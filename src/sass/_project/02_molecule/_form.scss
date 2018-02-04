@@ -1,0 +1,92 @@
+/* # Formulaires */
+
+@at-root {
+	input,
+	textarea,
+	button,
+	select {
+		display: inline-block;
+		vertical-align: top;
+		padding: $gutter/2;
+		font-size: inherit;
+		line-height: normal;
+		border-radius: none;
+		border: 1px solid;
+
+		&:focus,	
+		&:active {
+			//outline: none;
+			border-color: black; // change this if needed!
+		}
+	}
+	
+	input,
+	textarea {
+
+		&:focus,	
+		&:active {
+
+		}
+
+		&:-webkit-autofill {
+			-webkit-box-shadow: 0 0 0px 1000px white inset;
+			-webkit-text-fill-color: black;
+		}
+	}
+
+	
+
+	input,
+	select {
+		max-width: 90%;
+	}
+
+	input {
+		&::-ms-clear {
+			display: none;
+		}
+
+		.ie9 & {
+			line-height: normal !important;
+		}
+
+		&[type="radio"],
+		&[type="checkbox"] {
+			padding: 0 !important;
+		}
+		
+		&[type="radio"],
+		&[type="checkbox"],
+		&[type="submit"] {
+			width: auto;
+			height: auto;
+			min-height: 0;
+		}
+	}
+
+	select {
+		line-height: normal;
+
+		&::-ms-expand {
+			display: none;
+		}
+	}
+
+	textarea {
+		max-width: 100%;
+		appearance: none;
+	}
+
+	button {
+		padding: 0;
+		background: none;
+		color: inherit;
+		font: inherit;
+		line-height: inherit;
+		border: 0;	
+
+		img {
+			display: block;
+		}
+	}
+}

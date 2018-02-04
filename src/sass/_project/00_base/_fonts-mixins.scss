@@ -1,0 +1,11 @@
+/* # Font Mixins */
+
+@mixin font-style ($font: $font-regular, $font-size: 1rem, $weight : 400, $style: normal, $line-height : 1) {
+  font:{
+    family: $font;
+      style: $style;
+    size: $font-size;
+    weight: $weight;
+  }
+    line-height: $line-height;
+}

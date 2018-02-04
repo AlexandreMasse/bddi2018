@@ -1,0 +1,7 @@
+@include mq($from: mobile, $until: tablet) {
+	.intro {
+        background: blue;
+		color: #f4f4f4;
+		padding: 30px;
+	}
+}

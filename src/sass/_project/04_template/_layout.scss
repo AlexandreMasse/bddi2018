@@ -1,0 +1,41 @@
+/* # Layout styles */
+
+/*****************/
+/****** TABLE LAYOUT *****/
+/*****************/
+
+&-table {
+	display: table;
+	width: 100%;
+
+	&-full {
+		display: table;
+		width: 100%;
+		height: 100%;
+	}
+
+	&-row {
+		display:table-row;
+		height: auto;
+
+		&-min {
+			display:table-row;
+			height: 1px;
+		}
+	}
+
+	&-cell {
+		display: table-cell;
+		vertical-align: top;
+
+		&-middle {
+			vertical-align: middle;
+		}
+
+		&-bottom {
+			vertical-align: bottom;
+		}
+
+	}
+
+}
