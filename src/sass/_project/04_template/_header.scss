@@ -26,7 +26,8 @@ header {
     display: flex;
     justify-content: center;
     text-align: center;
-    position: absolute;
+    position: fixed;
+    margin-right: 35px;
     right: 60px;
     .header_menu-wording {
       line-height: 50px;
