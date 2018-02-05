@@ -1,0 +1,30 @@
+[
+  {
+    "id": 0,
+    "name": "Dataviz",
+    "projectsList" : [
+        {
+            "id" : 0,
+            "studentsList" : [1, 2]
+        },
+        {
+            "id" : 1,
+            "studentsList" : [1, 7]
+        }
+    ]
+  },
+  {
+    "id": 1,
+    "name": "Louvres",
+    "projectsList" : [
+        {
+            "id" : 2,
+            "studentsList" : [41, 5]
+        },
+        {
+            "id" : 3,
+            "studentsList" : [2, 3]
+        }
+    ]
+  }
+]
