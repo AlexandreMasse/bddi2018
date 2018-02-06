@@ -83,7 +83,11 @@
             transform: translateY(-50%);
             margin-left: 10px;
           }
-        }
+        }  
+        &-long {
+          max-width: 300px;
+          left: -70px;
+        }  
       }
       &-content {
         position: absolute;
