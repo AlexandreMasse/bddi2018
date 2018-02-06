@@ -18,6 +18,8 @@ header {
       opacity: 0.4;
       margin-left: 20px;
       font-size: 15px;
+      font-family:$font-aileron-light;
+      letter-spacing: 2px;
     }
   }
   .header_menu {
@@ -37,6 +39,7 @@ header {
       position: relative;
       letter-spacing: 3px;
       opacity: 0.9;
+      font-family:$font-aileron-light;
       &:after {
         content: '';
         width: 40px;

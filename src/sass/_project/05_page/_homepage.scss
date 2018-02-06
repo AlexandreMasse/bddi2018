@@ -13,13 +13,16 @@
       h1 {
         color: $color-white;
         opacity: 0.4;
-        font-size: 16px;
+        font-size: 14px;
         margin-bottom: 10px;
+        font-family:$font-aileron-light;
+        letter-spacing: 3px;
       }
       p {
         color: $color-white;
         line-height: 40px;
         font-size: 20px;
+        font-family:$font-walsheim-regular;
       }
     }
     &__start {
@@ -36,6 +39,7 @@
         position: relative;
         letter-spacing: 3px;
         opacity: 0.9;
+        font-family:$font-aileron-light;
         &:after {
           content: '';
           width: 1px;
@@ -66,6 +70,7 @@
           letter-spacing: 3px;
           position:relative;
           opacity: 0.9;
+          font-family:$font-aileron-light;
           &:after {
             content: '';
             width: 50px;
@@ -109,6 +114,13 @@
         p {
           color: $color-black;
           line-height: 25px;
+        }
+        span {
+          color: $color-black;
+          opacity: 0.5;
+          text-transform: uppercase;
+          font-family: $font-aileron-regular;
+          letter-spacing: 2px;
         }
       }
     }

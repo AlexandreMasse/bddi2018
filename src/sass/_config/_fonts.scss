@@ -1,7 +1,41 @@
 /* # Font-face */
-
 @font-face {
   font-family: 'roboto-regular';
   font-weight: 400;
   src : url('../fonts/roboto-regular.ttf');
+}
+@font-face {
+    font-family: 'Aileron-ultralight';
+    src: url('../fonts/Aileron-UltraLight.woff2') format('woff2'),
+         url('../fonts/Aileron-UltraLight.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Aileron-light';
+    src: url('../fonts/Aileron-Light.woff2') format('woff2'),
+         url('../fonts/Aileron-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Aileron-regular';
+    src: url('../fonts/Aileron-Regular.woff2') format('woff2'),
+         url('../fonts/Aileron-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GTWalsheimProLight';
+    src: url('../fonts/GTWalsheimProLight.woff2') format('woff2'),
+         url('../fonts/GTWalsheimProLight.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GTWalsheimProRegular';
+    src: url('../fonts/GTWalsheimProRegular.woff2') format('woff2'),
+         url('../fonts/GTWalsheimProRegular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
