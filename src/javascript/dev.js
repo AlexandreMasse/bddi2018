@@ -1,8 +1,8 @@
-var utils = require('./modules/utils');
+var utils = require('./modules/utils-test');
 
 var body = document.querySelector('body');
 
-utils.findAllIn('lea', function(categories) {
+utils.findAllIn('lea').then(function(categories) {
     for (let i = 0; i < 1; i++) {
         var table = document.createElement('table');
         document.body.appendChild(table);
@@ -11,8 +11,8 @@ utils.findAllIn('lea', function(categories) {
         var tbody = table.querySelector('tbody'),
             projectsList = categories[i].projectsList;
 
-        for (let k = 0; k < projectsList.length; k++) {
-            utils.findStudentsByProject(projectsList[k].id).then(function(students) {
+        for (let k = 0; k < projectsList.length ; k++) {
+            utils.findStudentsByProject(projectsList[k].id.toString()).then(function(students) {
                 var studentsNames = '';
                 for (let j = 0; j < students.length; j++) {
                     studentsNames += students[j].lastname + ' ' + students[j].firstname + ' - ';

@@ -50,8 +50,71 @@
       }
     }
   }
+  .projects {
+    width: 100%;
+    height: 100%;
+    &__category {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      &-title {
+        position: absolute;
+        top: 150px;
+        transform: rotate(-90deg);
+        h2 {
+          text-transform: uppercase;
+          letter-spacing: 3px;
+          position:relative;
+          opacity: 0.9;
+          &:after {
+            content: '';
+            width: 50px;
+            height: 1px;
+            background: $color-white;
+            position: absolute;
+            opacity: 0.9;
+            top: 50%;
+            transform: translateY(-50%);
+            margin-left: 10px;
+          }
+        }
+      }
+      &-content {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        width: 850px;
+        height: 500px;
+      }
+      &-thumbnail {
+        background-image: url('../images/placeholder-pic.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 700px;
+        height: 350px;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+      }
+      &-description {
+        background: $color-white;
+        width: 350px;
+        height: 250px;
+        padding: 20px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        p {
+          color: $color-black;
+          line-height: 25px;
+        }
+      }
+    }
+  }
 }
 
 @media screen and (max-width : 768px) {
-  
+
 }

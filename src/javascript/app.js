@@ -1,18 +1,23 @@
 //var $ = require('jquery');
 var niceModule = require('./modules/niceModule')
-var utils = require('./modules/utils')
-var dev = require('./dev')
+var dev = require('./dev') 
+var utils = require('./modules/utils-test')
 
-utils.findAllIn('students');
 
-utils.findOneByIn('students', 'firstname', 'Robin', function(data){
-    // console.log(data)
+
+utils.findAllIn('students').then(function(data) {
+    console.log(data);
 });
 
-utils.findStudentsByProject('1', function(data) {
-    // console.log(data);
-})
 
-utils.findAllProjectsByCategory('0', function(data){
-    // console.log(data)
-})
+// utils.findOneByIn('students', 'firstname', 'Robin').then(function(data){
+//     console.log(data)
+// });
+
+// utils.findStudentsByProject('1').then(function(data) {
+//     console.log(data);
+// })
+
+// utils.findAllProjectsByCategory('0').then( function(data){
+//     console.log(data)
+// })

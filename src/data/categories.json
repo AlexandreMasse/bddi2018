@@ -1,30 +1,812 @@
 [
-  {
-    "id": 0,
-    "name": "Dataviz",
-    "projectsList" : [
-        {
-            "id" : 0,
-            "studentsList" : [1, 2]
-        },
-        {
-            "id" : 1,
-            "studentsList" : [1, 7]
-        }
-    ]
-  },
-  {
-    "id": 1,
-    "name": "Louvres",
-    "projectsList" : [
-        {
-            "id" : 2,
-            "studentsList" : [41, 5]
-        },
-        {
-            "id" : 3,
-            "studentsList" : [2, 3]
-        }
-    ]
-  }
+    {
+        "id": 0,
+        "name": "Dataviz",
+        "ident": "dataviz",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur deserunt earum illum nostrum quam? Ad alias aliquam, at beatae, dolores ducimus ea esse facere nulla, officiis optio possimus quas tenetur?",
+        "projectsList": [
+            {
+                "id": 0,
+                "name": "Datatiz",
+                "ident": "datatiz",
+                "studentsList": [
+                    0,
+                    13
+                ]
+            },
+            {
+                "id": 1,
+                "name": "X",
+                "ident": "X",
+                "studentsList": [
+                    1,
+                    33
+                ]
+            },
+            {
+                "id": 2,
+                "name": "data-SYSTEM",
+                "ident": "data_system",
+                "studentsList": [
+                    2,
+                    3
+                ]
+            },
+            {
+                "id": 3,
+                "name": "Les BDDI vont à l'école",
+                "ident": "les_bddi_vont_a_l_ecole",
+                "studentsList": [
+                    4,
+                    5
+                ]
+            },
+            {
+                "id": 4,
+                "name": "Empreinte Carbone",
+                "ident": "empreinte_carbone",
+                "studentsList": [
+                    6,
+                    8
+                ]
+            },
+            {
+                "id": 5,
+                "name": "Microlimex",
+                "ident": "microlimex",
+                "studentsList": [
+                    7,
+                    30
+                ]
+            },
+            {
+                "id": 6,
+                "name": "Feux de forêts",
+                "ident": "feux_de_forets",
+                "studentsList": [
+                    9,
+                    36
+                ]
+            },
+            {
+                "id": 7,
+                "name": "Datartic",
+                "ident": "datartic",
+                "studentsList": [
+                    10,
+                    26
+                ]
+            },
+            {
+                "id": 8,
+                "name": "Une lueur d'espoir pour les BDDI",
+                "ident": "une_lueur_d_espoir_pour_les_bddi",
+                "studentsList": [
+                    11,
+                    12
+                ]
+            },
+            {
+                "id": 9,
+                "name": "Data'vie",
+                "ident": "datavie",
+                "studentsList": [
+                    14,
+                    19
+                ]
+            },
+            {
+                "id": 10,
+                "name": "Datable",
+                "ident": "datable",
+                "studentsList": [
+                    15,
+                    34
+                ]
+            },
+            {
+                "id": 11,
+                "name": "Dataviz",
+                "ident": "dataviz",
+                "studentsList": [
+                    16,
+                    35
+                ]
+            },
+            {
+                "id": 12,
+                "name": "Weather Battle",
+                "ident": "wheather_battle",
+                "studentsList": [
+                    17,
+                    31
+                ]
+            },
+            {
+                "id": 13,
+                "name": "La boum",
+                "ident": "la_boum",
+                "studentsList": [
+                    18,
+                    32
+                ]
+            },
+            {
+                "id": 14,
+                "name": "0%",
+                "ident": "zero_pourcent",
+                "studentsList": [
+                    20,
+                    29
+                ]
+            },
+            {
+                "id": 15,
+                "name": "Retro Mix",
+                "ident": "retro_mix",
+                "studentsList": [
+                    21,
+                    40
+                ]
+            },
+            {
+                "id": 16,
+                "name": "X",
+                "ident": "x",
+                "studentsList": [
+                    22,
+                    "???"
+                ]
+            },
+            {
+                "id": 17,
+                "name": "La déforestation de 1990 à nos jours",
+                "ident": "la_deforestation",
+                "studentsList": [
+                    23,
+                    38
+                ]
+            },
+            {
+                "id": 18,
+                "name": "X",
+                "ident": "x",
+                "studentsList": [
+                    24,
+                    39
+                ]
+            },
+            {
+                "id": 19,
+                "name": "L'Angleterre et ses énergies fossiles",
+                "ident": "l_angleterre_et_ses_energies_fossiles",
+                "studentsList": [
+                    25,
+                    41
+                ]
+            },
+            {
+                "id": 20,
+                "name": "La crise du logement chez les BDDI",
+                "ident": "la_crise_du_logement_chez_les_bddi",
+                "studentsList": [
+                    27,
+                    37
+                ]
+            },
+            {
+                "id": 21,
+                "name": "X",
+                "ident": "x",
+                "studentsList": [
+                    28,
+                    "???"
+                ]
+            }
+        ]
+    },
+    {
+        "id": 1,
+        "name": "Louvres",
+        "ident": "louvres",
+        "projectsList": [
+            {
+                "id": 22,
+                "name": "Intrusio",
+                "ident": "intrusio",
+                "studentsList": [
+                    1,
+                    17
+                ]
+            },
+            {
+                "id": 23,
+                "name": "(RÉ)VEIL",
+                "ident": "reveil",
+                "studentsList": [
+                    3,
+                    16
+                ]
+            },
+            {
+                "id": 24,
+                "name": "Murmures",
+                "ident": "murmures",
+                "studentsList": [
+                    4,
+                    19,
+                    22
+                ]
+            },
+            {
+                "id": 25,
+                "name": "Regalia",
+                "ident": "regalia",
+                "studentsList": [
+                    8,
+                    40
+                ]
+            },
+            {
+                "id": 26,
+                "name": "Le Retable de la Crucifixion",
+                "ident": "le_retable_de_la_crucifixion",
+                "studentsList": [
+                    9,
+                    25
+                ]
+            },
+            {
+                "id": 27,
+                "name": "Bas-relief",
+                "ident": "bas_relief",
+                "studentsList": [
+                    10,
+                    18
+                ]
+            },
+            {
+                "id": 28,
+                "name": "Henri VI roi de la comm",
+                "ident": "henri_vi_roi_de_la_comm",
+                "studentsList": [
+                    11,
+                    38
+                ]
+            },
+            {
+                "id": 29,
+                "name": "Enigma",
+                "ident": "enigma",
+                "studentsList": [
+                    13,
+                    20
+                ]
+            },
+            {
+                "id": 30,
+                "name": "Battle Royale",
+                "ident": "battle_royale",
+                "studentsList": [
+                    30,
+                    34
+                ]
+            },
+            {
+                "id": 31,
+                "name": "X",
+                "ident": "x",
+                "studentsList": [
+                    27,
+                    39
+                ]
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Application - Festival nation du film d'animation",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur deserunt earum illum nostrum quam? Ad alias aliquam, at beatae, dolores ducimus ea esse facere nulla, officiis optio possimus quas tenetur?",
+        "ident": "appli_festival",
+        "projectsList": [
+            {
+                "id": 32,
+                "name": "Application - Festival nation du film d'animation",
+                "ident": "appli",
+                "studentsList": [
+                    0,
+                    32,
+                    3,
+                    16
+                ]
+            },
+            {
+                "id": 33,
+                "name": "Application - Festival nation du film d'animation",
+                "ident": "appli",
+                "studentsList": [
+                    4,
+                    5,
+                    22,
+                    19,
+                    15
+                ]
+            },
+            {
+                "id": 34,
+                "name": "Application - Festival nation du film d'animation",
+                "ident": "appli",
+                "studentsList": [
+                    6,
+                    28,
+                    35,
+                    38
+                ]
+            },
+            {
+                "id": 35,
+                "name": "Application - Festival nation du film d'animation",
+                "ident": "appli",
+                "studentsList": [
+                    10,
+                    8,
+                    26,
+                    23
+                ]
+            },
+            {
+                "id": 36,
+                "name": "Application - Festival nation du film d'animation",
+                "ident": "appli",
+                "studentsList": [
+                    13,
+                    30,
+                    41,
+                    29
+                ]
+            },
+            {
+                "id": 37,
+                "name": "Application - Festival nation du film d'animation",
+                "ident": "appli",
+                "studentsList": [
+                    20,
+                    24,
+                    31,
+                    17
+                ]
+            },
+            {
+                "id": 38,
+                "name": "Application - Festival nation du film d'animation",
+                "ident": "appli",
+                "studentsList": [
+                    27,
+                    21,
+                    37,
+                    12,
+                    34
+                ]
+            },
+            {
+                "id": 39,
+                "name": "Application - Festival nation du film d'animation",
+                "ident": "appli",
+                "studentsList": [
+                    36,
+                    2,
+                    40,
+                    9
+                ]
+            },
+            {
+                "id": 40,
+                "name": "Application - Festival nation du film d'animation",
+                "ident": "appli",
+                "studentsList": [
+                    7,
+                    39,
+                    11
+                ]
+            },
+            {
+                "id": 41,
+                "name": "Application - Festival nation du film d'animation",
+                "ident": "appli",
+                "studentsList": [
+                    14,
+                    33,
+                    1,
+                    25
+                ]
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "name": "Canvas Audio Expirement",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur deserunt earum illum nostrum quam? Ad alias aliquam, at beatae, dolores ducimus ea esse facere nulla, officiis optio possimus quas tenetur?",
+        "ident": "canvas_xp",
+        "projectsList": [
+            {
+                "id": 42,
+                "name": "Blob",
+                "ident": "blob",
+                "studentsList": [
+                    0
+                ]
+            },
+            {
+                "id": 43,
+                "name": "Lollipop",
+                "ident": "lollipop",
+                "studentsList": [
+                    2
+                ]
+            },
+            {
+                "id": 44,
+                "name": "",
+                "ident": "",
+                "studentsList": [
+                    5
+                ]
+            },
+            {
+                "id": 45,
+                "name": "Data Canyon",
+                "ident": "data_canyon",
+                "studentsList": [
+                    6
+                ]
+            },
+            {
+                "id": 46,
+                "name": "Dancing Blob",
+                "ident": "dancing_blob",
+                "studentsList": [
+                    7
+                ]
+            },
+            {
+                "id": 47,
+                "name": "Blastcircle",
+                "ident": "blastcircle",
+                "studentsList": [
+                    12
+                ]
+            },
+            {
+                "id": 48,
+                "name": "",
+                "ident": "",
+                "studentsList": [
+                    14
+                ]
+            },
+            {
+                "id": 49,
+                "name": "Sound Visualizr",
+                "ident": "sound_visualizr",
+                "studentsList": [
+                    15
+                ]
+            },
+            {
+                "id": 50,
+                "name": "Sound round",
+                "ident": "sound_round",
+                "studentsList": [
+                    21
+                ]
+            },
+            {
+                "id": 51,
+                "name": "LineSound",
+                "ident": "line_sound",
+                "studentsList": [
+                    23
+                ]
+            },
+            {
+                "id": 52,
+                "name": "",
+                "ident": "",
+                "studentsList": [
+                    24
+                ]
+            },
+            {
+                "id": 53,
+                "name": "Path walker 2D",
+                "ident": "path_walker",
+                "studentsList": [
+                    26
+                ]
+            },
+            {
+                "id": 54,
+                "name": "",
+                "ident": "",
+                "studentsList": [
+                    28
+                ]
+            },
+            {
+                "id": 55,
+                "name": "",
+                "ident": "",
+                "studentsList": [
+                    29
+                ]
+            },
+            {
+                "id": 56,
+                "name": "",
+                "ident": "",
+                "studentsList": [
+                    31
+                ]
+            },
+            {
+                "id": 57,
+                "name": "Sound and Colors",
+                "ident": "sound_colors",
+                "studentsList": [
+                    32
+                ]
+            },
+            {
+                "id": 58,
+                "name": "Sound experiment",
+                "ident": "sound_xp",
+                "studentsList": [
+                    33
+                ]
+            },
+            {
+                "id": 59,
+                "name": "",
+                "ident": "",
+                "studentsList": [
+                    35
+                ]
+            },
+            {
+                "id": 60,
+                "name": "Sound experiment",
+                "ident": "sound_xp",
+                "studentsList": [
+                    36
+                ]
+            },
+            {
+                "id": 61,
+                "name": "Paintdrop beats",
+                "ident": "paintdrop_beats",
+                "studentsList": [
+                    37
+                ]
+            },
+            {
+                "id": 62,
+                "name": "",
+                "ident": "",
+                "studentsList": [
+                    41
+                ]
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "name": "VueJS Chat",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur deserunt earum illum nostrum quam? Ad alias aliquam, at beatae, dolores ducimus ea esse facere nulla, officiis optio possimus quas tenetur?",
+        "ident": "chat",
+        "projectsList": [
+            {
+                "id": 63,
+                "name": "Petits potins",
+                "ident": "petits_potins",
+                "studentsList": [
+                    6,
+                    9
+                ]
+            },
+            {
+                "id": 64,
+                "name": "Poisson chat",
+                "ident": "poisson_chat",
+                "studentsList": [
+                    7,
+                    22
+                ]
+            },
+            {
+                "id": 65,
+                "name": "Pipelette",
+                "ident": "pipelette",
+                "studentsList": [
+                    15,
+                    18
+                ]
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "name": "3D Audio Experiment",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur deserunt earum illum nostrum quam? Ad alias aliquam, at beatae, dolores ducimus ea esse facere nulla, officiis optio possimus quas tenetur?",
+        "ident": "3D_audio",
+        "projectsList": [
+            {
+                "id": 66,
+                "name": "Particles Danse",
+                "ident": "particles_danse",
+                "studentsList": [
+                    0
+                ]
+            },
+            {
+                "id": 67,
+                "name": "Cloudy",
+                "ident": "cloudy",
+                "studentsList": [
+                    2
+                ]
+            },
+            {
+                "id": 68,
+                "name": "",
+                "ident": "",
+                "studentsList": [
+                    5
+                ]
+            },
+            {
+                "id": 69,
+                "name": "AudioField",
+                "ident": "audiofield",
+                "studentsList": [
+                    6
+                ]
+            },
+            {
+                "id": 70,
+                "name": "Dancing Nebula",
+                "ident": "dancing_nebula",
+                "studentsList": [
+                    7
+                ]
+            },
+            {
+                "id": 71,
+                "name": "Gravity Sound",
+                "ident": "gravity_sound",
+                "studentsList": [
+                    12
+                ]
+            },
+            {
+                "id": 72,
+                "name": "",
+                "ident": "",
+                "studentsList": [
+                    14
+                ]
+            },
+            {
+                "id": 73,
+                "name": "Music Sampler",
+                "ident": "music_sampler",
+                "studentsList": [
+                    15
+                ]
+            },
+            {
+                "id": 74,
+                "name": "Spherical audio visualizer",
+                "ident": "music_sampler",
+                "studentsList": [
+                    21
+                ]
+            },
+            {
+                "id": 75,
+                "name": "PulseSound",
+                "ident": "pulse_sound",
+                "studentsList": [
+                    23
+                ]
+            },
+            {
+                "id": 76,
+                "name": "Blurryface",
+                "ident": "blurryface",
+                "studentsList": [
+                    24
+                ]
+            },
+            {
+                "id": 77,
+                "name": "Path walker 3D",
+                "ident": "path_walker",
+                "studentsList": [
+                    26
+                ]
+            },
+            {
+                "id": 78,
+                "name": "",
+                "ident": "",
+                "studentsList": [
+                    28
+                ]
+            },
+            {
+                "id": 79,
+                "name": "",
+                "ident": "",
+                "studentsList": [
+                    29
+                ]
+            },
+            {
+                "id": 80,
+                "name": "Vitalic",
+                "ident": "vitalic",
+                "studentsList": [
+                    31
+                ]
+            },
+            {
+                "id": 81,
+                "name": "Portals",
+                "ident": "portals",
+                "studentsList": [
+                    32
+                ]
+            },
+            {
+                "id": 82,
+                "name": "The Runaways",
+                "ident": "the_runaways",
+                "studentsList": [
+                    33
+                ]
+            },
+            {
+                "id": 83,
+                "name": "",
+                "ident": "",
+                "studentsList": [
+                    35
+                ]
+            },
+            {
+                "id": 84,
+                "name": "Halloween Zombie",
+                "ident": "halloween_zombie",
+                "studentsList": [
+                    36
+                ]
+            },
+            {
+                "id": 85,
+                "name": "White winter",
+                "ident": "white_winter",
+                "studentsList": [
+                    37
+                ]
+            },
+            {
+                "id": 86,
+                "name": "The enchanted Forest",
+                "ident": "enchanted_forest",
+                "studentsList": [
+                    41
+                ]
+            }
+        ]
+    }
 ]

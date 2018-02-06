@@ -73,7 +73,7 @@ exports.findStudentsByProject = function(projectId, callback) {
                         ctx.findAllByIn('students', 'id', projectsList[k].studentsList, function(datas) {
                             return datas;
                         })
-                        ctx.findAllByIn('students', 'id', projectsList[k].studentsList).then(function(datas) {
+                        ctx.findAllByIn('students', 'id', projectsList[k].studentsList, function(datas) {
                             callback(datas);
                         })
                     }
