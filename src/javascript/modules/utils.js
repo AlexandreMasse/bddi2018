@@ -1,6 +1,6 @@
 function ajaxGet(url, callback) {
     var req = new XMLHttpRequest();
-    req.open("GET", url);
+    req.open("GET", url, false);
     req.addEventListener("load", function () {
         if (req.status >= 200 && req.status < 400) {
             callback(req.responseText);
@@ -70,6 +70,9 @@ exports.findStudentsByProject = function(projectId, callback) {
                 var projectsList = datas[i].projectsList;
                 for (let k = 0; k < projectsList.length; k++) {
                     if (projectsList[k].id == projectId) {
+                        ctx.findAllByIn('students', 'id', projectsList[k].studentsList, function(datas) {
+                            return datas;
+                        })
                         ctx.findAllByIn('students', 'id', projectsList[k].studentsList, function(datas) {
                             callback(datas);
                         })
