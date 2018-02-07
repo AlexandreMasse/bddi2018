@@ -1,10 +1,16 @@
-#BDDI2018
+# Gobelins BDDI 2018
 
-### Tâches Gulp
+## Dependencies
+
+```sh
+$ npm install
+```
+
+## Gulp Tasks
 
 **Watch**
 
-Pour lancer le serveur :
+To lunch server and watch :
 
 ```sh
 $ gulp
@@ -12,7 +18,7 @@ $ gulp
 
 **Build**
 
-Pour créer le dossier de distribution:
+To create build :
 
 ```sh
 $ gulp build
