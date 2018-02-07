@@ -100,6 +100,8 @@
         position: absolute;
         top: 150px;
         transform: rotate(-90deg);
+        text-align: right;
+        line-height: 30px;
         h2 {
           text-transform: uppercase;
           letter-spacing: 3px;
@@ -117,11 +119,11 @@
             transform: translateY(-50%);
             margin-left: 10px;
           }
-        }  
+        }
         &-long {
           max-width: 300px;
           left: -70px;
-        }  
+        }
       }
       &-content {
         position: absolute;
@@ -182,13 +184,10 @@
     visibility: visible;
     opacity: 1;
     transition: opacity .5s, visibility .3s .5s;
-  
+
     &.hidden {
       visibility: hidden;
       opacity: 0;
     }
   }
-}
-
-@media screen and (max-width : 768px) {
 }
