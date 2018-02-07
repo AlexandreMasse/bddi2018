@@ -1,4 +1,4 @@
-.homepage {
+body {
   background-color: $color-black;
   color: $color-white;
   .menu {
@@ -13,8 +13,24 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%,-50%);
-      text-align: center;
+      width: 700px;
+      height: 95%;
+      .menu__thumbnail {
+        width: 700px;
+        height: 300px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+      }
       .menu__items {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
         &-item {
           text-transform: uppercase;
           font-family: $font-walsheim-regular;
@@ -23,6 +39,7 @@
           margin: 80px 0;
           transition: all 0.5s ease;
           position: relative;
+          text-align: center;
           &.active {
             span {
               opacity: 1;
