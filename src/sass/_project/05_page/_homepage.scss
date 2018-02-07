@@ -4,6 +4,7 @@
   background-repeat: repeat;
   background-size: 40px 40px;
   background-position: center;
+  scroll-behavior: smooth;
   color: $color-white;
   .menu {
     width: 100%;
@@ -121,7 +122,11 @@
             transform: translateY(-50%);
             margin-left: 10px;
           }
-        }
+        }  
+        &-long {
+          max-width: 300px;
+          left: -70px;
+        }  
       }
       &-content {
         position: absolute;
@@ -141,6 +146,7 @@
         position: absolute;
         left: 0;
         bottom: 0;
+        cursor: pointer;
       }
       &-description {
         background: $color-white;
@@ -172,4 +178,22 @@
       display: none;
     }
   }
+
+  .category {
+    position: absolute;
+    top: 90px;
+  }
+  .slideToFade {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity .5s, visibility .3s .5s;
+  
+    &.hidden {
+      visibility: hidden;
+      opacity: 0;
+    }
+  }
+}
+
+@media screen and (max-width : 768px) {
 }
