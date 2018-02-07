@@ -13,11 +13,12 @@ canvasBackground.init();
 
 //Show category list in homepage
 var categoriesList = document.getElementById('categories-list');
+var categoriesItem = document.getElementById('categories-item');
     utils.findAllIn('categories').then(function(categories) {
         for (let i = 0; i < categories.length; i++) {
             let categoryName = categories[i].name,
                 longCategoryTitle = categoryName.length > 15 ? 'projects__category-title-long' : '';
-            var categoryHTML = 
+            var categoryHTML =
             `<section class="projects__category" data-id="${categories[i].id}" data-name="${categories[i].name}">
                 <div class="projects__category-title ${longCategoryTitle}">
                         <h2>${categoryName}</h2>
@@ -30,7 +31,12 @@ var categoriesList = document.getElementById('categories-list');
                         </div>
                     </div>
             </section>`;
+            var categoryItem =
+            `<li class="menu__items-item" data-id="${categories[i].id}" data-name="${categories[i].name}">
+              <span>${categoryName}</span>
+            </li>`;
             categoriesList.innerHTML += categoryHTML;
+            categoriesItem.innerHTML += categoryItem;
         }
 
         //Event on thumbnail click to load projects from the category
@@ -55,13 +61,13 @@ var categoriesList = document.getElementById('categories-list');
                 utils.findAllProjectsByCategory(categoryId).then(function(projectsCategory) {
                     let categoryProjects =  document.getElementById('category-projects');
                     categoryProjects.classList.remove('hidden');
-                    categoryProjects.innerHTML += 
+                    categoryProjects.innerHTML +=
                         `<section id="category-${categoryId}">
                             <h1>Nom : ${category[0].name}</h1>
                             <p>Description : ${category[0].description}</p>
                         </section>`;
                     let categoryProjectsSection = categoryProjects.querySelector('section');
-                    
+
                     var promises = [];
                     for (let i = 0; i < projectsCategory.length; i++) {
                         (function(index) {
@@ -70,7 +76,7 @@ var categoriesList = document.getElementById('categories-list');
                                 for (let k = 0; k < students.length; k++) {
                                     studentsNames += `${students[k].firstname} ${students[k].lastname} <em>(${students[k].option})</em> - `;
                                     if (k == students.length - 1) {
-                                        categoryProjectsSection.innerHTML += 
+                                        categoryProjectsSection.innerHTML +=
                                         `<h2>${projectsCategory[index].name}</h2>
                                         <p>By : ${studentsNames}</p>
                                         <hr>`;
@@ -82,7 +88,7 @@ var categoriesList = document.getElementById('categories-list');
                     window.scrollTo(0, 0);
                 });
             });
-        } 
+        }
     }
 
 

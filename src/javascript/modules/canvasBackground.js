@@ -8,7 +8,7 @@ var ctx = canvas.getContext('2d'),
         x: 0,
         y: 0
     },
-    pointSize = 1,
+    pointSize = 0.5,
     spaceBetweenY = 30,
     spaceBetweenX = 30;
 
