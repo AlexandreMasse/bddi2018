@@ -31,6 +31,7 @@ header {
     position: fixed;
     margin-right: 35px;
     right: 60px;
+    z-index: 3;
     .header_menu-open, .header_menu-close {
       line-height: 50px;
       color: $color-white;
@@ -52,8 +53,10 @@ header {
         opacity: 0.9;
       }
     }
+    .header_menu-open {
+      position:absolute;
+    }
     .header_menu-close {
-      display: none;
       &:after {
         background: $color-purple;
       }
