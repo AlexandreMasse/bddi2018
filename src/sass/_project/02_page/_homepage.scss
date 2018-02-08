@@ -207,6 +207,7 @@ body {
     position: absolute;
     top: 90px;
   }
+
   .slideToFade {
     visibility: visible;
     opacity: 1;
@@ -217,4 +218,16 @@ body {
       opacity: 0;
     }
   }
+
+  /* TO DELETE ONLY FOR TEST */
+  .projects__category {
+    height: 400px;
+    margin: 100px;
+  }
+  section {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
 }

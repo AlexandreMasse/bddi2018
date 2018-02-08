@@ -198,7 +198,7 @@
     },
     {
         "id": 1,
-        "name": "Louvres",
+        "name": "La petite Galerie",
         "ident": "louvres",
         "description" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur deserunt earum illum nostrum quam? Ad alias aliquam, at beatae, dolores ducimus ea esse facere nulla, officiis optio possimus quas tenetur?",
         "projectsList": [
@@ -297,9 +297,9 @@
     },
     {
         "id": 2,
+        "ident": "festival",
         "name": "Application - Festival nation du film d'animation",
         "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur deserunt earum illum nostrum quam? Ad alias aliquam, at beatae, dolores ducimus ea esse facere nulla, officiis optio possimus quas tenetur?",
-        "ident": "appli_festival",
         "projectsList": [
             {
                 "id": 32,
@@ -416,9 +416,9 @@
     },
     {
         "id": 3,
+        "ident": "canvas-audio",
         "name": "Canvas Audio Expirement",
         "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur deserunt earum illum nostrum quam? Ad alias aliquam, at beatae, dolores ducimus ea esse facere nulla, officiis optio possimus quas tenetur?",
-        "ident": "canvas_xp",
         "projectsList": [
             {
                 "id": 42,
@@ -592,9 +592,9 @@
     },
     {
         "id": 4,
+        "ident": "chat",
         "name": "VueJS Chat",
         "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur deserunt earum illum nostrum quam? Ad alias aliquam, at beatae, dolores ducimus ea esse facere nulla, officiis optio possimus quas tenetur?",
-        "ident": "chat",
         "projectsList": [
             {
                 "id": 63,
@@ -627,9 +627,9 @@
     },
     {
         "id": 5,
+        "ident": "3d-audio",
         "name": "3D Audio Experiment",
         "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur deserunt earum illum nostrum quam? Ad alias aliquam, at beatae, dolores ducimus ea esse facere nulla, officiis optio possimus quas tenetur?",
-        "ident": "3D_audio",
         "projectsList": [
             {
                 "id": 66,
