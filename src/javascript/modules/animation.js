@@ -10,4 +10,6 @@ menu_open.addEventListener("click", function() {
 
 menu_close.addEventListener("click", function() {
   body.classList.remove("menu-active");
+  menu_open.classList.remove("hidden");
+  menu_close.classList.add("hidden");
 });
