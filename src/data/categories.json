@@ -106,8 +106,8 @@
             },
             {
                 "id": 11,
-                "name": "Dataviz",
-                "ident": "dataviz",
+                "name": "Electroviz",
+                "ident": "electroviz",
                 "studentsList": [
                     16,
                     35
@@ -151,11 +151,11 @@
             },
             {
                 "id": 16,
-                "name": "X",
-                "ident": "x",
+                "name": "Climate Change",
+                "ident": "climate_change",
                 "studentsList": [
                     22,
-                    "???"
+                    28
                 ]
             },
             {
@@ -169,8 +169,8 @@
             },
             {
                 "id": 18,
-                "name": "X",
-                "ident": "x",
+                "name": "L'afforestation",
+                "ident": "afforestation",
                 "studentsList": [
                     24,
                     39
@@ -192,15 +192,6 @@
                 "studentsList": [
                     27,
                     37
-                ]
-            },
-            {
-                "id": 21,
-                "name": "X",
-                "ident": "x",
-                "studentsList": [
-                    28,
-                    "???"
                 ]
             }
         ]
@@ -295,8 +286,8 @@
             },
             {
                 "id": 31,
-                "name": "X",
-                "ident": "x",
+                "name": "Les 12 bustes",
+                "ident": "les_douze_bustes",
                 "studentsList": [
                     27,
                     39
@@ -567,8 +558,8 @@
             },
             {
                 "id": 59,
-                "name": "",
-                "ident": "",
+                "name": "Flower",
+                "ident": "flower",
                 "studentsList": [
                     35
                 ]
@@ -778,8 +769,8 @@
             },
             {
                 "id": 83,
-                "name": "",
-                "ident": "",
+                "name": "Strange Thing",
+                "ident": "strange_thing",
                 "studentsList": [
                     35
                 ]
