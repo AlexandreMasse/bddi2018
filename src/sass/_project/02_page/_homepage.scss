@@ -8,6 +8,7 @@ body {
     top: 0;
     left: 0;
     display: none;
+    z-index: 999;
     &__navigation {
       width: 700px;
       position: absolute;
@@ -61,173 +62,200 @@ body {
         }
       }
     }
-    // display: none;
   }
-  .landing {
+  #homepage {
     width: 100%;
     height: 100%;
-    &__content {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 60%;
-      left: 15%;
-      h1 {
-        color: $color-white;
-        opacity: 0.4;
-        font-size: 14px;
-        margin-bottom: 10px;
-        font-family:$font-aileron-light;
-        letter-spacing: 3px;
-      }
-      p {
-        color: $color-white;
-        line-height: 40px;
-        font-size: 20px;
-        font-family:$font-walsheim-regular;
-      }
-    }
-    &__start {
-      position: absolute;
-      bottom: 50px;
-      left: 50%;
-      transform: translateX(-50%);
-      cursor: pointer;
-      span {
-        line-height: 50px;
-        color: $color-white;
-        text-transform: uppercase;
-        font-size: 12px;
-        position: relative;
-        letter-spacing: 3px;
-        opacity: 0.9;
-        font-family:$font-aileron-light;
-        &:after {
-          content: '';
-          width: 1px;
-          height: 100px;
-          background: $color-white;
-          position: absolute;
-          opacity: 0.9;
-          left: 50%;
-          transform: translateX(-50%);
-          top: 20px;
-        }
-      }
-    }
-  }
-  .projects {
-    width: 100%;
-    height: 100%;
-    &__category {
+    .landing {
       width: 100%;
       height: 100%;
-      position: relative;
-      &-title {
+      &__content {
         position: absolute;
-        top: 150px;
-        transform: rotate(-90deg);
-        text-align: right;
-        line-height: 30px;
-        h2 {
-          text-transform: uppercase;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 60%;
+        left: 15%;
+        h1 {
+          color: $color-white;
+          opacity: 0.4;
+          font-size: 14px;
+          margin-bottom: 10px;
+          font-family:$font-aileron-light;
           letter-spacing: 3px;
-          position:relative;
+        }
+        p {
+          color: $color-white;
+          line-height: 40px;
+          font-size: 20px;
+          font-family:$font-walsheim-regular;
+        }
+      }
+      &__start {
+        position: absolute;
+        bottom: 50px;
+        left: 50%;
+        transform: translateX(-50%);
+        cursor: pointer;
+        span {
+          line-height: 50px;
+          color: $color-white;
+          text-transform: uppercase;
+          font-size: 12px;
+          position: relative;
+          letter-spacing: 3px;
           opacity: 0.9;
           font-family:$font-aileron-light;
           &:after {
             content: '';
-            width: 50px;
-            height: 1px;
+            width: 1px;
+            height: 100px;
             background: $color-white;
             position: absolute;
             opacity: 0.9;
-            top: 50%;
-            transform: translateY(-50%);
-            margin-left: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 20px;
           }
-        }
-        &-long {
-          max-width: 300px;
-          left: -70px;
-        }
-      }
-      &-content {
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%,-50%);
-        width: 850px;
-        height: 500px;
-      }
-      &-thumbnail {
-        background-image: url('../images/placeholder-pic.jpg');
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        width: 700px;
-        height: 350px;
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        cursor: pointer;
-      }
-      &-description {
-        background: $color-white;
-        width: 350px;
-        height: 250px;
-        padding: 20px;
-        position: absolute;
-        top: 0;
-        right: 0;
-        p {
-          color: $color-black;
-          line-height: 25px;
-        }
-        span {
-          color: $color-black;
-          opacity: 0.5;
-          text-transform: uppercase;
-          font-family: $font-aileron-regular;
-          letter-spacing: 2px;
         }
       }
     }
+    .categories {
+      width: 100%;
+      height: 100%;
+      .projects {
+        &__category {
+          width: 100%;
+          height: 100%;
+          position: relative;
+          &-title {
+            position: absolute;
+            top: 150px;
+            transform: rotate(-90deg);
+            text-align: right;
+            line-height: 30px;
+            h2 {
+              text-transform: uppercase;
+              letter-spacing: 3px;
+              position:relative;
+              opacity: 0.9;
+              font-family:$font-aileron-light;
+              &:after {
+                content: '';
+                width: 50px;
+                height: 1px;
+                background: $color-white;
+                position: absolute;
+                opacity: 0.9;
+                top: 50%;
+                transform: translateY(-50%);
+                margin-left: 10px;
+              }
+            }
+            &-long {
+              max-width: 300px;
+              left: -70px;
+            }
+          }
+          &-content {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            width: 850px;
+            height: 500px;
+          }
+          &-thumbnail {
+            background-image: url('../images/placeholder-pic.jpg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 700px;
+            height: 350px;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            cursor: pointer;
+          }
+          &-description {
+            background: $color-white;
+            width: 350px;
+            height: 250px;
+            padding: 20px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            p {
+              color: $color-black;
+              line-height: 25px;
+            }
+            span {
+              color: $color-black;
+              opacity: 0.5;
+              text-transform: uppercase;
+              font-family: $font-aileron-regular;
+              letter-spacing: 2px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .category {
+    &__content {
+      width: 940px;
+      margin: 0 auto;
+      margin-top: 200px;
+      p.category__description {
+        color: $color-white;
+        line-height: 40px;
+        font-size: 20px;
+        font-family:$font-walsheim-regular;
+        width: 700px;
+      }
+      .project__list {
+        .projects__list-item {
+          width: 300px;
+          height: 350px;
+          float: left;
+          &:nth-of-type(3n+2) {
+            margin: 0 20px;
+          }
+          .project__thumbnail {
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-image: url('../images/placeholder-thumbnail.png');
+            width: 300px;
+            height: 200px;
+          }
+          h2 {
+
+          }
+          p {
+
+          }
+        }
+      }
+    }
+
   }
   &.menu-active {
     .menu {
       display: block;
     }
-    .landing, .projects {
+    .landing, .categories {
       display: none;
     }
   }
 
-  .category {
-    position: absolute;
-    top: 90px;
-  }
-
   .slideToFade {
-    visibility: visible;
     opacity: 1;
-    transition: opacity .5s, visibility .3s .5s;
-
+    display: block;
+    transition: opacity .5s, display .5s;
     &.hidden {
-      visibility: hidden;
+      display: none;
       opacity: 0;
     }
-  }
-
-  /* TO DELETE ONLY FOR TEST */
-  .projects__category {
-    height: 400px;
-    margin: 100px;
-  }
-  section {
-    position: absolute;
-    top: 0;
-    left: 0;
   }
 
 }
