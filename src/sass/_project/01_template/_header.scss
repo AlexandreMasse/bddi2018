@@ -1,7 +1,8 @@
 /* # header */
 header {
   margin: 35px;
-  position: relative;
+  position: absolute;
+  top: 0;
   .header_logo {
     display: flex;
     align-items: center;
@@ -31,7 +32,7 @@ header {
     position: fixed;
     margin-right: 35px;
     right: 60px;
-    z-index: 3;
+    z-index: 1000;
     .header_menu-open, .header_menu-close {
       line-height: 50px;
       color: $color-white;
@@ -52,9 +53,6 @@ header {
         left: 80px;
         opacity: 0.9;
       }
-    }
-    .header_menu-open {
-      position:absolute;
     }
     .header_menu-close {
       &:after {
