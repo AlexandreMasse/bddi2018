@@ -4,24 +4,19 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta property="og:url" content="" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="BDDI 2018 - Projets" />
+	<meta property="og:description" content="Venez découvrir les travaux des BDDI de l'année 2018." />
+	<meta property="og:image" content="" />
 	<title>BDDI 2018 - Projets</title>
 	<link rel="stylesheet" href="styles/styles.css">
 	<link rel="icon" type="image/png" href="images/icons/gobelins_favicon.png" />
 </head>
 
-<body class="homepage">
+<body>
 
-	<div class="menu">
-		<nav class="menu__navigation">
-			<ul class="menu__items">
-				<li class="menu__items-item">
-					<span>Chat</span>
-				</li>
-			</ul>
-		</nav>
-	</div>
-
-  <header>
+	<header>
 		<div class="header_logo">
 			<img src="images/icons/gobelins_logo_white.png" alt="">
 			<span>Gobelins - L'école de l'image</span>
@@ -34,46 +29,67 @@
 				Close
 			</div>
 		</div>
-  </header>
+	</header>
 
-	<div class="landing slideToFade" id="landing">
-		<div class="landing__content">
-			<h1>BDDI 2018</h1>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-		</div>
-		<div class="landing__start" id="landing-start">
-			<span>Start here</span>
-		</div>
-	</div>
-
-	<div class="projects slideToFade" id="categories-list">
-		<!-- <section class="projects__category">
-			<div class="projects__category-title">
-				<h2>Title</h2>
+	<section class="menu">
+		<nav class="menu__navigation">
+			<div class="menu__thumbnail" style="background-image:url('images/placeholder-pic.jpg')"></div>
+			<ul class="menu__items" id="categories-item">
+				<!-- <li class="menu__items-item">
+					<span>Chat</span>
+				</li> -->
+			</ul>
+		</nav>
+	</section>
+	<section id="homepage">
+		<div class="landing slideToFade" id="landing">
+			<div class="landing__content">
+				<h1>BDDI 2018</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 			</div>
-			<div class="projects__category-content">
-		   	<div class="projects__category-thumbnail"></div>
-				<div class="projects__category-description">
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-					<span>Next</span>
+			<div class="landing__start">
+				<span>Start here</span>
+			</div>
+		</div>
+		<div class="projects slideToFade" id="categories-list">
+			<!-- <section class="projects__category">
+				<div class="projects__category-title">
+					<h2>Title</h2>
 				</div>
-			</div>
-		</section>
+				<div class="projects__category-content">
+					<div class="projects__category-thumbnail"></div>
+					<div class="projects__category-description">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+						<span>Next</span>
+					</div>
+				</div>
+			</section> -->
+		</div>
+	</section>
+	<!-- <section id="category__dataviz" data-id="category-1">
+	    <div class="projects__list">
+	        <div class="projects__list-item" data-id="project-1"></div>
+	        <div class="projects__list-item" data-id="project-2"></div>
+	        <div class="projects__list-item" data-id="project-3"></div>
+	        <div class="projects__list-item" data-id="project-4"></div>
+	        <div class="projects__list-item" data-id="project-5"></div>
+	    </div>
+	    <iframe class="project-iframe"></iframe>
+	    <div class="project__screens">
+	        <div class="project__screens-1"></div>
+	        <div class="project__screens-2"></div>
+	        <div class="project__screens-3"></div>
+	    </div>
+	</section>
+	<section id="category__louvres"></section>
+	<section id="category__festival"></section>
+	<section id="category__canvas-audio"></section>
+	<section id="category__3d-audio"></section>
+	<section id="category__chat"></section>
+	<section id="category__site-web"></section> -->
 
-		<section class="projects__category projects__category-dataviz"></section>
-		<section class="projects__category projects__category-louvres"></section>
-		<section class="projects__category projects__category-canvasexperiment"></section>
-		<section class="projects__category projects__category-3dexperiment"></section>
-		<section class="projects__category projects__category-application"></section>
-		<section class="projects__category projects__category-siteweb"></section> -->
-	</div>
-	<div class="category slideToFade hidden" id="category-projects">
-	</div>
-  <footer>
+  <footer></footer>
 
-  </footer>
-
-	<script type="text/javascript" src="javascript/libraries/jquery-3.1.1.min.js"></script>
 	<script type="text/javascript" src="javascript/scripts.js"></script>
 </body>
 </html>

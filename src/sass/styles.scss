@@ -2,7 +2,6 @@
 /****** _Config *****/
 /*****************/
 
-
 /* # Config */
 
 @import '_config/config';
@@ -21,30 +20,19 @@
 
 @import "_config/fonts";
 
-
-
 /*****************/
-/****** _Project *****/
+/*** _Project ****/
 /*****************/
 
 /* # Base */
 @import '_project/00_base/_fonts-mixins.scss';
 @import "_project/00_base/*";
 
-/* # Atoms */
-@import "_project/01_atom/*";
-
-/* # Molecules */
-@import "_project/02_molecule/*";
-
-/* # Organisms */
-@import "_project/03_organism/*";
-
 /* # Templates */
-@import "_project/04_template/*";
+@import "_project/01_template/*";
 
 /* # Pages */
-@import "_project/05_page/*";
+@import "_project/02_page/*";
 
 /* # Mediaqueries */
-@import "_project/06_mediasqueries/*";
+@import "_project/03_mediasqueries/*";
