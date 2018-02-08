@@ -12,11 +12,15 @@ var previousSectionId;
     utils.findAllIn('categories').then(function(categories) {
         const categoriesList = document.getElementById('categories-list');
         for (let i = 0; i < categories.length; i++) {
-            let projects = categories[i].projectsList,
+            let projects = categories[i].projectsList;
+
+            //TODO : Add categories to menu and create action on click
+
+
             //Add categories to homepage
             categoryHTML =
-            `<div class="projects__category" data-id="category-${categories[i].id}">
-                <div class="pprojects__category-title">
+            `<div class="projects__category" data-id="category-${categories[i].id}" data-ident="category__${categories[i].ident}">
+                <div class="projects__category-title">
                         <h2>${categories[i].name}</h2>
                     </div>
                     <div class="projects__category-content">
@@ -30,13 +34,14 @@ var previousSectionId;
             categoriesList.innerHTML += categoryHTML;
             
             //Creates section for each category
-            const categorySection = createCustomElement('section', categories[i].id, 'category', categories[i].ident);
+            const   categorySection = createCustomElement('section', categories[i].id, 'category', categories[i].ident);
+                    categorySection.classList.add('slideToFade', 'hidden')
             const   projectsList  = document.createElement('div');
             const   projectsScreens = document.createElement('div');
-            projectsScreens.classList.add('project__screens');
-            projectsList.classList.add('project__list');
+                    projectsScreens.classList.add('project__screens');
+                    projectsList.classList.add('project__list');
             const   iframe = document.createElement('iframe');
-            iframe.classList.add('projects-iframe');
+                    iframe.classList.add('projects-iframe');
             
             //List all projects from category
             for (let j = 0; j < projects.length; j++) {
@@ -66,11 +71,20 @@ var previousSectionId;
                     if (index == projects.length - 1) {
                         categorySection.appendChild(projectsList);
                         categorySection.appendChild(projectsScreens);
-                        document.body.appendChild(categorySection);
+                        var homepage = document.getElementById('homepage');
+                            homepage.parentNode.insertBefore(categorySection, homepage.nextSibling);
                     }
                 })(j);   
             }
         }
+         //Add click event on category
+        categoriesList.querySelectorAll('.projects__category').forEach(function(category) {
+            const categoryIdent = category.getAttribute('data-ident');
+            category.querySelector('.projects__category-thumbnail').addEventListener('click', function() {
+                document.getElementById('homepage').classList.add('hidden');
+                document.querySelector('.'+categoryIdent).classList.remove('hidden');
+            });
+        });
     });
     
     function createCustomElement(element, id, slug, className) {
