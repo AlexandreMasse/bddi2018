@@ -1,0 +1,73 @@
+@font-face {
+  font-family: "Flaticon";
+  src: url("../fonts/icons/Flaticon.eot");
+  src: url("../fonts/icons/Flaticon.eot?#iefix") format("embedded-opentype"),
+       url("../fonts/icons/Flaticon.woff") format("woff"),
+       url("../fonts/icons/Flaticon.ttf") format("truetype"),
+       url("../fonts/icons/Flaticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.fi:before{
+  display: inline-block;
+  font-family: "Flaticon";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  line-height: 1;
+  text-decoration: inherit;
+  text-rendering: optimizeLegibility;
+  text-transform: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+.flaticon-link:before { content: "\f100"; }
+.flaticon-grid-world:before { content: "\f101"; }
+.flaticon-vimeo-logo:before { content: "\f102"; }
+.flaticon-social-vimeo-in-a-circle-logo:before { content: "\f103"; }
+.flaticon-linkedin-logo:before { content: "\f104"; }
+.flaticon-linkedin-button:before { content: "\f105"; }
+.flaticon-instagram-logo-1:before { content: "\f106"; }
+.flaticon-instagram-logo:before { content: "\f107"; }
+.flaticon-dribbble-logo:before { content: "\f108"; }
+.flaticon-dribble-logo-button:before { content: "\f109"; }
+.flaticon-behance-logo:before { content: "\f10a"; }
+.flaticon-behance-logo-button:before { content: "\f10b"; }
+.flaticon-3d-outlined-shape:before { content: "\f10c"; }
+.flaticon-github-logo:before { content: "\f10d"; }
+.flaticon-github:before { content: "\f10e"; }
+.flaticon-facebook-logo-button:before { content: "\f10f"; }
+.flaticon-twitter-logo-button:before { content: "\f110"; }
+.flaticon-twitter-logo-silhouette:before { content: "\f111"; }
+.flaticon-facebook-logo:before { content: "\f112"; }
+.flaticon-left-arrow:before { content: "\f113"; }
+.flaticon-arrow-point-to-right:before { content: "\f114"; }
+.flaticon-right-arrow-1:before { content: "\f115"; }
+.flaticon-right-arrow:before { content: "\f116"; }
+
+$font-Flaticon-link: "\f100";
+$font-Flaticon-grid-world: "\f101";
+$font-Flaticon-vimeo-logo: "\f102";
+$font-Flaticon-social-vimeo-in-a-circle-logo: "\f103";
+$font-Flaticon-linkedin-logo: "\f104";
+$font-Flaticon-linkedin-button: "\f105";
+$font-Flaticon-instagram-logo-1: "\f106";
+$font-Flaticon-instagram-logo: "\f107";
+$font-Flaticon-dribbble-logo: "\f108";
+$font-Flaticon-dribble-logo-button: "\f109";
+$font-Flaticon-behance-logo: "\f10a";
+$font-Flaticon-behance-logo-button: "\f10b";
+$font-Flaticon-3d-outlined-shape: "\f10c";
+$font-Flaticon-github-logo: "\f10d";
+$font-Flaticon-github: "\f10e";
+$font-Flaticon-facebook-logo-button: "\f10f";
+$font-Flaticon-twitter-logo-button: "\f110";
+$font-Flaticon-twitter-logo-silhouette: "\f111";
+$font-Flaticon-facebook-logo: "\f112";
+$font-Flaticon-left-arrow: "\f113";
+$font-Flaticon-arrow-point-to-right: "\f114";
+$font-Flaticon-right-arrow-1: "\f115";
+$font-Flaticon-right-arrow: "\f116";

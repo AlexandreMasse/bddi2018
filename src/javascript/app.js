@@ -48,7 +48,8 @@ var previousSectionId;
                     iframe.classList.add('projects-iframe');
 
             categoryDescription.innerHTML +=
-            `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.`;
+            `<div class="fi flaticon-left-arrow action-back"></div>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.`;
             categoryContent.appendChild(categoryDescription);
             categorySection.appendChild(categoryContent);
 
@@ -66,7 +67,9 @@ var previousSectionId;
                                 const pathFile = categories[i].ident+'/'+projects[index].id+'_'+projects[index].ident;
                                 projectsList.innerHTML +=
                                 `<div class="projects__list-item" data-id="project-${projects[index].id}" data-url="${pathFile}/projet">
-                                    <div class="project__thumbnail"></div>
+                                    <div class="project__thumbnail">
+                                      <div class="project__thumbnail-img"></div>
+                                    </div>
                                     <h2>${projects[index].name}</h2>
                                     <p>${studentsNames}</p>
                                 </div>`;
