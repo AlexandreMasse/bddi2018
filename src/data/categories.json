@@ -3,7 +3,7 @@
         "id": 0,
         "name": "Dataviz",
         "ident": "dataviz",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur deserunt earum illum nostrum quam? Ad alias aliquam, at beatae, dolores ducimus ea esse facere nulla, officiis optio possimus quas tenetur?",
+        "description": "Pour ce projet, nous avions la possibilité de choisir une technologie de notre choix. L’idée derrière ce projet était de montrer, au travers d’un site web, une représentation de données. Visuellement parlant, nous étions libres, et les données pouvaient soit provenir de gros jeu de données (pollution au cours des années, déforestation…) ou bien cela pouvait être un questionnaire de notre cru (enquête concernant les élèves de la classe par exemple)",
         "projectsList": [
             {
                 "id": 0,
@@ -218,7 +218,8 @@
                 "studentsList": [
                     3,
                     16
-                ]
+                ],
+                "screens" : [0, 1, 2, 3, 4]
             },
             {
                 "id": 24,
@@ -228,7 +229,8 @@
                     4,
                     19,
                     22
-                ]
+                ],
+                "screens" : [0, 1, 2, 3, 4]
             },
             {
                 "id": 25,
@@ -237,16 +239,18 @@
                 "studentsList": [
                     8,
                     40
-                ]
+                ],
+                "screens" : [0, 1, 2]
             },
             {
                 "id": 26,
                 "name": "Le Retable de la Crucifixion",
-                "ident": "le_retable_de_la_crucifixion",
+                "ident": "retable",
                 "studentsList": [
                     9,
                     25
-                ]
+                ],
+                "screens" : [0, 1, 2]
             },
             {
                 "id": 27,
@@ -255,7 +259,8 @@
                 "studentsList": [
                     10,
                     18
-                ]
+                ],
+                "screens" : [0, 1, 2]
             },
             {
                 "id": 28,
@@ -287,11 +292,12 @@
             {
                 "id": 31,
                 "name": "Les 12 bustes",
-                "ident": "les_douze_bustes",
+                "ident": "douze_bustes",
                 "studentsList": [
                     27,
                     39
-                ]
+                ],
+                "screens" : [0, 1, 2, 3]
             }
         ]
     },
@@ -322,7 +328,8 @@
                     22,
                     19,
                     15
-                ]
+                ],
+                "screens" : [0]
             },
             {
                 "id": 34,
@@ -333,7 +340,8 @@
                     28,
                     35,
                     38
-                ]
+                ],
+                "screens" : [0, 1, 2]
             },
             {
                 "id": 35,
@@ -344,7 +352,8 @@
                     8,
                     26,
                     23
-                ]
+                ],
+                "screens" : [0]
             },
             {
                 "id": 36,
@@ -355,7 +364,8 @@
                     30,
                     41,
                     29
-                ]
+                ],
+                "screens" : [0]
             },
             {
                 "id": 37,
@@ -366,7 +376,8 @@
                     24,
                     31,
                     17
-                ]
+                ],
+                "screens" : [0]
             },
             {
                 "id": 38,
@@ -389,7 +400,8 @@
                     2,
                     40,
                     9
-                ]
+                ],
+                "screens" : [0]
             },
             {
                 "id": 40,
@@ -399,7 +411,8 @@
                     7,
                     39,
                     11
-                ]
+                ],
+                "screens" : [0, 1, 2]
             },
             {
                 "id": 41,
@@ -410,7 +423,8 @@
                     33,
                     1,
                     25
-                ]
+                ],
+                "screens" : [0, 1, 2]
             }
         ]
     },
@@ -418,7 +432,7 @@
         "id": 3,
         "ident": "canvas-audio",
         "name": "Canvas Audio Expirement",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur deserunt earum illum nostrum quam? Ad alias aliquam, at beatae, dolores ducimus ea esse facere nulla, officiis optio possimus quas tenetur?",
+        "description": "Nous avons pu découvrir au travers de cette expérience la Web Audio API. Il s’agit d’une API navigateur qui permet d’analyser en temps réel un son. De ce fait, nous avons donc réalisé un « visualiseur » de son via l’utilisation des canvas en JavaScript. Nous avons donc pu, au travers de ce workshop, libérer notre créativité et expérimenter énormément de choses.",
         "projectsList": [
             {
                 "id": 42,
@@ -470,8 +484,8 @@
             },
             {
                 "id": 48,
-                "name": "",
-                "ident": "",
+                "name": "Egg & Co",
+                "ident": "egg_co",
                 "studentsList": [
                     14
                 ]
@@ -594,7 +608,7 @@
         "id": 4,
         "ident": "chat",
         "name": "VueJS Chat",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur deserunt earum illum nostrum quam? Ad alias aliquam, at beatae, dolores ducimus ea esse facere nulla, officiis optio possimus quas tenetur?",
+        "description": "Nous avons pu découvrir au travers de cette expérience la Web Audio API. Il s’agit d’une API navigateur qui permet d’analyser en temps réel un son. De ce fait, nous avons donc réalisé un « visualiseur » de son via l’utilisation des canvas en JavaScript. Nous avons donc pu, au travers de ce workshop, libérer notre créativité et expérimenter énormément de choses.",
         "projectsList": [
             {
                 "id": 63,
@@ -603,7 +617,8 @@
                 "studentsList": [
                     6,
                     9
-                ]
+                ],
+                "screens" : [0]
             },
             {
                 "id": 64,
@@ -622,6 +637,46 @@
                     15,
                     18
                 ]
+            },
+            {
+                "id": 87,
+                "name": "Citychat",
+                "ident": "citychat",
+                "studentsList": [
+                    31,
+                    4
+                ],
+                "screens" : [0, 1]
+            },
+            {
+                "id": 88,
+                "name": "Chat",
+                "ident": "chat",
+                "studentsList": [
+                    28,
+                    30
+                ],
+                "screens" : [0, 1]
+            },
+            {
+                "id": 89,
+                "name": "Ssscht",
+                "ident": "ssscht",
+                "studentsList": [
+                    11,
+                    37
+                ],
+                "screens" : [0, 1, 2]
+            },
+            {
+                "id": 90,
+                "name": "Chat",
+                "ident": "chat",
+                "studentsList": [
+                    29,
+                    40
+                ],
+                "screens" : [0]
             }
         ]
     },
@@ -629,7 +684,7 @@
         "id": 5,
         "ident": "3d-audio",
         "name": "3D Audio Experiment",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur deserunt earum illum nostrum quam? Ad alias aliquam, at beatae, dolores ducimus ea esse facere nulla, officiis optio possimus quas tenetur?",
+        "description": "Partant de nos connaissances que nous avions acquises sur la Web Audio API, nous avons dû refaire une expérience audio. Cependant, celle là devait être faite avec ThreeJS, une librairie permettant de faire de la 3D assez simplement. L’aspect trois dimensions nous a permis de se permettre encore plus de folies concernant le rendu visuel, et cela a donné des rendus très différents les uns des autres.",
         "projectsList": [
             {
                 "id": 66,
@@ -681,8 +736,8 @@
             },
             {
                 "id": 72,
-                "name": "",
-                "ident": "",
+                "name": "Ain't no Fuji high enough",
+                "ident": "fuji",
                 "studentsList": [
                     14
                 ]
@@ -798,6 +853,95 @@
                 "studentsList": [
                     41
                 ]
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "ident": "web",
+        "name": "Initiation HTML/CSS/JS",
+        "description": "Partant de nos connaissances que nous avions acquises sur la Web Audio API, nous avons dû refaire une expérience audio. Cependant, celle là devait être faite avec ThreeJS, une librairie permettant de faire de la 3D assez simplement. L’aspect trois dimensions nous a permis de se permettre encore plus de folies concernant le rendu visuel, et cela a donné des rendus très différents les uns des autres.",
+        "projectsList": [
+            {
+                "id": 91,
+                "name": "Portfolio",
+                "ident": "alix",
+                "studentsList": [
+                    4
+                ],
+                "screens" : [0, 1, 2, 3, 4]
+            },
+            {
+                "id": 92,
+                "name": "Portfolio",
+                "ident": "allan",
+                "studentsList": [
+                    25
+                ],
+                "screens" : [0, 1, 2, 3]
+            },
+            {
+                "id": 93,
+                "name": "tron",
+                "ident": "cassandre",
+                "studentsList": [
+                    18
+                ],
+                "screens" : [0]
+            },
+            {
+                "id": 94,
+                "name": "Portfolio",
+                "ident": "clara",
+                "studentsList": [
+                    39
+                ],
+                "screens" : [0, 1, 2]
+            },
+            {
+                "id": 95,
+                "name": "Nike",
+                "ident": "elisa",
+                "studentsList": [
+                    8
+                ],
+                "screens" : [0]
+            },
+            {
+                "id": 96,
+                "name": "Portfolio",
+                "ident": "manon",
+                "studentsList": [
+                    3
+                ],
+                "screens" : [0, 1, 2, 3]
+            },
+            {
+                "id": 97,
+                "name": "Portfolio",
+                "ident": "matthieu",
+                "studentsList": [
+                    30
+                ],
+                "screens" : [0, 1, 2, 3]
+            },
+            {
+                "id": 98,
+                "name": "Portfolio",
+                "ident": "remi",
+                "studentsList": [
+                    9
+                ],
+                "screens" : [0, 1, 2]
+            },
+            {
+                "id": 99,
+                "name": "Portfolio",
+                "ident": "xindi",
+                "studentsList": [
+                    40
+                ],
+                "screens" : [0, 1, 2]
             }
         ]
     }
