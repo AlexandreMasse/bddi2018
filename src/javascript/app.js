@@ -59,6 +59,7 @@ var previousSectionId;
                                 projectsList.innerHTML += 
                                 `<div class="projects__list-item" data-id="project-${projects[index].id}" data-url="${pathFile}/projet" data-view=${projects[index].view}>
                                     <h2>${projects[index].name}</h2>
+                                    <h1>${projects[index].id}</h1>
                                     <p>By : ${studentsNames}</p>
                                     <hr>
                                 </div>`;
