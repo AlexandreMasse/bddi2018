@@ -33,44 +33,53 @@ var previousSectionId;
                     </div>
             </div>`;
             categoriesList.innerHTML += categoryHTML;
-            
+
             //Creates section for each category
             const   categorySection = createCustomElement('section', categories[i].id, 'category', categories[i].ident);
-                    categorySection.classList.add('slideToFade', 'hidden')
+                    categorySection.classList.add('slideToFade', 'hidden', "category")
+            const   categoryContent = document.createElement('div');
+                    categoryContent.setAttribute('class','category__content');
+            const   categoryDescription = document.createElement('p');
+                    categoryDescription.setAttribute('class','category__description');
             const   projectsList  = document.createElement('div');
             const   projectsScreens = document.createElement('div');
                     projectsScreens.classList.add('project__screens');
                     projectsList.classList.add('project__list');
             const   iframe = document.createElement('iframe');
                     iframe.classList.add('projects-iframe');
-            
+
+            categoryDescription.innerHTML +=
+            `<div class="fi flaticon-left-arrow action-back"></div>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.`;
+            categoryContent.appendChild(categoryDescription);
+            categorySection.appendChild(categoryContent);
+
             //List all projects from category
             for (let j = 0; j < projects.length; j++) {
                 const studentsList = projects[j].studentsList;
                 (function(index) {
                     //Find students information
-                    utils.findStudentsByProject(projects[index].id).then(function(students) {
+                    utils.findStudentsByProject(projects[index].idgit ).then(function(students) {
                         var studentsNames = ``;
                         for (let k = 0; k < students.length; k++) {
                             utils.findOneByIn('students', 'id', students[k].id);
                             studentsNames += `${students[k].firstname} ${students[k].lastname} <em>(${students[k].option})</em> - `;
                             if (k == students.length - 1) {
                                 const pathFile = categories[i].ident+'/'+projects[index].id+'_'+projects[index].ident;
-                                projectsList.innerHTML += 
-                                `<div class="projects__list-item" data-id="project-${projects[index].id}" data-url="${pathFile}/projet" data-view=${projects[index].view}>
+                                projectsList.innerHTML +=
+                                `<div class="projects__list-item" data-id="project-${projects[index].id}" data-url="${pathFile}/projet">
+                                    <div class="project__thumbnail">
+                                      <div class="project__thumbnail-img"></div>
+                                    </div>
                                     <h2>${projects[index].name}</h2>
-                                    <h1>${projects[index].id}</h1>
-                                    <p>By : ${studentsNames}</p>
-                                    <hr>
+                                    <p>${studentsNames}</p>
                                 </div>`;
-
-                                //TODO : add screens for every screen in the list
-                                projectsScreens.innerHTML += 
-                                `<div class="projet__screen-${projects[index].id}">
-                                    <img src="${pathFile}/screens" />
+                                projectsScreens.innerHTML +=
+                                `<div class="project__screen->
+                                    <img src="${pathFile}/screens"/>
                                 </div>`;
                             }
-                        } 
+                        }
                     });
                     //Add sections to DOM
                     if (index == projects.length - 1) {
@@ -80,7 +89,7 @@ var previousSectionId;
                         var homepage = document.getElementById('homepage');
                             homepage.parentNode.insertBefore(categorySection, homepage.nextSibling);
                     }
-                })(j);   
+                })(j);
             }
         }
          //Add click event on category
@@ -114,7 +123,7 @@ var previousSectionId;
         })
         
     });
-    
+
     function createCustomElement(element, id, slug, className) {
         let elementCreated = document.createElement(element);
             slug && className ? elementCreated.setAttribute('id', slug+'__' + className) : false;
