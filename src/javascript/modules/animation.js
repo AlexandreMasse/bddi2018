@@ -43,9 +43,9 @@ menu_open.addEventListener("click", function() {
   menu_close.classList.remove("hidden");*/
 
   fadeOut(homepage, 0.5);
-  fadeOut(menu_open, 0.2);
-  fadeIn(menu_close, 0.5, 0.3);
-  fadeIn(menu, 0.5, 1);
+  fadeOut(menu_open, 0.5);
+  fadeIn(menu_close, 0.5);
+  fadeIn(menu, 0.5);
 
 });
 
@@ -54,16 +54,8 @@ menu_close.addEventListener("click", function() {
     menu_open.classList.remove("hidden");
     menu_close.classList.add("hidden");*/
 
-    fadeOut(menu_close, 0.5);
+    fadeOut(menu_close, 0.1);
     fadeOut(menu, 0.5);
     fadeIn(homepage, 0.5, 0.5);
-    fadeIn(menu_open,0.5, 0.5);
+    fadeIn(menu_open,0.5);
 });
-
-
-
-
-
-
-
-

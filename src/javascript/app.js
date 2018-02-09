@@ -43,7 +43,7 @@ var previousSectionId;
                     <div class="projects__category-thumbnail"></div>
                         <div class="projects__category-description">
                             <p>${categories[i].description.substring(0,250)}...</p>
-                            <span>Next</span>
+                            <div class="fi flaticon-left-arrow action-show"></div>
                         </div>
                     </div>
             </div>`;
