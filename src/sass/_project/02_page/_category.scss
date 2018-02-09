@@ -17,7 +17,6 @@
         }
       }
     }
-    .project__list {
       .projects__list-item {
         cursor: pointer;
         width: 300px;
@@ -36,7 +35,7 @@
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
-            background-image: url('../images/placeholder-thumbnail.png');
+            // background-image: url('../images/placeholder-thumbnail.png');
             transition: all 0.7s ease;
           }
         }
@@ -60,6 +59,5 @@
           }
         }
       }
-    }
   }
 }

@@ -28,13 +28,17 @@ function fadeIn(el, duration, delay = 0) {
 
 }
 
-
 var menu_open = document.querySelector(".header_menu-open");
 var menu_close = document.querySelector(".header_menu-close");
+var start = document.querySelector(".landing__start");
 var homepage = document.querySelector("#homepage");
 var menu = document.querySelector(".menu");
 var categories = document.querySelector(".categories");
 var body = document.querySelector("body");
+
+start.addEventListener("click", function() {
+  window.scrollTo(0, window.innerHeight);
+});
 
 
 menu_open.addEventListener("click", function() {
