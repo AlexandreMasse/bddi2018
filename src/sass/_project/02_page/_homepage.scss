@@ -74,6 +74,7 @@ body {
           justify-content: center;
           align-items: center;
           text-align: center;
+          cursor: pointer;
           .menu__thumbnail {
             width: 700px;
             height: 300px;
@@ -224,20 +225,27 @@ body {
             background: $color-white;
             width: 350px;
             height: 250px;
-            padding: 20px;
+            padding: 25px;
             position: absolute;
             top: 0;
             right: 0;
+            font-family: $font-aileron-regular;
+            font-size: 16px;
+            text-align: justify;
             p {
               color: $color-black;
               line-height: 25px;
             }
-            span {
-              color: $color-black;
-              opacity: 0.5;
-              text-transform: uppercase;
-              font-family: $font-aileron-regular;
-              letter-spacing: 2px;
+            .action-show {
+              text-align: right;
+              position: absolute;
+              right: 25px;
+              bottom: 25px;
+              cursor: pointer;
+              &:before {
+                color: $color-purple;
+                transform: rotate(180deg);
+              }
             }
           }
         }
@@ -353,7 +361,7 @@ body {
       }
     }
     .social-share__facebook {
-      margin-bottom: 10px;
+      margin-bottom: 15px;
     }
     span.fi {
       margin: 15px 0;
