@@ -264,7 +264,35 @@ body {
         }
       }
     }
-
+  }
+  .project {
+    &__content {
+      width: 940px;
+      margin: 0 auto;
+      margin-top: 200px;
+      .project__informations {
+        h1 {
+          text-transform: uppercase;
+          letter-spacing: 3px;
+          font-family: $font-walsheim-regular;
+          margin-bottom: 10px;
+        }
+        h2 {
+          font-family: $font-aileron-light;
+          font-size: 16px;
+          span {
+            text-decoration: underline;
+            cursor: pointer;
+          }
+        }
+        .action-show-project {
+        margin-top: 50px;
+        }
+      }
+      .project__screens {
+        margin-top: 100px;
+      }
+    }
   }
   &.menu-active {
     .menu {
