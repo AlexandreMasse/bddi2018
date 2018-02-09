@@ -1,5 +1,6 @@
 var menu_open = document.querySelector(".header_menu-open");
 var menu_close = document.querySelector(".header_menu-close");
+var categories = document.querySelector(".categories");
 var body = document.querySelector("body");
 
 menu_open.addEventListener("click", function() {
