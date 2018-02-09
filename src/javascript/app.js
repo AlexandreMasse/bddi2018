@@ -21,6 +21,7 @@ var previousSectionId;
 
             //TODO : Add categories to menu and create action on click
 
+            //TODO : Add back button
 
             //Add categories to homepage
             categoryHTML =
@@ -53,7 +54,8 @@ var previousSectionId;
                     iframe.classList.add('projects-iframe');
 
             categoryDescription.innerHTML +=
-            `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.`;
+            `<div class="fi flaticon-left-arrow action-back"></div>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.`;
             categoryContent.appendChild(categoryDescription);
             categorySection.appendChild(categoryContent);
 
@@ -62,7 +64,7 @@ var previousSectionId;
                 const studentsList = projects[j].studentsList;
                 (function(index) {
                     //Find students information
-                    utils.findStudentsByProject(projects[index].id).then(function(students) {
+                    utils.findStudentsByProject(projects[index].idgit ).then(function(students) {
                         var studentsNames = ``;
                         for (let k = 0; k < students.length; k++) {
                             utils.findOneByIn('students', 'id', students[k].id);
@@ -71,7 +73,9 @@ var previousSectionId;
                                 const pathFile = categories[i].ident+'/'+projects[index].id+'_'+projects[index].ident;
                                 projectsList.innerHTML +=
                                 `<div class="projects__list-item" data-id="project-${projects[index].id}" data-url="${pathFile}/projet">
-                                    <div class="project__thumbnail"></div>
+                                    <div class="project__thumbnail">
+                                      <div class="project__thumbnail-img"></div>
+                                    </div>
                                     <h2>${projects[index].name}</h2>
                                     <p>${studentsNames}</p>
                                 </div>`;
@@ -82,9 +86,11 @@ var previousSectionId;
                             }
                         }
                     });
+                    //Add sections to DOM
                     if (index == projects.length - 1) {
-                        categoryContent.appendChild(projectsList);
-                        categoryContent.appendChild(projectsScreens);
+                        categorySection.appendChild(projectsList);
+                        categorySection.appendChild(iframe);
+                        categorySection.appendChild(projectsScreens);
                         var homepage = document.getElementById('homepage');
                             homepage.parentNode.insertBefore(categorySection, homepage.nextSibling);
                     }
@@ -96,14 +102,36 @@ var previousSectionId;
             const categoryIdent = category.getAttribute('data-ident');
             category.querySelector('.projects__category-thumbnail').addEventListener('click', function() {
                 document.getElementById('homepage').classList.add('hidden');
-                document.querySelector('.'+categoryIdent).classList.remove('hidden');
+                document.getElementById(categoryIdent).classList.remove('hidden');
+                previousSectionId = 'homepage';
             });
         });
+
+        //Add click event on project (load screens or load iframe)
+        document.querySelectorAll('.projects__list-item').forEach(function(projectItem) {
+            console.log(projectItem);
+            projectItem.addEventListener('click', function() {
+                const projectScreens = document.querySelector('projet__screen-'+projectItem.getAttribute('data-id'));
+                console.log('load Project');
+                switch (projectItem.getAttribute('data-view')) {
+                    case 'code':
+                        console.log(projectsList.closest('section').querySelector('iframe'));
+                        break;
+                    case 'screen':
+                        console.log(projectScreens);
+                        break;
+                    case 'code-screen':
+                        console.log(projectScreens);
+                        break;
+                }
+            })
+        })
+        
     });
 
     function createCustomElement(element, id, slug, className) {
         let elementCreated = document.createElement(element);
-            slug && className ? elementCreated.classList.add(slug+'__' + className) : false;
+            slug && className ? elementCreated.setAttribute('id', slug+'__' + className) : false;
             id && slug ? elementCreated.setAttribute('data-id', slug+'-' + id) : false;
 
         return elementCreated;

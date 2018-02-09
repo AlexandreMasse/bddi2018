@@ -214,11 +214,19 @@ body {
         color: $color-white;
         line-height: 40px;
         font-size: 20px;
-        font-family:$font-walsheim-regular;
+        font-family: $font-walsheim-regular;
         width: 700px;
+        margin-bottom: 80px;
+        .fi {
+          &:before {
+            font-size: 14px;
+            color: $color-purple;
+          }
+        }
       }
       .project__list {
         .projects__list-item {
+          cursor: pointer;
           width: 300px;
           height: 350px;
           float: left;
@@ -226,20 +234,68 @@ body {
             margin: 0 20px;
           }
           .project__thumbnail {
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-image: url('../images/placeholder-thumbnail.png');
             width: 300px;
             height: 200px;
+            overflow: hidden;
+            &-img {
+              width: 300px;
+              height: 200px;
+              background-position: center;
+              background-repeat: no-repeat;
+              background-size: cover;
+              background-image: url('../images/placeholder-thumbnail.png');
+              transition: all 0.7s ease;
+            }
           }
           h2 {
-
+            font-family: $font-walsheim-regular;
+            margin: 15px 2px 10px 2px;
+            font-size: 20px;
+            line-height: 25px;
           }
           p {
-
+            font-family: $font-aileron-light;
+            font-size: 12px;
+            line-height: 20px;
+            opacity: 0.8;
+          }
+          &:hover {
+            .project__thumbnail {
+              &-img {
+                transform: scale(1.1);
+              }
+            }
           }
         }
+      }
+    }
+  }
+  .project {
+    &__content {
+      width: 940px;
+      margin: 0 auto;
+      margin-top: 200px;
+      .project__informations {
+        h1 {
+          text-transform: uppercase;
+          letter-spacing: 3px;
+          font-family: $font-walsheim-regular;
+          margin-bottom: 10px;
+        }
+        h2 {
+          font-family: $font-aileron-light;
+          font-size: 16px;
+          span {
+            text-decoration: underline;
+            cursor: pointer;
+          }
+        }
+        .action-show-project {
+        margin-top: 50px;
+        }
+      }
+      .project__screens {
+        margin-top: 100px;
       }
     }
   }
