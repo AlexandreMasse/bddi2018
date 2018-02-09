@@ -294,6 +294,31 @@ body {
       }
     }
   }
+  .social-share {
+    position: fixed;
+    bottom: 35px;
+    right: 35px;
+    .social-share__facebook, .social-share__twitter {
+      cursor: pointer;
+      &:hover {
+        span.fi {
+          &:before {
+            opacity: 1;
+          }
+        }
+      }
+    }
+    .social-share__facebook {
+      margin-bottom: 10px;
+    }
+    span.fi {
+      margin: 15px 0;
+      &:before {
+        transition: all 0.5s ease;
+        opacity: 0.5;
+      }
+    }
+  }
   &.menu-active {
     .menu {
       display: block;
