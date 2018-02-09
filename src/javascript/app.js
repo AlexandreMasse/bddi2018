@@ -3,6 +3,11 @@ var niceModule = require('./modules/niceModule');
 var utils = require('./modules/utils');
 var animation = require('./modules/animation');
 var canvasBackground = require('./modules/canvasBackground');
+var test = document.querySelector(".test");
+var T = require('gsap/TweenLite');
+
+
+
 
 //Init Background
 canvasBackground.init();

@@ -470,8 +470,8 @@
             },
             {
                 "id": 48,
-                "name": "",
-                "ident": "",
+                "name": "Egg & Co",
+                "ident": "egg_co",
                 "studentsList": [
                     14
                 ]
@@ -681,8 +681,8 @@
             },
             {
                 "id": 72,
-                "name": "",
-                "ident": "",
+                "name": "Ain't no Fuji high enough",
+                "ident": "fuji",
                 "studentsList": [
                     14
                 ]
