@@ -6,7 +6,10 @@ var canvasBackground = require('./modules/canvasBackground');
 var test = document.querySelector(".test");
 // var T = require('gsap/TweenLite');
 
-
+window.onload = () => {
+  const loader = document.querySelector('.loader');
+    loader.classList.add('hidden-loader');
+}
 
 
 //Init Background
