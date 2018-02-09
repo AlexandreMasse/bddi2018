@@ -23,9 +23,9 @@ var previousSectionId;
             //TODO : Add categories to menu and create action on click
             categoryItem =
             `<li class="menu__items-item">
-    					<div class="menu__thumbnail" style="background-image:url('images/thumbnail-${categories[i].id}.jpg')"></div>
-    					<span>${categories[i].name}</span>
-    				</li>`;
+                <div class="menu__thumbnail" style="background-image:url('images/thumbnail-${categories[i].id}.jpg')"></div>
+                <span>${categories[i].name}</span>
+            </li>`;
             categoriesMenu.innerHTML += categoryItem;
 
             //TODO : Add back button
@@ -39,7 +39,7 @@ var previousSectionId;
                     <div class="projects__category-content">
                     <div class="projects__category-thumbnail"></div>
                         <div class="projects__category-description">
-                            <p>${categories[i].description}</p>
+                            <p>${categories[i].description.substring(0,250)}...</p>
                             <span>Next</span>
                         </div>
                     </div>
@@ -61,8 +61,8 @@ var previousSectionId;
                     iframe.classList.add('projects-iframe');
 
             categoryDescription.innerHTML +=
-            `<div class="fi flaticon-left-arrow action-back"></div>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.`;
+                `<div class="fi flaticon-left-arrow action-back"></div>
+                <p>${categories[i].description}</p>`;
             categoryContent.appendChild(categoryDescription);
             categorySection.appendChild(categoryContent);
 
@@ -71,17 +71,20 @@ var previousSectionId;
                 const studentsList = projects[j].studentsList;
                 (function(index) {
                     //Find students information
-                    utils.findStudentsByProject(projects[index].idgit ).then(function(students) {
+                    utils.findStudentsByProject(projects[index].id).then(function(students) {
+                        console.log('yeya');
                         var studentsNames = ``;
                         for (let k = 0; k < students.length; k++) {
                             utils.findOneByIn('students', 'id', students[k].id);
                             studentsNames += `${students[k].firstname} ${students[k].lastname} <em>(${students[k].option})</em> - `;
                             if (k == students.length - 1) {
                                 const pathFile = categories[i].ident+'/'+projects[index].id+'_'+projects[index].ident;
+                                console.log(projects[j].screens);
+                                const thumbnail = projects[j].screens && projects[j].screens.length ? 'projets/'+pathFile+'/screens/0.png' : 'images/thumbnail-'+categories[i].id+'.jpg';
                                 projectsList.innerHTML +=
                                 `<div class="projects__list-item" data-id="project-${projects[index].id}" data-url="${pathFile}/projet">
                                     <div class="project__thumbnail">
-                                      <div class="project__thumbnail-img"></div>
+                                      <div class="project__thumbnail-img"><img src="${thumbnail}" width="300"/></div>
                                     </div>
                                     <h2>${projects[index].name}</h2>
                                     <p>${studentsNames}</p>
