@@ -4,7 +4,7 @@ var utils = require('./modules/utils');
 var animation = require('./modules/animation');
 var canvasBackground = require('./modules/canvasBackground');
 var test = document.querySelector(".test");
-var T = require('gsap/TweenLite');
+// var T = require('gsap/TweenLite');
 
 
 
@@ -16,10 +16,17 @@ var previousSectionId;
     //Loads all categories from file
     utils.findAllIn('categories').then(function(categories) {
         const categoriesList = document.getElementById('categories-list');
+        const categoriesMenu = document.getElementById('categories-item');
         for (let i = 0; i < categories.length; i++) {
             let projects = categories[i].projectsList;
 
             //TODO : Add categories to menu and create action on click
+            categoryItem =
+            `<li class="menu__items-item">
+    					<div class="menu__thumbnail" style="background-image:url('images/thumbnail-${categories[i].id}.jpg')"></div>
+    					<span>${categories[i].name}</span>
+    				</li>`;
+            categoriesMenu.innerHTML += categoryItem;
 
             //TODO : Add back button
 
@@ -126,7 +133,7 @@ var previousSectionId;
                 }
             })
         })
-        
+
     });
 
     function createCustomElement(element, id, slug, className) {
