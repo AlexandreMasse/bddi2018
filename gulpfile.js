@@ -111,7 +111,7 @@ gulp.task('scripts', function(){
 	
 	// Minify javascript
 	.pipe(buffer())
-	.pipe($.if(!dev, $.uglify()))
+	// .pipe($.if(!dev, $.uglify()))
 	.pipe($.if(dev, gulp.dest('.tmp/javascript')))
 	.pipe($.if(!dev, gulp.dest('dist/assets/javascript')))
 	.pipe(reload({stream:true}));

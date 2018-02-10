@@ -43,15 +43,16 @@
             const   categorySection = createCustomElement('section', categories[i].id, 'category', categories[i].ident);
                     categorySection.classList.add('slideToFade', 'hidden', "category")
             const   categoryContent = document.createElement('div');
-                    categoryContent.setAttribute('class','category__content');
+                    categoryContent.classList.add('project__list','category__content');
             const   categoryDescription = document.createElement('p');
                     categoryDescription.setAttribute('class','category__description');
-            const   projectsList  = document.createElement('div');
+            // const   projectsList  = document.createElement('div');
             const   projectsScreens = document.createElement('div');
                     projectsScreens.classList.add('project__screens', 'hidden');
-                    projectsList.classList.add('project__list');
+                    // projectsList.classList.add('project__list');
             const   iframe = document.createElement('iframe');
                     iframe.classList.add('project-iframe', 'hidden');
+                    categorySection.appendChild(iframe);
 
             categoryDescription.innerHTML +=
                 `<div class="fi flaticon-left-arrow action-back backhome"></div>
@@ -76,7 +77,8 @@
                                 const projectItem = document.createElement('div');
                                     projectItem.classList.add('projects__list-item');
                                     projectItem.setAttribute('id', `project-${projects[index].id}`);
-                                    projectItem.setAttribute('data-url', `${pathFile}/projet`);
+                                    projectItem.setAttribute('data-url', `${pathFile}/code`);
+                                    projectItem.setAttribute('data-view', projects[index].view);
                                     projectItem.innerHTML +=
                                     `   <div class="project__thumbnail">
                                             <div class="project__thumbnail-img" style="background-image: url('${thumbnail}')">
@@ -106,9 +108,8 @@
                                     for (let l = 0; l < projects[j].screens.length; l++) {
                                         projectScreen.innerHTML += 
                                         `<div class="project__screen-${l}">
-                                            <img src="projets/${pathFile}/screens/${l}.jpg" alt=""/>
+                                            <img src="${location.host}/projets/${pathFile}/screens/${l}.jpg" alt=""/>
                                         </div>`;
-
                                     }
                                     projectsScreens.appendChild(projectContent);
                                 }
@@ -121,8 +122,8 @@
                         const backLink = document.createElement('a');
                             backLink.innerHTML = 'back';
                             backLink.classList.add('project__back-link', 'fi', 'flaticon-left-arrow', 'action-back');
-                        categorySection.appendChild(projectsList);
-                        categorySection.appendChild(iframe);
+                        // categorySection.appendChild(projectsList);
+                        // categorySection.appendChild(iframe);
                         categorySection.appendChild(backLink);
                         
                         categorySection.appendChild(projectsScreens);
@@ -190,17 +191,12 @@
                 projectItem.addEventListener('click', function() {
                     const projectScreens = document.querySelector('projet__screen-'+projectItem.getAttribute('data-id'));
                     const   iframe = projectItem.closest('section').querySelector('iframe');
-                            iframe.setAttribute('src', 'projets/'+projectItem.getAttribute('data-url'));
 
                     switch (projectItem.getAttribute('data-view')) {
                         case 'code':
-                            iframe.setAttribute('src', 'projets/'+projectItem.getAttribute('data-url'));
+                            iframe.setAttribute('src', location.host+'/projets/'+projectItem.getAttribute('data-url'));
                             break;
                         case 'screen':
-                            console.log(projectScreens);
-                            break;
-                        case 'code-screen':
-                            console.log(projectScreens);
                             break;
                     }
                 })

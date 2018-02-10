@@ -1,6 +1,7 @@
 var animation = require('./modules/animation');
 var canvasBackground = require('./modules/canvasBackground');
 var projectHandler = require('./modules/projects');
+// var projectHandler = require('./modules/smoothScroll');
 
 const loader = document.querySelector('.loader');
 const header = document.querySelector('header');

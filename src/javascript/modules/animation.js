@@ -14,6 +14,12 @@ function fadeOut(el, duration, delay = 0) {
             (s.opacity-=.1) < -0.5 ? s.display="none" : setTimeout(fade,duration * 100)
         })();
     },delay * 1000)
+
+    window.scrollTo({
+        "behavior": "smooth",
+        "left": 0,
+        "top":0
+    });
 }
 
 function fadeIn(el, duration, delay = 0) {
@@ -198,7 +204,6 @@ function addListener() {
         fadeOut(current, 0.5);
     }
 
-
     // MENU : OPEN
 
     menu_open.addEventListener("click", function() {
@@ -237,9 +242,6 @@ function addListener() {
          });
      })
 
-
-
-
     // Louvres : OPEN
 
     menuLouvres.addEventListener('click', function () {
@@ -248,12 +250,31 @@ function addListener() {
         fadeInCurrent()
     });
 
+    homeLouvres.forEach(function (el) {
+        el.addEventListener('click', function () {
+            previous = current;
+            fadeOut(homepage, 0.5);
+            current = categoryLouvres;
+            fadeInCurrent();
+        });
+    })
+
     // Festival : OPEN
 
     menufestival.addEventListener('click', function () {
         current = categoryFestival;
         closeMenu();
         fadeInCurrent()
+    });
+
+
+    homefestival.forEach(function (el) {
+        el.addEventListener('click', function () {
+            previous = current;
+            fadeOut(homepage, 0.5);
+            current = categoryFestival;
+            fadeInCurrent();
+        });
     });
 
     // Canavs Audio : OPEN
@@ -264,6 +285,15 @@ function addListener() {
         fadeInCurrent()
     });
 
+    homeCanvasAudio.forEach(function (el) {
+        el.addEventListener('click', function () {
+            previous = current;
+            fadeOut(homepage, 0.5);
+            current = categoryCanvasAudio;
+            fadeInCurrent();
+        });
+    });
+
     // Chat : OPEN
 
     menuChat.addEventListener('click', function () {
@@ -271,6 +301,15 @@ function addListener() {
         closeMenu();
         fadeInCurrent()
     });
+
+    homeChat.forEach(function (el) {
+        el.addEventListener('click', function () {
+            previous = current;
+            fadeOut(homepage, 0.5);
+            current = categoryChat;
+            fadeInCurrent();
+        });
+    })
 
     // 3D audio: OPEN
 
@@ -280,7 +319,16 @@ function addListener() {
         fadeInCurrent()
     });
 
-    // 3D audio: OPEN
+    home3dAudio.forEach(function (el) {
+        el.addEventListener('click', function () {
+            previous = current;
+            fadeOut(homepage, 0.5);
+            current = category3dAudio;
+            fadeInCurrent();
+        });
+    })
+
+    // Menu web: OPEN
 
     menuWeb.addEventListener('click', function () {
         current = categoryWeb;
@@ -288,8 +336,17 @@ function addListener() {
         fadeInCurrent()
     });
 
+    homeWeb.forEach(function (el) {
+        el.addEventListener('click', function () {
+            previous = current;
+            fadeOut(homepage, 0.5);
+            current = categoryWeb;
+            fadeInCurrent();
+        });
+    })
 
     // BACKHOME
+
     for (let i = 0; i < backhome.length; i++) {
 
         backhome[i].addEventListener('click', function () {
