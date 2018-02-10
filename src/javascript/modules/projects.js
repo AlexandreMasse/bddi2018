@@ -15,7 +15,7 @@
 
             //TODO : create action on click
             categoryItem =
-                `<li class="menu__items-item" data-id="category-${categories[i].id}" data-ident="category__${categories[i].ident}">
+                `<li class="menu__items-item" data-id="category-${categories[i].id}" data-ident="category__${categories[i].ident}" id="menu-${categories[i].ident}">
                     <div class="menu__thumbnail" style="background-image:url('images/thumbnail-${categories[i].id}.jpg')"></div>
                     <span>${categories[i].name}</span>
                 </li>`;
