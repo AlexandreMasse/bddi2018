@@ -30,7 +30,7 @@
                         <h2>${categories[i].name}</h2>
                     </div>
                     <div class="projects__category-content">
-                    <div class="projects__category-thumbnail"></div>
+                    <div class="projects__category-thumbnail" style="background-image:url('images/thumbnail-${categories[i].id}.jpg')" /></div>
                         <div class="projects__category-description">
                             <p>${categories[i].description.substring(0,250)}...</p>
                             <div class="fi flaticon-left-arrow action-show"></div>
@@ -79,10 +79,10 @@
                                     projectItem.setAttribute('data-url', `${pathFile}/projet`);
                                     projectItem.innerHTML +=
                                     `   <div class="project__thumbnail">
-                                        <div class="project__thumbnail-img" style="background-image: url('${thumbnail}')">
+                                            <div class="project__thumbnail-img" style="background-image: url('${thumbnail}')">
+                                            </div>
                                         </div>
-                                        </div>
-                                        <h2>${projects[index].name}</h2>
+                                        <h2>${projects[j].id} - ${projects[index].name}</h2>
                                         <p>${studentsNames}</p>
                                     `;
                                 categoryContent.appendChild(projectItem);
