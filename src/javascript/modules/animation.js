@@ -1,3 +1,8 @@
+/*start.addEventListener("click", function() {
+  window.scrollTo(0, window.innerHeight);
+});*/
+
+
 /******* FUNCTIONS *******/
 
 function fadeOut(el, duration, delay = 0) {
@@ -84,6 +89,7 @@ function getElements(){
 
 /****** CHECK IF DOM ELEMENTS ARE READY *******/
 
+
 function checkDomElements() {
     if (menu_open
         && menu_close
@@ -108,8 +114,8 @@ function checkDomElements() {
     } else {
         setTimeout(function() {
             getElements();
-            checkDomElements()
-/*
+            checkDomElements();
+
             console.log(menu_open
                 ,menu_close
                 ,homepage
@@ -127,7 +133,7 @@ function checkDomElements() {
                 ,categoryCanvasAudio
                 ,categoryFestival
                 ,categoryLouvres
-                ,categoryDataviz);*/
+                ,categoryDataviz);
         }, 500);
     }
 };
