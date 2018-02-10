@@ -46,6 +46,13 @@ var menu_open,
     menufestival,
     menuLouvres,
     menuDataviz,
+    homeWeb,
+    home3dAudio,
+    homeChat,
+    homeCanvasAudio,
+    homefestival,
+    homeLouvres,
+    homeDataviz,
     categoryWeb,
     category3dAudio,
     categoryChat,
@@ -65,16 +72,27 @@ function getElements(){
         menu = document.querySelector(".menu"),
         backhome = document.querySelectorAll(".backhome");
 
-//Menu Item
-    menuWeb = document.querySelector("#menu-web"),
-        menu3dAudio = document.querySelector("#menu-3d-audio"),
-        menuChat = document.querySelector("#menu-chat"),
-        menuCanvasAudio = document.querySelector("#menu-canvas-audio"),
-        menufestival = document.querySelector("#menu-festival"),
-        menuLouvres = document.querySelector("#menu-louvres"),
-        menuDataviz = document.querySelector("#menu-dataviz");
+    //Menu Link Item
+    menuWeb = document.querySelector("#menu-link-web"),
+        menu3dAudio = document.querySelector("#menu-link-3d-audio"),
+        menuChat = document.querySelector("#menu-link-chat"),
+        menuCanvasAudio = document.querySelector("#menu-link-canvas-audio"),
+        menufestival = document.querySelector("#menu-link-festival"),
+        menuLouvres = document.querySelector("#menu-link-louvres"),
+        menuDataviz = document.querySelector("#menu-link-dataviz");
 
-//Category
+
+    //Home Link Item
+    homeWeb = document.querySelectorAll(".home-link-web"),
+        home3dAudio = document.querySelectorAll(".home-link-3d-audio"),
+        homeChat = document.querySelectorAll(".home-link-chat"),
+        homeCanvasAudio = document.querySelectorAll(".home-link-canvas-audio"),
+        homefestival = document.querySelectorAll(".home-link-festival"),
+        homeLouvres = document.querySelectorAll(".home-link-louvres"),
+        homeDataviz = document.querySelectorAll(".home-link-dataviz");
+
+
+    //Category
     categoryWeb = document.querySelector("#category__web"),
         category3dAudio = document.querySelector("#category__3d-audio"),
         categoryChat = document.querySelector("#category__chat"),
@@ -104,6 +122,13 @@ function checkDomElements() {
         && menufestival
         && menuLouvres
         && menuDataviz
+        && homeWeb
+        && home3dAudio
+        && homeChat
+        && homeCanvasAudio
+        && homefestival
+        && homeLouvres
+        && homeDataviz
         && categoryWeb
         && category3dAudio
         && categoryChat
@@ -130,6 +155,13 @@ function checkDomElements() {
                 ,menufestival
                 ,menuLouvres
                 ,menuDataviz
+                ,homeWeb
+                ,home3dAudio
+                ,homeChat
+                ,homeCanvasAudio
+                ,homefestival
+                ,homeLouvres
+                ,homeDataviz
                 ,categoryWeb
                 ,category3dAudio
                 ,categoryChat
@@ -188,7 +220,6 @@ function addListener() {
         fadeIn(previous, 0.5, 0.5);
     });
 
-
     // DATAVIZ : OPEN
 
     menuDataviz.addEventListener('click', function () {
@@ -196,6 +227,17 @@ function addListener() {
         closeMenu();
         fadeInCurrent();
     });
+
+     homeDataviz.forEach(function (el) {
+         el.addEventListener('click', function () {
+             previous = current;
+             fadeOut(homepage, 0.5);
+             current = categoryDataviz;
+             fadeInCurrent();
+         });
+     })
+
+
 
 
     // Louvres : OPEN
@@ -256,7 +298,6 @@ function addListener() {
             fadeIn(homepage,0.5, 0.5);
             current = homepage;
         });
-
     }
 
 
