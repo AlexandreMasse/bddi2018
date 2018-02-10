@@ -54,7 +54,7 @@
                     iframe.classList.add('projects-iframe');
 
             categoryDescription.innerHTML +=
-                `<div class="fi flaticon-left-arrow action-back"></div>
+                `<div class="fi flaticon-left-arrow action-back backhome"></div>
                 <p>${categories[i].description}</p>`;
             categoryContent.appendChild(categoryDescription);
             categorySection.appendChild(categoryContent);
@@ -118,7 +118,7 @@
 
         return elementCreated;
     }
-
+/*
     function showSection(sectionId) {
         document.querySelector('section.visible').classList.remove('visible').add('hidden');
         document.getElementById(sectionId).classList.remove('hidden').add('visible');
@@ -129,7 +129,7 @@
             previousSectionId = activeSectionId;
         }
         showSection(previousSectionId);
-    }
+    }*/
 
     function elementLoaded(el, cb) {
         if (el.length) {
