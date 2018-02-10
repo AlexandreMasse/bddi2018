@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <style type="text/css">
+    body {
+      overflow: hidden;
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <canvas></canvas>
+  <script src="toji-gl-matrix-a8540ce/dist/gl-matrix-min.js"></script>
+  <script src="easing.js"></script>
+  <script src="simplex-noise.js-master/simplex-noise.js"></script>
+  <script>
+    
+    window.AudioContext=window.AudioContext||window.webkitAudioContext||window.mozAudioContext;
+
+    let canvasWidth = window.innerWidth;
+    let canvasHeight = window.innerHeight;
+
+    let audioCtx = new AudioContext();
+
+    let audioBuffer;
+    let audioSource;
+    let analyser = audioCtx.createAnalyser();
+    analyser.smoothingTimeConstant = 0.95;
+    let frequencyData = new Uint8Array(analyser.frequencyBinCount);
+    let startOffset = 0;
+    let startTime = 0;
+    let isPlaying = false;
+
+    let DELTA_TIME = 0;
+    let LAST_TIME = Date.now();
+
+    let canvas
+    let ctx
+    let colors = ['#FF008E', '#124E96', '#1DCD9F', 'yellow']
+    
+    // Variables
+    let oldAverage = 0;
+    let radiusCircle = 200;
+    let rectangles = [];
+    let extpoints = [];
+    let interpoints = [];
+    let speed = 1;
+    let basicHeight = 50;
+    let random, cumul, rectangle;
+    let backgroundColor = null;
+    let color = colors[0];
+
+    let now, dt, lastTime;
+    let tweenCurrentTime, startPosition, targetPosition;
+    let duration = 1000;
+
+    class Rectangle {
+      constructor(angle) {
+        this.angle = angle;
+        this.height = basicHeight;
+        this.previousHeight = 0;
+      }
+
+      render(color) {
+        ctx.save();
+        ctx.fillStyle = color;
+        ctx.translate(radiusCircle*Math.cos(this.angle)+canvasWidth/2, radiusCircle*Math.sin(this.angle)+canvasHeight/2);
+        ctx.rotate(this.angle+Math.PI/2);
+        ctx.beginPath();
+        ctx.rect(-15, - this.height / 2, 30, this.height / 2);
+        ctx.fill();
+        ctx.closePath();
+        ctx.restore();
+      }
+
+      update(amplitude) {
+        this.height = (amplitude+50);
+        if(this.height - this.previousHeight > 7){
+          pulsePoints(this.angle);
+        }
+        if(this.height - this.previousHeight > 100){
+          backgroundColor = 'white'
+        }
+        this.previousHeight = this.height;
+      }
+
+      rotate() {
+        this.angle += (Math.PI/100);
+      }
+
+      lineTo(alpha) {
+        ctx.save();
+        ctx.beginPath();
+        ctx.globalAlpha = alpha;
+        ctx.moveTo(canvasWidth/2, canvasHeight/2);
+        ctx.lineTo(this.position[0], this.position[1]);
+        ctx.stroke();
+        ctx.closePath();
+        ctx.restore();
+      }
+    }
+
+    class Point {
+      
+      constructor(cos, sin, interpoint, color) {
+        if(interpoint == true){
+          this.radiusCircle = radiusCircle + 5;
+          this.velocity = vec2.fromValues(-cos, -sin);
+          this.radiusPoint = 2;
+          this.color = "#DAEAF6";
+          this.startPosition;
+        }
+        else{
+          this.radiusCircle = radiusCircle + 60;
+          this.velocity = vec2.fromValues(cos, sin);
+          this.radiusPoint = 5;
+          this.color = color;
+        }
+        this.position = vec2.fromValues(cos*this.radiusCircle+canvasWidth/2, sin*this.radiusCircle+canvasHeight/2);
+      }
+
+      updateExt() {
+        if(this.position[0] > (canvasWidth + this.radius) || this.position[0] < -this.radius || this.position[1] > (canvasHeight + this.radius) || this.position[1] < -this.radius){
+          extpoints.splice(extpoints.indexOf(this), 1);
+        }
+        else {
+          let velocity = vec2.fromValues(this.velocity[0]*speed, this.velocity[1]*speed)
+          vec2.add(this.position, this.position, velocity);
+        }
+      }
+
+      updateIntra(){
+        if( (Math.round(this.position[0]) == Math.round(canvasWidth/2) || Math.trunc(this.position[0]) == Math.trunc(canvasWidth/2) ) && (Math.round(this.position[1]) == Math.round(canvasHeight/2) || Math.trunc(this.position[1]) == Math.trunc(canvasHeight/2) )){  
+          interpoints.splice(interpoints.indexOf(this), 1);
+        }
+        else {
+          vec2.add(this.position, this.position, this.velocity);
+        }  
+      }
+
+      render() {
+        ctx.save();
+        ctx.fillStyle = this.color;
+        ctx.translate(this.position[0], this.position[1]);
+        ctx.beginPath();
+        ctx.arc(0, 0, this.radiusPoint, 0, 2*Math.PI);
+        ctx.fill();
+        ctx.closePath();
+        ctx.restore();
+      }
+    }
+
+    function initCanvas() {
+      canvas = document.querySelector('canvas');
+      ctx = canvas.getContext('2d');
+      canvas.width = canvasWidth;
+      canvas.height = canvasHeight;
+      canvas.style.width = canvasWidth + 'px';
+      canvas.style.height = canvasHeight + 'px';
+      initCircle();
+    }
+
+    function loadSound(url) {
+      let request = new XMLHttpRequest();
+      request.open('GET', './sounds/sound.mp3', true);
+      request.responseType = 'arraybuffer';
+
+      // Decode asynchronously
+      request.onload = function() {
+
+        audioCtx.decodeAudioData(request.response, function(buffer) {
+
+          // success callback
+          audioBuffer = buffer;
+
+          playBuffer();
+
+          addListeners();
+
+        }, function(){
+
+          // error callback
+          //
+        });
+      }
+      request.send();
+    }
+
+    function playBuffer() {
+      startTime = audioCtx.currentTime;
+      audioSource = audioCtx.createBufferSource();
+      audioSource.buffer = audioBuffer;
+      audioSource.connect(analyser);
+      analyser.connect(audioCtx.destination);
+      audioSource.start(0, startOffset % audioBuffer.duration)
+      isPlaying = true;
+      speed = 5;
+      frame();
+    }
+
+    /**
+     * addListeners
+     */
+    function addListeners() {
+
+      window.addEventListener( 'resize', onResize.bind(this) );
+      window.addEventListener('click', onClick.bind(this));
+      rafId = requestAnimationFrame( frame );
+
+    }
+
+    function onClick() {
+      if(isPlaying) {
+        audioSource.stop();
+        startOffset += audioCtx.currentTime - startTime;
+        isPlaying = false;
+      } else {
+        playBuffer();
+        isPlaying = true;
+      }
+    }
+
+    function frame() {
+
+      rafId = requestAnimationFrame( frame )
+
+      DELTA_TIME = Date.now() - LAST_TIME;
+      LAST_TIME = Date.now();
+
+      analyser.getByteFrequencyData(frequencyData);
+      
+      cumul = 0;
+      backgroundColor = null;
+
+      for ( let i = 0; i < rectangles.length; i++ ) {
+        let percentIdx = i / rectangles.length;
+        let frequencyIdx = Math.floor(700 * percentIdx);
+        rectangle = rectangles[i];
+        rectangle.update(frequencyData[frequencyIdx]*(speed/2));
+        cumul += frequencyData[frequencyIdx];
+      }
+
+      if ( Math.ceil(cumul/rectangles.length) >= 140) {
+        for (let i = 0; i < rectangles.length; i++) {
+          rectangle = rectangles[i];
+          rectangle.rotate();
+        }
+        speed = 5; 
+
+      } else {
+        speed = 1;
+      }
+
+      if( Math.ceil(cumul/rectangles.length - oldAverage) > 3 || Math.floor(cumul/rectangles.length - oldAverage) < -3) {
+        random = Math.round(Math.random()*(colors.length-1));
+        color = colors[random];
+      } 
+
+      oldAverage = cumul/rectangles.length;
+     
+      drawFrame();
+
+      if( (Math.ceil(cumul/rectangles.length)+oldAverage/2 == 0 && interpoints.length == 0 && extpoints.length == 0) || isPlaying == false) {
+        if(isPlaying == false) {
+          tweenCurrentTime = 0;
+          for(var i = 0; i < extpoints.length; i++){
+            extpoint = extpoints[i];
+            extpoint.startPosition = [extpoint.position[0], extpoint.position[1]]
+          }
+          targetPosition = vec2.fromValues(canvasWidth/2, canvasHeight/2)
+          lastTime = Date.now()
+          tween();  
+        }
+        return cancelAnimationFrame(rafId);
+      }
+    }
+
+    function initCircle() {
+        let angle = 0;
+        let angleRect = 0;
+        for(let i = 0; i < 50; i++) {
+          angle += (Math.PI*2/50);
+          let rectangle = new Rectangle(angle);
+            rectangles.push(rectangle);
+          }
+    }
+
+    function pulsePoints(angle) {
+      let extpoint = new Point(Math.cos(angle), Math.sin(angle), false, color);
+      extpoint.render();
+      let interpoint = new Point(Math.cos(angle), Math.sin(angle), true);
+      interpoint.render();
+      extpoints.push(extpoint);
+      interpoints.push(interpoint);
+    }
+
+    function drawBackground() {
+      ctx.save();
+      if(backgroundColor) {
+        ctx.fillStyle = backgroundColor;
+      } else {
+        ctx.fillStyle = 'rgba(0,0,0,0.1)'
+      }
+      ctx.beginPath();      
+      ctx.fillRect(0, 0, canvasWidth, canvasHeight);
+      ctx.closePath();
+      ctx.restore();
+    }
+
+    function drawExtPoints() {
+      let extpoint
+      for (let j = 0; j < extpoints.length; j++) {
+        extpoint = extpoints[j];
+        extpoint.updateExt();
+        extpoint.render();
+      }
+    }
+
+    function drawInterPoints() {
+      let interpoint;
+      ctx.save();
+      for (let j = 0; j < interpoints.length; j++) {
+        interpoint = interpoints[j];
+        interpoint.updateIntra();
+        interpoint.render();
+      }
+      ctx.restore();
+    }
+
+    function drawCenterCircle() {
+      ctx.save();
+      ctx.fillStyle = 'black'//'rgba(10,10,10,0.1)';
+      ctx.translate(canvasWidth/2, canvasHeight/2);
+      ctx.beginPath();
+      ctx.arc(0, 0, 201, 0, 2*Math.PI);
+      ctx.fill();
+      ctx.closePath();
+      ctx.restore();
+    } 
+
+    function drawCircle() {
+      let rectangle
+      for(let i = 0; i < rectangles.length; i++) {
+        rectangle = rectangles[i];
+        rectangle.render(color);
+      }
+    }
+
+    function tween() {
+      var raf = requestAnimationFrame(tween);
+      ctx.clearRect(0,0,canvasWidth, canvasHeight);
+      backgroundColor = 'black'
+
+      now = Date.now()
+      dt = now - lastTime
+      lastTime = now
+
+      tweenCurrentTime += dt
+
+      if(tweenCurrentTime < duration) {
+        let extpoint
+
+        for(var i = 0; i < extpoints.length; i++) {
+            extpoint = extpoints[i];
+            extpoint.position[0] = Easing.easeOutBack(tweenCurrentTime, extpoint.startPosition[0],targetPosition[0] - extpoint.startPosition[0], duration);
+            extpoint.position[1] = Easing.easeOutBack(tweenCurrentTime, extpoint.startPosition[1],targetPosition[1] - extpoint.startPosition[1], duration);
+        }
+        
+        drawFrame();
+      } 
+      else {
+        cancelAnimationFrame(raf);
+        drawFrame();
+      }
+    }
+
+    function drawFrame() {
+      drawBackground();
+      drawCenterCircle();
+      drawExtPoints();
+      drawInterPoints();
+      drawCircle();
+    }
+
+    function onResize( evt ) {
+
+      oldWidth = canvasWidth;
+      oldHeight = canvasHeight;
+
+      canvasWidth = window.innerWidth;
+      canvasHeight = window.innerHeight;
+
+      let move = vec2.fromValues(canvasWidth-oldWidth, canvasHeight-oldHeight);
+
+      if(extpoints.length > 0) {
+        extpoints = [];
+      }
+
+      if(interpoints.length > 0) {
+        interpoints = [];
+      }
+
+      canvas.width = canvasWidth;
+      canvas.height = canvasHeight;
+      canvas.style.width = canvasWidth + 'px';
+      canvas.style.height = canvasHeight + 'px';
+
+    }
+    
+    initCanvas();
+    loadSound();
+  </script>
+
+</body>
+</html>
+

@@ -1,0 +1,10 @@
+{
+  "name": "music-sampler",
+  "version": "1.0.0",
+  "description": "A music sampler made with Web Audio API and ThreeJS",
+  "author": "Omar Jbara <omar.jbara2@gmail.com>",
+  "private": true,
+  "scripts": {
+    "postinstall": "npm install express"
+  }
+}

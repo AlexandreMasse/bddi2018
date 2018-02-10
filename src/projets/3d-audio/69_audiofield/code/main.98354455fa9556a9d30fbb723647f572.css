@@ -1,0 +1,169 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: #000;
+  font-family: sans-serif;
+}
+
+#intro {
+	opacity: 1;
+	transition: all 1s ease-out;
+}
+
+#intro.hide {
+	visibility: hidden;
+	opacity: 0;
+}
+
+#intro,
+#intro:before,
+.intro-inner {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+#intro:before {
+  content: "";
+  z-index: 0;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAWCAMAAACFUC6CAAAA7VBMVEX5+fkFAAX39/cIAwgBAAEKBQoMCAz+/v7z8/NwbXDw7/BdWl1ZVllVUVUXFBcUEBTl5eXKycqAfYB9en1raGtgXGBGQ0Y0MDQsKCzq6uqysbKYl5iWlJaHhYdkYWRQTE88ODwgHCDT09PEw8S5uLmurK6koqSQjZCLiIt4dnh0cXRoZWhiX2JJRknt7e3Pz8+8u7x3dHdtam1ST1IlISXg4ODf3t7b29vZ2NmqqKqmpaafnZ+bmZuSkJKDgYNCP0JAPEA5NTkbGBsRDRH6+vrNzM2+vb62tLZLSEvi4uLQz9Cpp6mNi43x8PGGhIY6XHeQAAABzElEQVQoz42P53KqUBSFtxC5SAfBAhJEQCwgxV4Se0m59/0f5x6OZtSYH/mGYebM/mavteG5UGwZ0/hdooGAB2jpPZ4arWLhGYK0bdZm7n5Iw4WrTwA93LuzmtlOA9DU5PWleZRHDHGv4Qczko/Nl9dEDYDtdhR/rjvjHvHDyt7Y0ee+0umywGUlF54zuYpwI04cb5FV5IALVFRyemhUfxKrjcMHqqgGHPAoG5V0I4m+Nb6OjlxUESXzYHFBofg51+Uh/eCho2V9/pklW3DiWTX5Z3jOmIEHmLHjGWaiavwJShY6R/GbMSp5dzBBZBXjpq9kC0uwCvtsNzEXuvxGA4Hnlw8lv8n6wmx32X64hPUy5DW16M/iyd9vJwMzOcz8Yqrx4bIO5fUKmQWl5slStu42W5K9mpJq/XC1LkOlUq6X+myqGMcGsyNu2DEN3VBU1irVy5UK2PYAq1qn9bFn/mB2+M9E01ZHw9rAtkEURWFzlvlCzY1GUrXaq0qjyDXa3FnaCKK4hfwFKv+EsddLiz+tBviRI7MJBsgMbFJbURDJpwuUIIhbikIDEoPFM7kcWkCJgrDZCMKWyl8HGZB7AGfeg8VfAuRvLDKX/w/M/TmpwdsuvQAAAABJRU5ErkJggg==);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  filter: blur(25px);
+  /* Someday, sigh ... */
+  -webkit-filter: blur(25px);
+  /* Prefixed CSS3 blur filters */
+  -moz-filter: blur(25px);
+  -o-filter: blur(25px);
+  -ms-filter: blur(25px);
+}
+
+.intro-inner {
+  margin: auto;
+  max-width: 470px;
+  height: 160px;
+  text-align: center;
+  font-family: helvetica;
+  text-transform: uppercase;
+  color:#120112;
+}
+
+.intro-inner h1 {
+  font-weight: 600;
+  letter-spacing: 25px;
+  text-indent: 20px;
+}
+
+.intro-inner h1>span {
+  //display: block;
+}
+
+.intro-inner p {
+	margin-bottom: 50px;
+}
+
+#load-button {
+	transition: all 1.5s ease-out;
+	letter-spacing: 3px;
+  pointer-events: none;
+}
+
+#load-button.active {
+  pointer-events: auto;
+  letter-spacing: 0;
+  color: rgba(18,1,18,0.5);
+}
+
+/* Loader */
+#load-button:not(.active) {
+	color: rgba(0,0,0,0);
+}
+
+#load-button:not(.active):after{
+  animation: animLoadButton  ease 1s;
+  animation-iteration-count: infinite;
+  transform-origin: 50% 50%;
+  animation-fill-mode:forwards; /*when the spec is finished*/
+}
+
+@keyframes animLoadButton {
+  0% {
+    -webkit-transform: translate3d(-110%, 0, 0);
+    transform: translate3d(-110%, 0, 0);
+  }
+  100% {
+  	-webkit-transform: translate3d(110%, 0, 0);
+  	transform: translate3d(110%, 0, 0);
+  }
+}
+
+/* Link style */
+.link {
+  outline: none;
+  text-decoration: none;
+  position: relative;
+  font-size: 20px;
+  line-height: 1;
+  color: #9e9ba4;
+  display: inline-block;
+}
+
+/* Kamouchi */
+
+.link--kamouchi {
+  font-weight: 700;
+  overflow: hidden;
+  line-height: 0.90;
+  color: rgba(#FFF, 0.65);
+  padding-bottom: 10px;
+}
+
+.link--kamouchi:hover {
+  color: rgba(#FFF, 0.65);
+}
+
+.link--kamouchi::after {
+  content: '';
+  position: absolute;
+  height: 5px;
+  width: 100%;
+  bottom: 0;
+  right: 0;
+  background: #040004;
+  -webkit-transform: translate3d(-102%, 0, 0);
+  transform: translate3d(-102%, 0, 0);
+  -webkit-transition: -webkit-transform 0.4s;
+  transition: transform 0.4s;
+  -webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+  transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+}
+
+.link--kamouchi:hover::after {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.link--kamouchi:active::after {
+  -webkit-transform: translate3d(100%, 0, 0);
+  transform: translate3d(100%, 0, 0);
+}
+
+.link--kamouchi::before {
+  content: attr(data-letters);
+  position: absolute;
+  z-index: 2;
+  overflow: hidden;
+  color: #040004;
+  white-space: nowrap;
+  width: 0%;
+  -webkit-transition: width 0.4s 0.2s;
+  transition: width 0.4s 0.2s;
+}
+
+.link--kamouchi:hover::before {
+  width: 100%;
+}
