@@ -14,7 +14,7 @@
 
             //TODO : Add categories to menu and create action on click
             categoryItem =
-                `<li class="menu__items-item">
+                `<li class="menu__items-item" id="menu-${categories[i].ident}">
                     <div class="menu__thumbnail" style="background-image:url('images/thumbnail-${categories[i].id}.jpg')"></div>
                     <span>${categories[i].name}</span>
                 </li>`;
