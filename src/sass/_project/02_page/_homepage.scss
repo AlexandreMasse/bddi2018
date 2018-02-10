@@ -63,7 +63,7 @@
         height: 100%;
         position: relative;
         &-title {
-          left: 30px;
+          left: 100px;
           transform: rotate(-180deg);
           cursor: pointer;
 
@@ -113,6 +113,22 @@
           left: 0;
           bottom: 0;
           cursor: pointer;
+          overflow: hidden;
+
+          &-img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            transition: transform .7s;
+          }
+
+          &:hover {
+            .projects__category-thumbnail {
+              &-img {
+                transform: scale(1.1);
+              }
+            }   
+          }
         }
         &-description {
           background: $color-white;

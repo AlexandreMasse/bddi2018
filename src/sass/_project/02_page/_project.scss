@@ -39,4 +39,11 @@
     height: 100vh;
     width: 100vw;
   }
+  &:hover {
+    .project__thumbnail {
+      &-img {
+        transform: scale(1.1);
+      }
+    }
+  }
 }
