@@ -1,0 +1,249 @@
+@import url(https://fonts.googleapis.com/css?family=PT+Sans);html, body {
+    margin: 0;
+    padding: 0;
+
+    background: #000;
+
+    height: 100%;
+    width: 100%;
+
+    font-family: sans-serif;
+}
+
+.load{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    z-index: 3;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: #F4B3C3;
+}
+
+.load.hidden{
+    opacity: 0;
+    pointer-events: none;
+
+    transition:opacity .7s cubic-bezier(0, 0, 0.59, 0.88);
+}
+
+.load_block{
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+    transform: translate3d(-50%,-50%,0);
+
+    width: 100%;
+}
+
+.load-btn {
+    margin: 0 auto;
+    outline:none;
+    background:#F4B3C3;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 9rem;
+    height: 9rem;
+    text-transform: uppercase;
+    border-radius: 50%;
+    border: solid 2px rgba(255, 255, 255, 0.5);
+    opacity: .7;
+    cursor: pointer;
+    transition:opacity .5s ;
+}
+
+.load-btn.loading{
+    cursor: auto;
+}
+.load-btn.loading:before{
+     content: '';
+     position: absolute;
+     display: inline-block;
+     width: 8.6rem;
+     height: 8.6rem;
+     border-radius: 50%;
+     clip: rect(0rem, 9rem, 6rem, 2rem);
+     border: 2px solid #fff;
+    animation:rotateload 1s infinite cubic-bezier(0, 0, 0.59, 0.88);
+
+}
+
+.load-btn.success:hover{
+    opacity: 1;
+    transition:opacity .5s ;
+}
+
+.logo{
+    width: 40px;
+}
+
+.load-btn.loading .logo{
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: transform .5s cubic-bezier(0, 0, 0.59, 0.88),opacity .5s cubic-bezier(0, 0, 0.59, 0.88);
+}
+
+.load-btn.success .logo{
+    opacity: 1;
+    transform: translateY(0px);
+    transition: transform .5s cubic-bezier(0, 0, 0.59, 0.88),opacity .5s cubic-bezier(0, 0, 0.59, 0.88);
+}
+
+
+.load-sentence{
+    display: none;
+    position: absolute;
+
+    color:#fff;
+    font-family:"PT Sans";
+    margin-top: 10px;
+    margin-bottom: 0;
+    font-size: 18px;
+    width: 100%;
+    text-align: center;
+    transition: opacity .5s cubic-bezier(0, 0, 0.59, 0.88);
+    animation:blink 1s infinite cubic-bezier(0, 0, 0.59, 0.88);
+
+}
+
+.loaded-sentence.hidden {
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: transform .5s cubic-bezier(0, 0, 0.59, 0.88),opacity .5s cubic-bezier(0, 0, 0.59, 0.88);
+}
+
+.loaded-sentence{
+    position: absolute;
+
+    color:#fff;
+    font-family:"PT Sans";
+    margin-top: 10px;
+    margin-bottom: 0;
+    font-size: 18px;
+    opacity: 1;
+    transform: translateY(0px);
+    transition: transform .5s cubic-bezier(0, 0, 0.59, 0.88),opacity .5s cubic-bezier(0, 0, 0.59, 0.88);
+    width: 100%;
+    text-align: center;
+}
+
+.load-sentence.hidden{
+    opacity: 0;
+    transform: translateY(10px);
+
+    transition: transform .5s cubic-bezier(0, 0, 0.59, 0.88),opacity .5s cubic-bezier(0, 0, 0.59, 0.88);
+    animation: none;
+
+}
+
+
+#main{
+    position: relative;
+}
+.content_space__button{
+    position: absolute;
+    bottom: 75px;
+    width: 100%;
+    text-align: center;
+    opacity: .7;
+
+
+    font-family:'PT Sans';
+}
+.spacebar__button{
+    opacity: .7;
+    border-radius: 20px;
+    padding: 0;
+    outline: none;
+    border: none;
+    background: none;
+    font-family:'PT Sans';
+}
+
+.spacebar__button:hover .spacebar__button__inner{
+    transform: translateY(5px);
+    transition:transform .3s ease-in-out ;
+}
+.spacebar__button__inner{
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    width: 90px;
+    height: 25px;
+    border-radius: 25px;
+    border: 3px white solid;
+    background-color: #F4B3C3;
+    transition:transform .3s ease-in-out ;
+
+}
+.spacebar__button__inner span{
+    margin-top: 5px;
+    display: inline-block;
+    color: white;
+}
+
+
+.spacebar__button__outer{
+    position: absolute;
+    top: 0;
+    width: 90px;
+    height: 25px;
+    border-radius: 25px;
+    border: 3px white solid;
+    background: #fff;
+    transform: translateY(5px);
+
+}
+.press{
+    margin-top: 7px;
+    margin-left: -90px;
+    display: inline-block;
+    color: #fff;
+}
+.press.touch{
+    display: none;
+    margin-left: 0;
+}
+.touch .press.touch{
+    display: block;
+}
+
+.touch .press.no-touch{
+    display: none;
+}
+.touch .spacebar__button{
+    display: none;
+}
+
+.content_space__button.hidden{
+    opacity: 0;
+    transition: .3s opacity linear;
+}
+
+
+/****ANIMATIONS****/
+@keyframes rotateload {
+    0% {
+        transform: rotate(0deg);
+    }
+    50% {
+        clip: rect(0rem, 11rem, 7rem, 2rem);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes blink {
+    0% {opacity: 0}
+    49%{opacity: 0}
+    50% {opacity: 1}
+}

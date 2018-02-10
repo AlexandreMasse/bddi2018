@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Canvas experiment</title>
+		<link rel="stylesheet" href="app.css">
+		<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+		<meta charset="UTF-8">
+	</head>
+	<body>
+		<!-- Loader Block -->
+		<div id="loader" class="loader loader--visible">
+			<div class="loader__container">
+				<h1>Sound Experiment</h1>
+				<svg id="loadersvg" width="100" height="100">
+					<path d="M25, 75, 75, 75, 50, 25z'"  stroke-width="1"/>
+					<path d="M25, 75, 75, 75, 50, 25z'"  stroke-width="1"/>
+					<path d="M25, 75, 75, 75, 50, 25z'"  stroke-width="1"/>
+					<path d="M25, 75, 75, 75, 50, 25z'"  stroke-width="1"/>
+					<path d="M25, 75, 75, 75, 50, 25z'"  stroke-width="1"/>
+					<path d="M25, 75, 75, 75, 50, 25z'"  stroke-width="1"/>
+				</svg>
+				<button id="loader__button" class="loader__button loader__button--hidden">
+					  <svg viewBox='0 0 250 60'>
+					  	<path d='M250,60 0,60 0,0 250,0z'></path>
+					  </svg>
+					  <span>Commencer l'expérience</span>
+				</button>
+			</div>
+		</div>
+		
+		<!-- Fullscreen btn -->
+		<button id="button-fullscreen" class="mode--active btn-action button-fullscreen"></button>
+		
+		<!-- Audio btn -->
+		<button id="button-sound-mute" class="mode--active btn-action button-sound-cut button-sound-cut--sound"></button>
+		
+
+		<!-- Change Music -->
+		<div id="change-music" class="mode--active">
+			<label for="change-music-select"></label>
+			<select name="" id="change-music-select"></select>
+		</div>
+	
+		<!-- Control panel -->
+		<div id="global-control" class="mode--active"></div>
+
+		<!-- Canvas drawing -->
+		<div style="display:none;">
+			<img id="sourceCircle" src="images/circle.png" width="64" height="64">
+		</div>
+		<canvas id="canvas" width="500" height="500"></canvas>
+		
+
+		
+		<!-- Scripts -->
+		<script src="helpers/Polygon.js"></script>
+		<script src="helpers/GlobalControl.js"></script>
+		<script src="helpers/SoundAnalyser.js"></script>
+		<script src="store.js"></script>
+		<script src="script.js"></script>
+	</body>
+</html>

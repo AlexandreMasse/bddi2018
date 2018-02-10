@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Sound Experiment</title>
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:200,400" rel="stylesheet">
+    <style media="screen">
+
+      html, body {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        width: 100vw;
+        overflow: hidden;
+        position: relative;
+      }
+
+      canvas {
+        background-color: #0d1d33;
+      }
+
+      .introScreen {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #0d1d33;
+        width: 100vw;
+        height:100vh;
+        font-family: 'Work Sans';
+        opacity: 1;
+        animation: translateDown 1.5s;
+      }
+
+      .introScreen.hidden {
+        animation: opacity 1s forwards;
+      }
+
+      @keyframes opacity {
+        from {
+          opacity: 1;
+        } to {
+          transform: translateY(100%);
+          opacity : 0;
+        }
+      }
+
+      @keyframes translateDown {
+        0% {
+          opacity: 0;
+          transform: translateY(-100%);
+        }
+        70% {
+          transform: translateY(5%);
+
+        } 100% {
+          transform: translateY(0);
+          opacity : 1;
+        }
+      }
+
+      @keyframes highlights {
+        from {
+          opacity: 1;
+        } to {
+          opacity : 0.5;
+        }
+      }
+
+      .center {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+      }
+
+      h2, h3, p {
+        color: #fff;
+        text-align: center;
+        margin: 0;
+      }
+
+      .center p {
+        margin-top: 0;
+        font-style: italic;
+        animation: highlights;
+        animation-duration: 1.5s;
+        animation-iteration-count: infinite;
+      }
+
+      .center img {
+        display: block;
+        text-align: center;
+        margin: 80px auto 15px;
+        cursor: pointer;
+      }
+
+      .center img:hover {
+        animation-name: bounce;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+      }
+
+      h1 {
+        position: relative;
+        left: 15px;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        font-size: 3rem;
+        text-align: center;
+        margin: 0;
+        animation-name: colorChange;
+        animation-duration: 0.5s;
+        animation-iteration-count: infinite;
+      }
+
+      @keyframes colorChange {
+        from {
+          color: #fff680;
+        } to {
+           color: #ed5e9a;
+         }
+      }
+
+      @keyframes bounce {
+        from {
+          transform: translateY(0%);
+        } to {
+          transform: translateY(-15%);
+         }
+      }
+
+      h2, h3 {
+        margin: 15px;
+      }
+
+      h2 {
+        font-weight: 200;
+        letter-spacing: 2px;
+      }
+
+      .commands {
+        width : 100vw;
+        height: 30px;
+        background-color: rgba(74, 23, 168, 0.5);
+        position: absolute;
+        bottom: 0;
+      }
+
+      button {
+        position: absolute;
+        top: 5px;
+        left : 20px;
+        border: none;
+        outline: 0;
+        background: #5a06b8;
+        color: #fff;
+        font-size: 1rem;
+        font-family: 'Work Sans';
+        cursor: pointer;
+        width: 20px;
+        height: 20px;
+      }
+
+      button.mute {
+        background: #046069;
+      }
+
+      .commands p {
+        position: absolute;
+        top: 10px;
+        padding: 0;
+        margin: 0;
+        color : rgba(255, 255, 255, 0.9);
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        font-family: 'Work Sans';
+        font-size: 12px;
+      }
+
+      .commands p.right {
+        right : 4vw;
+      }
+
+      .commands p.right::after {
+        content:"";
+        position: absolute;
+        right: -20px;
+        top: -4px;
+        background: url('assets/volume.png');
+        background-size: 18px;
+        width: 18px;
+        height: 18px;
+      }
+
+      .commands p.left {
+        left : 4vw;
+      }
+
+      .commands p.left::before {
+        content:"";
+        position: absolute;
+        left: -18px;
+        top: -2px;
+        background: url('assets/drop.png');
+        background-size: 15px;
+        width: 15px;
+        height: 15px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="introScreen" id="introScreen">
+      <div class="center">
+        <h1>Paintdrop Beats</h1>
+        <h2>Léa Tanda</h2>
+        <h3>BDDI 2018 - Gobelins</h3>
+        <img src="assets/drop.png" id="drop" alt="" width="32" height="32">
+        <p>Touch the drop to start the beats.</p>
+      </div>
+    </div>
+    <div class="commands">
+      <p class="left">Paintdrop Beats</p>
+      <p class="right">Cosmic Sand - 9h00</p>
+    </div>
+    <canvas id="canvas" width="300" height="300"></canvas>
+    <script src="scripts/simplex-noise.js"></script>
+    <script src="scripts/easing.js"></script>
+    <script src="scripts/audio.js"></script>
+    <script src="scripts/shape.js"></script>
+    <script src="scripts/point.js"></script>
+    <script src="scripts/main.js"></script>
+  </body>
+</html>

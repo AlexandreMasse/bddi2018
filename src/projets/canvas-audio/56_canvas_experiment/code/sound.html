@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>autiotest</title>
+  <style type="text/css">
+    *{
+      margin:0;
+    }
+    body {
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body>
+
+  <canvas></canvas>
+    <script type="text/javascript" src="gl-matrix-min.js"></script>
+  <script>
+    window.AudioContext=window.AudioContext||window.webkitAudioContext||window.mozAudioContext;
+
+    var canvasWidth = window.innerWidth;
+    var canvasHeight = window.innerHeight;
+
+    /**
+     *
+     * Sound stuff
+     *
+     */
+    var audioCtx = new AudioContext();
+    var audioBuffer;
+    var audioSource;
+    var analyser = audioCtx.createAnalyser();
+    var frequencyData = new Uint8Array(analyser.frequencyBinCount);
+
+    /**
+      Time stuff
+    */
+    var DELTA_TIME = 0;
+    var LAST_TIME = Date.now();
+
+    /**
+      Canvas stuff
+    */
+    var canvas
+    var ctx
+
+    function initCanvas() {
+
+      canvas = document.querySelector('canvas')
+      ctx = canvas.getContext('2d')
+
+      ctx.fillStyle = '#000000'
+      ctx.fillRect(0,0,canvasWidth,canvasHeight)
+
+      onResize()
+
+    }
+
+    function loadSound(url) {
+      var request = new XMLHttpRequest();
+      request.open('GET', 'Pegboard Nerds-SwampThing.mp3', true);
+      request.responseType = 'arraybuffer';
+
+      // Decode asynchronously
+      request.onload = function() {
+
+        audioCtx.decodeAudioData(request.response, function(buffer) {
+
+          // success callback
+          audioBuffer = buffer;
+
+          // Create sound from buffer
+          audioSource = audioCtx.createBufferSource();
+          audioSource.buffer = audioBuffer;
+
+          // connect the audio source to context's output
+          audioSource.connect( analyser )
+          analyser.connect( audioCtx.destination )
+
+          // play sound
+          audioSource.start();
+
+          addListeners()
+          frame()
+
+        }, function(){
+
+          // error callback
+          //
+        });
+      }
+      request.send();
+    }
+
+
+    /**
+     * addListeners
+     */
+    function addListeners() {
+
+      window.addEventListener( 'resize', onResize.bind(this) );
+      rafId = requestAnimationFrame( frame )
+
+    }
+
+    /**
+      Settings
+    */
+    var frqSpan = 500,
+        beatScale = 0,
+        baseColor = '#00ffd8',
+        canBeat = true,
+        canSnare = true,
+        redValue = 0
+
+    // circle & points
+    var nbPoints = 50,
+        baseRadius = 100,
+        baseOpacity = 1,
+        colorFade = 5,
+        angleStep = (Math.PI * 2 / 360) * 0.25,
+        radiusStep = 1.2,
+        colorStep = 10,
+        groups = [],
+        pointsSize = 1,
+        alphaStep = -0.001,
+        speedModifier = 1.2,
+        scaleModifier = 6,
+        maxDist
+
+    // equalizer
+    var eqInnerRadius = 0,
+        eqOuterRadius = 90,
+        nbBars = 50,
+        eqMinHeight = 5
+        bars = []
+
+    /**
+     * Class Circle
+     */
+    var Circle = function (opacity, modifier) {
+      this.radius = 0
+      this.opacity = opacity
+      this.points = []
+      this.modifier = modifier
+      // this.fastest = false
+      // this.slowest = false
+    }
+
+    Circle.prototype = {
+      draw: function () {
+        for(var i = 0; i < nbPoints; i++){
+          var angle = Math.PI * 2 / nbPoints * i,
+              frequencyIdx = Math.floor(frqSpan * (i / nbPoints)),
+              speed = this.modifier[frequencyIdx] / 255 * speedModifier,
+              scale = (this.modifier[frequencyIdx] / 255 * scaleModifier) + 1
+              x = Math.cos(angle) * (this.radius * speed + baseRadius) + canvasWidth / 2,
+              y = Math.sin(angle) * (this.radius * speed + baseRadius) + canvasHeight / 2,
+              currentPos = vec2.fromValues(x, y),
+              opacity = this.opacity
+
+          this.points.push(new Point(currentPos, speed, angle, opacity, scale))
+          this.points[i].draw()
+
+          /* if(!this.fastest || this.fastest.speed < speed) {
+            this.fastest = this.points[i]
+          }
+          if(!this.slowest || this.slowest.speed > speed) {
+            this.slowest = this.points[i]
+          } */
+        }
+      },
+      update: function (modifier) {
+        this.radius += radiusStep
+        this.opacity += alphaStep
+        if(this.opacity < 0){ this.opacity = 0 }
+
+        for(var i = 0; i < nbPoints; i++){
+          var frequencyIdx = Math.floor(1024 * (i / nbPoints))
+          scale = (this.modifier[frequencyIdx] / 255 * scaleModifier) + 1
+          this.points[i].update(this.radius, this.opacity, scale)
+          this.points[i].draw()
+        }
+      }
+    }
+
+    /**
+     * Class Point
+     */
+    var Point = function (currentPos, speed, angle, opacity, scale) {
+      this.currentPos = currentPos
+      this.speed = speed
+      this.angle = angle
+      this.opacity = opacity
+      this.scale = scale
+    }
+
+    Point.prototype = {
+      draw: function () {
+        ctx.save()
+        ctx.translate(this.currentPos[0], this.currentPos[1])
+        ctx.scale(this.scale + beatScale, this.scale + beatScale)
+        ctx.globalAlpha = this.opacity
+
+        ctx.beginPath()
+        ctx.fillStyle = baseColor
+        ctx.arc(0, 0, pointsSize, 0, Math.PI * 2, true)
+        ctx.fill()
+        ctx.closePath()
+
+        ctx.restore()
+      },
+      update: function (radius, opacity, scale) {
+        this.scale = scale
+        this.opacity = opacity
+        this.angle += angleStep
+        this.currentPos[0] = Math.cos(this.angle) * (radius * this.speed + baseRadius) + canvasWidth / 2
+        this.currentPos[1] = Math.sin(this.angle) * (radius * this.speed + baseRadius) + canvasHeight / 2
+      }
+    }
+
+    /**
+     * Class Bar
+     */
+    var Bar = function (height, angle, angleAlt, coordinates) {
+      this.height = height
+      this.angle = angle
+      this.angleAlt = angleAlt
+      this.coordinates = coordinates
+    }
+    Bar.prototype = {
+      draw: function () {
+        ctx.globalAlpha = 0.3
+        ctx.beginPath()
+        ctx.fillStyle = baseColor
+        ctx.moveTo(this.coordinates[0][0], this.coordinates[0][1])
+        ctx.lineTo(this.coordinates[1][0], this.coordinates[1][1])
+        ctx.lineTo(this.coordinates[2][0], this.coordinates[2][1])
+        ctx.lineTo(this.coordinates[3][0], this.coordinates[3][1])
+        ctx.fill()
+        ctx.closePath()
+        ctx.globalAlpha = 0.8
+      },
+      update: function (modifier, i) {
+        this.height = modifier[Math.floor(frqSpan * (i / nbBars))] / 255 * eqOuterRadius
+        if(this.height < eqMinHeight){ this.height = eqMinHeight }
+
+        this.coordinates[2][0] = Math.cos(this.angleAlt) * (eqInnerRadius + this.height) + canvasWidth / 2
+        this.coordinates[2][1] = Math.sin(this.angleAlt) * (eqInnerRadius + this.height) + canvasHeight / 2
+
+        this.coordinates[3][0] = Math.cos(this.angle) * (eqInnerRadius + this.height) + canvasWidth / 2
+        this.coordinates[3][1] = Math.sin(this.angle) * (eqInnerRadius + this.height) + canvasHeight / 2
+      }
+    }
+
+    /**
+     * Create Circle
+     */
+    function createCircle (modifier) {
+      groups.push(new Circle(baseOpacity, modifier))
+      groups[groups.length - 1].draw()
+    }
+
+    /**
+     * Create Lines
+     */
+    function calculateDistance(a, b) {
+      var distX = a.currentPos[0] - b.currentPos[0]
+      var distY = a.currentPos[1] - b.currentPos[1]
+      var dist = Math.sqrt((distX * distX) + (distY * distY))
+
+      return dist
+    }
+    function drawLine (a, b, dist, maxDist) {
+      ctx.beginPath()
+      ctx.strokeStyle = baseColor
+      ctx.lineWidth = 4
+      ctx.globalAlpha = (maxDist - dist) / 100
+      ctx.moveTo(a.currentPos[0], a.currentPos[1])
+      ctx.lineTo(b.currentPos[0], b.currentPos[1])
+      ctx.stroke()
+      ctx.closePath()
+      ctx.globalAlpha = 1
+    }
+
+    function createBars () {
+      for(var i = 0;i < nbBars; i++) {
+        var angle = Math.PI * 2 / nbBars * i
+        var angleAlt = Math.PI * 2 / nbBars * (i + 1)
+        var firstX = Math.cos(angle) * (eqInnerRadius) + canvasWidth / 2
+        var firstY = Math.sin(angle) * (eqInnerRadius) + canvasHeight / 2
+        var secondX = Math.cos(angleAlt) * (eqInnerRadius) + canvasWidth / 2
+        var secondY = Math.sin(angleAlt) * (eqInnerRadius) + canvasHeight / 2
+        var thirdX = Math.cos(angleAlt) * (eqInnerRadius + eqMinHeight) + canvasWidth / 2
+        var thirdY = Math.sin(angleAlt) * (eqInnerRadius + eqMinHeight) + canvasHeight / 2
+        var fourthX = Math.cos(angle) * (eqInnerRadius + eqMinHeight) + canvasWidth / 2
+        var fourthY = Math.sin(angle) * (eqInnerRadius + eqMinHeight) + canvasHeight / 2
+        var coordinates = [vec2.fromValues(firstX, firstY), vec2.fromValues(secondX, secondY), vec2.fromValues(thirdX, thirdY), vec2.fromValues(fourthX, fourthY)]
+
+        bars.push(new Bar(eqMinHeight, angle, angleAlt, coordinates))
+      }
+      
+    }
+
+    /**
+     * update
+     * - Triggered on every TweenMax tick
+     */
+    function frame() {
+
+      rafId = requestAnimationFrame( frame )
+
+      DELTA_TIME = Date.now() - LAST_TIME;
+      LAST_TIME = Date.now();
+
+      // analyser.getByteFrequencyData(frequencyData);
+      analyser.getByteFrequencyData(frequencyData);
+      // ctx.clearRect( 0, 0, canvasWith, canvasHeight )
+
+      var thresholdBeat = 240
+      var frqKick = 5
+      var frqSnare = 9
+
+      ctx.fillStyle = 'rgba(0,0,0,0.05)'
+
+      if(frequencyData[frqSnare] > thresholdBeat && canSnare) {
+        redValue = 255
+        baseColor = "rgb(255,255,216)"
+        ctx.fillStyle = 'rgba(255, 255, 255, 0.07)'
+        canSnare = false
+      } else if(frequencyData[frqSnare] < thresholdBeat){
+        canSnare = true
+      }
+      if(redValue > 0) {
+        redValue += -6.5
+        baseColor = 'rgb(' + redValue + ', 255, 216)'
+      }
+
+      ctx.fillRect(0,0,canvasWidth,canvasHeight)
+
+      if(frequencyData[frqKick] > thresholdBeat && canBeat) {
+        beatScale = 1
+        createCircle(frequencyData)
+        canBeat = false
+      } else if(frequencyData[frqKick] < thresholdBeat){
+        canBeat = true
+      }
+
+      if(groups.length > 0) {
+        for(var j = 0; j < groups.length; j++) {
+          if(groups[j].opacity <= 0){
+            groups.splice(j, 1)
+          } else {
+            groups[j].update(frequencyData)
+          }
+        }
+      }
+
+      if(groups.length > 0) {
+        for(var j = 0; j < groups.length; j++) {
+          for(var i = 0; i < nbPoints; i++) {
+            k = i + 1
+            if(k >= nbPoints){ k = 0 }
+            maxDist = 40
+            var dist = calculateDistance(groups[j].points[i], groups[j].points[k])
+            if(dist < maxDist){
+              drawLine(groups[j].points[i], groups[j].points[k], dist, maxDist)
+            }
+          }
+        }
+      }
+
+      for(var i = 0; i < nbBars; i++){
+        bars[i].update(frequencyData, i)
+        bars[i].draw()
+      }
+      if(beatScale > 0){
+        beatScale += -0.075
+      }
+
+    }
+
+    /**
+     * Tests
+     */
+    addEventListener('click', logThisShit, false)
+    function logThisShit () {
+      for(var i = 0; i < nbPoints; i++){
+        console.log(groups[0].points[i].speed)
+      }
+    }
+
+    /**
+     * onResize
+     * - Triggered when window is resized
+     * @param  {obj} evt
+     */
+    function onResize( evt ) {
+
+      canvasWith = window.innerWidth;
+      canvasHeight = window.innerHeight;
+
+      canvas.width = canvasWith
+      canvas.height = canvasHeight
+      canvas.style.width = canvasWith + 'px'
+      canvas.style.height = canvasHeight + 'px'
+
+    }
+
+    
+    initCanvas()
+    loadSound()
+    createBars()
+
+  </script>
+</body>
+</html>
+

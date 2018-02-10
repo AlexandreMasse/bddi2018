@@ -1,0 +1,148 @@
+<html>
+<head>
+	<title>Climate Change | Gobelins project</title>
+	<link href="./assets/fonts/stylesheet.css" rel="stylesheet">
+	<style>
+		html,body{
+			overflow: hidden;
+		}
+		.container_data{
+			position: fixed;
+			bottom: 30px ;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 35%;
+			margin: 0 auto;
+			height: 100px;
+			display: -webkit-flex;
+			display: -moz-flex;
+			display: -ms-flex;
+			display: -o-flex;
+			display: flex;
+			display: none;
+
+		}
+
+		.element_data{
+			background:white;
+			opacity: .5;
+			margin-top: auto;
+			transition: .3s background,.3s opacity
+
+
+		}
+		.element_data.is_active{
+			opacity: 1;
+		}
+
+		.element_data.is_previous{
+			background:green;
+			transition: .3s background
+		}
+		.overlay{
+			position: fixed;
+			pointer-events: none;
+			background: rgba(0,0,0, .6);
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			opacity: 0;
+			transition: .4s opacity
+
+		}
+		.overlay_container{
+			width: 100%;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate3d(-50%,-50%,0);
+		}
+		.overlay_pre{
+			margin-top: 0px;
+			margin-bottom: 0;
+			font-size: 4.563em;
+			line-height: 1em;
+			font-weight: normal;
+			text-align: center;
+			width: 100%;
+			color: #fff
+		}
+		.overlay_co2{
+			font-size: 11.438em;
+			line-height: 0.9em;
+			margin-top: 30px;
+			margin-bottom: 30px;
+			font-weight: bold;
+			text-align: center;
+			width: 100%;
+			color: #fff
+		}
+
+		.overlay_year{
+			font-size: 6.875em;
+			line-height: 0.8em;
+
+			text-align: center;
+			font-weight: bold;
+			width: 100%;
+			color: #fff
+		}
+
+		.overlay.is_scrolling{
+			opacity: 1;
+			transition: .4s opacity .2s
+		}
+
+		.element_data.is-hover{
+			background-color:red;
+		}
+
+	</style>
+<link href="main.b8c3224f89770ea1dae2a18e3c18f4af.css" rel="stylesheet"></head>
+<body>
+	<span class="logo">
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 341.36 75.72"><defs><style>.cls-1{font-size:30px;font-family:Phenomena-Bold, Phenomena;font-weight:700;letter-spacing:0.02em;}.cls-1,.cls-13,.cls-6{fill:#2ebbbf;}.cls-2{letter-spacing:0.02em;}.cls-3,.cls-6{letter-spacing:0.03em;}.cls-4{letter-spacing:0em;}.cls-5{letter-spacing:0em;}.cls-6{font-size:15px;font-family:Phenomena-Light, Phenomena;}.cls-7{letter-spacing:0.02em;}.cls-8{letter-spacing:0.01em;}.cls-9{letter-spacing:0.02em;}.cls-10{letter-spacing:0.02em;}.cls-11,.cls-12{fill:none;stroke:#2ebbbf;stroke-miterlimit:10;stroke-width:1.25px;}.cls-12{opacity:0.3;}.cls-14{fill:#0b727a;}</style></defs><title>Fichier 1</title><g id="Calque_2" data-name="Calque 2"><g id="Plan_4"><text class="cls-1" transform="matrix(1, 0, 0, 1, 98.47, 37.74)">C<tspan class="cls-2" x="13.02" y="0">L</tspan><tspan class="cls-3" x="24.03" y="0">IM</tspan><tspan class="cls-4" x="51.93" y="0">A</tspan><tspan class="cls-5" x="65.52" y="0">T</tspan><tspan class="cls-3" x="76.41" y="0">E </tspan><tspan class="cls-2" x="95.28" y="0">C</tspan><tspan class="cls-3" x="108.21" y="0">HANGE</tspan></text><text class="cls-6" transform="matrix(1, 0, 0, 1, 98.51, 56.12)">and <tspan class="cls-7" x="23.11" y="0">c</tspan><tspan x="29.27" y="0">on</tspan><tspan class="cls-8" x="42.09" y="0">s</tspan><tspan x="48.04" y="0">e</tspan><tspan class="cls-9" x="54.25" y="0">q</tspan><tspan class="cls-10" x="60.64" y="0">ue</tspan><tspan x="73.23" y="0">n</tspan><tspan class="cls-7" x="79.69" y="0">c</tspan><tspan x="85.84" y="0">es</tspan></text><circle class="cls-11" cx="38.91" cy="37.86" r="37.23" transform="translate(1.01 76.72) rotate(-89.94)"/><path class="cls-11" d="M38.81,75.09c-4.09,0-7.39-16.68-7.37-37.24S34.8.62,38.9.63"/><path class="cls-12" d="M38.92,75.09c-14.83,0-26.83-16.7-26.81-37.26S24.18.61,39,.63"/><path class="cls-12" d="M38.9.63c4.09,0,7.39,16.68,7.37,37.24s-3.36,37.23-7.45,37.22"/><path class="cls-11" d="M39,.63c14.83,0,26.83,16.7,26.81,37.26S53.75,75.1,38.92,75.09"/><circle class="cls-13" cx="4.18" cy="24.01" r="4.18" transform="translate(-19.84 28.17) rotate(-89.94)"/><circle class="cls-13" cx="31.76" cy="49.98" r="4.18" transform="translate(-18.25 81.69) rotate(-89.94)"/><circle class="cls-14" cx="38.47" cy="38.28" r="4.18" transform="translate(0.15 76.7) rotate(-89.94)"/><circle class="cls-13" cx="64.42" cy="26.59" r="4.18" transform="translate(37.75 90.98) rotate(-89.94)"/></g></g></svg>
+	</span>
+	<h1 class="title">Le monde</h1>
+	<div id="main"></div>
+	<div class="overlay">
+		<div class="overlay_container">
+			<p class="overlay_pre">Emissions de C02</p>
+			<div class="overlay_co2"></div>
+			<div class="overlay_year"></div>
+		</div>
+	</div>
+	<div class="fix_data-container">
+		<div class="fix_data-col">
+			<div class="fix_data maxco2">
+				<div class="fix_data-number" id="maxco2"></div>
+				<p class="fix_data-text">Emissions maximum de CO2 dans le monde.</p>
+			</div>
+			<div class="fix_data minco2">
+				<div class="fix_data-number"></div>
+				<p class="fix_data-text">Emissions minimum de CO2 dans le monde.</p>
+			</div>
+		</div>
+		<div class="fix_data-col fix_data-col-2">
+			<div class="fix_data averrageco2">
+				<div class="fix_data-number"></div>
+				<p class="fix_data-text">Moyenne des émisions de CO2 par an.</p>
+			</div>
+			<div class="fix_data percentageco2">
+				<div class="fix_data-number"></div>
+				<p class="fix_data-text">Augmentation des émisions de CO2 entre 1961 et 2014</p>
+			</div>
+		</div>
+	</div>
+	<div class="container_data"></div>
+	<div class="container-ui">
+		<div class="cursor-line"></div>
+		<div class="cursor-line-move"></div>
+		<span class="cursor" data-value="0"><span class="cursor_point"></span></span>
+		<canvas id="canvasTimeline"></canvas>
+	</div>
+<script type="text/javascript" src="manifest.d7815a9abf87d93326ef.js"></script><script type="text/javascript" src="vendor.b7fd01c35b5326c32817.js"></script><script type="text/javascript" src="main.cba383acbb24e8c47598.js"></script></body>
+</html>

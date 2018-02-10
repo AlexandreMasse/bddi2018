@@ -1,0 +1,155 @@
+<html>
+    <head>
+        <title>Winter music</title>
+        <link rel="stylesheet" href="assets/fonts/flaticon.css">
+        <link href="https://fonts.googleapis.com/css?family=Work+Sans:200,400" rel="stylesheet">
+        <style media="screen">
+          .container {
+            position: absolute;
+            right: 2vw;
+            bottom: 2vh;
+          }
+          em {
+            position: relative;
+            top: -2.5px;
+            margin-top: -5px;
+            text-transform: uppercase;
+            color: #fff;
+            font-size: 10px;
+            letter-spacing: 2px;
+            font-style: normal;
+          }
+          a {
+            text-decoration: none;
+            color: rgba(255, 255, 255, 0.7);
+          }
+
+          .introScreen {
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: #afbbf0;
+            width: 100vw;
+            height:100vh;
+            font-family: 'Work Sans';
+          }
+
+          .introScreen.hidden {
+            animation: opacity 1s forwards;
+          }
+
+          @keyframes opacity {
+            from {
+              opacity: 1;
+            } to {
+              opacity : 0;
+            }
+          }
+
+          .center {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+          }
+
+          h1 {
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            font-size: 3rem;
+            text-align: center;
+            margin: 0;
+            color: #fff;
+            margin-bottom: 5vh;
+          }
+
+          h2, h3, p {
+            color: #fff;
+            text-align: center;
+            margin: 0;
+          }
+
+          .center p {
+            margin-top: 0;
+            font-style: italic;
+            font-size: 0.8rem;
+            font-weight: 200;
+            text-align: center;
+          }
+
+          .center a {
+            display: block;
+            text-align: center;
+            position: relative;
+            top: 5vh;
+            bottom: 0;
+            text-decoration: none;
+            color: #fff;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 3px;
+          }
+
+          .center a.startBtn {
+            opacity: 0;
+            margin-top: 5vh;
+            padding-bottom: 2vh;
+            transition: color .5s;
+          }
+
+          .center a.startBtn:hover {
+            color: #5b96b2;
+          }
+
+          .center a.show {
+            animation: opacityUp 1s forwards;
+          }
+
+          @keyframes opacityUp {
+            from {
+              opacity: 0;
+            } to {
+              opacity : 1;
+            }
+          }
+
+          .container {
+              text-align: right;
+              font-family: 'Work Sans';
+              font-size: 0.7rem;
+              color: #fff;
+              text-transform: uppercase;
+          }
+
+          .container a.link {
+              font-family: 'Work Sans';
+              color: #d7f2ff;
+              transition: color .5s;
+          }
+
+          .container a.link:hover {
+              color: #5b96b2;
+          }
+
+        </style>
+    <link href="main.0b3a6f0d596581fae82cb4b0a9839e29.css" rel="stylesheet"></head>
+    <body>
+      <div class="introScreen" id="introScreen">
+        <div class="center">
+          <h1>White winter</h1>
+          <h2>Léa Tanda</h2>
+          <h3>BDDI 2018 - Gobelins</h3>
+          <p>Sound experiment, using web audio API & three.js .</p>
+          <a href="#" class="loading">-</a>
+          <a href="#" class="startBtn">-</a>
+        </div>
+      </div>
+      <div class="container">
+        <em>White winter hymnal - Pentatonix</em>
+        <a href="#" class="pauseBtn flaticon-pause-symbol"></a><br><br>
+        <span>By </span> <a href="http://leatanda.fr" class="link">Léa Tanda</a><br>
+        <a href="https://github.com/itsleaht/snowSound"  class="link">Source code on Github</a>
+      </div>
+        <div id="main"></div>
+    <script type="text/javascript" src="manifest.bc99129d480c67553f5d.js"></script><script type="text/javascript" src="vendor.1bbbbbf0651b8b5648dc.js"></script><script type="text/javascript" src="main.5b30fff23254d62387e7.js"></script></body>
+</html>

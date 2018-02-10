@@ -1,0 +1,12 @@
+html, body {
+    margin: 0;
+    padding: 0;
+
+    background: #000;
+
+    font-family: sans-serif;
+}
+
+canvas {
+	background: radial-gradient(circle, #040F36, #030A24, #010412 );
+}

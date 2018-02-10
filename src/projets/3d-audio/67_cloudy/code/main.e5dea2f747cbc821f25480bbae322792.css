@@ -1,0 +1,33 @@
+html, body {
+    margin: 0;
+    padding: 0;
+
+    background: #000;
+
+    font-family: sans-serif;
+
+}
+#hud {
+    position: fixed;
+    top: 25px;
+    bottom: 25px;
+    left: 25px;
+    right: 25px;
+    padding: 25px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+}
+h1 {
+    font-size: 50pt;
+}
+button {
+    padding: 20px 100px;
+    border: 3px solid black;
+    background: none;
+    font-size: 15pt;
+    font-weight: bold;
+}
+/*# sourceMappingURL=main.e5dea2f747cbc821f25480bbae322792.css.map*/

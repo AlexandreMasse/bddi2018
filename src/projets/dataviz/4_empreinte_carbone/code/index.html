@@ -1,0 +1,40 @@
+<html>
+<head>
+    <title>Emprunte Carbone - Main</title>
+<link href="main.506354149383028b163b66c9cdcb1648.css" rel="stylesheet"></head>
+
+<body>
+    <div id="main">
+        <div id="app" v-if="state.load">
+                <!--
+                <div class="debugger" v-if="state.debug">
+                    <input type="number" v-model="state.year" min="1960" max="2016">
+                    <v-select v-model.lazy="state.country" :options="state.countries"></v-select>
+                    <hr>
+
+                    <dl>
+                        <dt>Year</dt>
+                        <dd>{{state.year}}</dd>
+                        <dt>co2</dt>
+                        <dd>{{state.co2}}</dd>
+                        <dt>country</dt>
+                        <dd>{{state.country}}</dd>
+                        <dt>scaler</dt>
+                        <dd>{{state.scaler}}</dd>
+                    </dl>
+                    <hr>
+                </div>
+                -->
+
+                <!-- route outlet -->
+                <!-- component matched by the route will render here -->
+                <div class="view" :class="viewClass">
+                    <component class="view--inner" :class="state.currentView" v-bind:is="state.currentView">
+                        <!-- component changes when vm.currentView changes! -->
+                    </component>
+                </div>
+        </div>
+    </div>
+<script type="text/javascript" src="manifest.7205f3874bb0f24209cb.js"></script><script type="text/javascript" src="vendor.7db4ca07a45acf268714.js"></script><script type="text/javascript" src="main.cbbaf0e12f4a756f3b72.js"></script></body>
+
+</html>

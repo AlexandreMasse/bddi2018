@@ -26,4 +26,17 @@
       margin-top: 100px;
     }
   }
+  &__back-link {
+    position: absolute;
+    left: 30px;
+    font-family: $font-aileron-regular;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    cursor: pointer;
+  }
+  &-iframe {
+    border: none;
+    height: 100vh;
+    width: 100vw;
+  }
 }

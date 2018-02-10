@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Music sampler</title>
+    </head>
+    <body>
+        <div id="loader">
+            <h2>Loading sounds... <span id="loadedSounds"></span></h2>
+            <img src="assets/images/loader.svg" alt="">
+        </div>
+        <div id="introduction">
+            <h1>Music Sampler</h1>
+            <h2>How to use it?</h2>
+            <p class="introduction">Just move around the sphere and click to play a sound. You can choose between <strong>3</strong> instruments and <strong>2</strong> types of
+            percussions. <br/>
+            You can also play with your keyboard! Use <strong>A,Z,E,R,T,Y</strong> to play. (you can play multiple notes) <br/>
+            By moving your mouse to the left and right, you can play with filters. Try it out!</p>
+            <h2>Shortcuts</h2>
+            <p><strong>S</strong> to toggle panel controls</p>
+            <button id="launch">Launch experiment</button>
+        </div>
+        <div class="notes">
+            <div class="note first"></div>
+            <div class="note second"></div>
+            <div class="note third"></div>
+            <div class="note fourth"></div>
+            <div class="note fifth"></div>
+            <div class="note sixth"></div>
+        </div>
+        <div class="controls visible">
+            <div class="overlay">
+                <h2>Percussions</h2>
+                <button data-drums="drums" class="percussions-button">Percussions 1</button>
+                <button data-drums="drums2" class="percussions-button" >Percussions 2</button>
+                <h2>Instruments</h2>
+                <button data-instrument="odrenka" class="instruments-button" >Odrenka</button>
+                <button data-instrument="violins" class="instruments-button" >Violins</button>
+                <button data-instrument="trancy" class="instruments-button" >Trancy</button>
+            </div>
+            <button title="Shortcut : s" id="toggleOverlay"><</button>
+        </div>
+        <div id="main"></div>
+    <script type="text/javascript" src="manifest.bdc6ba4346d2d52ac27f.js"></script><script type="text/javascript" src="vendor.ca600ab6df2840359f06.js"></script><script type="text/javascript" src="main.e7362d4ea7b2659ee688.js"></script></body>
+</html>
