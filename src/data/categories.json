@@ -622,12 +622,13 @@
             },
             {
                 "id": 64,
-                "name": "Poisson chat",
-                "ident": "poisson_chat",
+                "name": "Chat",
+                "ident": "Chat",
                 "studentsList": [
-                    7,
-                    22
-                ]
+                    8,
+                    33
+                ],
+                "screens" : [0]
             },
             {
                 "id": 65,
@@ -784,16 +785,16 @@
             },
             {
                 "id": 78,
-                "name": "",
-                "ident": "",
+                "name": "Sound experiment",
+                "ident": "sound_experiment",
                 "studentsList": [
                     28
                 ]
             },
             {
                 "id": 79,
-                "name": "",
-                "ident": "",
+                "name": "Sound experiment",
+                "ident": "sound_experiment",
                 "studentsList": [
                     29
                 ]

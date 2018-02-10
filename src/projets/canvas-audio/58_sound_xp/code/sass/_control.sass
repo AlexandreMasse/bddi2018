@@ -1,0 +1,79 @@
+#menu
+	position: fixed
+	right: 50px
+	top: 50px
+	z-index: 2
+	background-color: white
+	padding: 20px
+	box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3)
+
+#global-control
+	position: fixed
+	top: 20px
+	right: 20px
+	z-index: 999
+	color: white
+	padding-top: 60px
+	border-radius: 5px
+	font-weight: 200
+	letter-spacing: 1px
+	padding-top: 70px
+	.button-control
+		width: 45px
+		height: 45px
+		background-color: black
+		float: right
+		border-radius: 5px
+		border: 0
+		background-position: center
+		background-repeat: no-repeat
+		background-size: 30px
+		position: absolute
+		top: 0
+		right: 0
+		transition: all .4s
+		&__hide
+			background-image: url("images/menu.svg")
+			background-size: 20px
+			filter: invert(100%)
+		&__display
+			background-image: url("images/close.svg")
+			background-size: 20px
+	
+	.control-group
+		background-color: white
+		color: black
+		width: 260px
+		border: 2px solid black
+		border-radius: 5px
+		padding: 15px
+		margin-bottom: 5px
+		transition: all .3s
+		&__hide
+			transform: translateX(350px)
+			opacity: 0
+		&__display
+			transform: translateX(0px)
+			opacity: 1
+
+		label
+			display: inline-block
+			margin-right: 5px
+			&::first-letter
+				text-transform: uppercase
+
+		input
+			display: block
+			width: 160px
+			margin: 0
+			float: right
+			&[type="text"]
+				width: 30px
+				display: inline-block
+				margin-left: 10px
+				border: 0
+				padding: 5px
+				border-radius: 5px
+				background-color: #222
+				color: white
+				text-align: center

@@ -1,0 +1,62 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="icon.png">
+
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body id="container">
+      <div id="audio">
+          <audio id="audioPlayer">
+              <source src="music/sound.mp3">
+          </audio>
+
+          <button class="control" onclick="play('audioPlayer', this)">PLAY MUSIC</button>
+      </div>
+
+      <nav>
+        <ul>
+          <li id="france" class="active"><p>FRANCE</p></li>
+          <li id="chine"><p>CHINE</p></li>
+          <li id="ghana"><p>GHANA</p></li>
+          <li id="espagne"><p>ESPAGNE</p></li>
+        </ul>
+      </nav>
+      <div id="content">
+        <p id="test"></p>
+      </div>
+
+      <input type="range" id="range" orient="vertical" list="listYears">
+
+        <script src="js/tween/TweenMax.min.js"></script>
+        <script src="datas/fr_urbanisation.js"></script>
+        <script src="datas/fr_forestation.js"></script>
+        <script src="datas/ch_forestation.js"></script>
+        <script src="datas/ch_urbanisation.js"></script>
+        <script src="datas/gha_forestation.js"></script>
+        <script src="datas/gha_urbanisation.js"></script>
+        <script src="datas/esp_forestation.js"></script>
+        <script src="datas/esp_urbanisation.js"></script>
+        <script src="js/addons/jquery-3.2.1.min.js"></script>
+        <script src="js/addons/perlin.js"></script>
+        <script src="js/addons/tween.js"></script>
+        <script src="js/addons/plugins.js"></script>
+        <script src="js/addons/p5.min.js"></script>
+        <script src="js/addons/p5.dom.min.js"></script>
+        <script src="js/addons/p5.sound.min.js"></script>
+        <script src="js/setGradient.js"></script>
+        <script src="js/selectCountry.js"></script>
+        <script src="js/drawCountry.js"></script>
+        <script src="js/drawPourcent.js"></script>
+        <script src="js/drawForestation.js"></script>
+        <script src="js/drawUrbanisation.js"></script>
+        <script src="js/drawTimeline.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>

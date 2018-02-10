@@ -1,0 +1,386 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  font-family: "Raleway"; }
+
+button {
+  display: block;
+  margin: auto;
+  position: relative;
+  background: none;
+  text-transform: uppercase;
+  border: none;
+  padding: 0;
+  color: rgba(0, 0, 0, 0.7);
+  outline: none;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s; }
+
+button svg {
+  width: 250px;
+  height: 60px;
+  fill: none;
+  stroke: currentColor;
+  stroke-dasharray: 0, 0, 620px, 620px;
+  -webkit-transition: stroke-dasharray 0.3s;
+  transition: stroke-dasharray 0.6s; }
+
+button path {
+  stroke-width: 5; }
+
+button span {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  line-height: 60px;
+  font-size: 13px;
+  letter-spacing: 1px; }
+
+button:hover, button:focus {
+  color: #000; }
+
+button:hover svg, button:focus svg {
+  stroke-dasharray: 250px, 620px; }
+
+.btn-action {
+  z-index: 1001;
+  cursor: pointer;
+  position: fixed;
+  top: 21px;
+  height: 45px;
+  width: 45px;
+  color: white;
+  background-repeat: no-repeat;
+  background-size: 20px;
+  background-position: center;
+  border-radius: 5px;
+  border: 0;
+  box-sizing: border-box; }
+
+.button-fullscreen {
+  right: 80px;
+  background-image: url("images/expand.svg");
+  background-color: black;
+  filter: invert(100%); }
+
+.button-sound-cut {
+  right: 145px;
+  background-image: url("images/expand.svg");
+  background-color: white;
+  background-size: 28px; }
+  .button-sound-cut--sound {
+    background-image: url("images/speaker-sound.png"); }
+  .button-sound-cut--mute {
+    background-image: url("images/speaker-mute.png"); }
+
+#change-music {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  height: 45px;
+  width: 200px;
+  z-index: 2;
+  overflow: hidden;
+  border-radius: 5px; }
+
+#change-music-select {
+  background-color: black;
+  color: white;
+  border: 0;
+  border-radius: 5px;
+  padding-left: 10px;
+  letter-spacing: 1px;
+  height: 45px;
+  width: 250px; }
+
+#change-music::after {
+  content: "";
+  display: block; }
+
+#menu {
+  position: fixed;
+  right: 50px;
+  top: 50px;
+  z-index: 2;
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3); }
+
+#global-control {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 999;
+  color: white;
+  padding-top: 60px;
+  border-radius: 5px;
+  font-weight: 200;
+  letter-spacing: 1px;
+  padding-top: 70px; }
+  #global-control .button-control {
+    width: 45px;
+    height: 45px;
+    background-color: black;
+    float: right;
+    border-radius: 5px;
+    border: 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 30px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transition: all 0.4s; }
+    #global-control .button-control__hide {
+      background-image: url("images/menu.svg");
+      background-size: 20px;
+      filter: invert(100%); }
+    #global-control .button-control__display {
+      background-image: url("images/close.svg");
+      background-size: 20px; }
+  #global-control .control-group {
+    background-color: white;
+    color: black;
+    width: 260px;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 5px;
+    transition: all 0.3s; }
+    #global-control .control-group__hide {
+      transform: translateX(350px);
+      opacity: 0; }
+    #global-control .control-group__display {
+      transform: translateX(0px);
+      opacity: 1; }
+    #global-control .control-group label {
+      display: inline-block;
+      margin-right: 5px; }
+      #global-control .control-group label::first-letter {
+        text-transform: uppercase; }
+    #global-control .control-group input {
+      display: block;
+      width: 160px;
+      margin: 0;
+      float: right; }
+      #global-control .control-group input[type="text"] {
+        width: 30px;
+        display: inline-block;
+        margin-left: 10px;
+        border: 0;
+        padding: 5px;
+        border-radius: 5px;
+        background-color: #222;
+        color: white;
+        text-align: center; }
+
+#loadersvg {
+  transform: rotate(180deg); }
+
+#loadersvg path {
+  fill: none;
+  stroke: black;
+  transform-origin: 50%; }
+  #loadersvg path:nth-child(1) {
+    transform: scale(1) rotate(0deg);
+    opacity: 1;
+    animation-name: rotate-1;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out; }
+  #loadersvg path:nth-child(2) {
+    transform: scale(0.9) rotate(0deg);
+    opacity: 0.85;
+    animation-name: rotate-2;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out; }
+  #loadersvg path:nth-child(3) {
+    transform: scale(0.8) rotate(0deg);
+    opacity: 0.7;
+    animation-name: rotate-3;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out; }
+  #loadersvg path:nth-child(4) {
+    transform: scale(0.7) rotate(0deg);
+    opacity: 0.55;
+    animation-name: rotate-4;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out; }
+  #loadersvg path:nth-child(5) {
+    transform: scale(0.6) rotate(0deg);
+    opacity: 0.4;
+    animation-name: rotate-5;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out; }
+  #loadersvg path:nth-child(6) {
+    transform: scale(0.5) rotate(0deg);
+    opacity: 0.25;
+    animation-name: rotate-6;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out; }
+
+@keyframes rotate-1 {
+  0% {
+    transform: scale(1); }
+  50% {
+    transform: scale(1.5); }
+  100% {
+    transform: scale(1); } }
+@keyframes rotate-2 {
+  0% {
+    transform: scale(0.9); }
+  50% {
+    transform: scale(1.2); }
+  100% {
+    transform: scale(0.9); } }
+@keyframes rotate-3 {
+  0% {
+    transform: scale(0.8); }
+  50% {
+    transform: scale(0.9); }
+  100% {
+    transform: scale(0.8); } }
+@keyframes rotate-4 {
+  0% {
+    transform: scale(0.7); }
+  50% {
+    transform: scale(0.6); }
+  100% {
+    transform: scale(0.7); } }
+@keyframes rotate-5 {
+  0% {
+    transform: scale(0.6); }
+  50% {
+    transform: scale(0.3); }
+  100% {
+    transform: scale(0.6); } }
+@keyframes loadersvg {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+#loader.loader {
+  height: 100vh;
+  width: 100vw;
+  background-color: white;
+  z-index: 1002;
+  position: fixed;
+  top: 0;
+  left: 0;
+  flex-direction: column;
+  justify-content: center;
+  transition: all 0.4s; }
+
+.loader--visible {
+  opacity: 1;
+  display: flex; }
+
+.loader--hidding {
+  opacity: 0;
+  display: flex; }
+
+.loader--hidden {
+  display: none; }
+
+.loader__container {
+  text-align: center; }
+  .loader__container h1 {
+    text-align: center;
+    font-size: 35px;
+    font-weight: 100;
+    letter-spacing: 5px;
+    margin-bottom: 30px; }
+
+.loader__button {
+  transition: all 0.4s ease;
+  transform: scale(0.8);
+  color: black;
+  margin-top: 20px; }
+
+.loader__button--hidden {
+  opacity: 0;
+  pointer-events: none;
+  user-select: none; }
+
+.loader__button--visible {
+  opacity: 1; }
+
+.mode--active, .mode--lite {
+  transition: 0.3s; }
+.mode--active {
+  opacity: 1; }
+.mode--lite {
+  opacity: 0; }
+
+#canvas {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  animation-name: rotate;
+  animation-duration: 3000;
+  animation-iteration-count: infinite; }
+
+/*# sourceMappingURL=app.css.map */

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>LinesSound</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+
+  </head>
+  <body>
+
+    <div id="intro-container">
+      <div id="intro">
+        <div id="intro-title">LineSound</div>
+        <div id="intro-split"></div>
+        <div id="intro-me">Alexandre Massé</div>
+      </div>
+    </div>
+
+    <div id="sliders-container">
+
+      <div id="slider-nb-line">
+        <label for="nb-line">Nombre de lignes</label>
+        <input id="nb-line" type="range" min="1" max="42" step="1">
+      </div>
+
+      <div id="slider-margin-top-bottom">
+        <label for="margin-top-bottom">Margin top-bottom</label>
+        <input id="margin-top-bottom" type="range" min="0" max="" step="10">
+      </div>
+
+      <div id="slider-nb-particle">
+        <label for="nb-particle">Courbure ligne</label>
+        <input id="nb-particle" type="range" min="1" max="200" step="1">
+      </div>
+
+      <div id="slider-fade">
+        <label for="fade">Ombre</label>
+        <input id="fade" type="range" min="0.01" max="1" step="0.01">
+      </div>
+
+      <div id="slider-amplitude-mult">
+        <label for="amplitude-mult">Amplitude</label>
+        <input id="amplitude-mult" type="range" min="0" max="3" step="0.05">
+      </div>
+
+      <div id="slider-speed">
+        <label for="speed">Vitesse</label>
+        <input id="speed" type="range" min="0.00001" max="0.005" step="0.00001">
+      </div>
+
+    </div>
+
+    <div id="canvas-container">
+
+      <div class="border"> </div>
+      <canvas id="canvas"></canvas>
+      <div class="border"> </div>
+
+    </div>
+
+
+    <div id="music-info-container">
+
+      <div id="music-artist">Arctic Monkeys</div>
+      <div id="music-split"></div>
+      <div id="music-title">Do I Wanna Know?</div>
+
+    </div>
+
+    <script src="lib/simplex-noise.js"></script>
+    <script src="js/particle.js"></script>
+    <script src="js/line.js"></script>
+    <script src="js/audio.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

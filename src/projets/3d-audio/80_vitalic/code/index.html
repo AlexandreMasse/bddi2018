@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>autiotest</title>
+  <style type="text/css">
+    *{
+      margin:0;
+    }
+    body {
+      overflow: hidden;
+      background: #000000;
+      height:100vh;
+      width:100vw;
+    }
+    .myButton {
+      position: absolute;
+      display: block;
+      left:calc(50% - 150px);
+      top:calc(50% - 130px);
+      transform: translateY(105px);
+      width: 300px;
+      animation-timing-function: ease-in-out;
+      animation-fill-mode: forwards;
+    }
+    #vitalic {
+      position: absolute;
+      width: 324px;
+      left: calc(50% - 174px);
+      top: calc(50% - 275px);
+      display: none;
+    }
+    #triangle {
+      width:100%;
+      opacity: 1;
+    }
+    #triangle path {
+      stroke:#ffffff;
+      stroke-width:3px;
+    }
+    .st0 {
+      opacity: 0;
+      animation-duration: 1.5s;
+      animation-timing-function: ease-in-out;
+      animation-fill-mode: forwards;
+    }
+    .st1, .st0{
+      fill:#FFFFFF;
+    }
+    .txt {
+      font-size: 20px;
+      color: #ffffff;
+      font-family: arial, sans-serif;
+      text-align: center;
+      line-height: 30px;
+      position: absolute;
+      left: 0;
+      top: 30%;
+      font-weight: bold;
+      letter-spacing: 2px;
+      width: 100%;
+      transition: all 0.2s ease;
+      display: none;
+    }
+
+    @media screen and (max-height: 700px) {
+      #vitalic {
+        width: 162px;
+        left: calc(50% - 87px);
+        top: calc(50% - 137px);
+      }
+      .myButton {
+        left:calc(50% - 75px);
+        top:calc(50% - 65px);
+        transform: translateY(52px);
+        width: 150px;
+      }
+    }
+
+    @keyframes glitchOn {
+      0% {opacity: 0;}
+      2% {opacity: 0;}
+      5% {opacity: 1;}
+      8% {opacity: 0;}
+      15% {opacity: 0;}
+      18% {opacity: 1;}
+      21% {opacity: 0;}
+      60% {opacity: 0;}
+      63% {opacity: 1;}
+      66% {opacity: 0;}
+      69% {opacity: 0;}
+      100% {opacity: 1;}
+    }
+    @keyframes glitchOff {
+      0% {opacity: 1;}
+      33% {opacity: 0;}
+      66% {opacity: 1;}
+      100% {opacity: 0;}
+    }
+    
+  </style>
+</head>
+<body>
+<div class="myButton">
+  <svg version="1.1" id="triangle" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 501 434" style="enable-background:new 0 0 501 434;" xml:space="preserve">
+    <path class="st1" d="M483.2,10.5l-232.7,403L17.8,10.5H483.2 M500.5,0.5H0.5l250,433L500.5,0.5L500.5,0.5z"/>
+  </svg>
+  <p class="txt"></p>
+</div>
+<svg version="1.1" id="vitalic" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 660.3 1123.2" style="enable-background:new 0 0 660.3 1123.2;" xml:space="preserve">
+<g>
+  <g>
+    <path class="st0" d="M125.6,327.8L64.5,473.2h-2.9L0.5,327.8h21.3l41.3,104.5l41.3-104.5H125.6z"/>
+    <path class="st0" d="M144.3,327.8h19.4v143.1h-19.4V327.8z"/>
+    <path class="st0" d="M278.7,346.8h-35.4v124.1h-19.4V346.8h-36.2v-19h91V346.8z"/>
+    <path class="st0" d="M485.1,451.9v19h-62.6V327.8h19.4v124.1H485.1z"/>
+    <path class="st0" d="M506.5,327.8h19.4v143.1h-19.4V327.8z"/>
+    <path class="st0" d="M552.9,399.3c0-39.7,28.6-74,73.2-74c13.1,0,24.1,2.7,33.7,7.6v21.9c-8.2-6.5-19-10.6-33.5-10.6c-32.1,0-53.6,25.8-53.6,55.2c0,29.4,21.5,55.2,53.6,55.2c14.5,0,25.4-4.1,33.5-10.6v21.9c-9.6,4.9-20.7,7.6-33.7,7.6C581.5,473.4,552.9,439,552.9,399.3z"/>
+    <polygon class="st0" points="335.7,325.7 332.9,325.7 269.7,470.9 291.2,470.9 334.5,366.4 377.9,470.9 399.1,470.9"/>
+  </g>
+  <g>
+    <path class="st0" d="M288.9,124.4l14.3-13.5c8.1,11.6,20.3,19.7,33.4,19.7c14.5,0,24-8.9,24-20.5c0-34.8-67.8-24.9-67.8-72.3c0.2-20.9,17.8-37.3,42.1-37.3c18.4,0,33.2,9.9,42.1,20.7l-12.8,13.3c-7-7.9-17.4-15.1-28.8-15.1c-13.3,0-22.4,7.9-22.4,18.6c-0.2,31.5,68.2,23.4,67.6,72.3c-0.2,21.8-17,39.4-45.2,39.4C315.6,149.7,298.2,138.7,288.9,124.4z"/>
+    <path class="st0" d="M380.9,184.5H345v125.8h-19.7V184.5h-36.7v-19.3h92.2V184.5z"/>
+    <path class="st0" d="M396.1,635.6l-20.1-93l-40.6,94.7h-2.7l-40-93.7l-18.9,92h-20.3l31.9-147.3h2.9l45.8,110.2l45.6-110.2h2.9L416,635.6H396.1z"/>
+    <path class="st0" d="M324.9,653.2h19.7v145.1h-19.7V653.2z"/>
+    <path class="st0" d="M393.8,815.9v147.5h-2.7l-95.9-102.2V961h-19.5V813.6h2.7l95.9,104V815.9H393.8z"/>
+    <polygon class="st0" points="336,977.5 333.1,977.5 270,1122.7 291.4,1122.7 334.8,1018.2 378.1,1122.7 399.4,1122.7"/>
+  </g>
+  <g>
+    <path class="st0" d="M288.9,124.4l14.3-13.5c8.1,11.6,20.3,19.7,33.4,19.7c14.5,0,24-8.9,24-20.5c0-34.8-67.8-24.9-67.8-72.3c0.2-20.9,17.8-37.3,42.1-37.3c18.4,0,33.2,9.9,42.1,20.7l-12.8,13.3c-7-7.9-17.4-15.1-28.8-15.1c-13.3,0-22.4,7.9-22.4,18.6c-0.2,31.5,68.2,23.4,67.6,72.3c-0.2,21.8-17,39.4-45.2,39.4C315.6,149.7,298.2,138.7,288.9,124.4z"/>
+    <path class="st0" d="M380.9,184.5H345v125.8h-19.7V184.5h-36.7v-19.3h92.2V184.5z"/>
+    <path class="st0" d="M396.1,635.6l-20.1-93l-40.6,94.7h-2.7l-40-93.7l-18.9,92h-20.3l31.9-147.3h2.9l45.8,110.2l45.6-110.2h2.9L416,635.6H396.1z"/>
+    <path class="st0" d="M324.9,653.2h19.7v145.1h-19.7V653.2z"/>
+    <path class="st0" d="M393.8,815.9v147.5h-2.7l-95.9-102.2V961h-19.5V813.6h2.7l95.9,104V815.9H393.8z"/>
+    <polygon class="st0" points="336,977.5 333.1,977.5 270,1122.7 291.4,1122.7 334.8,1018.2 378.1,1122.7 399.4,1122.7"/>
+  </g>
+</g>
+</svg>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/87/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/easing/EasePack.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenLite.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js"></script>
+  <script>
+    window.AudioContext=window.AudioContext||window.webkitAudioContext||window.mozAudioContext;
+
+    var canvasWidth = window.innerWidth
+    var canvasHeight = window.innerHeight
+
+    /*
+     *  Sound stuff
+     */
+    var audioCtx = new AudioContext()
+    var audioBuffer
+    var audioSource
+    var analyser = audioCtx.createAnalyser()
+    var frequencyData = new Uint8Array(analyser.frequencyBinCount)
+
+    /*
+     *  Init Scene
+     */
+    var scene = new THREE.Scene()
+    var camera = new THREE.PerspectiveCamera(90, canvasWidth / canvasHeight, 0.01, 25)
+    camera.position.z = 0.8
+
+    var renderer = new THREE.WebGLRenderer()
+    renderer.setSize(canvasWidth, canvasHeight)
+    document.body.appendChild(renderer.domElement)
+
+    var pointLight = new THREE.PointLight( 0xffffff, 0, 100 );
+    pointLight.position.set( 0, 0, 0 );
+    scene.add( pointLight );
+
+    /*
+     * SVG elements
+     */
+    var letters = document.querySelectorAll('.st0'),
+        myButton = document.querySelector('.myButton'),
+        vitalic = document.querySelector('#vitalic'),
+        txt = document.querySelector('.txt')
+
+    // Load sound & start frame function
+    function loadSound(url) {
+      var request = new XMLHttpRequest()
+      request.open('GET', 'Vitalic - Stamina.mp3', true)
+      request.responseType = 'arraybuffer'
+
+      request.onprogress = function (pe) {
+        if(pe.lengthComputable) {
+          txt.style.display = 'block'
+          txt.innerHTML = Math.floor(pe.loaded / pe.total) + '%'
+          console.log(pe.loaded / pe.total)
+        }
+      }
+
+      // Decode asynchronously
+      request.onload = function() {
+
+        audioCtx.decodeAudioData(request.response, function(buffer) {
+
+          // success callback
+          audioBuffer = buffer
+
+          // Create sound from buffer
+          audioSource = audioCtx.createBufferSource()
+          audioSource.buffer = audioBuffer
+
+          // connect the audio source to context's output
+          audioSource.connect( analyser )
+          analyser.connect( audioCtx.destination )
+
+          // add listener to start button
+          myButton.addEventListener('click', startSound, false)
+
+          txt.innerHTML = 'START'
+          myButton.style.cursor = 'pointer'
+
+        }, function(){
+
+          // error callback
+
+        })
+      }
+      request.send()
+    }
+
+    // Start on click
+
+    function startSound () {
+      console.log('start')
+      audioSource.start()
+      frame()
+      console.log('start')
+
+      vitalic.style.display = 'block'
+      txt.style.opacity = 0
+      letters.forEach(function (letter) {
+        letter.style.animationDelay = Math.random() * 0.7 + 's'
+        letter.style.animationName = 'glitchOn'
+      })
+      setTimeout(function () {
+        letters.forEach(function (letter) {
+          letter.style.animationDelay = '0s'
+          letter.style.animationDuration = '0.2s'
+          letter.style.animationName = 'glitchOff'
+        })
+        myButton.style.animationDelay = '0.2s'
+        myButton.style.animationDuration = '0.2s'
+        myButton.style.animationName = 'glitchOff'
+      }, 3300)
+    }
+
+    /**
+      Settings
+    */
+    // Bars
+    var nbBars = 90,
+        bars = [],
+        barWidth = 20,
+        barHeight = 4,
+        barDepth = 0.2,
+        baseRadius = 3
+
+    // Color
+    var baseR = 78,
+        baseG = 114,
+        baseB = 114,
+        baseColor = 'rgb(' + baseR + ', ' + baseG + ', ' + baseB + ')'
+
+    // Waves
+    var waveLength = 25,
+        waveHeight = -1,
+        waveGrowth = 0.2,
+        waveFade = 0.6,
+        waveStartOffset = 25
+
+    // Rotation
+    var offsetRotate = 20
+
+    // Frequencies
+    var thresholdKick = 245,
+        frqKick = 7,
+        thresholdBass = 235,
+        frqBass = 3,
+        thresholdNote1 = 240,
+        thresholdNote2 = 230,
+        thresholdNote3 = 220,
+        frqNote1 = 13,
+        frqNote2 = 15,
+        frqNote3 = 18
+
+    /**
+     * Update Bar
+     */
+    function updateBar (bar, i) {
+      bar.rotation.z = (i * Math.PI * 2 / 3) + (Math.PI / 180 * 30)
+      bar.wave = 0
+      bar.waving = false
+      bar.rotating = false
+      bar.radius = baseRadius
+      bar.tween
+      bar.position.x = Math.cos(bar.rotation.z) * bar.radius
+      bar.position.y = Math.sin(bar.rotation.z) * bar.radius
+      bar.position.z = -i * barDepth
+    }
+
+    /**
+     * Create Bars
+     */
+    function createBars () {
+      for (var i = 0; i < nbBars; i++) {
+        var geometry = new THREE.BoxGeometry(barHeight, barWidth, barDepth)
+        var material = new THREE.MeshPhongMaterial({color: baseColor, emissive: 0x000000, specular: 0x111111, shininess: 20 , transparent: true, opacity: 1})
+        var mesh = new THREE.Mesh(geometry, material)
+        bars.push(mesh)
+        updateBar(bars[i], i)
+        scene.add(bars[i])
+      }
+    }
+
+    function updatePosition (bar) {
+      bar.position.x = Math.cos(bar.rotation.z) * bar.radius
+      bar.position.y = Math.sin(bar.rotation.z) * bar.radius
+    }
+
+    // onKick function
+    function kick () {
+      var rdmColor = randomRgb()
+      for (var i = 0; i < waveLength; i++) {
+
+        // radius stuff
+        var bar = bars[i + waveStartOffset]
+        k = i - (waveLength / 2)
+        var offset = k / (waveLength / 2)
+        if(offset > 0){offset = offset * -1}
+
+        // change bar wave settings
+        bar.wave = (-offset - 1) * waveHeight
+
+        bar.waving = true
+
+        // animate
+        bar.tween = TweenMax.to(bar.position, waveGrowth, {
+          ease: Quad.easeOut,
+          x: Math.cos(bar.rotation.z) * (bar.radius + bar.wave),
+          y: Math.sin(bar.rotation.z) * (bar.radius + bar.wave),
+          onCompleteParams:[bar],
+          onComplete: reverseWave
+        })
+        TweenLite.to(bar, waveGrowth, {
+          ease: Quad.easeOut,
+          radius: bar.radius + bar.wave
+        })
+        TweenLite.to(bar.material.color, waveGrowth, {
+          ease: Quad.easeOut,
+          r: bar.material.color.r + (Math.round((baseR - rdmColor.r) * bar.wave) / 255),
+          g: bar.material.color.g + (Math.round((baseG - rdmColor.g) * bar.wave) / 255),
+          b: bar.material.color.b + (Math.round((baseB - rdmColor.b) * bar.wave) / 255)
+        })
+      }
+    }
+
+    function reverseWave (bar) {
+      bar.tween = TweenMax.to(bar.position, waveFade, {
+        x: Math.cos(bar.rotation.z) * (baseRadius),
+        y: Math.sin(bar.rotation.z) * (baseRadius),
+        onComplete: function () { setTimeout(function () { bar.waving = false }, 5) }
+      })
+      TweenLite.to(bar, waveFade, {
+        radius: bar.radius - bar.wave
+      })
+    }
+    /*
+     * Random Color
+     */
+    function randomRgb() {
+      var o = Math.round,
+          r = Math.random,
+          s = 255
+      return { r: o(r()*s), g: o(r()*s), b: o(r()*s) }
+    }
+
+    /**
+     * update
+     * - Triggered on every TweenMax tick
+     */
+    function frame() {
+      rafId = requestAnimationFrame( frame )
+
+      renderer.render(scene, camera)
+
+      analyser.getByteFrequencyData(frequencyData)
+
+      // increase light intensity
+      if(pointLight.intensity < 2) {
+        pointLight.intensity += 0.025
+      }
+
+      // reset first bar
+      if (bars[0].position.z > 1.5) {
+        // reset depth
+        bars[0].position.z = bars[nbBars - 1].position.z - barDepth
+
+        // reset material
+        bars[0].material.opacity = 0
+        bars[0].material.color.setRGB(baseR / 255, baseG / 255, baseB / 255)
+
+        //reset wave tween
+        if (bars[0].tween) {
+          bars[0].tween.totalProgress(1).kill()
+        }
+
+        // reset radius
+        bars[0].radius = baseRadius
+        bars[0].wave = 0
+        updatePosition(bars[0])
+
+        // push to end of aray
+        bars.push(bars[0])
+        bars.splice(0, 1)
+      }
+
+      // react on kick
+      if (frequencyData[frqKick] > thresholdKick && canKick) {
+        kick()
+        canKick = false
+      } else if (frequencyData[frqKick] < thresholdKick) {
+        canKick = true
+      }
+
+      // react on bass
+      if (frequencyData[frqBass] > thresholdBass) {
+        for (var i = 0; i < nbBars; i++) {
+          bars[i].rotating = true
+        }
+      } else {
+        for (var i = 0; i < nbBars; i++) {
+          bars[i].rotating = false
+        }
+      }
+
+      //react on notes
+      if (frequencyData[frqNote1] > thresholdNote1) {
+        for (var i = 0; i < nbBars; i++) {
+          if (bars[i].id % 3 === 0) {
+            bars[i].material.emissive.r = 0.2
+            bars[i].material.emissive.g = 0.2
+            bars[i].material.emissive.b = 0.2
+          }
+        }
+      } else {
+        for (var i = 0; i < nbBars; i++) {
+          if (bars[i].id % 3 === 0) {
+            bars[i].material.emissive.r = 0
+            bars[i].material.emissive.g = 0
+            bars[i].material.emissive.b = 0
+          }
+        }
+      }
+      if (frequencyData[frqNote2] > thresholdNote2) {
+        for (var i = 0; i < nbBars; i++) {
+          if (bars[i].id % 3 === 0) {
+            if (i + 1 < nbBars) {
+              bars[i + 1].material.emissive.r = 0.2
+              bars[i + 1].material.emissive.g = 0.2
+              bars[i + 1].material.emissive.b = 0.2
+            }
+          }
+        }
+      } else {
+        for (var i = 0; i < nbBars; i++) {
+          if (bars[i].id % 3 === 0) {
+            if (i + 1 < nbBars) {
+              bars[i + 1].material.emissive.r = 0
+              bars[i + 1].material.emissive.g = 0
+              bars[i + 1].material.emissive.b = 0
+            }
+          }
+        }
+      }
+      if (frequencyData[frqNote3] > thresholdNote3) {
+        for (var i = 0; i < nbBars; i++) {
+          if (bars[i].id % 3 === 0) {
+            if (i + 2 < nbBars) {
+              bars[i + 2].material.emissive.r = 0.2
+              bars[i + 2].material.emissive.g = 0.2
+              bars[i + 2].material.emissive.b = 0.2
+            }
+          }
+        }
+      } else {
+        for (var i = 0; i < nbBars; i++) {
+          if (bars[i].id % 3 === 0) {
+            if (i + 2 < nbBars) {
+              bars[i + 2].material.emissive.r = 0
+              bars[i + 2].material.emissive.g = 0
+              bars[i + 2].material.emissive.b = 0
+            }
+          }
+        }
+      }
+
+      // animate bars
+      for (var i = 0; i < nbBars; i++) {
+        // raise new bar opacity to 1
+        if (bars[i].material.opacity < 1){
+          bars[i].material.opacity += 0.02
+        }
+
+        // bars depth animation
+        bars[i].position.z += 0.15
+        bars[i].rotation.z += (Math.PI * 2) / 360 / 1.5
+
+        // bars rotation animation
+        if(bars[i].rotating){
+          bars[i].rotation.z += ((Math.PI * 2 / nbBars) / 2 * 1.5) * (i / nbBars)
+          if (bars[i].waving) {
+            bars[i].tween.updateTo({
+              x: Math.cos(bars[i].rotation.z) * (bars[i].radius + bars[i].wave),
+              y: Math.sin(bars[i].rotation.z) * (bars[i].radius + bars[i].wave)
+            }, false)
+          }
+        }
+        updatePosition(bars[i])
+      }
+
+    }
+
+    loadSound()
+    createBars()
+
+  </script>
+</body>
+</html>
+

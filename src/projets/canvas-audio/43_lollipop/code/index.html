@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        h1 {
+            position: fixed;
+            top: 40px;
+            left: 40px;
+            color: white;
+            font-family: "Roboto";
+            font-size: 40pt;
+            margin: 0;
+            z-index: 100;
+
+        }
+        #myCanvas {
+            height: 100vh;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+        #cutMusic {
+            display: none;
+            position: fixed;
+            top: 55px;
+            left: 0;
+            right: 0;
+            width: 100px;
+            margin: auto;
+            background: none;
+            padding: 10px;
+            border: 1px solid white;
+            border-radius: 50px;
+            color: white;
+            transition: background 0.2s, color 0.2s;
+            z-index: 100;
+        }
+        #cutMusic:hover {
+            background: white;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+<h1>Lollipop</h1>
+<button id="cutMusic">Mute</button>
+    <canvas id="myCanvas" width="800" height="800"></canvas>
+    <script src="gl-matrix.js"></script>
+    <script src="node_modules/simplex-noise/simplex-noise.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/randomcolor/0.5.2/randomColor.min.js"></script>
+    <script src="canvas.js"></script>
+</body>
+</html>

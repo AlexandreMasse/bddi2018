@@ -1,0 +1,72 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Sound Gravity</title>
+        <link href="https://fonts.googleapis.com/css?family=Assistant:200,300,400|Montserrat:400,600,700,800,900" rel="stylesheet">
+        <link rel="stylesheet" href="/node_modules/font-awesome/css/font-awesome.css">
+    <link href="main.0a79bf93dcecd9ef9530ff74d916be29.css" rel="stylesheet"></head>
+    <body>
+
+        <div class="loader animated">
+            <p>wait</p>
+        </div>
+
+        <div class="landing-gate">
+            <div class="content">
+                <h1>Gravity Sound<br>Experiment</h1>
+                <h2>by Circé Grand</h2>
+                <button id="start">GO</button>
+            </div>
+        </div>
+
+        <div class="panel-controls">
+          <div class="cameras">
+            <div id="camera1">
+              <div class="fa fa-video-camera"></div>
+              <p>1</p>
+            </div>
+            <div id="camera2">
+              <div class="fa fa-video-camera"></div>
+              <p>2</p>
+            </div>
+            <div id="camera3">
+              <div class="fa fa-video-camera"></div>
+              <p>3</p>
+            </div>
+          </div>
+            <div class="volume">
+                <h4>Volume</h4>
+                <div class="range">
+                    <input id="range_volume" type="range" min="0" max="1" step="0.01" value="1" class="swipe">
+                </div>
+            </div>
+            <div class="edge">
+              <h4>Edge</h4>
+              <div class="range">
+                <input id="range_edge" type="range" min="0" max="4" step="1" value="1" class="swipe">
+              </div>
+            </div>
+            <div class="meteors">
+              <h4>Meteors</h4>
+              <div class="range">
+                <input id="range_meteors" type="range" min="100" max="3000" step="1" value="1500" class="swipe">
+              </div>
+          </div>
+        </div>
+
+        <div class="control">
+            <div id="play">
+                <i class="fa fa-play"></i>
+            </div>
+            <div id="pause">
+                <i class="fa fa-pause"></i>
+            </div>
+        </div>
+
+        <div id="main"></div>
+
+        <script src"/node_modules/tween.js/src/Tween.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="manifest.103b3863fe3e20b8e96d.js"></script><script type="text/javascript" src="vendor.9cb5faf4383f3b3c911a.js"></script><script type="text/javascript" src="main.94eb1be5db6e92cbf654.js"></script></body>
+</html>
