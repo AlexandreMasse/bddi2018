@@ -47,10 +47,10 @@
                     categoryDescription.setAttribute('class','category__description');
             const   projectsList  = document.createElement('div');
             const   projectsScreens = document.createElement('div');
-                    projectsScreens.classList.add('project__screens');
+                    projectsScreens.classList.add('project__screens', 'hidden');
                     projectsList.classList.add('project__list');
             const   iframe = document.createElement('iframe');
-                    iframe.classList.add('projects-iframe');
+                    iframe.classList.add('project-iframe', 'hidden');
 
             categoryDescription.innerHTML +=
                 `<div class="fi flaticon-left-arrow action-back"></div>
@@ -70,7 +70,7 @@
                             studentsNames += `${students[k].firstname} ${students[k].lastname} <em>(${students[k].option})</em> - `;
                             if (k == students.length - 1) {
                                 const pathFile = categories[i].ident+'/'+projects[index].id+'_'+projects[index].ident;
-                                const thumbnail = projects[j].screens && projects[j].screens.length ? 'projets/'+pathFile+'/screens/0.png' : 'images/thumbnail-'+categories[i].id+'.jpg';
+                                const thumbnail = projects[j].screens && projects[j].screens.length ? 'projets/'+pathFile+'/screens/0.jpg' : 'images/thumbnail-'+categories[i].id+'.jpg';
 
                                 const projectItem = document.createElement('div');
                                     projectItem.classList.add('projects__list-item');
@@ -86,18 +86,43 @@
                                 projectsList.appendChild(projectItem);
                                 projectListItems.push(projectItem);
 
-                                projectsScreens.innerHTML +=
-                                `<div class="project__screen->
-                                    <img src="${pathFile}/screens"/>
-                                </div>`;
+                                
+                                if (projects[j].screens && projects[j].screens.length > 2) {
+                                    const   projectContent = document.createElement('div');
+                                            projectContent.classList.add('project__content');
+
+                                            projectContent.innerHTML += 
+                                            `<div class="project__informations">
+                                                <h1>${projects[j].name}</h1>
+                                                <h2>${studentsNames}</h2>
+                                            </div>`;
+
+                                    const   projectScreen = document.createElement('div');
+                                            projectScreen.setAttribute('data-project', projects[j].id);
+                                            projectContent.appendChild(projectScreen);
+
+                                    for (let l = 0; l < projects[j].screens.length; l++) {
+                                        projectScreen.innerHTML += 
+                                        `<div class="project__screen-${l}">
+                                            <img src="projets/${pathFile}/screens/${l}.jpg" alt=""/>
+                                        </div>`;
+
+                                    }
+                                    projectsScreens.appendChild(projectContent);
+                                }
                             }
                         }
                     });
 
                     //Add sections to DOM
                     if (index == projects.length - 1) {
+                        const backLink = document.createElement('a');
+                            backLink.innerHTML = 'back';
+                            backLink.classList.add('project__back-link', 'fi', 'flaticon-left-arrow', 'action-back');
                         categorySection.appendChild(projectsList);
                         categorySection.appendChild(iframe);
+                        categorySection.appendChild(backLink);
+                        
                         categorySection.appendChild(projectsScreens);
 
                         var homepage = document.getElementById('homepage');
@@ -157,11 +182,13 @@
         elementLoaded(projectListItems, function() {
             projectListItems.forEach(function(projectItem) {
                 projectItem.addEventListener('click', function() {
-                    console.log('load Project');
                     const projectScreens = document.querySelector('projet__screen-'+projectItem.getAttribute('data-id'));
+                    const   iframe = projectItem.closest('section').querySelector('iframe');
+                            iframe.setAttribute('src', 'projets/'+projectItem.getAttribute('data-url'));
+
                     switch (projectItem.getAttribute('data-view')) {
                         case 'code':
-                            console.log(projectsList.closest('section').querySelector('iframe'));
+                            iframe.setAttribute('src', 'projets/'+projectItem.getAttribute('data-url'));
                             break;
                         case 'screen':
                             console.log(projectScreens);

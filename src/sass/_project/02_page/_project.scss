@@ -1,0 +1,42 @@
+.project {
+  &__content {
+    width: 940px;
+    margin: 0 auto;
+    margin-top: 200px;
+    .project__informations {
+      h1 {
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        font-family: $font-walsheim-regular;
+        margin-bottom: 10px;
+      }
+      h2 {
+        font-family: $font-aileron-light;
+        font-size: 16px;
+        span {
+          text-decoration: underline;
+          cursor: pointer;
+        }
+      }
+      .action-show-project {
+        margin-top: 50px;
+      }
+    }
+    .project__screens {
+      margin-top: 100px;
+    }
+  }
+  &__back-link {
+    position: absolute;
+    left: 30px;
+    font-family: $font-aileron-regular;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    cursor: pointer;
+  }
+  &-iframe {
+    border: none;
+    height: 100vh;
+    width: 100vw;
+  }
+}
