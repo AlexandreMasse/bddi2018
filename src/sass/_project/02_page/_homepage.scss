@@ -65,8 +65,6 @@
         &-title {
           left: 100px;
           transform: rotate(-180deg);
-          cursor: pointer;
-
           position: absolute;
           top: 150px;
           text-align: right;
@@ -131,6 +129,7 @@
           }
         }
         &-description {
+          cursor: pointer;
           background: $color-white;
           width: 350px;
           height: 250px;

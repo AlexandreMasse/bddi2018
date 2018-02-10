@@ -15,7 +15,7 @@
 
             //TODO : create action on click
             categoryItem =
-                `<li class="menu__items-item" data-id="category-${categories[i].id}" data-ident="category__${categories[i].ident}" id="menu-${categories[i].ident}">
+                `<li class="menu__items-item" data-id="category-${categories[i].id}" data-ident="category__${categories[i].ident}" id="menu-link-${categories[i].ident}">
                     <div class="menu__thumbnail" style="background-image:url('images/thumbnail-${categories[i].id}.jpg')"></div>
                     <span>${categories[i].name}</span>
                 </li>`;
@@ -30,9 +30,8 @@
                         <h2>${categories[i].name}</h2>
                     </div>
                     <div class="projects__category-content">
-                    <div class="projects__category-thumbnail"><div class="projects__category-thumbnail-img" style="background-image:url('images/thumbnail-${categories[i].id}.jpg')">
-                    </div></div>
-                        <div class="projects__category-description">
+                    <div class="projects__category-thumbnail home-link-${categories[i].ident}" style="background-image:url('images/thumbnail-${categories[i].id}.jpg')" /></div>
+                        <div class="projects__category-description home-link-${categories[i].ident}">
                             <p>${categories[i].description.substring(0,250)}...</p>
                             <div class="fi flaticon-left-arrow action-show"></div>
                         </div>
@@ -56,7 +55,7 @@
                     categorySection.appendChild(iframe);
 
             categoryDescription.innerHTML +=
-                `<div class="fi flaticon-left-arrow action-back"></div>
+                `<div class="fi flaticon-left-arrow action-back backhome"></div>
                 <p>${categories[i].description}</p>`;
             categoryContent.appendChild(categoryDescription);
             categorySection.appendChild(categoryContent);
@@ -145,7 +144,7 @@
 
         return elementCreated;
     }
-
+/*
     function showSection(sectionId) {
         document.querySelector('section.visible').classList.remove('visible').add('hidden');
         document.getElementById(sectionId).classList.remove('hidden').add('visible');
@@ -156,7 +155,7 @@
             previousSectionId = activeSectionId;
         }
         showSection(previousSectionId);
-    }
+    }*/
 
     function elementLoaded(el, cb) {
         if (el.length) {
