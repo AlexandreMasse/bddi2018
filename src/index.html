@@ -16,7 +16,7 @@
 
 <body>
 
-	<header>
+	<header class="hidden">
 		<div class="header_logo">
 			<img src="images/icons/gobelins_logo_white.png" alt="">
 			<span>Gobelins - L'école de l'image</span>
@@ -30,10 +30,14 @@
 			</div>
 		</div>
 	</header>
-<section class="loader">
-	<div id="loader"></div>
-</section>
-	<section class="menu">
+	
+	<section class="loader">
+		<div id="preloader">
+		  <div id="loader"></div>
+		</div>
+	</section>
+
+	<section class="menu" id="menu">
 		<nav class="menu__navigation">
 			<ul class="menu__items" id="categories-item">
 				<!-- <li class="menu__items-item">
@@ -63,7 +67,7 @@
 			</ul>
 		</nav>
 	</section>
-	<section class="slideToFade" id="homepage" >
+	<section class="slideToFade hidden" id="homepage" >
 		<div class="landing slideToFade" id="landing">
 			<div class="landing__content">
 				<h1>BDDI 2018</h1>
@@ -137,12 +141,12 @@
 
 	<div class="social-share">
 		<div class="social-share__facebook">
-			<a href="https://www.facebook.com/sharer/sharer.php?u=" target="_blank">
+			<a href="https://www.facebook.com/sharer/sharer.php?u=http://projets.gobelins.fr/bddi/2018/jpo/" target="_blank">
 				<span class="fi flaticon-facebook-logo"></span>
 			</a>
 		</div>
 		<div class="social-share__twitter">
-			<a href="https://twitter.com/intent/tweet/?url={url}&text={text}" target="_blank">
+			<a href="https://twitter.com/intent/tweet/?url=http://projets.gobelins.fr/bddi/2018/jpo/&text=Venez+découvrir+les+projets+des+BDDI+2018+:" target="_blank">
 				<span class="fi flaticon-twitter-logo-silhouette"></span>
 			</a>
 		</div>

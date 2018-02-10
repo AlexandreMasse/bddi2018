@@ -1,20 +1,21 @@
-(function () { 
+(function () {
     var  previousSectionId,
     utils = require('./utils');
 
     const categoriesList = document.getElementById('categories-list');
+    const categoriesMenu = document.getElementById('categories-item');
+
     var projectListItems = [];
 
     //Loads all categories from file
     utils.findAllIn('categories').then(function(categories) {
-        
-        const categoriesMenu = document.getElementById('categories-item');
+
         for (let i = 0; i < categories.length; i++) {
             let projects = categories[i].projectsList;
 
-            //TODO : Add categories to menu and create action on click
+            //TODO : create action on click
             categoryItem =
-                `<li class="menu__items-item">
+                `<li class="menu__items-item" data-id="category-${categories[i].id}" data-ident="category__${categories[i].ident}">
                     <div class="menu__thumbnail" style="background-image:url('images/thumbnail-${categories[i].id}.jpg')"></div>
                     <span>${categories[i].name}</span>
                 </li>`;
@@ -32,7 +33,7 @@
                     <div class="projects__category-thumbnail"></div>
                         <div class="projects__category-description">
                             <p>${categories[i].description.substring(0,250)}...</p>
-                            <span>Next</span>
+                            <div class="fi flaticon-left-arrow action-show"></div>
                         </div>
                     </div>
             </div>`;
@@ -76,14 +77,15 @@
                                     projectItem.classList.add('projects__list-item');
                                     projectItem.setAttribute('id', `project-${projects[index].id}`);
                                     projectItem.setAttribute('data-url', `${pathFile}/projet`);
-                                    projectItem.innerHTML += 
+                                    projectItem.innerHTML +=
                                     `   <div class="project__thumbnail">
-                                        <div class="project__thumbnail-img"><img src="${thumbnail}" width="300"/></div>
+                                        <div class="project__thumbnail-img" style="background-image: url('${thumbnail}')">
+                                        </div>
                                         </div>
                                         <h2>${projects[index].name}</h2>
                                         <p>${studentsNames}</p>
                                     `;
-                                projectsList.appendChild(projectItem);
+                                categoryContent.appendChild(projectItem);
                                 projectListItems.push(projectItem);
 
                                 
@@ -165,13 +167,17 @@
           }, 1000);
         }
       };
-    
 
     function addListeners() {
         //Add click event on category
         categoriesList.querySelectorAll('.projects__category').forEach(function(category) {
             const categoryIdent = category.getAttribute('data-ident');
             category.querySelector('.projects__category-thumbnail').addEventListener('click', function() {
+                document.getElementById('homepage').classList.add('hidden');
+                document.getElementById(categoryIdent).classList.remove('hidden');
+                previousSectionId = 'homepage';
+            });
+            category.querySelector('.action-show').addEventListener('click', function() {
                 document.getElementById('homepage').classList.add('hidden');
                 document.getElementById(categoryIdent).classList.remove('hidden');
                 previousSectionId = 'homepage';
@@ -201,8 +207,7 @@
             });
 
         });
-        
+
     }
+
 })();
-
-
