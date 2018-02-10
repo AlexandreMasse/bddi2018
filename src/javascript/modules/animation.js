@@ -1,43 +1,4 @@
-/*start.addEventListener("click", function() {
-  window.scrollTo(0, window.innerHeight);
-});*/
-
-
-/******* FUNCTIONS *******/
-
-function fadeOut(el, duration, delay = 0) {
-    el.style.transition = "opacity 0.3s";
-    var s = el.style;
-    s.opacity = 1;
-    setTimeout(function () {
-        (function fade() {
-            (s.opacity-=.1) < -0.5 ? s.display="none" : setTimeout(fade,duration * 100)
-        })();
-    },delay * 1000)
-
-    window.scrollTo({
-        "behavior": "smooth",
-        "left": 0,
-        "top":0
-    });
-}
-
-function fadeIn(el, duration, delay = 0) {
-    el.style.display = "block";
-    el.style.transition = "opacity 0.3s";
-    var val = el.style.opacity;
-    val = 0;
-    setTimeout(function () {
-        (function fade() {
-            if ( ((val += .1) < 1.5) ) {
-                el.style.opacity = val;
-                setTimeout(fade, duration * 100 )
-            }
-        })();
-    }, delay * 1000)
-}
-
-
+const utils = require("./utils")
 
 /*********** ELEMENT ***********/
 
@@ -68,7 +29,10 @@ var menu_open,
     categoryDataviz,
     previous,
     current,
-    backhome;
+    backhome,
+    iframes,
+    backLinks,
+    projectLists;
 
 function getElements(){
 
@@ -76,7 +40,11 @@ function getElements(){
         menu_close = document.querySelector(".header_menu-close"),
         homepage = document.querySelector("#homepage"),
         menu = document.querySelector(".menu"),
-        backhome = document.querySelectorAll(".backhome");
+        backhome = document.querySelectorAll(".backhome"),
+        iframes = document.querySelectorAll("iframe"),
+        backLinks = document.querySelectorAll(".project__back-link"),
+        projectLists = document.querySelectorAll(".project__list");
+
 
     //Menu Link Item
     menuWeb = document.querySelector("#menu-link-web"),
@@ -111,8 +79,6 @@ function getElements(){
 
 }
 
-
-
 /****** CHECK IF DOM ELEMENTS ARE READY *******/
 
 
@@ -143,6 +109,8 @@ function checkDomElements() {
         && categoryLouvres
         && categoryDataviz
         && backhome
+        && backLinks
+        && projectLists
     ) {
         addListener()
     } else {
@@ -175,7 +143,8 @@ function checkDomElements() {
                 ,categoryFestival
                 ,categoryLouvres
                 ,categoryDataviz
-                ,backhome);
+                ,backhome
+                ,backLinks);
         }, 500);
     }
 };
@@ -189,19 +158,40 @@ function addListener() {
 
     //Generic function
     function closeMenu(){
-        fadeOut(menu_close, 0.1);
-        fadeIn(menu_open,0.5);
-        fadeOut(menu, 0.5);
+        utils.fadeOut(menu_close, 0.1);
+        utils.fadeIn(menu_open,0.5);
+        utils.fadeOut(menu, 0.5);
     }
 
     function fadeOutPrevious() {
-        fadeOut(previous, 0.5);
+        utils.fadeOut(previous, 0.5);
     }
     function fadeInCurrent() {
-        fadeIn(current, 0.5, 0.5);
+        utils.fadeIn(current, 0.5, 0.5);
     }
     function fadeOutCurrent() {
-        fadeOut(current, 0.5);
+        utils.fadeOut(current, 0.5);
+    }
+
+    function fadeOutIframe(){
+        iframes.forEach(function (iframe) {
+            utils.fadeOut(iframe, 0.5);
+            document.body.style.overflowY = "auto";
+
+            backLinks.forEach(function (backlink) {
+                utils.fadeOut(backlink, 0.5);
+            })
+
+            document.querySelectorAll(".project__content").forEach(function (el) {
+                utils.fadeOut(el, 0.5)
+            });
+
+            document.querySelectorAll(".project__list").forEach(function (el) {
+                utils.fadeIn(el, 0.5)
+            });
+
+
+        })
     }
 
     // MENU : OPEN
@@ -212,9 +202,9 @@ function addListener() {
         fadeOutPrevious();
         //fadeOutCurrent();
 
-        fadeOut(menu_open, 0.5);
-        fadeIn(menu_close, 0.5, 0.5);
-        fadeIn(menu, 0.5, 0.5);
+        utils.fadeOut(menu_open, 0.5);
+        utils.fadeIn(menu_close, 0.5, 0.5);
+        utils.fadeIn(menu, 0.5, 0.5);
 
     });
 
@@ -222,7 +212,7 @@ function addListener() {
 
     menu_close.addEventListener("click", function() {
         closeMenu();
-        fadeIn(previous, 0.5, 0.5);
+        utils.fadeIn(previous, 0.5, 0.5);
     });
 
     // DATAVIZ : OPEN
@@ -231,12 +221,13 @@ function addListener() {
         current = categoryDataviz;
         closeMenu();
         fadeInCurrent();
+        fadeOutIframe();
     });
 
      homeDataviz.forEach(function (el) {
          el.addEventListener('click', function () {
              previous = current;
-             fadeOut(homepage, 0.5);
+             utils.fadeOut(homepage, 0.5);
              current = categoryDataviz;
              fadeInCurrent();
          });
@@ -247,13 +238,14 @@ function addListener() {
     menuLouvres.addEventListener('click', function () {
         current = categoryLouvres;
         closeMenu();
-        fadeInCurrent()
+        fadeInCurrent();
+        fadeOutIframe();
     });
 
     homeLouvres.forEach(function (el) {
         el.addEventListener('click', function () {
             previous = current;
-            fadeOut(homepage, 0.5);
+            utils.fadeOut(homepage, 0.5);
             current = categoryLouvres;
             fadeInCurrent();
         });
@@ -264,14 +256,15 @@ function addListener() {
     menufestival.addEventListener('click', function () {
         current = categoryFestival;
         closeMenu();
-        fadeInCurrent()
+        fadeInCurrent();
+        fadeOutIframe();
     });
 
 
     homefestival.forEach(function (el) {
         el.addEventListener('click', function () {
             previous = current;
-            fadeOut(homepage, 0.5);
+            utils.fadeOut(homepage, 0.5);
             current = categoryFestival;
             fadeInCurrent();
         });
@@ -282,13 +275,14 @@ function addListener() {
     menuCanvasAudio.addEventListener('click', function () {
         current = categoryCanvasAudio;
         closeMenu();
-        fadeInCurrent()
+        fadeInCurrent();
+        fadeOutIframe();
     });
 
     homeCanvasAudio.forEach(function (el) {
         el.addEventListener('click', function () {
             previous = current;
-            fadeOut(homepage, 0.5);
+            utils.fadeOut(homepage, 0.5);
             current = categoryCanvasAudio;
             fadeInCurrent();
         });
@@ -299,13 +293,14 @@ function addListener() {
     menuChat.addEventListener('click', function () {
         current = categoryChat;
         closeMenu();
-        fadeInCurrent()
+        fadeInCurrent();
+        fadeOutIframe();
     });
 
     homeChat.forEach(function (el) {
         el.addEventListener('click', function () {
             previous = current;
-            fadeOut(homepage, 0.5);
+            utils.fadeOut(homepage, 0.5);
             current = categoryChat;
             fadeInCurrent();
         });
@@ -316,13 +311,14 @@ function addListener() {
     menu3dAudio.addEventListener('click', function () {
         current = category3dAudio;
         closeMenu();
-        fadeInCurrent()
+        fadeInCurrent();
+        fadeOutIframe();
     });
 
     home3dAudio.forEach(function (el) {
         el.addEventListener('click', function () {
             previous = current;
-            fadeOut(homepage, 0.5);
+            utils.fadeOut(homepage, 0.5);
             current = category3dAudio;
             fadeInCurrent();
         });
@@ -334,12 +330,13 @@ function addListener() {
         current = categoryWeb;
         closeMenu();
         fadeInCurrent()
+        fadeOutIframe();
     });
 
     homeWeb.forEach(function (el) {
         el.addEventListener('click', function () {
             previous = current;
-            fadeOut(homepage, 0.5);
+            utils.fadeOut(homepage, 0.5);
             current = categoryWeb;
             fadeInCurrent();
         });
@@ -352,15 +349,30 @@ function addListener() {
         backhome[i].addEventListener('click', function () {
             previous = current;
             fadeOutPrevious();
-            fadeIn(homepage,0.5, 0.5);
+            utils.fadeIn(homepage,0.5, 0.5);
             current = homepage;
         });
     }
 
 
+    backLinks.forEach(function (backlink) {
+        backlink.addEventListener('click', function () {
+            //utils.fadeOut(backlink, 0.5);
+            fadeOutIframe()
+/*
+            document.querySelectorAll(".project__content").forEach(function (el) {
+                utils.fadeOut(el, 0.5)
+            });
+
+            document.querySelectorAll(".project__list").forEach(function (el) {
+                utils.fadeIn(el, 0.5)
+            });*/
 
 
-}
+        })
+    })
+
+};
 
 
 

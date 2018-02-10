@@ -13,7 +13,8 @@
       margin-bottom: 80px;
       .fi {
         &:before {
-          font-size: 14px;
+          cursor: pointer;
+          font-size: 20px;
           color: $color-purple;
         }
       }

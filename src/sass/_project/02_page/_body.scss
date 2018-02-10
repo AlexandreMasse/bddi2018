@@ -1,6 +1,7 @@
 body {
   background-color: $color-black;
   color: $color-white;
+  overflow-x: hidden;
 
   .social-share {
     position: fixed;

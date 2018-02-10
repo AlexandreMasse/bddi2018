@@ -48,10 +48,12 @@
                     categoryDescription.setAttribute('class','category__description');
             // const   projectsList  = document.createElement('div');
             const   projectsScreens = document.createElement('div');
-                    projectsScreens.classList.add('project__screens', 'hidden');
+                    projectsScreens.classList.add('project__screens');
                     // projectsList.classList.add('project__list');
             const   iframe = document.createElement('iframe');
-                    iframe.classList.add('project-iframe', 'hidden');
+                    iframe.classList.add('project-iframe');
+                    iframe.style.display = "none";
+                    iframe.style.opacity = 0;
                     categorySection.appendChild(iframe);
 
             categoryDescription.innerHTML +=
@@ -77,6 +79,7 @@
                                 const projectItem = document.createElement('div');
                                     projectItem.classList.add('projects__list-item');
                                     projectItem.setAttribute('id', `project-${projects[index].id}`);
+                                    projectItem.setAttribute('data-id', projects[index].id);
                                     projectItem.setAttribute('data-url', `${pathFile}/code`);
                                     projectItem.setAttribute('data-view', projects[index].view);
                                     projectItem.innerHTML +=
@@ -94,7 +97,7 @@
                                 if (projects[j].screens && projects[j].screens.length > 2) {
                                     const   projectContent = document.createElement('div');
                                             projectContent.classList.add('project__content');
-
+                                            projectContent.setAttribute('id',"projectContent-" + projects[j].id);
                                             projectContent.innerHTML += 
                                             `<div class="project__informations">
                                                 <h1>${projects[j].name}</h1>
@@ -108,7 +111,7 @@
                                     for (let l = 0; l < projects[j].screens.length; l++) {
                                         projectScreen.innerHTML += 
                                         `<div class="project__screen-${l}">
-                                            <img src="${location.host}/projets/${pathFile}/screens/${l}.jpg" alt=""/>
+                                            <img src="projets/${pathFile}/screens/${l}.jpg" alt=""/>
                                         </div>`;
                                     }
                                     projectsScreens.appendChild(projectContent);
@@ -189,14 +192,32 @@
         elementLoaded(projectListItems, function() {
             projectListItems.forEach(function(projectItem) {
                 projectItem.addEventListener('click', function() {
-                    const projectScreens = document.querySelector('projet__screen-'+projectItem.getAttribute('data-id'));
-                    const   iframe = projectItem.closest('section').querySelector('iframe');
+                    const projectContent = document.querySelector('#projectContent-'+projectItem.getAttribute('data-id'));
+                    console.log(projectItem.getAttribute('data-id'));
+                    const iframe = projectItem.closest('section').querySelector('iframe');
+
+                    const backLinks = document.querySelectorAll(".project__back-link");
+                    backLinks.forEach(function (backlink) {
+                        utils.fadeIn(backlink, 0.5);
+                    });
 
                     switch (projectItem.getAttribute('data-view')) {
                         case 'code':
                             iframe.setAttribute('src', location.host+'/projets/'+projectItem.getAttribute('data-url'));
+                            utils.fadeIn(iframe, 0.5);
+                            document.body.style.overflow = "hidden";
+                            window.scrollTo({
+                                "behavior": "smooth",
+                                "left": 0,
+                                "top":0
+                            });
                             break;
                         case 'screen':
+                            utils.fadeIn(projectContent, 0.5, 0.5);
+
+                            document.querySelectorAll(".project__list").forEach(function (list) {
+                                utils.fadeOut(list, 0.5)
+                            });
                             break;
                     }
                 })

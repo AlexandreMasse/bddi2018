@@ -114,4 +114,38 @@ exports.findStudentsByProject = function(projectId) {
     }.bind(this));
 }
 
-//Find a project 
+
+
+
+
+exports.fadeOut = function(el, duration, delay = 0) {
+    el.style.transition = "opacity 0.3s";
+    var s = el.style;
+    s.opacity = 1;
+    setTimeout(function () {
+        (function fade() {
+            (s.opacity-=.1) < -0.5 ? s.display="none" : setTimeout(fade,duration * 100)
+        })();
+    },delay * 1000)
+
+    window.scrollTo({
+        "behavior": "smooth",
+        "left": 0,
+        "top":0
+    });
+}
+
+exports.fadeIn = function(el, duration, delay = 0) {
+    el.style.display = "block";
+    el.style.transition = "opacity 0.3s";
+    var val = el.style.opacity;
+    val = 0;
+    setTimeout(function () {
+        (function fade() {
+            if ( ((val += .1) < 1.5) ) {
+                el.style.opacity = val;
+                setTimeout(fade, duration * 100 )
+            }
+        })();
+    }, delay * 1000)
+}
