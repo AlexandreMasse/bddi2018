@@ -452,8 +452,8 @@
             },
             {
                 "id": 44,
-                "name": "",
-                "ident": "",
+                "name": "Canvas experiment",
+                "ident": "canvas_experiment",
                 "studentsList": [
                     5
                 ]
@@ -516,8 +516,8 @@
             },
             {
                 "id": 52,
-                "name": "",
-                "ident": "",
+                "name": "Canvas experiment",
+                "ident": "canvas_experiment",
                 "studentsList": [
                     24
                 ]
@@ -532,24 +532,24 @@
             },
             {
                 "id": 54,
-                "name": "",
-                "ident": "",
+                "name": "Canvas experiment",
+                "ident": "canvas_experiment",
                 "studentsList": [
                     28
                 ]
             },
             {
                 "id": 55,
-                "name": "",
-                "ident": "",
+                "name": "Canvas experiment",
+                "ident": "canvas_experiment",
                 "studentsList": [
                     29
                 ]
             },
             {
                 "id": 56,
-                "name": "",
-                "ident": "",
+                "name": "Canvas experiment",
+                "ident": "canvas_experiment",
                 "studentsList": [
                     31
                 ]
@@ -596,8 +596,8 @@
             },
             {
                 "id": 62,
-                "name": "",
-                "ident": "",
+                "name": "Canvas experiment",
+                "ident": "canvas_experiment",
                 "studentsList": [
                     41
                 ]
@@ -705,8 +705,8 @@
             },
             {
                 "id": 68,
-                "name": "",
-                "ident": "",
+                "name": "Sound experiment",
+                "ident": "sound_experiment",
                 "studentsList": [
                     5
                 ]
