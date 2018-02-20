@@ -16,7 +16,7 @@
             //TODO : create action on click
             categoryItem =
                 `<li class="menu__items-item" data-id="category-${categories[i].id}" data-ident="category__${categories[i].ident}" id="menu-link-${categories[i].ident}">
-                    <div class="menu__thumbnail" style="background-image:url('images/thumbnail-${categories[i].id}.jpg')"></div>
+                    <div class="menu__thumbnail" style="background-image:url('assets/images/thumbnail-${categories[i].id}.jpg')"></div>
                     <span>${categories[i].name}</span>
                 </li>`;
             categoriesMenu.innerHTML += categoryItem;
@@ -30,7 +30,7 @@
                         <h2>${categories[i].name}</h2>
                     </div>
                     <div class="projects__category-content">
-                    <div class="projects__category-thumbnail home-link-${categories[i].ident}" style="background-image:url('images/thumbnail-${categories[i].id}.jpg')" /></div>
+                    <div class="projects__category-thumbnail home-link-${categories[i].ident}" style="background-image:url('assets/images/thumbnail-${categories[i].id}.jpg')" /></div>
                         <div class="projects__category-description home-link-${categories[i].ident}">
                             <p>${categories[i].description.substring(0,250)}...</p>
                             <div class="fi flaticon-left-arrow action-show"></div>
@@ -74,7 +74,7 @@
                             studentsNames += `${students[k].firstname} ${students[k].lastname} <em>(${students[k].option})</em> - `;
                             if (k == students.length - 1) {
                                 const pathFile = categories[i].ident+'/'+projects[index].id+'_'+projects[index].ident;
-                                const thumbnail = projects[j].screens && projects[j].screens.length ? 'projets/'+pathFile+'/screens/0.jpg' : 'images/thumbnail-'+categories[i].id+'.jpg';
+                                const thumbnail = projects[j].screens && projects[j].screens.length ? 'projets/'+pathFile+'/screens/0.jpg' : 'assets/images/thumbnail-'+categories[i].id+'.jpg';
 
                                 const projectItem = document.createElement('div');
                                     projectItem.classList.add('projects__list-item');
@@ -193,7 +193,6 @@
             projectListItems.forEach(function(projectItem) {
                 projectItem.addEventListener('click', function() {
                     const projectContent = document.querySelector('#projectContent-'+projectItem.getAttribute('data-id'));
-                    console.log(projectItem.getAttribute('data-id'));
                     const iframe = projectItem.closest('section').querySelector('iframe');
 
                     const backLinks = document.querySelectorAll(".project__back-link");
@@ -203,7 +202,7 @@
 
                     switch (projectItem.getAttribute('data-view')) {
                         case 'code':
-                            iframe.setAttribute('src', location.host+'/projets/'+projectItem.getAttribute('data-url'));
+                            iframe.setAttribute('src', 'projets/'+projectItem.getAttribute('data-url')+'/');
                             utils.fadeIn(iframe, 0.5);
                             document.body.style.overflow = "hidden";
                             window.scrollTo({

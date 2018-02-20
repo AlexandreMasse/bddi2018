@@ -118,33 +118,33 @@ function checkDomElements() {
             getElements();
             checkDomElements();
 
-            console.log(menu_open
-                ,menu_close
-                ,homepage
-                ,menu
-                ,menuWeb
-                ,menu3dAudio
-                ,menuChat
-                ,menuCanvasAudio
-                ,menufestival
-                ,menuLouvres
-                ,menuDataviz
-                ,homeWeb
-                ,home3dAudio
-                ,homeChat
-                ,homeCanvasAudio
-                ,homefestival
-                ,homeLouvres
-                ,homeDataviz
-                ,categoryWeb
-                ,category3dAudio
-                ,categoryChat
-                ,categoryCanvasAudio
-                ,categoryFestival
-                ,categoryLouvres
-                ,categoryDataviz
-                ,backhome
-                ,backLinks);
+            // console.log(menu_open
+            //     ,menu_close
+            //     ,homepage
+            //     ,menu
+            //     ,menuWeb
+            //     ,menu3dAudio
+            //     ,menuChat
+            //     ,menuCanvasAudio
+            //     ,menufestival
+            //     ,menuLouvres
+            //     ,menuDataviz
+            //     ,homeWeb
+            //     ,home3dAudio
+            //     ,homeChat
+            //     ,homeCanvasAudio
+            //     ,homefestival
+            //     ,homeLouvres
+            //     ,homeDataviz
+            //     ,categoryWeb
+            //     ,category3dAudio
+            //     ,categoryChat
+            //     ,categoryCanvasAudio
+            //     ,categoryFestival
+            //     ,categoryLouvres
+            //     ,categoryDataviz
+            //     ,backhome
+            //     ,backLinks);
         }, 500);
     }
 };
