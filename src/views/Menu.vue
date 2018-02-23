@@ -1,21 +1,45 @@
 <template>
-  <div class="menu">
-   <p>{{text}}</p>
-    <menu-item text="Item 1"></menu-item>
-    <menu-item text="Item 2"></menu-item>
-    <menu-item text="Item 3"></menu-item>
-  </div>
+    <section class="menu" id="menu">
+      <nav class="menu__navigation">
+        <ul class="menu__items" id="categories-item">
+          <menu-item v-for="category in categories" :key="category.id" :categoryId="category.id" :categoryIdent="category.ident" :categoryName="category.name" ></menu-item>
+        </ul>
+      </nav>
+    </section>
 </template>
 
 <script>
   import MenuItem from '@/components/MenuItem.vue'
+  import categories from '@/data/categories.json'
+
   export default {
     name: 'menu',
     components: {MenuItem},
     data () {
       return {
-        text: 'Menu'
+        categories
       }
     }
   }
 </script>
+
+<style lang="scss">
+  .menu {
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+    //position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    z-index: 500;
+    &__navigation {
+      width: 700px;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 200px;
+      margin-bottom: 100px;
+    }
+  }
+</style>

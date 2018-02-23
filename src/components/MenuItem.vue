@@ -1,22 +1,67 @@
 <template>
-  <div class="menu-item">
-    <h1>{{ text }}</h1>
-  </div>
+
+  <li class="menu__items-item" :data-id="'category-' + categoryId" :data-ident="'category__' + categoryIdent" :id="'menu-link-' + categoryId">
+    <div class="menu__thumbnail" :style="{'background-image': `url(${require(`../assets/thumbnail-${categoryId}.jpg`)})`}"></div>
+    <span>{{categoryName}}</span>
+  </li>
+
 </template>
 
 <script>
   export default {
     name: 'MenuItem',
-    props: {
-      text: {
-        default: 'default value',
-        type: String
-      }
-    }
+    props: ['categoryId', 'categoryIdent', 'categoryName']
   }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
-
+.menu__items {
+  &-item {
+    height: 100px;
+    text-transform: uppercase;
+    //font-family: $font-walsheim-regular;
+    letter-spacing: 15px;
+    font-size: 50px;
+    margin: 50px 0;
+    transition: all 0.5s ease;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    cursor: pointer;
+    .menu__thumbnail {
+      width: 700px;
+      height: 300px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      //background-image:url('../assets/thumbnail-0.jpg');
+      text-align: center;
+      position:absolute;
+      top: -100%;
+      left: 0;
+      opacity: 0;
+      z-index: 1;
+      transition: all 0.5s ease;
+    }
+    span {
+      cursor: pointer;
+      position: relative;
+      z-index: 2;
+      opacity: 0.5;
+      transition: all 0.5s ease;
+    }
+    &:hover {
+      .menu__thumbnail {
+        opacity: 1;
+      }
+      span {
+        opacity: 1;
+        font-weight: bold;
+      }
+    }
+  }
+}
 </style>
