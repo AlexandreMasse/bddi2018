@@ -5,13 +5,12 @@
 </template>
 
 <script>
-
-export default {
-  name: 'home',
-  data () {
-    return {
-      text: 'Home'
+  export default {
+    name: 'home',
+    data () {
+      return {
+        text: 'Home'
+      }
     }
   }
-}
 </script>

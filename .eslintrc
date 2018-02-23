@@ -3,5 +3,11 @@
   "extends": [
     "plugin:vue/essential",
     "@vue/standard"
-  ]
+  ],
+  "rules": {
+    "indent": "off",
+    "vue/script-indent": ["error", 2, {
+      "baseIndent": 1
+    }]
+  }
 }
