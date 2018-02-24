@@ -27,7 +27,7 @@
         for (let i = 0; i < categories.length; i++) {
           if (categories[i].ident === this.categoryIdent) {
             return categories[i]
-          } else if (i === categories.length || this.categoryIdent === 'default') {
+          } else if (this.categoryIdent === 'default') {
             return categories[0]
           }
         }
