@@ -9,7 +9,7 @@ Check your IDE supports .editorconfig files, if not install an extension
 npm install
 ```
 
-## Start dev server
+## Run dev server
 ```
 npm run serve
 ```
