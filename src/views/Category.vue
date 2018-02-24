@@ -1,6 +1,7 @@
 <template>
   <div class="category">
    <h1>{{text}}</h1>
+   <h2>Ident : {{categoryIdent}}</h2>
    <project-item></project-item>
   </div>
 </template>
@@ -12,7 +13,8 @@
     components: {projectItem},
     data () {
       return {
-        text: 'Category'
+        text: 'Category',
+        categoryIdent : this.$route.params.ident
       }
     }
   }

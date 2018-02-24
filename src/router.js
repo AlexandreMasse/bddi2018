@@ -26,7 +26,7 @@ export default new Router({
       component: Menu
     },
     {
-      path: '/category',
+      path: '/category/:ident',
       name: 'category',
       component: Category
     },

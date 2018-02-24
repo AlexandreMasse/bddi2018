@@ -4,7 +4,7 @@
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link> |
       <router-link to="/menu">Menu</router-link> |
-      <router-link to="/category">Category</router-link> |
+      <router-link to="/category/default">Category</router-link> |
       <router-link to="/project">Project</router-link>
     </div>
     <router-view/>
