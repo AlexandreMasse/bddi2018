@@ -1,7 +1,7 @@
 <template>
 
   <li class="menu__items-item" :data-id="'category-' + categoryId" :data-ident="'category__' + categoryIdent" :id="'menu-link-' + categoryId">
-    <div class="menu__thumbnail" :style="{'background-image': `url(${require(`../assets/thumbnail-${categoryId}.jpg`)})`}"></div>
+    <div class="menu__thumbnail" :style="styles"></div>
     <span>{{categoryName}}</span>
   </li>
 
@@ -10,7 +10,15 @@
 <script>
   export default {
     name: 'MenuItem',
-    props: ['categoryId', 'categoryIdent', 'categoryName']
+    props: ['categoryId', 'categoryIdent', 'categoryName'],
+    computed: {
+      styles () {
+        let url = require(`../assets/thumbnail-${this.categoryId}.jpg`)
+        return {
+          'background-image': `url(${url})`
+        }
+      }
+    }
   }
 </script>
 
@@ -37,7 +45,6 @@
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
-      //background-image:url('../assets/thumbnail-0.jpg');
       text-align: center;
       position:absolute;
       top: -100%;
