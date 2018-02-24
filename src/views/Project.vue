@@ -1,6 +1,7 @@
 <template>
   <div class="project">
-   <p>{{text}}</p>
+   <h1>{{text}}</h1>
+   <p>Je suis un projet unique !</p>
   </div>
 </template>
 
