@@ -44,7 +44,7 @@
     height: 350px;
     float: left;
 
-    &:nth-of-type(3n+2) {
+    &:nth-of-type(3n) {
       margin: 0 20px;
     }
 
