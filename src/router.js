@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HomeExemple from './views/HomeExemple.vue'
 import About from './views/About.vue'
 import Menu from './views/Menu.vue'
 import Home from './views/Home.vue'
@@ -13,8 +12,8 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'home-exemple',
-      component: HomeExemple
+      name: 'home',
+      component: Home
     },
     {
       path: '/about',
@@ -25,11 +24,6 @@ export default new Router({
       path: '/menu',
       name: 'menu',
       component: Menu
-    },
-    {
-      path: '/home',
-      name: 'home',
-      component: Home
     },
     {
       path: '/category',
