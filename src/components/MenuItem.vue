@@ -28,7 +28,7 @@
   &-item {
     height: 100px;
     text-transform: uppercase;
-    //font-family: $font-walsheim-regular;
+    font-family: 'GTWalsheimProRegular';
     letter-spacing: 15px;
     font-size: 50px;
     margin: 50px 0;
@@ -59,6 +59,7 @@
       z-index: 2;
       opacity: 0.5;
       transition: all 0.5s ease;
+      color: #fefefe;
     }
     &:hover {
       .menu__thumbnail {

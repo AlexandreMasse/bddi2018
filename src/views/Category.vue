@@ -5,7 +5,7 @@
       <div class="fi flaticon-left-arrow action-back backhome"></div>
       <p>{{category.description}}</p>
     </div>
-   <project-item v-for="project in category.projectsList" :key="project.id" :data=project> </project-item>
+   <project-item v-for="project in category.projectsList" :key="project.id" :data="project"> </project-item>
   </div>
 </template>
 
