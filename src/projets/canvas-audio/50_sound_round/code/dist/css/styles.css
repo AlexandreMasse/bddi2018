@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito:300,400,800');
+
+body {
+    margin: 0;
+    overflow: hidden;
+    color: #FBFCFC;
+}
+
+.controls {
+    margin-top: 10px;
+    margin-right: 10px;
+    position: absolute;
+    right: 0;
+    display: flex;
+    z-index: 10;
+}
+
+button {
+    box-sizing: border-box;
+    padding: 7px 10px;
+    color: #ecf0f1;
+    opacity: 0.2;
+    border: none;
+    background-color: transparent;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+img {
+    width: 20px;
+}
