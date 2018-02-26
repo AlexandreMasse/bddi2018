@@ -3,11 +3,10 @@ const fs = require('fs');
 module.exports = {
   baseUrl: '/',
   css: {
-    sourceMap: true,
+    //sourceMap: true,
     loaderOptions: {
       sass: {
-        outputStyle: 'nested',
-        data: fs.readFileSync('src/variables.scss', 'utf-8')
+        data: '@import "~@/stylesheets/global.scss";'
       }
     }
   }
