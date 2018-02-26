@@ -10,9 +10,11 @@
       <router-link to="/menu" class="menu"><span>Works</span></router-link>
     </div>
     <div id="nav">
-      <router-link to="/about">About</router-link> |
       <router-link to="/category/default">Category</router-link> |
       <router-link to="/project">Project</router-link>
+    </div>
+    <div id="about">
+      <router-link to="/about">About</router-link>
     </div>
     <router-view/>
   </div>
@@ -89,6 +91,19 @@
       letter-spacing: 2px;
       line-height: 22px;
     }
+  }
+}
+#about {
+  position: fixed;
+  bottom: 20px;
+  right: 40px;
+  font-family: 'Aileron-light';
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  a {
+    text-decoration: none;
+    color: #afadad;
   }
 }
 </style>
