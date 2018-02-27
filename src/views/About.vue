@@ -12,14 +12,12 @@
 <style lang="scss" scoped>
 .about {
   font-family: 'Aileron-light';
-  
   h1 {
     text-transform: uppercase;
     letter-spacing: 3px;
     font-size: 15px;
     margin: 50px auto 80px;
   }
-
   p {
     color: #777777;
     font-family: "GTWalsheimProRegular";
