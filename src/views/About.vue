@@ -10,8 +10,8 @@
   </div>
 </template>
 <style lang="scss" scoped>
-.about {
-  font-family: 'Aileron-light';
+  .about {
+    font-family: 'Aileron-light';
   h1 {
     text-transform: uppercase;
     letter-spacing: 3px;

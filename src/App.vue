@@ -1,19 +1,19 @@
 <template>
   <div id="app">
-    <div id="home">
+    <div id="home-link">
       <router-link to="/" class="home">
-        <img src="./assets/gobelins_logo_white.png">
+        <img src="./assets/images/gobelins_logo_white.png">
         <p>Gobelins - L'école de l'image <br> BDDI 2018</p>
       </router-link>
     </div>
-    <div id="menu">
+    <div id="menu-link">
       <router-link to="/menu" class="menu"><span>Works</span></router-link>
     </div>
     <div id="nav">
       <router-link to="/category/default">Category</router-link> |
       <router-link to="/project">Project</router-link>
     </div>
-    <div id="about">
+    <div id="about-link">
       <router-link to="/about">About</router-link>
     </div>
     <router-view/>
@@ -42,7 +42,7 @@
     }
   }
 }
-#menu {
+#menu-link {
   padding: 30px;
   z-index:998;
   position: fixed;
@@ -68,7 +68,7 @@
     }
   }
 }
-#home {
+#home-link {
   padding: 30px;
   position: absolute;
   left: 0;
@@ -93,7 +93,7 @@
     }
   }
 }
-#about {
+#about-link {
   position: fixed;
   bottom: 20px;
   right: 40px;

@@ -13,7 +13,7 @@
     props: ['categoryId', 'categoryIdent', 'categoryName'],
     computed: {
       styles () {
-        let url = require(`../assets/thumbnail-${this.categoryId}.jpg`)
+        let url = require(`../assets/images/thumbnail-${this.categoryId}.jpg`)
         return {
           'background-image': `url(${url})`
         }
