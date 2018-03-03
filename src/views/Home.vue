@@ -6,10 +6,10 @@
         <p>{{description}}</p>
       </div>
       <div class="landing__start">
-				<span>Start here</span>
-			</div>
+        <span>Start here</span>
+      </div>
     </div>
-   <category-item></category-item>
+    <category-item></category-item>
   </div>
 </template>
 

@@ -6,7 +6,7 @@
     </div>
     <h2>{{project.name}}</h2>
     <p>
-      <span v-for="student in studentListOutput" :key="student.id">{{student[0].firstname}} <em>({{student[0].option}})</em> - </span>
+      <span v-for="student in studentListOutput" :key="student.id">{{student[0].firstname}} {{student[0].lastname}} <em>({{student[0].option}})</em> - </span>
     </p>
   </div>
 </template>
