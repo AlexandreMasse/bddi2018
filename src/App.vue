@@ -22,7 +22,7 @@
 
 <style lang="scss" scoped>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: $font-medium;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -50,7 +50,7 @@
   .menu {
     position: relative;
     text-transform: uppercase;
-    font-family: 'Aileron-light';
+    font-family: $font-aileron-light;
     font-size: 18px;
     letter-spacing: 5px;
     text-decoration: none;
@@ -86,7 +86,7 @@
       margin: 0;
       margin-left: 20px;
       opacity: 0.5;
-      font-family: 'Aileron-light';
+      font-family: $font-aileron-light;
       font-size: 15px;
       letter-spacing: 2px;
       line-height: 22px;
@@ -97,7 +97,7 @@
   position: fixed;
   bottom: 20px;
   right: 40px;
-  font-family: 'Aileron-light';
+  font-family: $font-aileron-light;
   font-size: 14px;
   text-transform: uppercase;
   letter-spacing: 3px;

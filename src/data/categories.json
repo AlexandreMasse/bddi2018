@@ -24,7 +24,7 @@
                     33
                 ],
                 "view" : "code",
-                "screens" : [0]
+                "screens" : []
             },
             {
                 "id": 2,
@@ -55,7 +55,7 @@
                     8
                 ],
                 "view" : "code",
-                "screens" : [0]
+                "screens" : []
             },
             {
                 "id": 5,
@@ -167,7 +167,7 @@
                     40
                 ],
                 "view" : "code",
-                "screens" : [0]
+                "screens" : []
             },
             {
                 "id": 16,
@@ -198,7 +198,7 @@
                     39
                 ],
                 "view" : "code",
-                "screens" : [0]
+                "screens" : []
             },
             {
                 "id": 19,
@@ -209,7 +209,7 @@
                     41
                 ],
                 "view" : "code",
-                "screens" : [0]
+                "screens" : []
             },
             {
                 "id": 20,
@@ -380,7 +380,7 @@
                     35,
                     38
                 ],
-                "screens" : [0, 1, 2],
+                "screens" : [],
                 "view": "screen"
             },
             {
@@ -393,7 +393,7 @@
                     26,
                     23
                 ],
-                "screens" : [0],
+                "screens" : [0, 1, 2],
                 "view": "screen"
             },
             {
@@ -710,7 +710,7 @@
             {
                 "id": 64,
                 "name": "Chat",
-                "ident": "Chat",
+                "ident": "chat",
                 "studentsList": [
                     8,
                     33

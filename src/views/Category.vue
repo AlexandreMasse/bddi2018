@@ -51,17 +51,17 @@
       margin: 0 auto;
       margin-top: 200px;
       .category__description {
-        // color: $color-white;
+        color: $color-white;
         line-height: 40px;
         font-size: 20px;
-        // font-family: $font-walsheim-regular;
+        font-family: $font-walsheim-regular;
         width: 700px;
         margin-bottom: 80px;
         .fi {
           &:before {
             cursor: pointer;
             font-size: 20px;
-            // color: $color-purple;
+            color: $color-purple;
           }
         }
       }

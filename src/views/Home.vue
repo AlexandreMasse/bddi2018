@@ -30,13 +30,13 @@
         h1 {
           text-transform: uppercase;
           opacity: 0.5;
-          font-family: "Aileron-light";
+          font-family: $font-aileron-light;
           letter-spacing: 3px;
           font-size: 13px;
         }
         p {
           color: #fefefe;
-          font-family: "GTWalsheimProRegular";
+          font-family: $font-walsheim-regular;
           font-size: 20px;
         }
       }
@@ -54,7 +54,7 @@
           position: relative;
           letter-spacing: 3px;
           opacity: 0.9;
-          font-family: "Aileron-light";
+          font-family: $font-aileron-light;
           &:after {
             content: '';
             width: 1px;
