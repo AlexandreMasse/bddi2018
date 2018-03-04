@@ -2,7 +2,7 @@
     <section class="menu" id="menu">
       <nav class="menu__navigation">
         <ul class="menu__items" id="categories-item">
-          <menu-item v-for="category in categories" :key="category.id" :categoryId="category.id" :categoryIdent="category.ident" :categoryName="category.name" ></menu-item>
+          <menu-item v-for="category in categories" :key="category.id" :categoryId="category.id" :categoryIdent="category.ident" :categoryName="category.name"></menu-item>
         </ul>
       </nav>
     </section>
@@ -23,7 +23,7 @@
   }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
   .menu {
     opacity: 1;
     width: 100%;
@@ -39,6 +39,9 @@
       transform: translateX(-50%);
       top: 200px;
       margin-bottom: 100px;
+    }
+    .menu__items {
+      padding: 0;
     }
   }
 </style>

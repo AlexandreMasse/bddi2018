@@ -1,17 +1,19 @@
 <template>
-  <div class="category category__content">
-    <h2>Ident : {{categoryIdent}}</h2>
-   <div class="category__description">
-      <div class="fi flaticon-left-arrow action-back backhome"></div>
-      <p>{{category.description}}</p>
+  <section v-if="category" :id="'category__' + categoryIdent" data-id="category-3" class="category">
+    <div class="category__content">
+      <h2>Ident : {{categoryIdent}}</h2>
+      <div class="category__description">
+        <div class="fi flaticon-left-arrow action-back backhome"></div>
+        <p>{{category.description}}</p>
+      </div>
+      <project-item v-for="project in category.projectsList" :key="project.id" :data="project"></project-item>
     </div>
-   <project-item v-for="project in category.projectsList" :key="project.id" :data="project"> </project-item>
-  </div>
+  </section>
 </template>
 
 <script>
   import projectItem from '@/components/ProjectItem.vue'
-  import categories from '@/data/categories.json' // To delete soon
+  import categories from '@/data/categories.json'
 
   export default {
     name: 'category',
@@ -27,14 +29,20 @@
         for (let i = 0; i < categories.length; i++) {
           if (categories[i].ident === this.categoryIdent) {
             return categories[i]
-          } else if (this.categoryIdent === 'default') {
-            return categories[0]
+          } else if (i === categories.length - 1) {
+            return null
           }
         }
+      }
+    },
+    mounted () {
+      if (!this.category) {
+        this.$router.push('/')
       }
     }
   }
 </script>
+
 <style lang="scss" scoped>
   .category {
     // opacity: 0;

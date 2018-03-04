@@ -10,7 +10,7 @@
       <router-link to="/menu" class="menu"><span>Works</span></router-link>
     </div>
     <div id="nav">
-      <router-link to="/category/default">Category</router-link> |
+      <router-link to="/category/dataviz">Category</router-link> |
       <router-link to="/project">Project</router-link>
     </div>
     <div id="about-link">
@@ -20,7 +20,7 @@
   </div>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
