@@ -1,7 +1,7 @@
 [
     {
         "id": 0,
-        "name": "Dataviz",
+        "name": "Datavisualisation",
         "ident": "dataviz",
         "description": "Pour ce projet, nous avions la possibilité de choisir une technologie de notre choix. L’idée derrière ce projet était de montrer, au travers d’un site web, une représentation de données. Visuellement parlant, nous étions libres, et les données pouvaient soit provenir de gros jeu de données (pollution au cours des années, déforestation…) ou bien cela pouvait être un questionnaire de notre cru (enquête concernant les élèves de la classe par exemple)",
         "projectsList": [
@@ -694,7 +694,7 @@
         "id": 4,
         "ident": "chat",
         "name": "VueJS Chat",
-        "description": "Il s’agit d’un des tous premiers workshops qui nous a été assigné en duo graphiste / développeur. Le but était de réaliser un client pour un chat en ligne en temps réel. Un serveur socket.io centralisé pour la classe a été mis à disposition. VueJS a été utilisé pour la réalisation de l’application. ",
+        "description": "Il s’agit d’un des tous premiers workshops qui nous a été assigné en duo designer / développeur. Le but était de réaliser un client pour un chat en ligne en temps réel. Un serveur socket.io centralisé pour la classe a été mis à disposition. VueJS a été utilisé pour la réalisation de l’application. ",
         "projectsList": [
             {
                 "id": 63,

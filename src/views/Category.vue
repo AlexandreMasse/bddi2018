@@ -1,10 +1,8 @@
 <template>
   <section v-if="category" :id="'category__' + categoryIdent" data-id="category-3" class="category">
     <div class="category__content">
-      <h2>Ident : {{categoryIdent}}</h2>
       <div class="category__description">
-        <div class="fi flaticon-left-arrow action-back backhome"></div>
-        <p>{{category.description}}</p>
+        <intro :title="category.name" :description="category.description" :backHome="true"></intro>
       </div>
       <project-item v-for="project in category.projectsList" :key="project.id" :data="project" :categoryIdent="category.ident" :categoryId="category.id"></project-item>
     </div>
@@ -13,11 +11,12 @@
 
 <script>
   import projectItem from '@/components/ProjectItem.vue'
+  import intro from '@/components/Intro.vue'
   import categories from '@/data/categories.json'
 
   export default {
     name: 'category',
-    components: {projectItem},
+    components: {projectItem, intro},
     data () {
       return {
         text: 'Category',
@@ -52,18 +51,9 @@
       margin-top: 200px;
       .category__description {
         color: $color-white;
-        line-height: 40px;
         font-size: 20px;
         font-family: $font-walsheim-regular;
-        width: 700px;
         margin-bottom: 80px;
-        .fi {
-          &:before {
-            cursor: pointer;
-            font-size: 20px;
-            color: $color-purple;
-          }
-        }
       }
     }
   }

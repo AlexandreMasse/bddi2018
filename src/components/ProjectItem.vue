@@ -6,7 +6,7 @@
     </div>
     <h2>{{project.name}}</h2>
     <p>
-      <span v-for="student in studentListOutput" :key="student.id">{{student[0].firstname}} {{student[0].lastname}} <em>({{student[0].option}})</em> - </span>
+      <span v-for="(student, index) in studentListOutput" :key="student.id">{{student[0].firstname}} {{student[0].lastname}} <em>({{student[0].option}})</em> <span  v-if="index != studentListOutput.length - 1">-</span> </span>
     </p>
   </div>
 </template>
@@ -70,23 +70,29 @@
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        // background-image: url('../images/placeholder-thumbnail.png');
         transition: all 0.7s ease;
       }
     }
 
     h2 {
-      // font-family: $font-walsheim-regular;
+      font-family: $font-walsheim-regular;
       margin: 15px 2px 10px 2px;
       font-size: 20px;
       line-height: 25px;
+      color: $color-white;
     }
 
     p {
-      // font-family: $font-aileron-light;
+      font-family: $font-aileron-light;
       font-size: 12px;
       line-height: 20px;
       opacity: 0.8;
+
+      em {
+        font-size: 0.9em;
+        color: #b4b4b4;
+        font-style: normal;
+      }
     }
 
     &:hover {
