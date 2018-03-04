@@ -1,0 +1,53 @@
+/*////////NAV/////////*/
+
+
+#menu{
+	width: 100vw;
+	height: 100vh;
+}
+
+#menutexte li{
+	padding: 7% 0% 7% 0;
+}
+
+
+#menutexte a{
+	font-size: 7vh;
+}
+
+ /* burger */
+
+#burger {
+    width: 36px;
+}
+
+ /* traits background */
+
+ .trait {
+    width: 33%;
+
+}
+
+.trait :nth-child(4n) {
+	display: none;
+}
+
+.trait :nth-child(5n) {
+	display: none;
+}
+
+
+/* /// CARROUSSEL ///*/
+
+h4{
+    font-size: 4vh;
+}
+
+h5{
+    font-size: 2vh;
+}
+
+
+.caroussel p{
+    font-size: 1.3vh;
+}

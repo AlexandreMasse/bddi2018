@@ -1,0 +1,127 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    background: #000;
+    font-family: sans-serif;
+    width: 100vw;
+    height: 100vh;
+}
+
+
+/* loadingscreen */
+#loadingScreen, #links {
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+	background-color: #100F0F;
+	font-family: 'Rubik', sans-serif;
+	line-height: 24px;
+	color: rgba(255,255,255,0.9);
+	letter-spacing: 2px;
+	font-size: 13px;
+}
+
+#loadingScreen .center {
+	position: relative;
+	margin: 0 auto;
+	text-align: center;
+	top: 45vh;
+}
+
+#loadingScreen.onProgress {
+	background-color: #100F0F;
+}
+
+#loading {
+	position: relative;
+	margin-left: auto;
+  	margin-right: auto;
+  	top: 20px;
+	width: 100px;
+}
+
+.loadingbar {
+	position: absolute;
+	width: 3px;
+	height: 3px;
+}
+
+.loadingbar > div {
+	position: relative;
+	width: 3px;
+	height: 3px;
+	background: rgba(255,255,255,0.9);
+	border: none;
+}
+
+#link {
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+}
+
+/* links */
+.twitter, .info {
+	top: 48vh;
+	position: absolute;
+	padding: 5px 0;
+	-ms-transform: rotate(90deg); 
+    -webkit-transform: rotate(90deg); 
+    transform: rotate(90deg);
+    letter-spacing: 3px;
+    font-size: 13px;
+    text-decoration: none;
+	color: rgba(255,255,255,0.8);
+    border-bottom: 2px solid rgba(255,255,255,0.7);
+	font-family: 'Rubik', sans-serif;
+	opacity: 0;
+
+	transition: all 0.2s;
+}
+
+.twitter {
+	left: 8px;
+}
+
+.info {
+	right: -60px;
+}
+
+.twitter:hover, .info:hover {
+	border-bottom: 2px solid rgba(255,255,255,0.9);
+	color: rgba(255,255,255,0.9);
+}
+
+
+/* music */
+#music {
+	position: absolute;
+	bottom: 20px;
+	left: 50%;
+}
+
+.divMusic {
+	position: relative; 
+	left: -50%; 
+	background-color: #0E0909;
+	padding: 20px;
+	color: rgba(255,255,255,0.5);
+	float: left;
+	margin: 10px;
+	display: none;
+	opacity: 0;
+
+	transition: all 0.2s;
+}
+
+.divMusic:hover {
+	cursor: pointer;
+	opacity: 0.7;
+	position: relative;
+	color: rgba(255,255,255,1);
+}
+
+audio {
+	position: absolute;
+	left: 160px;
+}

@@ -1,0 +1,934 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body,html{
+            position: relative;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            margin: 0;
+        }
+        img{
+            position: absolute;
+            left: 50%;
+            bottom: -36px;
+            transform: translateX(-50%);
+            width: 80%;
+            max-width: 400px;
+
+        }
+        canvas{
+            background-color:#000;
+        }
+
+    </style>
+</head>
+<body>
+
+<canvas id="canvas"></canvas>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
+<script src="noise.js"></script>
+<script src="gl-matrix.js"></script>
+<script>
+//Dirty ASF sorry
+
+    /***
+     * EYE CLASS
+     * */
+    var scene,
+        sceneW,
+        sceneH,
+        eyeNb,
+        ctx,
+        eyeArr,
+        mouse,
+        spaceOnCanvas,
+        deltaTime,
+        pointArr,
+        simplex,
+        currentAudioTime;
+
+
+    scene = document.querySelector('#canvas')
+    scene.width = document.body.clientWidth;
+    scene.height = document.body.clientHeight;
+    sceneW = scene.clientWidth
+    sceneH = scene.clientHeight
+    ctx = scene.getContext('2d')
+    //ctx.fillStyle='#000'
+    //ctx.scale(4,4)
+    eyeNb = 6
+    eyeArr = []
+    spaceOnCanvas = []
+    mouse = vec2.create()
+    var img;
+
+
+
+    drawEyes()
+    moveMouse()
+
+    function loadImage(){
+        img =  new Image();
+        img.addEventListener('load', function() {
+            console.log('loaded');
+            frame()
+        }, false);
+        img.src = 'kay.png';
+    }
+    function Eye(xPos, yPos,pupilleW,location,rotation) {
+        this.xPos = xPos;
+        this.yPos = yPos;
+        this.pupilleW = pupilleW
+        this.location = location
+        this.opacity = 1
+        this.rotation = rotation
+
+        this.dir = vec2.create()
+        this.isBlink = false
+
+        this.blinkAdvancement = 0;
+        this.isBlinking= false;
+        this.blinkDuration = 200;
+        this.conf = {
+            top: {
+                open: 120,
+                close: 60
+            },
+            bottom: {
+                open: 0,
+                close: 60
+            }
+        }
+    }
+
+    Eye.prototype.draw = function (delta) {
+        //oeil
+
+        // this.xPos = sceneW/2
+        //this.yPos = sceneH/2
+        this.currentTime += delta;
+        if( this.isBlinking && this.currentTime < 200) {
+            var advance = this.currentTime/200;
+            var anim = (Math.cos(Math.PI*2*advance)+1)/2
+            //console.log(anim);
+        } else {
+            var anim = 1;
+        }
+
+        this.pupilleW = 40
+        ctx.save()
+        ctx.translate(this.xPos,this.yPos)
+        ctx.rotate(this.rotation)
+        ctx.scale(.6,.6)
+        ctx.beginPath();
+        ctx.moveTo(0,60);
+        ctx.quadraticCurveTo(100, 60+anim*60, 200, 60);
+        ctx.quadraticCurveTo(100, 60-anim*60, 0, 60);
+        ctx.closePath();
+        ctx.clip();
+
+
+        ctx.beginPath();
+        if(this.isBlink === true) {
+            ctx.fillStyle = "black";
+        } else {
+            ctx.fillStyle = "white"
+        }
+        //ctx.rotate(.07)
+        ctx.moveTo(0,60);
+        ctx.globalAlpha = this.opacity
+
+        ctx.quadraticCurveTo(100, 120, 200, 60);
+        ctx.quadraticCurveTo(100, 0, 0, 60);
+        ctx.closePath();
+        ctx.lineWidth = 5;
+        ctx.strokeStyle = 'black';
+        ctx.stroke();
+        ctx.fill();
+
+
+        //pupille
+        ctx.fillStyle = "black";
+        ctx.beginPath();
+        ctx.arc( 100 + this.dir[0] *.09, 50 + this.dir[1]*.09, this.pupilleW, 0, Math.PI * 2, false);
+        ctx.closePath();
+        ctx.fill();
+
+        ctx.restore()
+
+    }
+
+    Eye.prototype.blink = function () {
+        this.blinkStart = Date.now();
+        this.lastBlink = this.blinkStart;
+        this.isBlinking = true;
+        this.currentTime = 0;
+    }
+
+    Eye.prototype.setData = function (mouse) {
+        this.starPosition = this.location
+        this.lastTime = Date.now()
+        this.currentTime = 0
+    }
+
+    Eye.prototype.movePupille = function () {
+//            var RAF = requestAnimationFrame(this.movePupille.bind(this))
+//            var now =  Date.now()
+//            deltaTime = now - this.lastTime
+//            this.lastTime = now
+
+
+        vec2.sub( this.dir,mouse,this.location)
+        vec2.normalize(this.dir,this.dir)
+        vec2.scale(this.dir, this.dir, 30)
+
+//            console.log(this.dir)
+
+        vec2.add(this.location,this.location,this.dir)
+
+        // ctx.clearRect(0,0,sceneW,sceneH)
+        // this.draw()
+
+        //      console.log(vec2.add(this.location,this.location,dir));
+    }
+
+    function moveMouse() {
+
+        document.addEventListener('mousemove',function (e) {
+            mouse = vec2.fromValues(e.clientX,e.clientY)
+        });
+
+    }
+
+    function drawEyes() {
+
+        function randomNumberRange(min, max){
+            return Math.floor(Math.random() * (max - min + 1) + min);
+        }
+        var inc = sceneW / 2;
+        var mult = 1;
+        var nbLigne = 1;
+        // var xPos = 200;
+        for(var i = 0; i < eyeNb; i++){
+               inc = 400;
+          //  xPos = sceneW / 2 -200
+            if(i % 2 === 0){
+                var rotation = 0
+                var xPos = sceneW / 2 + 20
+
+            }else{
+                var rotation = 0
+                var xPos = sceneW / 2 - 140
+
+            }
+
+            if(i % 2 === 0){
+                nbLigne++
+                mult = 1
+            }
+//            if (xPos > 200) {
+//                mult = 0
+//                nbLigne++
+//            }
+           // var xPos = inc  / 200 * mult * 100
+
+
+
+            var x = xPos
+           // console.log(x);
+            mult++
+           // var y = randomNumberRange(0,sceneH - 120)
+            var y =  100 * nbLigne
+
+            var pupilleW = randomNumberRange(25,40)
+
+            var spaceX = x + 200*.7;
+            var spaceY = y + 78*.7;
+            var spaceEye = [spaceX,spaceY]
+
+            var location = vec2.fromValues(x,y)
+            spaceOnCanvas.push(spaceEye);
+
+            var eye = new Eye(x,y,pupilleW,location,rotation)
+            eyeArr.push(eye)
+        }
+    }
+
+    var lastTime = Date.now();
+    var now = lastTime;
+
+    /**
+     * Wave
+     **/
+    pointArr =[]
+
+    simplex = new SimplexNoise()
+    var time = 0
+    var  angle = 0,
+        angleSun = 0,
+        x = 0,
+        y = 0;
+
+    function Point(x,y,rayon,multiplVar,pointSize) {
+        this.x = x
+        this.y = y
+        this.rayon = rayon
+        this.multipVar = multiplVar
+        this.pointSize = pointSize
+    }
+
+    Point.prototype.draw = function () {
+
+        function randomNumberRange(min, max){
+            return Math.floor(Math.random() * (max - min + 1) + min);
+        }
+
+        ctx.save()
+        ctx.translate(this.x,this.y)
+        ctx.beginPath();
+        ctx.fillStyle = "white";
+        ctx.shadowColor = '#fffff';
+        ctx.shadowBlur = 20;
+        ctx.shadowOffsetX = 15;
+        ctx.shadowOffsetY = 15;
+        ctx.arc(0, 0, this.pointSize, 0, Math.PI * 2, false);
+//           ctx.arc(0, -10, .4, 0, Math.PI * 2, true);
+//            ctx.arc(0, -20, .6, 0, Math.PI * 2, true);
+        // ctx.arc(0, -30, .4, 0, Math.PI * 2, true);
+        // ctx.arc(20, -40, .6, 0, Math.PI * 2, true);
+
+        // ctx.arc(100,100,100,0,Math.PI*2, false); // outer (filled)
+        //ctx.arc(100,100,55,0,Math.PI*2, true);
+
+        ctx.closePath();
+        ctx.fill();
+        ctx.restore()
+    }
+
+    Point.prototype.update = function (j,variation,nbPoint) {
+        //  console.log(this.rayon);
+        this.x = (this.rayon + variation) *  Math.cos( Math.PI * 2 / nbPoint * j) + scene.clientWidth / 2;
+        this.y = (this.rayon + variation ) * Math.sin( Math.PI*2 / nbPoint * j)  + scene.clientHeight / 2;
+    }
+
+
+    function drawPoint(nbPoint,rayon,multiplVar,pointSize) {
+        var newArr = []
+        var increase = Math.PI * 2 / nbPoint;
+
+        for( var i = 0; i < nbPoint; i++ ) {
+
+            // x = rayon *  Math.cos( angle ) + scene.clientWidth / 2;
+            //y = rayon * Math.sin( angle )  + scene.clientHeight / 2;
+
+            var point = new Point(0,0,rayon,multiplVar,pointSize);
+            newArr.push(point)
+
+            angle += increase;
+        }
+        pointArr.push(newArr)
+
+        //console.log(pointArr);
+    }
+
+    drawPoint(807,450,20,.9);
+    drawPoint(399,300,70,.7);
+    drawPoint(200,180,10,1);
+
+    /**
+     * Stars
+     **/
+    var nbStars,starsArr;
+    nbStars = 200;
+    starsArr = [];
+    function Star(xPos,yPos,color,scale,rotation,opacity) {
+        this.xPos = xPos
+        this.yPos = yPos
+        this.color = color
+        this.scale = scale
+        this.rotation = rotation
+        this.opacity = 0
+    }
+
+    Star.prototype.draw = function () {
+
+        var rot = Math.PI / 2 * 3;
+        var x = 75;
+        var y = 200;
+        var step = Math.PI / 6;
+       // ctx.strokeSyle = "#000";
+        ctx.save()
+        ctx.translate(this.xPos,this.yPos)
+        ctx.rotate( this.rotation)
+        ctx.scale(this.scale,this.scale)
+        ctx.beginPath();
+        ctx.moveTo(75, 200 - 30)
+        for (var i = 0; i < 6; i++) {
+            x = 75 + Math.cos(rot) * 30;
+            y = 200 + Math.sin(rot) * 30;
+            ctx.lineTo(x, y)
+            rot += step
+
+            x = 75 + Math.cos(rot) * 15;
+            y = 200 + Math.sin(rot) * 15;
+            ctx.lineTo(x, y)
+            rot += step
+        }
+        ctx.lineTo(75, 200 - 30)
+        ctx.closePath();
+//        ctx.lineWidth=5;
+//        ctx.strokeStyle='blue';
+        ctx.stroke();
+        ctx.fillStyle=this.color;
+        ctx.fill();
+        ctx.restore()
+    }
+
+    Star.prototype.updateValues = function (variation) {
+       //console.log(variation);
+        //console.log('255 test ',variation / 255);
+         this.opacity = 1
+    }
+
+    function drawStars(){
+        function randomNumberRange(min, max){
+            return Math.floor(Math.random() * (max - min + 1) + min);
+        }
+        function  map( num, min1, max1, min2, max2 ) {
+            var num1 = ( num - min1 ) / ( max1 - min1 )
+            var num2 = ( num1 * ( max2 - min2 ) ) + min2
+            return num2;
+        }
+        for (var i = 0;i < nbStars;i++){
+            var x = randomNumberRange(0, sceneW )
+            var y = randomNumberRange(-100, sceneH)
+            var scale = map(Math.random(), 0, 1, .2,.7);
+          //  console.log(scale);
+            var colorz = ['#fe4e51','#53dcfe']
+            var star = new Star(x,y,colorz[Math.floor(Math.random()*colorz.length)],scale,0,0)
+
+            starsArr.push(star)
+        }
+
+    }
+
+    drawStars()
+
+    /**
+     *Sun
+     **/
+    var sunArr,nbSun
+    sunArr = []
+    nbSun = 11
+    function Sun(x,y,scale,opacity) {
+        this.x = x;
+        this.y = y;
+        this.scale = scale;
+        this.opacity = 0
+    }
+
+    Sun.prototype.draw = function () {
+//            var rot = Math.PI / 2 * 3;
+//            var x = 175;
+//            var y = 200;
+//            var step = Math.PI / 20;
+
+            ctx.save()
+            ctx.translate(this.x,this.y)
+            ctx.scale(this.scale,this.scale)
+            ctx.strokeSyle = "#000";
+            ctx.beginPath();
+            ctx.arc(0, 0, 20, 0, Math.PI * 2, false);
+            ctx.closePath();
+            ctx.lineWidth=5;
+            ctx.strokeStyle='#ff1901';
+            ctx.globalAlpha = .8
+            ctx.stroke();
+            ctx.fillStyle='#ffe002';
+            ctx.fill();
+            ctx.restore()
+     }
+
+    Sun.prototype.updateValues = function () {
+        this.opacity = .6
+    }
+
+     function drawSun() {
+         function randomNumberRange(min, max){
+             return Math.floor(Math.random() * (max - min + 1) + min);
+         }
+         function  map( num, min1, max1, min2, max2 ) {
+             var num1 = ( num - min1 ) / ( max1 - min1 )
+             var num2 = ( num1 * ( max2 - min2 ) ) + min2
+             return num2;
+         }
+         for (var i = 0;i < nbSun;i++) {
+             var x = randomNumberRange(0, sceneW )
+             var y = randomNumberRange(-100, sceneH)
+             var scale = map(Math.random(), 0, 1, .2,.7);
+             //  console.log(scale);
+             var sun = new Sun(x,y,.8,0,0)
+
+             sunArr.push(sun)
+         }
+     }
+
+    drawSun()
+
+
+//    function drawSun(nbSun,rayon) {
+//        var newArr = []
+//        var increase = Math.PI * 2 / nbSun;
+//
+//        for( var i = 0; i < nbSun; i++ ) {
+//
+//            x = rayon *  Math.cos( angleSun ) + scene.clientWidth / 2;
+//            y = rayon * Math.sin( angleSun )  + scene.clientHeight / 2;
+//            var scale  = 1
+//
+//            var sun = new Sun(x,y,scale,1);
+//            newArr.push(sun)
+//
+//            angleSun += increase;
+//        }
+//        sunArr.push(newArr)
+//
+//        console.log(sunArr);
+//    }
+
+    //drawSun(6,450);
+    //drawSun(4,300);
+  //  drawSun(6,180);
+
+
+
+
+
+
+
+
+ //   drawPoint(200,10,50,3);
+
+//    requestAnimationFrame(function animate() {
+//        requestAnimationFrame(animate.bind(this));
+//
+////        now = Date.now();
+////        var delta = now - lastTime;
+////
+////        ctx.fillRect(0, 0, sceneW, sceneH);
+////        loadImage()
+////        for(var i = 0; i < eyeNb; i++) {
+////            var eye = eyeArr[i]
+////            eye.draw(delta);
+////            //  eye.movePupille()
+////
+////        }
+////
+////        lastTime = now;
+//    });
+
+    window.AudioContext=window.AudioContext||window.webkitAudioContext||window.mozAudioContext;
+
+    /**
+     *
+     * Sound stuff
+     *
+     */
+    var audioCtx = new AudioContext();
+    var audioBuffer;
+    var audioSource;
+
+    var analyser = audioCtx.createAnalyser();
+
+    var bassAnalyser = audioCtx.createAnalyser();
+    var bassFilter = audioCtx.createBiquadFilter();
+    // Manipulate the Biquad filter
+    bassFilter.type = "lowpass";
+    bassFilter.frequency.value = 100;
+    bassFilter.gain.value = 25;
+
+
+    var kickAnalyser = audioCtx.createAnalyser();
+    var kickFilter = audioCtx.createBiquadFilter();
+    // Manipulate the Biquad filter
+    kickFilter.type = "highpass";
+    kickFilter.frequency.value = 4000;
+    kickFilter.gain.value = 25;
+
+    var lilkickAnalyser = audioCtx.createAnalyser();
+    var lilkickFilter = audioCtx.createBiquadFilter();
+    // Manipulate the Biquad filter
+    lilkickFilter.type = "highpass";
+    lilkickFilter.frequency.value = 8000;
+    lilkickFilter.gain.value = 25;
+
+    var frequencyData = new Uint8Array(analyser.frequencyBinCount);
+    var bassFrequencyData = new Uint8Array(bassAnalyser.frequencyBinCount);
+    var kickFrequencyData = new Uint8Array(kickAnalyser.frequencyBinCount);
+    var lilkickFrequencyData = new Uint8Array(lilkickAnalyser.frequencyBinCount);
+
+    /**
+     Time stuff
+     */
+    var DELTA_TIME = 0;
+    var LAST_TIME = Date.now();
+
+    var beatTimestamp = 0;
+    var beatTimeThresold = 250;
+    var hasBeat = false;
+
+
+    var blinkTimestamp = 0;
+    var blinkTimeThresold = 2800;
+    var hasblinkd = false;
+
+    var kickTimestamp = 0;
+    var kickTimeThresold = 110;
+    var hasKick = false;
+
+    var lilkickTimestamp = 0;
+    var lilkickTimeThresold = 70;
+    var haslilKick = false;
+
+//    function initCanvas() {
+//
+//
+//
+//        onResize()
+//
+//    }
+
+    function loadSound(url) {
+        var request = new XMLHttpRequest();
+        request.open('GET', 'kay.mp3', true);
+        request.responseType = 'arraybuffer';
+
+// Decode asynchronously
+        request.onload = function() {
+
+            audioCtx.decodeAudioData(request.response, function(buffer) {
+
+// success callback
+                audioBuffer = buffer;
+
+// Create sound from buffer
+                audioSource = audioCtx.createBufferSource();
+                audioSource.buffer = audioBuffer;
+
+// connect the audio source to context's output
+                audioSource.connect( analyser )
+                audioSource.connect(bassFilter)
+                bassFilter.connect(bassAnalyser)
+                audioSource.connect(kickFilter)
+                kickFilter.connect(kickAnalyser)
+                audioSource.connect(lilkickFilter)
+                lilkickFilter.connect(lilkickAnalyser)
+                audioSource.connect(audioCtx.destination )
+
+// play sound
+                audioSource.start();
+
+                addListeners()
+
+               // loadImage()
+                frame()
+
+            }, function(){
+
+// error callback
+//
+            });
+        }
+        request.send();
+    }
+
+
+    /**
+     * addListeners
+     */
+    function addListeners() {
+
+        window.addEventListener( 'resize', onResize.bind(this) );
+        rafId = requestAnimationFrame( frame )
+
+    }
+
+    /**
+     * update
+     * - Triggered on every TweenMax tick
+     */
+    function frame() {
+
+        rafId = requestAnimationFrame( frame )
+        time += 0.01 ;
+        currentAudioTime = audioCtx.currentTime;
+       // console.log(currentAudioTime);
+        DELTA_TIME = Date.now() - LAST_TIME;
+        LAST_TIME = Date.now();
+
+
+        ctx.fillRect(0, 0, sceneW, sceneH);
+
+       for(var i = 0; i < eyeNb; i++) {
+            var eye = eyeArr[i]
+            eye.draw(DELTA_TIME);
+            eye.movePupille()
+        }
+
+        analyser.getByteFrequencyData(frequencyData);
+        bassAnalyser.getByteFrequencyData(bassFrequencyData);
+        kickAnalyser.getByteFrequencyData(kickFrequencyData);
+        lilkickAnalyser.getByteFrequencyData(lilkickFrequencyData);
+
+        var cumul = 0;
+        var bassCumul = 0;
+        var average = 0;
+        average = arrAverage(frequencyData)
+
+        if (currentAudioTime < 48) {
+            var ratio = Math.round(average / eyeNb)
+            if(ratio == 0 ){
+                ratio = 1
+            }
+         //   console.log(ratio);
+            if (hasblinkd) {
+                blinkTimestamp += DELTA_TIME;
+
+                if(blinkTimestamp > blinkTimeThresold) {
+                    blinkTimestamp = 0;
+                    hasblinkd = false;
+                }
+            }
+
+            if (!hasblinkd) {
+               // console.log('blink')
+                hasblinkd = true;
+
+                var arrEyeSlice = eyeArr.slice(0,ratio)
+                for(var p = 0; p < arrEyeSlice.length; p++) {
+                    var eye = arrEyeSlice[p]
+                    eye.blink()
+                }
+        }
+
+            //star.updateValues(kickAverage)
+
+
+
+        }
+
+
+//
+//        for(var p = 0; p < arrEyeSlice.length; p++){
+//            var eye = arrEyeSlice[p]
+//            eye.blink()
+//        }
+       // console.log(currentAudioTime);
+//            if(currentAudioTime > 48) {
+//                for(var m = 0; m < nbSun; m++) {
+//                    var sun = sunArr[m]
+//                    //  var variationStar = simplex.noise2D(l + time, l + time);
+//                    // variationStar = variationStar * kickAverage;
+//                    //sun.updateValues()
+//                    sun.draw();
+//                }
+//            }
+
+
+
+//        if(currentAudioTime > 36 && currentAudioTime < 37 ){
+//                eyeArr[0].blink()
+//                eyeArr[5].blink()
+//        }
+//
+//        if(currentAudioTime > 37 && currentAudioTime < 38 ){
+//                eyeArr[2].blink()
+//                eyeArr[4].blink()
+//        }
+//
+//        if(currentAudioTime > 38 && currentAudioTime < 40 ){
+//            eyeArr[1].blink()
+//                eyeArr[3].blink()
+//        }
+//
+//         if(currentAudioTime > 52 ) {
+//                             for(var l = 0; l < nbStars; l++) {
+//                    var star = starsArr[l]
+////                    var variationStar = simplex.noise2D(l + time, l + time);
+////                    variationStar = variationStar * kickAverage;
+////                    star.updateValues(variationStar)
+//                    star.draw();
+//                    //eye.movePupille()
+//                }
+////            eyeArr[1].blink()
+////            eyeArr[3].blink()
+//         }
+        for (var k = 0; k < pointArr.length; k++) {
+
+            var uniquePointArr =pointArr[k] ;
+            // console.log(uniquePointArr[0]);
+            for (var j = 0;j < uniquePointArr.length; j++ ) {
+
+                var variation = simplex.noise2D(j + time, j + time);
+                variation = variation * average;
+                uniquePointArr[j].update(j,variation,uniquePointArr.length)
+                uniquePointArr[j].draw()
+
+            }
+        }
+
+
+
+
+//        ctx.fill()
+//        ctx.closePath()
+
+
+
+
+
+        var kickAverage = arrAverage(kickFrequencyData);
+
+        if (kickAverage > 98){
+
+            if (hasKick) {
+                kickTimestamp += DELTA_TIME;
+
+                if(kickTimestamp > kickTimeThresold) {
+                    kickTimestamp = 0;
+                    hasKick = false;
+                }
+            }
+
+            if (!hasKick) {
+               // console.log('kick')
+                hasKick = true;
+                for(var i = 0; i < eyeNb; i++) {
+                    var eye = eyeArr[i]
+                   eye.blink()
+                   //eye.movePupille()
+                }
+                //star.updateValues(kickAverage)
+            }
+        }
+
+        var lilkickAverage = arrAverage(lilkickFrequencyData);
+
+        if (lilkickAverage > 30 && lilkickAverage < 80) {
+            if (haslilKick) {
+                lilkickTimestamp += DELTA_TIME;
+
+                if(lilkickTimestamp > lilkickTimeThresold) {
+                    lilkickTimestamp = 0;
+                    haslilKick = false;
+                }
+            }
+
+            if (!haslilKick) {
+             //   console.log('lilkick')
+                haslilKick = true;
+                 TweenMax.fromTo(ctx,.2,
+                    {fillStyle: "#642998"},
+                    {fillStyle: "#000"}
+                )
+
+//                TweenMax.to(ctx,.2,
+//                    {onUpdate: function(){ctx.rotate(180)},
+//                    onComplete:function () {
+//                        ctx.rotate(0)
+//                    }
+//                    }
+//                )
+
+                for(var l = 0; l < nbStars; l++) {
+                    var star = starsArr[l]
+                    var variationStar = simplex.noise2D(l + time, l + time);
+                    variationStar = variationStar * kickAverage;
+                    star.updateValues(variationStar)
+                    star.draw();
+                }
+            }
+        }
+
+        var variationScale = average / 255
+       // console.log(variationScale);
+        ctx.save()
+        ctx.scale(1 + variationScale,1 + variationScale)
+        ctx.restore()
+
+        var bassAverage = bassFrequencyData[3];
+        if (bassAverage === 255){
+
+            if (hasBeat) {
+                beatTimestamp += DELTA_TIME;
+
+                if(beatTimestamp > beatTimeThresold) {
+                    ctx.fillStyle='#000';
+
+                    beatTimestamp = 0;
+                    hasBeat = false;
+
+                }
+            }
+
+            if (!hasBeat) {
+             // console.log('boom')
+
+              // new TweenLite.to(document.body, 2,{backgroundColor: "#642998"})
+
+//                hasBeat = true;
+//                 var variationWave = simplex.noise2D(4 + time, 4 + time);
+//                variationWave = variationWave * (bassAverage / 255);
+//                pointArr[4].updateValues(variationWave)
+//                pointArr[4].draw();
+//                for(var m = 0; m < nbSun; m++) {
+//                    var sun = sunArr[m]
+//                  //  var variationStar = simplex.noise2D(l + time, l + time);
+//                   // variationStar = variationStar * kickAverage;
+//                   // sun.updateValues()
+//                    sun.draw();
+//                }
+            }
+        }
+
+        //ctx.drawImage(img,10,10);
+
+    }
+
+
+    /**
+     * onResize
+     * - Triggered when window is resized
+     * @param  {obj} evt
+     */
+    function onResize( evt ) {
+
+        sceneW = window.innerWidth;
+        sceneH = window.innerHeight;
+
+        scene.width = sceneW
+        scene.height = sceneH
+        scene.style.width = sceneW + 'px'
+        scene.style.height = sceneH + 'px'
+
+    }
+
+    function arrAverage(arr) {
+        var sum = arr.reduce(function(a, b) { return a + b; });
+        return sum / arr.length;
+    }
+
+
+   // initCanvas()
+    loadSound()
+
+</script>
+</body>
+</html>

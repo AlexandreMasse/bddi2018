@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Canvas - AudioViz</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+
+    <style>
+        body, html
+        {
+            margin : 0; padding: 0; overflow: hidden;
+            background: black;
+            width:100vw;
+            height:100vh;
+            display:flex;
+            align-items: center;
+        }
+
+        #container {
+            background: white;
+            width:97%;
+            height:94%;
+            margin:auto;
+            display:none
+        }
+
+        .content {
+            height:100%;
+            align-items: center;
+            position:relative;
+            display:none;
+        }
+        canvas.disappear {
+          display:none;
+        }
+
+        canvas.appear {
+            display:block;
+        }
+
+        h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: black;
+            font-size : 85px;
+            text-align: center;
+            margin:auto;
+            letter-spacing: 4px;
+            position:absolute;
+            left:0; right:0;
+            top:47%;
+
+        }
+
+        ul {
+            list-style-type: none;
+            display:flex;
+            margin:auto;
+            position:absolute;
+            bottom:40px;
+            width:246px;
+            left:0; right:0;
+        }
+        .social{
+            width: 30px;
+            margin: 0px 20px
+        }
+        img{
+            width: 30px;
+        }
+
+        .song {
+            color:white;
+            left:72px;
+            top:48px;
+            display:flex;
+            position: absolute;
+            z-index: 1;
+            height: 35px;
+        }
+
+        .song p {
+            font-size: 12px;
+            margin-left: 20px;
+            line-height: 12px;
+            letter-spacing: 1.5px;
+            font-family: 'Open Sans', sans-serif;
+
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="song">
+        <img class="logo" src="img/soundcloud.svg"/>
+        <p class="music"> Now playing : <b> Overthrow </b> by <b> Boys Noize </b> </p>
+    </div>
+
+    <canvas> </canvas>
+    <!-- <button class="button"> LAUNCH </button> -->
+    <div id="container">
+
+        <div class="content">
+            <h1> THANKS FOR WATCHING </h1>
+            <ul>
+                <a href="#"><li class="social"> <img src="img/github.svg"/></li></a>
+                <a href="#"><li class="social"> <img src="img/twitter.svg"/></li></a>
+                <a href="#"><li class="social"> <img src="img/codepen.svg"/></li></a>
+            </ul>
+        </div> 
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
+    <script type="text/javascript" src="js/libs/glmatrix.min.js"></script>
+    <script type="text/javascript" src="js/libs/simplexnoise.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+</body>
+</html>

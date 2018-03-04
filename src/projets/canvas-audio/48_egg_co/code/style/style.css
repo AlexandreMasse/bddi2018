@@ -1,0 +1,67 @@
+body {
+    margin: 0;
+    border: 0;
+    padding:0;
+    overflow: hidden;
+
+}
+
+.main{
+    overflow: hidden;
+    margin: 0;
+    border: 0;
+    padding:0;
+    width: 100vw;
+    height:100vh;
+    text-align: center;
+    color: red;
+    background: black;
+    line-height:100vh;
+    text-align:center; /* centrage horizontal */
+
+
+}
+.sound, .category, .title, .canvas, .end{
+    -webkit-transition: opacity 2s linear;
+    -moz-transition: opacity 2s linear;
+    -ms-transition: opacity 2s linear;
+    -o-transition: opacity 2s linear;
+    transition: opacity 2s linear;
+    opacity: 0;
+}
+
+.sound.hello, .category.hello, .title.hello, .canvas.hello, .end.hello {
+
+    -webkit-transition: opacity 2s linear;
+    -moz-transition: opacity 2s linear;
+    -ms-transition: opacity 2s linear;
+    -o-transition: opacity 2s linear;
+    transition: opacity 2s linear;
+    opacity: 1;
+}
+.container{
+    width:290px; /* largeur de la zone de texte */
+    padding:10px; /* aération interne de la zone de texte */
+
+    vertical-align:middle;
+    display:inline-block;
+    line-height:1.2; /* on rétablit le line-height */
+    text-align:left; /* ... et l'alignement du texte */
+}
+.container:hover{
+
+}
+h1, p{
+
+    margin:5px;
+    font-family: Monaco, "DejaVu Sans Mono", "Lucida Console", "Andale Mono", monospace;;
+    /*vertical-align: middle;*/
+    color: white;
+
+}
+p{
+    display: block;
+    vertical-align: middle;
+}
+h1, p {
+}

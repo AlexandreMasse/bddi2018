@@ -1,0 +1,88 @@
+$baseRotate: 3
+$targetRotate: 45
+
+#loadersvg
+  transform: rotate(180deg)
+  
+#loadersvg path
+  fill: none
+  stroke: black
+  // animation-name: loadersvg
+  // animation-iteration-count: infinite
+  transform-origin: 50%
+  
+  $nbTriangle: 6
+  @for $i from 1 to 7
+    &:nth-child(#{$i})
+      //transform: translateX(50%) translateY(50%) scale(#{1 - 0.1 * ($i - 1)}) rotate(#{$baseRotate*$i}deg)
+      transform: scale(#{1 - 0.1 * ($i - 1)}) rotate(0deg)
+      opacity: 1 - 0.15 * ($i - 1)
+      animation-name: rotate-#{$i}
+      animation-duration: 6s
+      animation-iteration-count: infinite
+      animation-timing-function: ease-in-out
+
+@for $i from 1 to 6 
+  @keyframes rotate-#{$i}
+    0%  
+      transform: scale(#{1 - 0.1 * ($i - 1)}) //rotate(0deg)  translateY(0px)
+      // transform: translateX(50%) translateY(50%) scale(#{1 - 0.1 * ($i - 1)}) rotate(#{$baseRotate*$i}deg)
+    50% 
+      transform: scale(#{1.5 - 0.3 * ($i - 1)}) //rotate(#{$targetRotate*$i}deg) translateY(#{5*$i}px)
+    //66%
+      //transform: scale(#{1.5 - 0.3 * ($i - 1)}) //rotate(#{-1*$targetRotate*$i}deg) translateY(#{5*$i}px)
+    100% 
+      transform: scale(#{1 - 0.1 * ($i - 1)}) //rotate(0deg) translateY(0px)
+      // transform: translateX(50%) translateY(50%) scale(#{1 - 0.1 * ($i - 1)}) rotate(#{$baseRotate*$i}deg)
+
+@keyframes loadersvg
+  0% 
+    transform: rotate(0deg)
+  100%
+    transform: rotate(360deg)
+
+#loader.loader
+  height: 100vh
+  width: 100vw
+  background-color: white
+  z-index: 1002
+  position: fixed
+  top: 0
+  left: 0
+  flex-direction: column
+  justify-content: center
+  transition: all .4s
+
+.loader--visible
+  opacity: 1
+  display: flex
+
+.loader--hidding
+  opacity: 0
+  display: flex
+
+.loader--hidden
+  display: none
+
+.loader__container
+  text-align: center
+  h1
+    text-align: center
+    font-size: 35px
+    font-weight: 100
+    letter-spacing: 5px
+    margin-bottom: 30px
+
+.loader__button
+  transition: all .4s ease
+  transform: scale(0.8)
+  color: black
+  margin-top: 20px
+
+.loader__button--hidden
+  opacity: 0
+  pointer-events: none
+  user-select: none
+
+.loader__button--visible
+  opacity: 1

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Three.js - Experiment</title>
+<link href="main.996ef76b62fbe6ddbb6a8629821fd0d5.css" rel="stylesheet"></head>
+<body>
+    <div id="landing">
+        <div>
+            <h1>Spherical Audio Visualizer</h1>
+
+            <div id="loader">
+                <div class="spinnerBlock">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+
+            <button id="landingButton" class="hidden">
+                    <span class='pulse-button'>listen</span>
+            </button>
+        </div>
+    </div>
+
+    <div class="controls hidden" id="controls">
+        <div class="buttons">
+            <button>
+                <img id="mute" src="./assets/img/mute.svg" alt="Mute">
+            </button>
+                
+            <button>
+                <img id="play-or-pause" src="./assets/img/pause.svg" alt="Play">
+            </button>
+    
+            <button>
+                <img id="fullScreen" src="./assets/img/full_screen.svg" alt="Full screen">
+            </button>
+        </div>
+
+        <div class="sliders">
+                <input id="shape" type="range" min="0.03" max="0.4" step="0.01" value="0.03">                
+        </div>
+    </div>
+
+    <p id="author" class="author">Erwann Letue <span class="separator">|</span> <a href="https://github.com/Eronne/threejs-audio-visualizer">Github</a></p>
+
+    <div id="main"></div>
+<script type="text/javascript" src="manifest.dc0268546bf979d5b6e9.js"></script><script type="text/javascript" src="vendor.8d6b8604bd246164c0fa.js"></script><script type="text/javascript" src="main.8c39cf89a4715f29c8e5.js"></script></body>
+</html>
+

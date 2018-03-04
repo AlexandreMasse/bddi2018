@@ -1,0 +1,577 @@
+<svg id="Calque_1" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 5464 768">
+    <defs>
+        <style type="text/css">
+            @font-face {
+                font-family: 'Citizen-Bold';
+                src: url('../font/Citizen-Bold.otf');
+            }
+        </style>
+        <style>.cls-1,.cls-5{fill:#a6c6ce;}.cls-2{fill:#2382db;}.cls-17,.cls-19,.cls-3,.cls-6,.cls-9{fill:#002e6b;}.cls-10,.cls-11,.cls-12,.cls-15,.cls-16,.cls-4,.cls-7,.cls-8{fill:none;}.cls-11,.cls-4{stroke:#002e6b;}.cls-10,.cls-11,.cls-12,.cls-15,.cls-16,.cls-17,.cls-4,.cls-7,.cls-8,.cls-9{stroke-miterlimit:10;}.cls-15,.cls-4,.cls-7{stroke-width:3px;}.cls-5{opacity:0.18;font-size:209px;}.cls-19,.cls-5,.cls-6{font-family:Citizen-Bold, Citizen;font-weight:700;}.cls-6{font-size:14px;}.cls-7{stroke:#f1322c;}.cls-8,.cls-9{stroke:#2382db;}.cls-10,.cls-11,.cls-12,.cls-8,.cls-9{stroke-width:4px;}.cls-10,.cls-15,.cls-16{stroke:#a6c6ce;}.cls-12{stroke:#003f7e;}.cls-13{fill:#b0ccd4;}.cls-14{fill:#003f7e;}.cls-16{stroke-width:2px;}.cls-17{stroke:#fff;}.cls-18{fill:#fcfcfc;}.cls-19{font-size:37.85px;}.cls-20{font-size:9px;}</style>
+        <symbol id="pylone_2" data-name="pylone_2" viewBox="0 0 82.42 200.09">
+            <polyline class="cls-4" points="49.18 0.5 49.18 118.42 65.13 199.81" />
+            <polyline class="cls-4" points="17.29 198.81 28.26 142.84 33.24 117.42 33.24 0.5" />
+            <polygon class="cls-4" points="33.24 66.99 5.2 49.33 33.24 49.33 33.24 66.99" />
+            <polygon class="cls-4" points="33.24 19.15 5.2 1.5 33.24 1.5 33.24 19.15" />
+            <polygon class="cls-4" points="49.18 51.04 77.22 33.39 49.18 33.39 49.18 51.04" />
+            <line class="cls-4" x1="57.15" y1="158.95" x2="25.26" y2="158.95" />
+            <line class="cls-4" x1="49.18" y1="113.11" x2="33.24" y2="113.11" />
+            <line class="cls-4" x1="49.18" y1="1.5" x2="33.24" y2="1.5" />
+            <line class="cls-4" x1="52.17" y1="131.05" x2="30.25" y2="131.05" />
+            <line class="cls-4" x1="65.12" y1="198.81" x2="25.26" y2="158.95" />
+            <line class="cls-4" x1="17.29" y1="198.81" x2="57.15" y2="158.95" />
+            <line class="cls-4" x1="25.26" y1="158.95" x2="52.17" y2="132.04" />
+            <line class="cls-4" x1="57.15" y1="157.95" x2="30.25" y2="131.05" />
+            <line class="cls-4" x1="51.17" y1="130.05" x2="34.23" y2="113.11" />
+            <line class="cls-4" x1="49.18" y1="97.16" x2="33.24" y2="81.22" />
+            <line class="cls-4" x1="49.18" y1="65.28" x2="33.24" y2="49.33" />
+            <line class="cls-4" x1="49.18" y1="33.39" x2="33.24" y2="17.44" />
+            <line class="cls-4" x1="5.33" y1="59.3" x2="5.33" y2="49.33" />
+            <line class="cls-4" x1="5.33" y1="11.47" x2="5.33" y2="1.5" />
+            <line class="cls-4" x1="77.08" y1="43.35" x2="77.08" y2="33.39" />
+            <line class="cls-4" x1="60.14" y1="44.35" x2="49.18" y2="33.39" />
+            <line class="cls-4" x1="66.62" y1="39.87" x2="60.14" y2="33.39" />
+            <line class="cls-4" x1="31.24" y1="131.05" x2="48.18" y2="114.11" />
+            <line class="cls-4" x1="33.24" y1="113.11" x2="49.18" y2="97.16" />
+            <line class="cls-4" x1="33.24" y1="81.22" x2="49.18" y2="65.28" />
+            <line class="cls-4" x1="33.24" y1="49.33" x2="49.18" y2="33.39" />naturalGas
+            <line class="cls-4" x1="33.24" y1="17.44" x2="49.18" y2="1.5" />
+            <line class="cls-4" x1="22.28" y1="60.29" x2="33.24" y2="49.33" />
+            <line class="cls-4" x1="15.8" y1="55.81" x2="22.28" y2="49.33" />
+            <line class="cls-4" x1="22.28" y1="12.46" x2="33.24" y2="1.5" />
+            <line class="cls-4" x1="15.8" y1="7.98" x2="22.28" y2="1.5" />
+        </symbol>
+        <symbol id="gaz" data-name="gaz" viewBox="0 0 43.92 55.64">
+            <g id="bLiER8.tif">
+                <path class="cls-1" d="M36.33,2.56a23.63,23.63,0,0,1,5.87,8.58,25.77,25.77,0,0,1,.5,17.09A16.84,16.84,0,0,1,38,35.42c-1.47,1.46-3,2.79-4.45,4.27a10.13,10.13,0,0,0-3,8.06c.1,1.73.43,3.41.67,5.11,0,.25.1.48.16.75-.07,0-.13.06-.16,0a26.41,26.41,0,0,1-8-9.71A25.44,25.44,0,0,1,22,26.12,14.93,14.93,0,0,1,26,19.5c1.61-1.64,3.29-3.13,4.89-4.77A17.3,17.3,0,0,0,33,12.09a10.51,10.51,0,0,0,1.36-6.91c-.15-1.52-.45-3-.68-4.48,0-.23,0-.47-.07-.7C34.5.85,35.43,1.67,36.33,2.56Z" />
+            </g>
+            <g id="bLiER8.tif-2" data-name="bLiER8.tif">
+                <path class="cls-1" d="M2.23,23.71a15.31,15.31,0,0,1,5.59,3.62,17.86,17.86,0,0,1,4.85,10.11A11.29,11.29,0,0,1,11.93,43c-.43,1.25-.93,2.44-1.35,3.71a6.94,6.94,0,0,0,.47,5.6c.52,1,1.15,1.93,1.74,2.89.09.14.19.26.29.41s-.06.07-.08.07a16.84,16.84,0,0,1-7.07-3.76A17.59,17.59,0,0,1,.5,41.52a10.07,10.07,0,0,1,.43-5c.46-1.4,1-2.72,1.47-4.12a11.45,11.45,0,0,0,.48-2.13A7.29,7.29,0,0,0,1.81,25.8c-.49-.87-1.05-1.67-1.58-2.5C.15,23.17.08,23,0,22.89.74,23.17,1.49,23.41,2.23,23.71Z" />
+            </g>
+        </symbol>
+        <symbol id="petrole" data-name="petrole" viewBox="0 0 54.77 51.84">
+            <path class="cls-3" d="M54.38,18.75c1.16,6.56,0,10-6.7,10S30.27,25.45,28.93,17.41C27.84,10.85,31,0,37.64,0S52.37,7.37,54.38,18.75Z" />
+            <path class="cls-3" d="M26.24,30c0,7.65-9.07,14.58-15.31,14.58S0,37.68,0,30,9.8,14.72,16,14.72,26.24,22.38,26.24,30Z" />
+            <path class="cls-3" d="M46.72,45.44c0,3.71-4.79,6.4-8.32,6.4s-7.68-4.93-7.68-8.64a6.57,6.57,0,0,1,6.4-6.72C40.65,36.48,46.72,41.73,46.72,45.44Z" />
+        </symbol>
+        <symbol id="minerais" data-name="minerais" viewBox="0 0 55.04 52.48">
+            <polygon class="cls-2" points="17.28 0 1.92 7.04 0 16.64 4.48 21.76 17.28 24.96 24.32 14.08 17.28 0" />
+            <polygon class="cls-2" points="44.16 9.6 30.08 18.56 28.16 31.36 44.16 40.32 55.04 28.8 55.04 17.92 44.16 9.6" />
+            <polygon class="cls-2" points="14.08 32.64 5.12 37.12 8.96 50.56 24.32 52.48 31.36 44.16 28.16 35.84 14.08 32.64" />
+        </symbol>
+    </defs>
+    <title>Plan de travail 5</title>
+    <use id="_1960pylone_1" class="pylone" data-name="1960pylone_1" width="82.42" height="200.09" transform="translate(207.09 170) scale(0.99 1)" xlink:href="#pylone_2" />
+    <use id="_1960pylone_2" class="pylone" data-name="1960pylone_2" width="82.42" height="200.09" transform="translate(552.09 284) scale(0.99 1)" xlink:href="#pylone_2" />
+    <use id="_1960pylone_3" class="pylone" data-name="1960pylone_3" width="82.42" height="200.09" transform="translate(850.09 132) scale(0.99 1)" xlink:href="#pylone_2" />
+    <use id="_1973pylone_4" class="pylone" data-name="1973pylone_4" width="82.42" height="200.09" transform="translate(1517.13 227) scale(0.99 1)" xlink:href="#pylone_2" />
+    <use id="_1973pylone_5" class="pylone" data-name="1973pylone_5" width="82.42" height="200.09" transform="translate(1866.23 459) scale(0.99 1)" xlink:href="#pylone_2" />
+    <use id="_1973pylone_6" class="pylone" data-name="1973pylone_6" width="82.42" height="200.09" transform="translate(2458.28 404) scale(0.99 1)" xlink:href="#pylone_2" />
+    <use id="_1984pylone_7" class="pylone" data-name="1984pylone_7" width="82.42" height="200.09" transform="translate(2905.37 111) scale(0.99 1)" xlink:href="#pylone_2" />
+    <use id="_1984pylone_8" class="pylone" data-name="1984pylone_8" width="82.42" height="200.09" transform="translate(3309.44 74) scale(0.99 1)" xlink:href="#pylone_2" />
+    <use id="_1984pylone_9" class="pylone" data-name="1984pylone_9" width="82.42" height="200.09" transform="translate(3840.5 413) scale(0.99 1)" xlink:href="#pylone_2" />
+    <use id="_2016pylone_10" class="pylone" data-name="2016pylone_10" width="82.42" height="200.09" transform="translate(4251.5 483) scale(0.99 1)" xlink:href="#pylone_2" />
+    <use id="_2016pylone_11" class="pylone" data-name="2016pylone_11" width="82.42" height="200.09" transform="translate(4642.5 121) scale(0.99 1)" xlink:href="#pylone_2" />
+    <use id="_2016pylone_12" class="pylone" data-name="2016pylone_12" width="82.42" height="200.09" transform="translate(5274.5 284) scale(0.99 1)" xlink:href="#pylone_2" />
+    <g class="large-figures">
+        <text class="cls-5" transform="translate(4521.34 571.38)" data-view="4"></text> <!-- 2015 -->
+        <text class="cls-5" transform="translate(3176.34 567.38)" data-view="3"></text> <!-- 1984 -->
+        <text class="cls-5" transform="translate(1865.34 227.38)" data-view="2"></text> <!-- 1973 -->
+        <text class="cls-5" transform="translate(648.34 543.38)" data-view="1"></text> <!-- 1961 -->
+    </g>
+    <g>
+        <text class="cls-6 indication" data-view="1" transform="translate(694.55 590.92)">total de production d’électricité avec
+            <tspan x="0" y="16.8" class="indication-target">le charbon</tspan>
+        </text>
+        <text class="cls-6 indication-explication" data-view="1" transform="translate(694.55 634.52)">
+            <tspan x="0" y="0">L'Angleterre connaît un</tspan>
+            <tspan x="0" y="16.8">rayonnement économique, culturel</tspan>
+            <tspan x="0" y="33.6">et une forte croissance de sa</tspan>
+            <tspan x="0" y="50.4">production industrielle durant la</tspan>
+            <tspan x="0" y="67.2">période de prospérité des Trente</tspan>
+            <tspan x="0" y="84">Glorieuses.</tspan>
+        </text>
+    </g>
+    <g>
+        <text class="cls-6 indication" data-view="2" transform="translate(1906.55 289.4)">total de production d’électricité avec
+            <tspan class="indication-target">le charbon</tspan>
+        </text>
+        <text class="cls-6 indication-explication" data-view="1" transform="translate(1906.55 315.8)">
+            <tspan x="0" y="0">Entre le premier pic de production des États-Unis,</tspan>
+            <tspan x="0" y="16.8">premier producteur de pétrole de l’époque,</tspan>
+            <tspan x="0" y="33.6">la fin des accords de Bretton Woods et</tspan>
+            <tspan x="0" y="50.4">l’embargo de l’OPEP, l’Angleterre est touchée</tspan>
+            <tspan x="0" y="67.2">par la première crise pétrolière de l’histoire.</tspan>
+        </text>
+
+    </g>
+    <g>
+        <text class="cls-6 indication" data-view="3" transform="translate(3222.55 616.4)">total de production d’électricité avec
+            <tspan class="indication-target">le charbon</tspan>
+        </text>
+        <text class="cls-6 indication-explication" data-view="1" transform="translate(3222.55 642.9)">
+            <tspan x="0" y="0">Le plan de restructuration industrielle porté</tspan>
+            <tspan x="0" y="16.8">par gouvernement conservateur de Margaret Thatcher</tspan>
+            <tspan x="0" y="33.6">engendre une grève des mineurs. Cette opposition</tspan>
+            <tspan x="0" y="50.4">dura un an et marqua l’histoire de l’industrie</tspan>
+            <tspan x="0" y="67.2">britannique.</tspan>
+        </text>
+    </g>
+    <g>
+        <text class="cls-6 indication" data-view="4" transform="translate(4559.55 616.4)">total de production d’électricité avec
+            <tspan class="indication-target">le charbon</tspan>
+        </text>
+        <text class="cls-6 indication-explication" data-view="1" transform="translate(4559.55 643.2)">
+            <tspan x="0" y="0">La découverte de gaz naturel dans la fin des années 90</tspan>
+            <tspan x="0" y="16.8">au large la mer du Nord permet à l’Angleterre de</tspan>
+            <tspan x="0" y="33.6">compenser la fermeture des mines de charbon</tspan>
+            <tspan x="0" y="50.4">et l'épuisement des réserves de pétrole.</tspan>
+        </text>
+    </g>
+    <line id="_1960lignepylone1_1" data-name="1960lignepylone1_1" class="cls-7" x1="557.5" y1="294.5" x2="212.5" y2="180.5" />
+    <line id="_1960lignepylone1_2" data-name="1960lignepylone1_2" class="cls-7" x1="628.5" y1="327.5" x2="283.5" y2="211.5" />
+    <line id="_1960lignepylone1_3" data-name="1960lignepylone1_3" class="cls-7" x1="557.5" y1="342.5" x2="212.5" y2="227.5" />
+    <line id="_1960lignepylone2_1" data-name="1960lignepylone2_1" class="cls-7" x1="556.5" y1="294.5" x2="854.5" y2="143.5" />
+    <line id="_1960lignepylone2_2" data-name="1960lignepylone2_2" class="cls-7" x1="628.5" y1="327.5" x2="926.5" y2="174.5" />
+    <line id="_1960lignepylone2_3" data-name="1960lignepylone2_3" class="cls-7" x1="557.5" y1="342.5" x2="855.5" y2="190.5" />
+    <line id="_1960lignepylone3_1" data-name="1960lignepylone3_1" class="cls-7" x1="855.5" y1="143.5" x2="1522.5" y2="239.5" />
+    <line id="_1960lignepylone3_2" data-name="1960lignepylone3_2" class="cls-7" x1="855.5" y1="190.5" x2="1522.5" y2="287.5" />
+    <line id="_1960lignepylone3_3" data-name="1960lignepylone3_3" class="cls-7" x1="926.5" y1="174.5" x2="1594.5" y2="271.5" />
+    <line id="_1960lignepylone4_1" data-name="1960lignepylone4_1" class="cls-7" x1="1522.5" y1="239.5" x2="1872.5" y2="469.5" />
+    <line id="_1960lignepylone4_2" data-name="1960lignepylone4_2" class="cls-7" x1="1522.5" y1="287.5" x2="1872.5" y2="517.5" />
+    <line id="_1960lignepylone4_3" data-name="1960lignepylone4_3" class="cls-7" x1="1594.5" y1="271.5" x2="1944.5" y2="501.5" />
+    <line id="_1960lignepylone5_1" data-name="1960lignepylone5_1" class="cls-7" x1="1872.5" y1="469.5" x2="2464.5" y2="415.5" />
+    <line id="_1960lignepylone5_2" data-name="1960lignepylone5_2" class="cls-7" x1="1872.5" y1="517.5" x2="2464.5" y2="463.5" />
+    <line id="_1960lignepylone5_3" data-name="1960lignepylone5_3" class="cls-7" x1="1944.5" y1="501.5" x2="2536.5" y2="447.5" />
+    <line id="_1960lignepylone6_1" data-name="1960lignepylone6_1" class="cls-7" x1="2464.5" y1="415.5" x2="2910.5" y2="122.5" />
+    <line id="_1960lignepylone6_2" data-name="1960lignepylone6_2" class="cls-7" x1="2464.5" y1="463.5" x2="2910.5" y2="170.5" />
+    <line id="_1960lignepylone6_3" data-name="1960lignepylone6_3" class="cls-7" x1="2536.5" y1="447.5" x2="2982.5" y2="154.5" />
+    <line id="_1960lignepylone7_1" data-name="1960lignepylone7_1" class="cls-7" x1="2910.5" y1="122.5" x2="3314.5" y2="85.5" />
+    <line id="_1960lignepylone7_2" data-name="1960lignepylone7_2" class="cls-7" x1="2910.5" y1="170.5" x2="3314.5" y2="133.5" />
+    <line id="_1960lignepylone7_3" data-name="1960lignepylone7_3" class="cls-7" x1="2982.5" y1="154.5" x2="3386.5" y2="117.5" />
+    <line id="_1960lignepylone8_1" data-name="1960lignepylone8_1" class="cls-7" x1="3314.5" y1="85.5" x2="3843.5" y2="423.5" />
+    <line id="_1960lignepylone8_2" data-name="1960lignepylone8_2" class="cls-7" x1="3314.5" y1="133.5" x2="3843.5" y2="471.5" />
+    <line id="_1960lignepylone8_3" data-name="1960lignepylone8_3" class="cls-7" x1="3386.5" y1="117.5" x2="3915.5" y2="455.5" />
+    <line id="_1960lignepylone9_1" data-name="1960lignepylone9_1" class="cls-7" x1="3843.5" y1="423.5" x2="4257.5" y2="494.5" />
+    <line id="_1960lignepylone9_2" data-name="1960lignepylone9_2" class="cls-7" x1="3843.5" y1="471.5" x2="4257.5" y2="542.5" />
+    <line id="_1960lignepylone9_3" data-name="1960lignepylone9_3" class="cls-7" x1="3915.5" y1="455.5" x2="4329.5" y2="526.5" />
+    <line id="_1960lignepylone10_1" data-name="1960lignepylone10_1" class="cls-7" x1="4257.5" y1="494.5" x2="4646.5" y2="132.5" />
+    <line id="_1960lignepylone10_2" data-name="1960lignepylone10_2" class="cls-7" x1="4257.5" y1="542.5" x2="4646.5" y2="180.5" />
+    <line id="_1960lignepylone10_3" data-name="1960lignepylone10_3" class="cls-7" x1="4329.5" y1="526.5" x2="4718.5" y2="164.5" />
+    <line id="_1960lignepylone11_1" data-name="1960lignepylone11_1" class="cls-7" x1="4646.5" y1="132.5" x2="5280.5" y2="296.5" />
+    <line id="_1960lignepylone11_2" data-name="1960lignepylone11_2" class="cls-7" x1="4646.5" y1="180.5" x2="5280.5" y2="344.5" />
+    <line id="_1960lignepylone11_3" data-name="1960lignepylone11_3" class="cls-7" x1="4718.5" y1="164.5" x2="5352.5" y2="328.5" />
+    <g class="tooltip tooltip-12" id="_2016charb_bulle" data-name="2016charb_bulle">
+        <circle class="cls-11" cx="5133.33" cy="146.58" r="52.06" />
+        <line class="cls-11" x1="5044.92" y1="231.95" x2="5094.13" y2="182.75" />
+    </g>
+    <g class="tooltip tooltip-11" id="_2016gaz_bulle" data-name="2016gaz_bulle">
+        <circle class="cls-10" cx="4486.5" cy="211.06" r="52.06" />
+        <line class="cls-10" x1="4571.88" y1="299.47" x2="4522.67" y2="250.26" />
+    </g>
+    <g class="tooltip tooltip-10" id="_2016petro_bulle" data-name="2016petro_bulle">
+        <circle class="cls-8" cx="4350.5" cy="287.06" r="52.06" />
+        <line class="cls-9" x1="4435.88" y1="375.47" x2="4386.67" y2="326.26" />
+    </g>
+    <g class="tooltip tooltip-9" id="_1984charb_bulle" data-name="1984charb_bulle">
+        <circle class="cls-11" cx="3771.62" cy="235.58" r="52.06" />
+        <line class="cls-11" x1="3683.22" y1="320.95" x2="3732.43" y2="271.75" />
+    </g>
+    <g class="tooltip tooltip-8" id="_1984gaz_bulle" data-name="1984gaz_bulle">
+        <circle class="cls-8" cx="3588.62" cy="165.58" r="52.06" />
+        <line class="cls-9" x1="3500.22" y1="250.95" x2="3549.43" y2="201.75" />
+    </g>
+    <g class="tooltip tooltip-7" id="_1984petro_bulle" data-name="1984petro_bulle">
+        <circle class="cls-10" cx="3175.11" cy="231.7" r="52.06" />
+        <line class="cls-10" x1="3089.74" y1="143.3" x2="3138.94" y2="192.51" />
+    </g>
+    <g class="tooltip tooltip-6" id="_1973charb_bulle" data-name="1973charb_bulle">
+        <circle class="cls-10" cx="2180.99" cy="558.19" r="52.06" />
+        <line class="cls-10" x1="2269.39" y1="472.81" x2="2220.18" y2="522.02" />
+    </g>
+    <g class="tooltip tooltip-5" id="_1973gaz_bulle" data-name="1973gaz_bulle">
+        <circle class="cls-11" cx="2048.99" cy="530.19" r="52.06" />
+        <line class="cls-11" x1="2137.39" y1="444.81" x2="2088.18" y2="494.02" />
+    </g>
+    <g class="tooltip tooltip-4" id="_1973petro_bulle" data-name="1973petro_bulle">
+        <circle class="cls-8" cx="1645.99" cy="514.19" r="52.06" />
+        <line class="cls-9" x1="1734.39" y1="428.81" x2="1685.18" y2="478.02" />
+    </g>
+    <g class="tooltip tooltip-3" id="_1960charb_bulle" data-name="1960charb_bulle">
+        <circle class="cls-8" cx="612.5" cy="180.06" r="52.06" />
+        <line class="cls-9" x1="697.88" y1="268.47" x2="648.67" y2="219.26" />
+    </g>
+    <g class="tooltip tooltip-2" id="_1960petro_bulle" data-name="1960petro_bulle">
+        <circle class="cls-12" cx="401.99" cy="365.89" r="52.06" />
+        <line class="cls-12" x1="490.39" y1="280.51" x2="441.18" y2="329.72" />
+    </g>
+    <g class="tooltip tooltip-1" id="_1960gaz_bulle" data-name="1960gaz_bulle">
+        <circle class="cls-10" cx="331.99" cy="333.89" r="52.06" />
+        <line class="cls-10" x1="420.39" y1="248.51" x2="371.18" y2="297.72" />
+    </g>
+    <polygon class="cls-13" points="2373.03 124.18 2523.16 158.75 2522.22 153.46 2537.5 164.5 2518.93 167.75 2522.09 163.39 2371.97 128.82 2373.03 124.18" />
+    <g id="_1973tonneau" data-name="1973tonneau">
+        <rect class="cls-14" x="2363.04" y="156.89" width="41.37" height="60.11" />
+        <line class="cls-10" x1="2362.46" y1="156.5" x2="2405" y2="156.5" />
+        <line class="cls-10" x1="2362.95" y1="174.43" x2="2404.5" y2="174.4" />
+        <line class="cls-10" x1="2362.92" y1="200.37" x2="2404.53" y2="200.24" />
+        <rect class="cls-14" x="2420.94" y="167.32" width="34.19" height="49.68" />
+        <line class="cls-10" x1="2420.46" y1="167" x2="2455.62" y2="167" />
+        <line class="cls-10" x1="2420.87" y1="181.82" x2="2455.21" y2="181.79" />
+        <line class="cls-10" x1="2420.84" y1="203.25" x2="2455.23" y2="203.15" />
+        <rect class="cls-14" x="2472.17" y="177.26" width="27.35" height="39.74" />
+        <line class="cls-15" x1="2471.78" y1="177" x2="2499.91" y2="177" />
+        <line class="cls-15" x1="2472.11" y1="188.85" x2="2499.58" y2="188.83" />
+        <line class="cls-15" x1="2472.09" y1="206" x2="2499.6" y2="205.92" />
+        <rect class="cls-14" x="2516.11" y="189.18" width="19.15" height="27.82" />
+        <line class="cls-16" x1="2515.84" y1="189" x2="2535.52" y2="189" />
+        <line class="cls-16" x1="2516.07" y1="197.3" x2="2535.29" y2="197.28" />
+        <line class="cls-16" x1="2516.05" y1="209.3" x2="2535.31" y2="209.24" />
+    </g>
+    <polygon class="cls-13" points="2688.03 516.18 3024.16 593.75 3023.23 588.45 3038.5 599.5 3019.93 602.74 3023.09 598.39 2686.97 520.82 2688.03 516.18" />
+    <g id="_1984chariot" data-name="1984chariot">
+        <polygon class="cls-16" points="2815 499 2827 493 2835 487 2848 493 2862 492 2870 499 2877 506 2880 509 2882 515 2815 499" />
+        <polygon class="cls-3" points="2868.43 548.98 2808.02 535.04 2809 496 2887 514 2868.43 548.98" />
+        <circle class="cls-17" cx="2819.5" cy="536.5" r="7.5" />
+        <circle class="cls-17" cx="2857.5" cy="546.5" r="7.5" />
+    </g>
+    <g id="_2016usine_1" data-name="2016usine_1">
+        <polygon class="cls-1" points="5227.9 665.22 5255.43 665.22 5252.71 678.63 5227.9 665.22" />
+        <polygon class="cls-1" points="5199.77 665.22 5228.93 665.22 5225.62 678.63 5199.77 665.22" />
+        <polygon class="cls-1" points="5173.13 665.22 5201.84 665.22 5198.52 678.63 5173.13 665.22" />
+        <polygon class="cls-1" points="5145.91 665.22 5174.03 665.22 5170.72 678.63 5145.91 665.22" />
+        <polygon class="cls-1" points="5118.49 665.22 5146.62 665.22 5143.3 678.63 5118.49 665.22" />
+        <polygon class="cls-1" points="5091.4 665.22 5120.2 665.22 5116.2 678.63 5091.4 665.22" />
+        <polygon class="cls-1" points="5065.2 665.42 5092.14 665.22 5088.51 678.25 5065.2 665.42" />
+        <polygon class="cls-3" points="5225.28 678.26 5200.57 665.42 5197.65 678.5 5197.65 706.24 5225.31 706.24 5225.28 678.26" />
+        <polygon class="cls-3" points="5280.07 678.26 5255.4 665.42 5251.41 678.5 5251.41 706.24 5280.1 706.24 5280.07 678.26" />
+        <polygon class="cls-3" points="5252.81 678.26 5228.57 665.42 5225.24 678.5 5225.24 706.24 5252.84 706.24 5252.81 678.26" />
+        <polygon class="cls-3" points="5198.4 678.26 5173.8 665.42 5170.77 678.5 5170.77 706.24 5198.42 706.24 5198.4 678.26" />
+        <polygon class="cls-3" points="5171.03 678.26 5146.41 665.42 5142.48 678.5 5142.48 706.24 5171.06 706.24 5171.03 678.26" />
+        <polygon class="cls-3" points="5143.77 678.26 5119.7 665.42 5116.31 678.5 5116.31 706.24 5143.79 706.24 5143.77 678.26" />
+        <polygon class="cls-3" points="5116.51 678.26 5091.92 665.42 5088.02 678.5 5088.02 706.24 5116.53 706.24 5116.51 678.26" />
+        <polygon class="cls-3" points="5089.25 678.26 5065.2 665.42 5061.85 678.5 5061.85 706.24 5089.27 706.24 5089.25 678.26" />
+        <rect class="cls-1" x="5268.38" y="688.56" width="7.78" height="17.68" />
+        <rect class="cls-18" x="5229.48" y="682.2" width="16.98" height="7.78" />
+        <rect class="cls-18" x="5201.89" y="682.2" width="18.39" height="7.78" />
+        <rect class="cls-18" x="5175.72" y="682.2" width="16.98" height="7.78" />
+        <rect class="cls-18" x="5147.43" y="682.2" width="18.39" height="7.78" />
+        <rect class="cls-18" x="5121.26" y="682.2" width="17.68" height="7.78" />
+        <rect class="cls-18" x="5095.09" y="682.2" width="16.98" height="7.78" />
+        <rect class="cls-18" x="5066.8" y="682.2" width="17.68" height="7.78" />
+        <path class="cls-3" d="M5115.6,661.1s-2.83,2.1-5,0v6.09a3.72,3.72,0,0,0,5,0Z" />
+        <path class="cls-3" d="M5115.6,654.14s-2.83,2.1-5,0v6.09a3.72,3.72,0,0,0,5,0Z" />
+        <path class="cls-3" d="M5115.6,647.18s-2.83,2.1-5,0v6.09a3.72,3.72,0,0,0,5,0Z" />
+        <path class="cls-1" d="M5110.48,645.22a2.54,2.54,0,1,0,2.54-2.54,2.54,2.54,0,0,0-2.54,2.54" />
+        <path class="cls-3" d="M5170.06,661.1s-2.83,2.1-5,0v6.09a3.72,3.72,0,0,0,5,0Z" />
+        <path class="cls-3" d="M5170.06,654.14s-2.83,2.1-5,0v6.09a3.72,3.72,0,0,0,5,0Z" />
+        <path class="cls-3" d="M5170.06,647.18s-2.83,2.1-5,0v6.09a3.72,3.72,0,0,0,5,0Z" />
+        <path class="cls-1" d="M5164.83,645a2.73,2.73,0,1,0,2.73-2.73,2.73,2.73,0,0,0-2.73,2.73" />
+        <path class="cls-3" d="M5161.58,661.1s-2.12,2.1-5.66,0v6.09s3.54,2.1,5.66,0Z" />
+        <path class="cls-3" d="M5161.58,654.14s-2.12,2.1-5.66,0v6.09s3.54,2.1,5.66,0Z" />
+        <path class="cls-3" d="M5161.58,647.18s-2.12,2.1-5.66,0v6.09s3.54,2.1,5.66,0Z" />
+        <path class="cls-1" d="M5156,645a2.73,2.73,0,1,0,2.73-2.73A2.73,2.73,0,0,0,5156,645" />
+    </g>
+    <g id="_1984usine_2" data-name="1984usine_2">
+        <polygon class="cls-3" points="4067.14 312.64 4047.64 333.3 4047.64 344.13 4035.8 354.68 4035.8 375.77 4067.14 375.77 4067.14 312.64" />
+        <polygon class="cls-3" points="4067.14 312.64 4086.65 333.3 4086.65 344.13 4098.49 354.68 4098.49 375.77 4067.14 375.77 4067.14 312.64" />
+        <rect class="cls-3" x="4098.49" y="365.37" width="84.41" height="10.4" />
+        <rect class="cls-1" x="4098.49" y="354.97" width="84.41" height="10.4" />
+        <rect class="cls-3" x="4086.61" y="333.23" width="84.41" height="10.98" />
+        <polygon class="cls-3" points="4086.65 344.13 4098.57 354.97 4183.51 354.97 4174.12 344.21 4086.65 344.13" />
+        <polygon class="cls-1" points="4068.58 314.14 4086.65 333.3 4171.02 333.23 4149.96 312.64 4067.15 312.64 4068.58 314.14" />
+        <path class="cls-3" d="M4141.85,309.47s-.71,1.59-3.54,0v4.61s2.71,1.59,3.54,0Z" />
+        <path class="cls-3" d="M4141.85,304.2s-.71,1.59-3.54,0v4.61s2.71,1.59,3.54,0Z" />
+        <path class="cls-3" d="M4141.85,298.93s-.71,1.59-3.54,0v4.61s2.71,1.59,3.54,0Z" />
+        <path class="cls-1" d="M4138.22,297.25a1.75,1.75,0,1,0,1.75-1.75,1.75,1.75,0,0,0-1.75,1.75" />
+        <rect class="cls-18" x="4094.46" y="336.63" width="9.9" height="4.24" />
+        <rect class="cls-18" x="4052.72" y="350.07" width="9.9" height="4.24" />
+        <rect class="cls-18" x="4065.46" y="350.07" width="9.9" height="4.24" />
+        <rect class="cls-18" x="4052.72" y="357.85" width="9.9" height="4.24" />
+        <rect class="cls-18" x="4065.46" y="357.85" width="9.9" height="4.24" />
+        <rect class="cls-18" x="4052.72" y="365.63" width="9.9" height="4.24" />
+        <rect class="cls-18" x="4065.46" y="365.63" width="9.9" height="4.24" />
+        <rect class="cls-18" x="4109.31" y="336.63" width="9.2" height="4.24" />
+        <rect class="cls-18" x="4124.87" y="336.63" width="9.9" height="4.24" />
+        <rect class="cls-18" x="4140.43" y="336.63" width="9.2" height="4.24" />
+        <rect class="cls-18" x="4154.58" y="336.63" width="9.9" height="4.24" />
+    </g>
+    <g id="_1984usine_1" data-name="1984usine_1">
+        <rect class="cls-3" x="3333.48" y="336.53" width="154.52" height="42.47" />
+        <rect class="cls-3" x="3461.8" y="322.98" width="12.65" height="48.79" />
+        <rect class="cls-3" x="3427.46" y="322.98" width="12.65" height="48.79" />
+        <rect class="cls-3" x="3366.92" y="331.11" width="44.28" height="42.47" />
+        <rect class="cls-3" x="3354.27" y="327.49" width="12.65" height="48.79" />
+        <rect class="cls-18" x="3384.32" y="363.64" width="11.5" height="6.26" />
+        <rect class="cls-18" x="3384.32" y="353.7" width="11.5" height="6.26" />
+        <rect class="cls-18" x="3384.32" y="343.76" width="11.5" height="6.26" />
+        <path class="cls-3" d="M3472.28,324.87s-2.56,1.9-4.47,0v5.5a3.36,3.36,0,0,0,4.47,0Z" />
+        <path class="cls-3" d="M3472.28,318.58s-2.56,1.9-4.47,0v5.5a3.36,3.36,0,0,0,4.47,0Z" />
+        <path class="cls-3" d="M3472.28,312.29s-2.56,1.9-4.47,0v5.5a3.36,3.36,0,0,0,4.47,0Z" />
+        <path class="cls-1" d="M3467.65,310.52a2.29,2.29,0,1,0,2.29-2.29,2.29,2.29,0,0,0-2.29,2.29" />
+        <path class="cls-3" d="M3433.42,317.64s-2.56,1.9-4.47,0v5.5a3.36,3.36,0,0,0,4.47,0Z" />
+        <path class="cls-3" d="M3433.42,311.35s-2.56,1.9-4.47,0v5.5a3.36,3.36,0,0,0,4.47,0Z" />
+        <path class="cls-3" d="M3433.42,305.06s-2.56,1.9-4.47,0v5.5a3.36,3.36,0,0,0,4.47,0Z" />
+        <path class="cls-1" d="M3428.8,303.29a2.29,2.29,0,1,0,2.29-2.29,2.29,2.29,0,0,0-2.29,2.29" />
+        <path class="cls-3" d="M3362.94,323.06s-2.56,1.9-4.47,0v5.5a3.36,3.36,0,0,0,4.47,0Z" />
+        <path class="cls-3" d="M3362.94,316.77s-2.56,1.9-4.47,0v5.5a3.36,3.36,0,0,0,4.47,0Z" />
+        <path class="cls-3" d="M3362.94,310.49s-2.56,1.9-4.47,0V316a3.36,3.36,0,0,0,4.47,0Z" />
+        <path class="cls-1" d="M3358.32,308.71a2.29,2.29,0,1,0,2.29-2.29,2.29,2.29,0,0,0-2.29,2.29" />
+        <path class="cls-3" d="M3407.22,335.72s-2.56,1.9-4.47,0v5.5a3.36,3.36,0,0,0,4.47,0Z" />
+        <path class="cls-3" d="M3407.22,329.42s-2.56,1.9-4.47,0v5.5a3.36,3.36,0,0,0,4.47,0Z" />
+        <path class="cls-3" d="M3407.22,323.14s-2.56,1.9-4.47,0v5.5a3.36,3.36,0,0,0,4.47,0Z" />
+        <path class="cls-1" d="M3402.59,321.37a2.29,2.29,0,1,0,2.29-2.29,2.29,2.29,0,0,0-2.29,2.29" />
+        <path class="cls-3" d="M3399.09,335.72s-2.56,1.9-4.47,0v5.5a3.36,3.36,0,0,0,4.47,0Z" />
+        <path class="cls-3" d="M3399.09,329.42s-2.56,1.9-4.47,0v5.5a3.36,3.36,0,0,0,4.47,0Z" />
+        <path class="cls-3" d="M3399.09,323.14s-2.56,1.9-4.47,0v5.5a3.36,3.36,0,0,0,4.47,0Z" />
+        <path class="cls-1" d="M3394.46,321.37a2.29,2.29,0,1,0,2.29-2.29,2.29,2.29,0,0,0-2.29,2.29" />
+        <rect class="cls-18" x="3429.86" y="343.76" width="7.68" height="6.3" />
+        <rect class="cls-18" x="3429.86" y="353.7" width="7.68" height="6.3" />
+        <rect class="cls-18" x="3429.86" y="363.64" width="7.68" height="6.3" />
+        <rect class="cls-18" x="3464.2" y="343.76" width="7.68" height="6.3" />
+        <rect class="cls-18" x="3464.2" y="353.7" width="7.68" height="6.3" />
+        <rect class="cls-18" x="3464.2" y="363.64" width="7.68" height="6.3" />
+        <rect class="cls-18" x="3356.67" y="343.76" width="7.68" height="6.3" />
+        <rect class="cls-18" x="3356.67" y="353.7" width="7.68" height="6.3" />
+        <rect class="cls-18" x="3356.67" y="363.64" width="7.68" height="6.3" />
+    </g>
+    <g id="_1973usine_3" data-name="1973usine_3">
+        <polygon class="cls-3" points="2342.14 613.64 2322.64 634.3 2322.64 645.13 2310.8 655.68 2310.8 676.77 2342.14 676.77 2342.14 613.64" />
+        <polygon class="cls-3" points="2342.14 613.64 2361.65 634.3 2361.65 645.13 2373.49 655.68 2373.49 676.77 2342.14 676.77 2342.14 613.64" />
+        <rect class="cls-3" x="2373.49" y="666.37" width="84.41" height="10.4" />
+        <rect class="cls-1" x="2373.49" y="655.97" width="84.41" height="10.4" />
+        <rect class="cls-3" x="2361.61" y="634.23" width="84.41" height="10.98" />
+        <polygon class="cls-3" points="2361.65 645.13 2373.57 655.97 2458.51 655.97 2449.12 645.21 2361.65 645.13" />
+        <polygon class="cls-1" points="2343.58 615.14 2361.65 634.3 2446.02 634.23 2424.96 613.64 2342.15 613.64 2343.58 615.14" />
+        <path class="cls-3" d="M2416.85,610.47s-.71,1.59-3.54,0v4.61s2.71,1.59,3.54,0Z" />
+        <path class="cls-3" d="M2416.85,605.2s-.71,1.59-3.54,0v4.61s2.71,1.59,3.54,0Z" />
+        <path class="cls-3" d="M2416.85,599.93s-.71,1.59-3.54,0v4.61s2.71,1.59,3.54,0Z" />
+        <path class="cls-1" d="M2413.22,598.25a1.75,1.75,0,1,0,1.75-1.75,1.75,1.75,0,0,0-1.75,1.75" />
+        <rect class="cls-18" x="2369.46" y="637.63" width="9.9" height="4.24" />
+        <rect class="cls-18" x="2327.72" y="651.07" width="9.9" height="4.24" />
+        <rect class="cls-18" x="2340.46" y="651.07" width="9.9" height="4.24" />
+        <rect class="cls-18" x="2327.72" y="658.85" width="9.9" height="4.24" />
+        <rect class="cls-18" x="2340.46" y="658.85" width="9.9" height="4.24" />
+        <rect class="cls-18" x="2327.72" y="666.63" width="9.9" height="4.24" />
+        <rect class="cls-18" x="2340.46" y="666.63" width="9.9" height="4.24" />
+        <rect class="cls-18" x="2384.31" y="637.63" width="9.2" height="4.24" />
+        <rect class="cls-18" x="2399.87" y="637.63" width="9.9" height="4.24" />
+        <rect class="cls-18" x="2415.43" y="637.63" width="9.2" height="4.24" />
+        <rect class="cls-18" x="2429.58" y="637.63" width="9.9" height="4.24" />
+    </g>
+    <g id="_1973usine_2" data-name="1973usine_2">
+        <polygon class="cls-3" points="1733.89 122 1758.51 122 1758.51 136.77 1772.78 136.77 1772.78 162.37 1733.89 162.37 1733.89 122" />
+        <polyline class="cls-3" points="1778.2 194.37 1733.89 194.37 1733.89 162.37 1747.18 162.37 1747.18 169.26 1778.2 169.26" />
+        <polyline class="cls-1" points="1779.67 169.26 1752.22 169.26 1747.02 162.37 1772.87 162.37 1779.67 169.26" />
+        <polygon class="cls-1" points="1758.51 122.2 1758.51 136.77 1773.75 136.77 1758.51 122.2" />
+        <rect class="cls-18" x="1758.51" y="140.71" width="8.86" height="3.94" />
+        <rect class="cls-18" x="1747.18" y="184.52" width="5.91" height="9.85" />
+        <polygon class="cls-1" points="1741.77 128.11 1741.77 138.19 1695 184.02 1695 174.61 1741.77 128.11" />
+        <polygon class="cls-3" points="1733.79 126.92 1742.84 126.92 1695.29 174.67 1686.13 174.67 1733.79 126.92" />
+        <polygon class="cls-1" points="1747.18 162.5 1752.22 169.26 1747.18 169.26 1747.18 162.5" />
+        <rect class="cls-3" x="1675.8" y="183.04" width="19.2" height="11.32" />
+        <polygon class="cls-1" points="1681.96 174.67 1695.19 174.67 1688.34 183.04 1674.81 183.04 1681.96 174.67" />
+        <rect class="cls-18" x="1677.77" y="184.52" width="8.37" height="3.94" />
+        <polygon class="cls-3" points="1695 174.56 1695 183.04 1688.13 183.04 1695 174.56" />
+    </g>
+    <g id="_1973usine_1" data-name="1973usine_1">
+        <rect class="cls-3" x="1472.48" y="652.53" width="154.52" height="42.47" />
+        <rect class="cls-3" x="1600.8" y="638.98" width="12.65" height="48.79" />
+        <rect class="cls-3" x="1566.46" y="638.98" width="12.65" height="48.79" />
+        <rect class="cls-3" x="1505.92" y="647.11" width="44.28" height="42.47" />
+        <rect class="cls-3" x="1493.27" y="643.49" width="12.65" height="48.79" />
+        <rect class="cls-18" x="1523.32" y="679.64" width="11.5" height="6.26" />
+        <rect class="cls-18" x="1523.32" y="669.7" width="11.5" height="6.26" />
+        <rect class="cls-18" x="1523.32" y="659.76" width="11.5" height="6.26" />
+        <path class="cls-3" d="M1611.28,640.87s-2.56,1.9-4.47,0v5.5a3.36,3.36,0,0,0,4.47,0Z" />
+        <path class="cls-3" d="M1611.28,634.58s-2.56,1.9-4.47,0v5.5a3.36,3.36,0,0,0,4.47,0Z" />
+        <path class="cls-3" d="M1611.28,628.29s-2.56,1.9-4.47,0v5.5a3.36,3.36,0,0,0,4.47,0Z" />
+        <path class="cls-1" d="M1606.65,626.52a2.29,2.29,0,1,0,2.29-2.29,2.29,2.29,0,0,0-2.29,2.29" />
+        <path class="cls-3" d="M1572.42,633.64s-2.56,1.9-4.47,0v5.5a3.36,3.36,0,0,0,4.47,0Z" />
+        <path class="cls-3" d="M1572.42,627.35s-2.56,1.9-4.47,0v5.5a3.36,3.36,0,0,0,4.47,0Z" />
+        <path class="cls-3" d="M1572.42,621.06s-2.56,1.9-4.47,0v5.5a3.36,3.36,0,0,0,4.47,0Z" />
+        <path class="cls-1" d="M1567.8,619.29a2.29,2.29,0,1,0,2.29-2.29,2.29,2.29,0,0,0-2.29,2.29" />
+        <path class="cls-3" d="M1501.94,639.06s-2.56,1.9-4.47,0v5.5a3.36,3.36,0,0,0,4.47,0Z" />
+        <path class="cls-3" d="M1501.94,632.77s-2.56,1.9-4.47,0v5.5a3.36,3.36,0,0,0,4.47,0Z" />
+        <path class="cls-3" d="M1501.94,626.49s-2.56,1.9-4.47,0V632a3.36,3.36,0,0,0,4.47,0Z" />
+        <path class="cls-1" d="M1497.32,624.71a2.29,2.29,0,1,0,2.29-2.29,2.29,2.29,0,0,0-2.29,2.29" />
+        <path class="cls-3" d="M1546.22,651.72s-2.56,1.9-4.47,0v5.5a3.36,3.36,0,0,0,4.47,0Z" />
+        <path class="cls-3" d="M1546.22,645.42s-2.56,1.9-4.47,0v5.5a3.36,3.36,0,0,0,4.47,0Z" />
+        <path class="cls-3" d="M1546.22,639.14s-2.56,1.9-4.47,0v5.5a3.36,3.36,0,0,0,4.47,0Z" />
+        <path class="cls-1" d="M1541.59,637.37a2.29,2.29,0,1,0,2.29-2.29,2.29,2.29,0,0,0-2.29,2.29" />
+        <path class="cls-3" d="M1538.09,651.72s-2.56,1.9-4.47,0v5.5a3.36,3.36,0,0,0,4.47,0Z" />
+        <path class="cls-3" d="M1538.09,645.42s-2.56,1.9-4.47,0v5.5a3.36,3.36,0,0,0,4.47,0Z" />
+        <path class="cls-3" d="M1538.09,639.14s-2.56,1.9-4.47,0v5.5a3.36,3.36,0,0,0,4.47,0Z" />
+        <path class="cls-1" d="M1533.46,637.37a2.29,2.29,0,1,0,2.29-2.29,2.29,2.29,0,0,0-2.29,2.29" />
+        <rect class="cls-18" x="1568.86" y="659.76" width="7.68" height="6.3" />
+        <rect class="cls-18" x="1568.86" y="669.7" width="7.68" height="6.3" />
+        <rect class="cls-18" x="1568.86" y="679.64" width="7.68" height="6.3" />
+        <rect class="cls-18" x="1603.2" y="659.76" width="7.68" height="6.3" />
+        <rect class="cls-18" x="1603.2" y="669.7" width="7.68" height="6.3" />
+        <rect class="cls-18" x="1603.2" y="679.64" width="7.68" height="6.3" />
+        <rect class="cls-18" x="1495.67" y="659.76" width="7.68" height="6.3" />
+        <rect class="cls-18" x="1495.67" y="669.7" width="7.68" height="6.3" />
+        <rect class="cls-18" x="1495.67" y="679.64" width="7.68" height="6.3" />
+    </g>
+    <g id="_1960usine_3" data-name="1960usine_3">
+        <rect class="cls-3" x="1087.69" y="329.71" width="184.08" height="27.36" />
+        <polygon class="cls-1" points="1272 329.71 1210.8 329.71 1241.04 316.03 1272 329.71" />
+        <polygon class="cls-1" points="1210.08 329.71 1148.89 329.71 1179.13 316.03 1210.08 329.71" />
+        <polygon class="cls-1" points="1148.89 329.71 1087.69 329.71 1117.93 316.03 1148.89 329.71" />
+        <rect class="cls-1" x="1232.68" y="346.27" width="17.72" height="10.98" />
+        <rect class="cls-1" x="1170.76" y="346.27" width="17.72" height="10.98" />
+        <rect class="cls-1" x="1109.57" y="346.27" width="17.72" height="10.98" />
+        <rect class="cls-18" x="1248.45" y="335.66" width="4.83" height="4.07" />
+        <rect class="cls-18" x="1238.59" y="335.66" width="4.83" height="4.07" />
+        <rect class="cls-18" x="1228.72" y="335.66" width="4.83" height="4.07" />
+        <rect class="cls-18" x="1187.03" y="335.66" width="4.83" height="4.07" />
+        <rect class="cls-18" x="1177.16" y="335.66" width="4.83" height="4.07" />
+        <rect class="cls-18" x="1167.3" y="335.66" width="4.83" height="4.07" />
+        <rect class="cls-18" x="1125.6" y="335.66" width="4.83" height="4.07" />
+        <rect class="cls-18" x="1115.74" y="335.66" width="4.83" height="4.07" />
+        <rect class="cls-18" x="1105.88" y="335.66" width="4.83" height="4.07" />
+        <path class="cls-3" d="M1196.12,321.86s-2,1.51-3.56,0v4.38a2.68,2.68,0,0,0,3.56,0Z" />
+        <path class="cls-3" d="M1196.12,316.85s-2,1.51-3.56,0v4.38a2.68,2.68,0,0,0,3.56,0Z" />
+        <path class="cls-3" d="M1196.12,311.84s-2,1.51-3.56,0v4.38a2.68,2.68,0,0,0,3.56,0Z" />
+        <path class="cls-1" d="M1192.43,310.43a1.83,1.83,0,1,0,1.83-1.83,1.83,1.83,0,0,0-1.83,1.83" />
+        <path class="cls-3" d="M1190.36,318.26s-2,1.51-3.56,0v4.38a2.68,2.68,0,0,0,3.56,0Z" />
+        <path class="cls-3" d="M1190.36,313.25s-2,1.51-3.56,0v4.38a2.68,2.68,0,0,0,3.56,0Z" />
+        <path class="cls-3" d="M1190.36,308.24s-2,1.51-3.56,0v4.38a2.68,2.68,0,0,0,3.56,0Z" />
+        <path class="cls-1" d="M1186.67,306.83a1.83,1.83,0,1,0,1.83-1.83,1.83,1.83,0,0,0-1.83,1.83" />
+        <path class="cls-3" d="M1103.24,322.58s-2,1.51-3.56,0V327a2.68,2.68,0,0,0,3.56,0Z" />
+        <path class="cls-3" d="M1103.24,317.57s-2,1.51-3.56,0V322a2.68,2.68,0,0,0,3.56,0Z" />
+        <path class="cls-3" d="M1103.24,312.56s-2,1.51-3.56,0v4.38a2.68,2.68,0,0,0,3.56,0Z" />
+        <path class="cls-1" d="M1099.56,311.15a1.83,1.83,0,1,0,1.83-1.83,1.83,1.83,0,0,0-1.83,1.83" />
+    </g>
+    <g id="_1960usine_2" data-name="1960usine_2">
+        <rect class="cls-3" x="425.64" y="586.14" width="61.21" height="103.84" />
+        <rect class="cls-1" x="442.45" y="673.58" width="26.91" height="16.66" />
+        <polyline class="cls-1" points="488.68 587.24 435.68 587.24 425.64 576.73 475.55 576.73 488.68 587.24" />
+        <polygon class="cls-1" points="425.64 576.62 437.66 587.24 425.64 587.24 425.64 576.62" />
+        <path class="cls-3" d="M433.94,573.13s-3.09,2.3-5.41,0v6.66a4.07,4.07,0,0,0,5.41,0Z" />
+        <path class="cls-3" d="M433.94,565.52s-3.09,2.3-5.41,0v6.66a4.07,4.07,0,0,0,5.41,0Z" />
+        <path class="cls-3" d="M433.94,557.92s-3.09,2.3-5.41,0v6.66a4.07,4.07,0,0,0,5.41,0Z" />
+        <path class="cls-1" d="M428.35,555.77a2.77,2.77,0,1,0,2.77-2.77,2.77,2.77,0,0,0-2.77,2.77" />
+        <path class="cls-3" d="M442.69,573.13s-3.09,2.3-5.41,0v6.66a4.07,4.07,0,0,0,5.41,0Z" />
+        <path class="cls-3" d="M442.69,565.52s-3.09,2.3-5.41,0v6.66a4.07,4.07,0,0,0,5.41,0Z" />
+        <path class="cls-3" d="M442.69,557.92s-3.09,2.3-5.41,0v6.66a4.07,4.07,0,0,0,5.41,0Z" />
+        <path class="cls-1" d="M437.09,555.77a2.77,2.77,0,1,0,2.77-2.77,2.77,2.77,0,0,0-2.77,2.77" />
+        <rect class="cls-18" x="439.85" y="608" width="9.29" height="7.62" />
+        <rect class="cls-18" x="452.58" y="608" width="9.29" height="7.62" />
+        <rect class="cls-18" x="465.32" y="608" width="9.29" height="7.62" />
+        <rect class="cls-18" x="439.85" y="625.49" width="9.29" height="7.62" />
+        <rect class="cls-18" x="452.58" y="625.49" width="9.29" height="7.62" />
+        <rect class="cls-18" x="465.32" y="625.49" width="9.29" height="7.62" />
+        <rect class="cls-18" x="439.85" y="645.16" width="9.29" height="7.62" />
+        <rect class="cls-18" x="452.58" y="645.16" width="9.29" height="7.62" />
+        <rect class="cls-18" x="465.32" y="645.16" width="9.29" height="7.62" />
+    </g>
+    <g id="_1960usine_1" data-name="1960usine_1">
+        <polygon class="cls-1" points="250.91 506.22 278.43 506.22 275.71 519.63 250.91 506.22" />
+        <polygon class="cls-1" points="222.77 506.22 251.93 506.22 248.62 519.63 222.77 506.22" />
+        <polygon class="cls-1" points="196.13 506.22 224.84 506.22 221.52 519.63 196.13 506.22" />
+        <polygon class="cls-1" points="168.91 506.22 197.03 506.22 193.72 519.63 168.91 506.22" />
+        <polygon class="cls-1" points="141.49 506.22 169.62 506.22 166.3 519.63 141.49 506.22" />
+        <polygon class="cls-1" points="114.4 506.22 143.2 506.22 139.2 519.63 114.4 506.22" />
+        <polygon class="cls-1" points="88.2 506.42 115.14 506.22 111.51 519.25 88.2 506.42" />
+        <polygon class="cls-3" points="248.28 519.26 223.57 506.42 220.65 519.5 220.65 547.24 248.31 547.24 248.28 519.26" />
+        <polygon class="cls-3" points="303.07 519.26 278.4 506.42 274.41 519.5 274.41 547.24 303.1 547.24 303.07 519.26" />
+        <polygon class="cls-3" points="275.81 519.26 251.57 506.42 248.24 519.5 248.24 547.24 275.84 547.24 275.81 519.26" />
+        <polygon class="cls-3" points="221.4 519.26 196.8 506.42 193.77 519.5 193.77 547.24 221.42 547.24 221.4 519.26" />
+        <polygon class="cls-3" points="194.03 519.26 169.41 506.42 165.48 519.5 165.48 547.24 194.06 547.24 194.03 519.26" />
+        <polygon class="cls-3" points="166.77 519.26 142.7 506.42 139.31 519.5 139.31 547.24 166.79 547.24 166.77 519.26" />
+        <polygon class="cls-3" points="139.51 519.26 114.92 506.42 111.02 519.5 111.02 547.24 139.53 547.24 139.51 519.26" />
+        <polygon class="cls-3" points="112.25 519.26 88.2 506.42 84.84 519.5 84.84 547.24 112.27 547.24 112.25 519.26" />
+        <rect class="cls-1" x="291.38" y="529.56" width="7.78" height="17.68" />
+        <rect class="cls-18" x="252.48" y="523.2" width="16.98" height="7.78" />
+        <rect class="cls-18" x="224.89" y="523.2" width="18.39" height="7.78" />
+        <rect class="cls-18" x="198.72" y="523.2" width="16.98" height="7.78" />
+        <rect class="cls-18" x="170.43" y="523.2" width="18.39" height="7.78" />
+        <rect class="cls-18" x="144.26" y="523.2" width="17.68" height="7.78" />
+        <rect class="cls-18" x="118.09" y="523.2" width="16.98" height="7.78" />
+        <rect class="cls-18" x="89.8" y="523.2" width="17.68" height="7.78" />
+        <path class="cls-3" d="M138.6,502.1s-2.83,2.1-5,0v6.09a3.72,3.72,0,0,0,5,0Z" />
+        <path class="cls-3" d="M138.6,495.14s-2.83,2.1-5,0v6.09a3.72,3.72,0,0,0,5,0Z" />
+        <path class="cls-3" d="M138.6,488.18s-2.83,2.1-5,0v6.09a3.72,3.72,0,0,0,5,0Z" />
+        <path class="cls-1" d="M133.48,486.22a2.54,2.54,0,1,0,2.54-2.54,2.54,2.54,0,0,0-2.54,2.54" />
+        <path class="cls-3" d="M193.06,502.1s-2.83,2.1-5,0v6.09a3.72,3.72,0,0,0,5,0Z" />
+        <path class="cls-3" d="M193.06,495.14s-2.83,2.1-5,0v6.09a3.72,3.72,0,0,0,5,0Z" />
+        <path class="cls-3" d="M193.06,488.18s-2.83,2.1-5,0v6.09a3.72,3.72,0,0,0,5,0Z" />
+        <path class="cls-1" d="M187.83,486a2.73,2.73,0,1,0,2.73-2.73,2.73,2.73,0,0,0-2.73,2.73" />
+        <path class="cls-3" d="M184.58,502.1s-2.12,2.1-5.66,0v6.09s3.54,2.1,5.66,0Z" />
+        <path class="cls-3" d="M184.58,495.14s-2.12,2.1-5.66,0v6.09s3.54,2.1,5.66,0Z" />
+        <path class="cls-3" d="M184.58,488.18s-2.12,2.1-5.66,0v6.09s3.54,2.1,5.66,0Z" />
+        <path class="cls-1" d="M179,486a2.73,2.73,0,1,0,2.73-2.73A2.73,2.73,0,0,0,179,486" />
+    </g>
+    <g class="tooltip-figures">
+        <text class="cls-19 tooltip-11" transform="translate(4462 206.31)"><tspan class="figure-percent naturalGas">3%</tspan><tspan class="cls-20"><tspan x="-21.15" y="10" class="figure-percent-indication naturalGas">d’augmentation par</tspan><tspan x="-7.28" y="20"> rapport à <tspan class="figure-percent-year">1959</tspan></tspan></tspan></text>
+        <text class="cls-19 tooltip-12" transform="translate(5109 142.31)"><tspan class="figure-percent oil">2%</tspan><tspan class="cls-20"><tspan x="-21.15" y="10" class="figure-percent-indication oil">d’augmentation par</tspan><tspan x="-7.28" y="20"> rapport à <tspan class="figure-percent-year">1959</tspan></tspan></tspan></text>
+        <text class="cls-19 tooltip-10" transform="translate(4326 282.31)"><tspan class="figure-percent coal">1%</tspan><tspan class="cls-20"><tspan x="-21.15" y="10" class="figure-percent-indication coal">d’augmentation par</tspan><tspan x="-7.28" y="20"> rapport à <tspan class="figure-percent-year">1959</tspan></tspan></tspan></text>
+    </g>
+    <g class="tooltip-figures">
+        <text class="cls-19 tooltip-8" transform="translate(3564 164.31)"><tspan class="figure-percent coal">4%</tspan><tspan class="cls-20"><tspan x="-21.15" y="10" class="figure-percent-indication coal">d’augmentation par</tspan><tspan x="-7.28" y="20"> rapport à <tspan class="figure-percent-year">1959</tspan></tspan></tspan></text>
+        <text class="cls-19 tooltip-9" transform="translate(3748 232.31)"><tspan class="figure-percent oil">6%</tspan><tspan class="cls-20"><tspan x="-21.15" y="10" class="figure-percent-indication oil">d’augmentation par</tspan><tspan x="-7.28" y="20"> rapport à <tspan class="figure-percent-year">1959</tspan></tspan></tspan></text>
+        <text class="cls-19 tooltip-7" transform="translate(3151 227.31)"><tspan class="figure-percent naturalGas">5%</tspan><tspan class="cls-20"><tspan x="-21.15" y="10" class="figure-percent-indication naturalGas">d’augmentation par</tspan><tspan x="-7.28" y="20"> rapport à <tspan class="figure-percent-year">1959</tspan></tspan></tspan></text>
+    </g>
+    <g class="tooltip-figures">
+        <text class="cls-19 tooltip-4" transform="translate(1622 510.31)"><tspan class="figure-percent coal">9%</tspan><tspan class="cls-20"><tspan x="-21.15" y="10" class="figure-percent-indication coal">d’augmentation par</tspan><tspan x="-7.28" y="20"> rapport à <tspan class="figure-percent-year">1959</tspan></tspan></tspan></text>
+        <text class="cls-19 tooltip-6" transform="translate(2157 553.31)"><tspan class="figure-percent naturalGas">8%</tspan><tspan class="cls-20"><tspan x="-21.15" y="10" class="figure-percent-indication naturalGas">d’augmentation par</tspan><tspan x="-7.28" y="20"> rapport à <tspan class="figure-percent-year">1959</tspan></tspan></tspan></text>
+        <text class="cls-19 tooltip-5" transform="translate(2025 525.31)"><tspan class="figure-percent oil">7%</tspan><tspan class="cls-20"><tspan x="-21.15" y="10" class="figure-percent-indication oil">d’augmentation par</tspan><tspan x="-7.28" y="20"> rapport à <tspan class="figure-percent-year">1959</tspan></tspan></tspan></text>
+    </g>
+    <g class="tooltip-figures">
+        <text class="cls-19 tooltip-3" transform="translate(588 179.31)"><tspan class="figure-percent coal">12%</tspan><tspan class="cls-20"><tspan x="-21.15" y="10" class="figure-percent-indication coal">d’augmentation par</tspan><tspan x="-7.28" y="20"> rapport à <tspan class="figure-percent-year">1969</tspan></tspan></tspan></text>
+        <text class="cls-19 tooltip-1" transform="translate(308 330.31)"><tspan class="figure-percent naturalGas">11%</tspan><tspan class="cls-20"><tspan x="-21.15" y="10" class="figure-percent-indication naturalGas">d’augmentation par</tspan><tspan x="-7.28" y="20"> rapport à <tspan class="figure-percent-year">1969</tspan></tspan></tspan></text>
+        <text class="cls-19 tooltip-2" transform="translate(378 364.31)"><tspan class="figure-percent oil">10%</tspan><tspan class="cls-20"><tspan x="-21.15" y="10" class="figure-percent-indication oil">d’augmentation par</tspan><tspan x="-7.28" y="20"> rapport à <tspan class="figure-percent-year">1969</tspan></tspan></tspan></text>
+    </g>
+    <g class="tirets" data-view="4">
+        <line id="_2016charb_tiret" data-name="2016charb_tiret" class="cls-8 tiret coal" x1="4733.8" y1="587" x2="4788.84" y2="587" />
+        <line id="_2016petro_tiret" data-name="2016petro_tiret" class="cls-11 tiret oil" x1="4644.2" y1="587" x2="4699.24" y2="587" />
+        <line id="_2016gaz_tiret" data-name="2016gaz_tiret" class="cls-10 tiret naturalGas" x1="4562" y1="587" x2="4617.04" y2="587" />
+    </g>
+    <g class="tirets" data-view="3">
+        <line id="_1984charb_tiret" data-name="1984charb_tiret" class="cls-8 tiret coal" x1="3397.8" y1="587" x2="3452.84" y2="587" />
+        <line id="_1984petro_tiret" data-name="1984petro_tiret" class="cls-11 tiret oil" x1="3308.2" y1="587" x2="3363.24" y2="587" />
+        <line id="_1984gaz_tiret" data-name="1984gaz_tiret" class="cls-10 tiret naturalGas" x1="3226" y1="587" x2="3281.04" y2="587" />
+    </g>
+    <g class="tirets" data-view="2">
+        <line id="_1973charb_tiret" data-name="1973charb_tiret" class="cls-8 tiret coal" x1="2078.8" y1="256" x2="2133.84" y2="256" />
+        <line id="_1973petro_tiret" data-name="1973petro_tiret" class="cls-11 tiret oil" x1="1989.2" y1="256" x2="2044.24" y2="256" />
+        <line id="_1973gaz_tiret" data-name="1973gaz_tiret" class="cls-10 tiret naturalGas" x1="1907" y1="256" x2="1962.04" y2="256" />
+    </g>
+    <g class="tirets" data-view="1">
+        <line id="_1960charb_tiret" data-name="1960charb_tiret" class="cls-8 tiret coal" x1="866.8" y1="559" x2="921.84" y2="559" />
+        <line id="_1960petro_tiret" data-name="1960petro_tiret" class="cls-11 tiret oil" x1="777.2" y1="559" x2="832.24" y2="559" />
+        <line id="_1960gaz_tiret" data-name="1960gaz_tiret" class="cls-10 tiret naturalGas" x1="695" y1="559" x2="750.04" y2="559" />
+    </g>
+    <use id="_2016gaz" data-name="2016gaz" width="43.92" height="55.64" transform="translate(4568 521) scale(0.98 1.01)" xlink:href="#gaz" />
+    <use id="_2016petrole" data-name="2016petrole" width="54.77" height="51.84" transform="translate(4643 525) scale(0.99 1)" xlink:href="#petrole" />
+    <use id="_2016minerais" data-name="2016minerais" width="55.04" height="52.48" transform="translate(4734 522) scale(1.02 0.99)" xlink:href="#minerais" />
+    <use id="_1984gaz" data-name="1984gaz" width="43.92" height="55.64" transform="translate(3232 521) scale(0.98 1.01)" xlink:href="#gaz" />
+    <use id="_1984petrole" data-name="1984petrole" width="54.77" height="51.84" transform="translate(3307 525) scale(0.99 1)" xlink:href="#petrole" />
+    <use id="_1984minerais" data-name="1984minerais" width="55.04" height="52.48" transform="translate(3398 522) scale(1.02 0.99)" xlink:href="#minerais" />
+    <use id="_1973gaz" data-name="1973gaz" width="43.92" height="55.64" transform="translate(1913 190) scale(0.98 1.01)" xlink:href="#gaz" />
+    <use id="_1973petrole" data-name="1973petrole" width="54.77" height="51.84" transform="translate(1988 194) scale(0.99 1)" xlink:href="#petrole" />
+    <use id="_1973minerais" data-name="1973minerais" width="55.04" height="52.48" transform="translate(2079 191) scale(1.02 0.99)" xlink:href="#minerais" />
+    <use id="_1960minerais" data-name="1960minerais" width="55.04" height="52.48" transform="translate(866.8 495)" xlink:href="#minerais" />
+    <use id="_1960petrole" data-name="1960petrole" width="54.77" height="51.84" transform="translate(777.2 500.12)" xlink:href="#petrole" />
+    <use id="_1960gaz" data-name="1960gaz" width="43.92" height="55.64" transform="translate(701.57 496.38)" xlink:href="#gaz" />
+    <g>
+        <circle id="point12" class="cls-3 pulse tooltip-12 oil" cx="5041.6" cy="234.48" r="4.92" data-name="tooltip-12" data-view="4"/>
+        <circle id="point11" class="cls-1 pulse tooltip-11 naturalGas" cx="4572.25" cy="299.85" r="4.92" data-name="tooltip-11" data-view="4"/>
+        <circle id="point10" class="cls-2 pulse tooltip-10 coal" cx="4436.25" cy="375.85" r="4.92" data-name="tooltip-10" data-view="4"/>
+    </g>
+    <g>
+        <circle id="point9" class="cls-3 pulse tooltip-9 oil" cx="3682.84" cy="321.33" r="4.92" data-name="tooltip-9" data-view="3"/>
+        <circle id="point8" class="cls-2 pulse tooltip-8 coal" cx="3499.84" cy="251.33" r="4.92" data-name="tooltip-8" data-view="3"/>
+        <circle id="point7" class="cls-1 pulse tooltip-7 naturalGas" cx="3089.36" cy="142.92" r="4.92" data-name="tooltip-7" data-view="3"/>
+    </g>
+    <g>
+        <circle id="point6" class="cls-1 pulse tooltip-6 naturalGas" cx="2269.77" cy="472.43" r="4.92" data-name="tooltip-6" data-view="2"/>
+        <circle id="point5" class="cls-3 pulse tooltip-5 oil" cx="2137.77" cy="444.43" r="4.92" data-name="tooltip-5" data-view="2"/>
+        <circle id="point4" class="cls-2 pulse tooltip-4 coal" cx="1734.77" cy="428.43" r="4.92" data-name="tooltip-4" data-view="2"/>
+    </g>
+    <g>
+        <circle id="point3" class="cls-2 pulse tooltip-3 coal" cx="698.25" cy="268.85" r="4.92" data-name="tooltip-3" data-view="1"/>
+        <circle id="point2" class="cls-3 pulse tooltip-2 oil" cx="489.6" cy="280.48" r="4.92" data-name="tooltip-2" data-view="1"/>
+        <circle id="point1" class="cls-1 pulse tooltip-1 naturalGas" cx="420.42" cy="247.62" r="4.92" data-name="tooltip-1" data-view="1"/>
+    </g>
+</svg>

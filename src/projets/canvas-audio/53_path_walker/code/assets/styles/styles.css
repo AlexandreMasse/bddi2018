@@ -1,0 +1,104 @@
+body {
+    /*background-color: #3c3c3c;*/
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    font-family: 'Tinos', serif;
+    position: relative;
+    background-color: #f4f4f4;
+    color: #3c3c3c
+}
+
+#canvas{
+    display: none
+}
+
+#defaultCanvas0{
+    z-index: 1
+}
+
+.start-exp{
+    border: 1px solid #3c3c3c;
+    padding: 20px 30px;
+    z-index: 1;
+    font-size: 20px;
+}
+
+.start-exp:hover, .takeScreenShot:hover{
+    cursor: crosshair;
+}
+
+.first_step, .advert-screenshot, .start-exp{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.title, .tags, .gobelins, .advert-screenshot {
+    opacity: 0;
+}
+
+.advert-screenshot{
+    line-height: 2em;
+}
+
+.takeScreenShot{
+    border: 1px solid #3c3c3c;
+    color: #3c3c3c;
+    padding: 20px 30px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index:30;
+    opacity: 0;
+    background-color: transparent;
+    animation-name: opacity;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    animation-delay: 13s;
+    animation-timing-function: ease-in;
+}
+.takeScreenShot:hover{
+    opacity: 1;
+    animation: opacity 0.5s ease-in none;
+}
+
+@keyframes opacity {
+    to{
+        opacity: 0.3
+    }
+}
+
+.endMessage {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    opacity: 0;
+    z-index: -1
+}
+
+.endMessage p {
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 0
+}
+
+.endMessage a {
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+}
+
+.endMessage svg {
+    max-height: 30px;
+    transition: fill 0.3s ease;
+}
+
+.endMessage svg:hover{
+    fill: #1dcaff;
+}

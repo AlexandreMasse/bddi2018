@@ -1,7 +1,7 @@
 <template>
   <div class="projects__list-item">
     <div class="project__thumbnail">
-        <div class="project__thumbnail-img" style="background-image: url('/img/thumbnail-0.1994789b.jpg')">
+        <div class="project__thumbnail-img" :style="styles">
         </div>
     </div>
     <h2>{{project.name}}</h2>
@@ -16,7 +16,7 @@
 
   export default {
     name: 'projectItem',
-    props: ['data'],
+    props: ['data', 'categoryIdent', 'categoryId'],
     data () {
       return {
         project: this.data
@@ -31,6 +31,17 @@
           if (i === this.project.studentsList.length - 1) {
             return students
           }
+        }
+      },
+      styles () {
+        let url = ''
+        if (this.project.screens && this.project.screens.length) {
+          url = require(`../projets/${this.categoryIdent}/${this.project.id}_${this.project.ident}/screens/0.jpg`)
+        } else {
+          url = require(`../assets/images/thumbnail-${this.categoryId}.jpg`)
+        }
+        return {
+          'background-image': `url(${url})`
         }
       }
     }

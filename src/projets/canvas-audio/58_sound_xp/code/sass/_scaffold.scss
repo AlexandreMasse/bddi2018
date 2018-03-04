@@ -1,0 +1,94 @@
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  font-family: "Raleway";
+  // cursor: url("./images/cursor.png") 2 2, pointer;
+}
+
+button {
+	display: block;
+	margin: auto;
+  position: relative;
+  background: none;
+  text-transform: uppercase;
+  border: none;
+  padding: 0;
+  color: rgba(0, 0, 0, 0.7);
+  outline: none;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+  // cursor: url("./images/cursor.png") 2 2, pointer;
+}
+button svg {
+  width: 250px;
+  height: 60px;
+  fill: none;
+  stroke: currentColor;
+  stroke-dasharray: 0, 0, 620px, 620px;
+  -webkit-transition: stroke-dasharray 0.3s;
+  transition: stroke-dasharray 0.6s;
+}
+button path {
+	stroke-width: 5;
+}
+button span {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  line-height: 60px;
+  font-size: 13px;
+	letter-spacing: 1px;
+}
+button:hover, button:focus {
+  color: #000;
+}
+button:hover svg, button:focus svg {
+  stroke-dasharray: 250px, 620px;
+}
+
+.btn-action {
+  z-index: 1001;
+  cursor: pointer;
+  position: fixed;
+  top: 21px;
+  height: 45px;
+  width: 45px;
+  color: white;
+  background-repeat: no-repeat;
+  background-size: 20px;
+  background-position: center;
+  border-radius: 5px;
+  border: 0;
+  box-sizing: border-box;   
+}
+.button-fullscreen {
+  right: 80px;
+  background-image: url('images/expand.svg');
+  background-color: black;
+  filter: invert(100%);
+}
+
+.button-sound-cut {
+  right: 145px;
+  background-image: url('images/expand.svg');
+  background-color: white;
+  background-size: 28px;
+  &--sound {
+    background-image: url('images/speaker-sound.png');
+  }
+  &--mute {
+    background-image: url('images/speaker-mute.png');
+  }
+}
