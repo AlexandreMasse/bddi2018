@@ -17,8 +17,17 @@
       <router-link to="/about">About</router-link>
     </div>
     <router-view/>
+    <canvas-background></canvas-background>
   </div>
 </template>
+
+<script>
+  import canvasBackground from '@/components/CanvasBackground.vue'
+  export default {
+    name: 'App',
+    components: {canvasBackground}
+  }
+</script>
 
 <style lang="scss" scoped>
 #app {
