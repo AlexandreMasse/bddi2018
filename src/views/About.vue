@@ -11,7 +11,7 @@
 </template>
 <style lang="scss" scoped>
   .about {
-    font-family: 'Aileron-light';
+    font-family: $font-aileron-light;
   h1 {
     text-transform: uppercase;
     letter-spacing: 3px;
@@ -20,7 +20,7 @@
   }
   p {
     color: #777777;
-    font-family: "GTWalsheimProRegular";
+    font-family: $font-walsheim-regular;
     font-size: 20px;
   }
 }

@@ -2,8 +2,7 @@
   <div class="home">
     <div class="landing">
       <div class="landing__content">
-        <h1>{{title}}</h1>
-        <p>{{description}}</p>
+        <intro :title="title" :description="description" :backHome="false"></intro>
       </div>
       <div class="landing__start">
         <span>Start here</span>
@@ -26,19 +25,6 @@
         left: 15%;
         top: 50%;
         transform: translateY(-50%);
-        width: 60%;
-        h1 {
-          text-transform: uppercase;
-          opacity: 0.5;
-          font-family: "Aileron-light";
-          letter-spacing: 3px;
-          font-size: 13px;
-        }
-        p {
-          color: #fefefe;
-          font-family: "GTWalsheimProRegular";
-          font-size: 20px;
-        }
       }
       &__start {
         position: absolute;
@@ -54,7 +40,7 @@
           position: relative;
           letter-spacing: 3px;
           opacity: 0.9;
-          font-family: "Aileron-light";
+          font-family: $font-aileron-light;
           &:after {
             content: '';
             width: 1px;
@@ -74,9 +60,11 @@
 
 <script>
   import categoryItem from '@/components/CategoryItem.vue'
+  import intro from '@/components/Intro.vue'
+
   export default {
     name: 'home',
-    components: {categoryItem},
+    components: {categoryItem, intro},
     data () {
       return {
         title: 'Bachelor Designer & Développeur Intéractif',
