@@ -10,7 +10,6 @@
       <router-link to="/menu" class="menu"><span>Works</span></router-link>
     </div>
     <div id="nav">
-      <router-link to="/category/dataviz">Category</router-link> |
       <router-link to="/project">Project</router-link>
     </div>
     <div id="about-link">
@@ -101,9 +100,13 @@
   font-size: 14px;
   text-transform: uppercase;
   letter-spacing: 3px;
+  z-index: 1000;
   a {
     text-decoration: none;
     color: #afadad;
+    &:hover {
+      color: $color-purple;
+    }
   }
 }
 </style>

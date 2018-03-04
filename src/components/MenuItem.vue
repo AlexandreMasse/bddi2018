@@ -1,6 +1,6 @@
 <template>
   <router-link :to="'/category/' + categoryIdent">
-    <li class="menu__items-item" :data-id="'category-' + categoryId" :data-ident="'category__' + categoryIdent" :id="'menu-link-' + categoryId">
+    <li class="menu__items-item">
       <div class="menu__thumbnail" :style="styles"></div>
       <span>{{categoryName}}</span>
     </li>
