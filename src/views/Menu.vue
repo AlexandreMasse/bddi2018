@@ -7,7 +7,7 @@
       </nav>
     </section>
 </template>
-
+  
 <script>
   import MenuItem from '@/components/MenuItem.vue'
   import categories from '@/data/categories.json'
@@ -25,7 +25,6 @@
 
 <style lang="scss" scoped>
   .menu {
-    opacity: 1;
     width: 100%;
     height: 100%;
     top: 0;
