@@ -10,7 +10,7 @@
       <router-link to="/menu" class="menu"><span>Works</span></router-link>
     </div>
     <div id="nav">
-      <router-link to="/project">Project</router-link>
+      <router-link to="/project/categoryIdent/projectident/projectId">Project</router-link>
     </div>
     <div id="about-link">
       <router-link to="/about">About</router-link>

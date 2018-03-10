@@ -32,7 +32,7 @@ export default new Router({
       component: Category
     },
     {
-      path: '/project',
+      path: '/project/:categoryIdent/:projectIdent/:projectId',
       name: 'project',
       component: Project
     },
