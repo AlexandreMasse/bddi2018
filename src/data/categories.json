@@ -13,7 +13,7 @@
                     0,
                     13
                 ],
-                "view" : "code"
+                "view" : "iframe"
             },
             {
                 "id": 1,
@@ -23,7 +23,7 @@
                     1,
                     33
                 ],
-                "view" : "code",
+                "view" : "iframe",
                 "screens" : []
             },
             {
@@ -34,7 +34,7 @@
                     2,
                     3
                 ],
-                "view" : "code"
+                "view" : "iframe"
             },
             {
                 "id": 3,
@@ -44,7 +44,7 @@
                     4,
                     5
                 ],
-                "view" : "code"
+                "view" : "iframe"
             },
             {
                 "id": 4,
@@ -54,7 +54,7 @@
                     6,
                     8
                 ],
-                "view" : "code",
+                "view" : "iframe",
                 "screens" : []
             },
             {
@@ -65,7 +65,7 @@
                     7,
                     30
                 ],
-                "view" : "code"
+                "view" : "iframe"
             },
             {
                 "id": 6,
@@ -75,7 +75,7 @@
                     9,
                     36
                 ],
-                "view" : "code"
+                "view" : "iframe"
             },
             {
                 "id": 7,
@@ -85,7 +85,7 @@
                     10,
                     26
                 ],
-                "view" : "code"
+                "view" : "iframe"
             },
             {
                 "id": 8,
@@ -95,7 +95,7 @@
                     11,
                     12
                 ],
-                "view" : "code"
+                "view" : "iframe"
             },
             {
                 "id": 9,
@@ -105,7 +105,7 @@
                     14,
                     19
                 ],
-                "view" : "code"
+                "view" : "iframe"
             },
             {
                 "id": 10,
@@ -115,7 +115,7 @@
                     15,
                     34
                 ],
-                "view" : "code"
+                "view" : "iframe"
             },
             {
                 "id": 11,
@@ -125,7 +125,7 @@
                     16,
                     35
                 ],
-                "view" : "code"
+                "view" : "iframe"
             },
             {
                 "id": 12,
@@ -135,7 +135,7 @@
                     17,
                     31
                 ],
-                "view" : "code"
+                "view" : "iframe"
             },
             {
                 "id": 13,
@@ -145,7 +145,7 @@
                     18,
                     32
                 ],
-                "view" : "code",
+                "view" : "iframe",
                 "screens" : [0]
             },
             {
@@ -156,7 +156,7 @@
                     20,
                     29
                 ],
-                "view" : "code"
+                "view" : "iframe"
             },
             {
                 "id": 15,
@@ -166,7 +166,7 @@
                     21,
                     40
                 ],
-                "view" : "code",
+                "view" : "iframe",
                 "screens" : []
             },
             {
@@ -177,7 +177,7 @@
                     22,
                     28
                 ],
-                "view" : "code"
+                "view" : "iframe"
             },
             {
                 "id": 17,
@@ -187,7 +187,7 @@
                     23,
                     38
                 ],
-                "view" : "code"
+                "view" : "iframe"
             },
             {
                 "id": 18,
@@ -197,7 +197,7 @@
                     24,
                     39
                 ],
-                "view" : "code",
+                "view" : "iframe",
                 "screens" : []
             },
             {
@@ -208,7 +208,7 @@
                     25,
                     41
                 ],
-                "view" : "code",
+                "view" : "iframe",
                 "screens" : []
             },
             {
@@ -219,7 +219,7 @@
                     27,
                     37
                 ],
-                "view" : "code"
+                "view" : "iframe"
             }
         ]
     },
@@ -487,7 +487,7 @@
                 "studentsList": [
                     0
                 ],
-                "view" : "code",
+                "view" : "iframe",
                 "screens" : [0]
             },
             {
@@ -497,7 +497,7 @@
                 "studentsList": [
                     2
                 ],
-                "view" : "code",
+                "view" : "iframe",
                 "screens" : [0]
             },
             {
@@ -507,7 +507,7 @@
                 "studentsList": [
                     5
                 ],
-                "view" : "code",
+                "view" : "iframe",
                 "screens" : [0]
             },
             {
@@ -517,7 +517,7 @@
                 "studentsList": [
                     6
                 ],
-                "view" : "code",
+                "view" : "iframe",
                 "screens" : [0]
             },
             {
@@ -527,7 +527,7 @@
                 "studentsList": [
                     7
                 ],
-                "view" : "code",
+                "view" : "iframe",
                 "screens" : [0]
             },
             {
@@ -537,7 +537,7 @@
                 "studentsList": [
                     12
                 ],
-                "view" : "code",
+                "view" : "iframe",
                 "screens" : [0]
             },
             {
@@ -547,7 +547,7 @@
                 "studentsList": [
                     14
                 ],
-                "view" : "code",
+                "view" : "iframe",
                 "screens" : [0]
             },
             {
@@ -557,7 +557,7 @@
                 "studentsList": [
                     15
                 ],
-                "view" : "code",
+                "view" : "iframe",
                 "screens" : [0]
             },
             {
@@ -567,7 +567,7 @@
                 "studentsList": [
                     21
                 ],
-                "view" : "code",
+                "view" : "iframe",
                 "screens" : [0]
             },
             {
@@ -577,7 +577,7 @@
                 "studentsList": [
                     23
                 ],
-                "view" : "code",
+                "view" : "iframe",
                 "screens" : [0]
             },
             {
@@ -587,7 +587,7 @@
                 "studentsList": [
                     24
                 ],
-                "view" : "code",
+                "view" : "iframe",
                 "screens" : [0]
             },
             {
@@ -597,7 +597,7 @@
                 "studentsList": [
                     26
                 ],
-                "view" : "code",
+                "view" : "iframe",
                 "screens" : [0]
             },
             {
@@ -616,7 +616,7 @@
                 "studentsList": [
                     29
                 ],
-                "view" : "code",
+                "view" : "iframe",
                 "screens" : [0]
             },
             {
@@ -626,7 +626,7 @@
                 "studentsList": [
                     31
                 ],
-                "view" : "code",
+                "view" : "iframe",
                 "screens" : [0]
             },
             {
@@ -636,7 +636,7 @@
                 "studentsList": [
                     32
                 ],
-                "view" : "code",
+                "view" : "iframe",
                 "screens" : [0]
             },
             {
@@ -646,7 +646,7 @@
                 "studentsList": [
                     33
                 ],
-                "view" : "code",
+                "view" : "iframe",
                 "screens" : [0]
             },
             {
@@ -656,7 +656,7 @@
                 "studentsList": [
                     35
                 ],
-                "view" : "code",
+                "view" : "iframe",
                 "screens" : [0]
             },
             {
@@ -675,7 +675,7 @@
                 "studentsList": [
                     37
                 ],
-                "view" : "code",
+                "view" : "iframe",
                 "screens" : [0]
             },
             {
@@ -685,7 +685,7 @@
                 "studentsList": [
                     41
                 ],
-                "view" : "code",
+                "view" : "iframe",
                 "screens" : [0]
             }
         ]
@@ -759,7 +759,7 @@
                     37
                 ],
                 "screens" : [0, 1, 2],
-                "view":"code"
+                "view":"iframe"
             },
             {
                 "id": 90,
@@ -787,7 +787,7 @@
                 "studentsList": [
                     0
                 ],
-                "view":"code",
+                "view": "iframe",
                 "screens" : [0]
             },
             {
@@ -797,7 +797,7 @@
                 "studentsList": [
                     2
                 ],
-                "view":"code",
+                "view": "iframe",
                 "screens" : [0]
             },
             {
@@ -807,7 +807,7 @@
                 "studentsList": [
                     5
                 ],
-                "view":"code",
+                "view": "iframe",
                 "screens" : [0]
             },
             {
@@ -817,7 +817,7 @@
                 "studentsList": [
                     6
                 ],
-                "view":"code",
+                "view": "iframe",
                 "screens" : [0]
             },
             {
@@ -827,7 +827,7 @@
                 "studentsList": [
                     7
                 ],
-                "view":"code"
+                "view": "iframe"
             },
             {
                 "id": 71,
@@ -836,7 +836,7 @@
                 "studentsList": [
                     12
                 ],
-                "view":"code",
+                "view": "iframe",
                 "screens" : [0]
             },
             {
@@ -846,7 +846,7 @@
                 "studentsList": [
                     14
                 ],
-                "view":"code",
+                "view": "iframe",
                 "screens" : [0]
             },
             {
@@ -856,7 +856,7 @@
                 "studentsList": [
                     15
                 ],
-                "view":"code",
+                "view": "iframe",
                 "screens" : [0]
             },
             {
@@ -866,7 +866,7 @@
                 "studentsList": [
                     21
                 ],
-                "view":"code",
+                "view": "iframe",
                 "screens" : [0]
             },
             {
@@ -876,7 +876,7 @@
                 "studentsList": [
                     23
                 ],
-                "view":"code"
+                "view": "iframe"
             },
             {
                 "id": 76,
@@ -885,7 +885,7 @@
                 "studentsList": [
                     24
                 ],
-                "view":"code",
+                "view": "iframe",
                 "screens" : [0]
             },
             {
@@ -895,7 +895,7 @@
                 "studentsList": [
                     26
                 ],
-                "view":"code",
+                "view": "iframe",
                 "screens" : [0]
             },
             {
@@ -905,7 +905,7 @@
                 "studentsList": [
                     28
                 ],
-                "view":"code"
+                "view": "iframe"
             },
             {
                 "id": 79,
@@ -914,7 +914,7 @@
                 "studentsList": [
                     29
                 ],
-                "view":"code",
+                "view": "iframe",
                 "screens" : [0]
             },
             {
@@ -924,7 +924,7 @@
                 "studentsList": [
                     31
                 ],
-                "view":"code",
+                "view": "iframe",
                 "screens" : [0]
             },
             {
@@ -934,7 +934,7 @@
                 "studentsList": [
                     32
                 ],
-                "view":"code",
+                "view": "iframe",
                 "screens" : [0]
             },
             {
@@ -944,7 +944,7 @@
                 "studentsList": [
                     33
                 ],
-                "view":"code",
+                "view": "iframe",
                 "screens" : [0]
             },
             {
@@ -954,7 +954,7 @@
                 "studentsList": [
                     35
                 ],
-                "view":"code",
+                "view": "iframe",
                 "screens" : [0]
             },
             {
@@ -964,7 +964,7 @@
                 "studentsList": [
                     36
                 ],
-                "view":"code",
+                "view": "iframe",
                 "screens" : [0]
             },
             {
@@ -974,7 +974,7 @@
                 "studentsList": [
                     37
                 ],
-                "view" : "code",
+                "view" : "iframe",
                 "screens" : [0]
             },
             {
@@ -984,7 +984,7 @@
                 "studentsList": [
                     41
                 ],
-                "view" : "code",
+                "view" : "iframe",
                 "screens" : [0]
             }
         ]

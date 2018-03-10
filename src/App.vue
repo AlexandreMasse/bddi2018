@@ -9,9 +9,6 @@
     <div id="menu-link">
       <router-link to="/menu" class="menu"><span>Works</span></router-link>
     </div>
-    <div id="nav">
-      <router-link to="/project/categoryIdent/projectident/projectId">Project</router-link>
-    </div>
     <div id="about-link">
       <router-link to="/about">About</router-link>
     </div>
@@ -55,6 +52,7 @@
   z-index:998;
   position: fixed;
   right: 60px;
+  top: 0;
   .menu {
     position: relative;
     text-transform: uppercase;

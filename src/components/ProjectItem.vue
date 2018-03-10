@@ -1,8 +1,9 @@
 <template>
   <div class="projects__list-item">
     <div class="project__thumbnail">
-        <div class="project__thumbnail-img" :style="styles">
-        </div>
+      <router-link :to="'/project/' + categoryIdent + '/' + project.id + '/' + project.ident " class="home">
+        <div class="project__thumbnail-img" :style="styles"></div>
+      </router-link>
     </div>
     <h2>{{project.name}}</h2>
     <p>
