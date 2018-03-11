@@ -6,7 +6,7 @@
 <script>
   export default {
     name: 'backLink',
-    props : ['backLinkSrc']
+    props: ['backLinkSrc']
   }
 </script>
 

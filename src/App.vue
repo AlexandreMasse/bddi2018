@@ -116,7 +116,7 @@
 
   #menu-link {
     margin: 30px;
-    z-index:10;
+    z-index:10000;
     position: fixed;
     right: 60px;
     top: 0;
@@ -151,7 +151,7 @@
     font-size: 14px;
     text-transform: uppercase;
     letter-spacing: 3px;
-    z-index: 1000;
+    z-index: 10000;
     a {
       text-decoration: none;
       color: #afadad;

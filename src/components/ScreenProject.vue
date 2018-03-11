@@ -1,13 +1,13 @@
 <template>
   <transition name="fade" mode="out-in">
     <iframe-project v-if="showIframe" :src="srcIframe" v-on:backToScreen="hideIframe" :backLinkSrc="currentLink" :key="iframe"></iframe-project>
-    <div class="project__screens" v-else :key="screens">
+    <div class="project__screens" v-else :key="'screens'">
       <back-link :backLinkSrc="backLinkSrc"  v-if="!showIframe"></back-link>
       <div class="project__informations">
         <h1>
-          <span v-for="(student, index) in studentsListOutput" :key="student.id"> 
-            {{student[0].firstname}} {{student[0].lastname}}  
-            <em>({{student[0].option}})</em>
+          <span v-for="(student, index) in studentsListOutput" :key="student.id">
+            {{student[0].firstname}} {{student[0].lastname}}
+            <em> ({{student[0].option}})</em>
             <span v-if="index != studentsListOutput.length - 1">-</span>
           </span>
         </h1>
@@ -27,12 +27,12 @@
 
   export default {
     name: 'screenProject',
-    props: ['project', 'students', 'src', 'iframe', 'backLinkSrc'],
+    props: ['project', 'categoryIdent', 'students', 'src', 'iframe', 'backLinkSrc'],
     components: {backLink, iframeProject},
     data () {
       return {
         showIframe: false,
-        currentLink : this.$route.path
+        currentLink: this.$route.path
       }
     },
     computed: {
@@ -47,8 +47,7 @@
         }
       },
       srcIframe () {
-        // return '/projets/canvas-audio/46_dancing_blob/code/'
-        return `/projets/${this.categoryIdent}/${this.projectId}_${this.projectIdent}/code/`
+        return `/projets/${this.categoryIdent}/${this.project.id}_${this.project.ident}/code/`
       },
       hasIframe () {
         return this.project.view === 'both'

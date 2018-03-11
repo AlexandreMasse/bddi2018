@@ -10,9 +10,9 @@
   import BackLink from '@/components/BackLink.vue'
   export default {
     name: 'iframeProject',
-    props: ['src' ,'backLinkSrc'],
+    props: ['src', 'backLinkSrc'],
     components: {BackLink},
-    methods : {
+    methods: {
       backToScreen () {
         this.$emit('backToScreen')
       }
