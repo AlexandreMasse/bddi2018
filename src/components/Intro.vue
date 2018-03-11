@@ -1,6 +1,6 @@
 <template>
   <div class="intro">
-    <a v-if="backHome" href="/" class="fi flaticon-left-arrow action-back backhome"></a>
+    <router-link :to="'/'" v-if="backHome" class="fi flaticon-left-arrow action-back backhome"></router-link>
     <h1>{{title}}</h1>
     <p>{{description}}</p>
   </div>
