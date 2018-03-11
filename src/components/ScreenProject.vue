@@ -3,12 +3,12 @@
     <iframe-project v-if="showIframe" :src="srcIframe" v-on:backToScreen="hideIframe" :backLinkSrc="currentLink" :key="iframe"></iframe-project>
     <div class="project__screens" v-else :key="'screens'">
       <div class="project__informations">
-      <router-link :to="backLinkSrc" class="fi flaticon-left-arrow action-back back"></router-link>
+      <back-link :backLinkSrc="backLinkSrc"></back-link>
         <h1>
-          <span v-for="(student, index) in studentsListOutput" :key="student.id">
+          <span v-for="(student, index) in students" :key="student.id">
             {{student[0].firstname}} {{student[0].lastname}}
             <em> ({{student[0].option}})</em>
-            <span v-if="index != studentsListOutput.length - 1">-</span>
+            <span v-if="index != students.length - 1">-</span>
           </span>
         </h1>
         <h2>{{project.name}}</h2>
@@ -23,11 +23,12 @@
 <script>
   import studentsList from '@/data/students.json'
   import iframeProject from '@/components/IframeProject.vue'
+  import backLink from '@/components/BackLink.vue'
 
   export default {
     name: 'screenProject',
     props: ['project', 'categoryIdent', 'students', 'src', 'iframe', 'backLinkSrc'],
-    components: {iframeProject},
+    components: {iframeProject, backLink},
     data () {
       return {
         showIframe: false,
@@ -35,16 +36,6 @@
       }
     },
     computed: {
-      studentsListOutput () {
-        var students = []
-        for (let i = 0; i < this.project.studentsList.length; i++) {
-          let student = this.project.studentsList[i]
-          students.push(studentsList.filter(studentList => student === studentList.id))
-          if (i === this.project.studentsList.length - 1) {
-            return students
-          }
-        }
-      },
       srcIframe () {
         return `/projets/${this.categoryIdent}/${this.project.id}_${this.project.ident}/code/`
       },

@@ -1,15 +1,17 @@
 <template>
   <div class="intro">
-    <router-link :to="'/'" v-if="backHome" class="fi flaticon-left-arrow action-back backhome"></router-link>
+    <back-link v-if="backLinkSrc" :backLinkSrc="backLinkSrc"></back-link>
     <h1>{{title}}</h1>
     <p>{{description}}</p>
   </div>
 </template>
 
 <script>
+  import backLink from '@/components/BackLink.vue'
   export default {
     name: 'intro',
-    props: ['title', 'description', 'backHome']
+    props: ['title', 'description', 'backLinkSrc'],
+    components: {backLink}
   }
 </script>
 

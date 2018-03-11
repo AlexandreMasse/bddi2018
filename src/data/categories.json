@@ -342,11 +342,11 @@
         "id": 2,
         "ident": "festival",
         "name": "Application",
-        "description": "Réalisation d’une application mobile (android et IOS) pour le prochain Festival national du film d’animation organisé par l’AFCA (Association française du cinéma d’animation) du 4 au 8 avril 2018 à Rennes.<br>Cette application a pour but de faciliter les choix sur le programme (projections, rencontres, ateliers…) ainsi que le déplacement (plusieurs lieux) pour les festivaliers (invités accrédités, intervenants, grand public) lors de l’évènement.",
+        "description": "Réalisation d’une application mobile (android et IOS) pour le prochain Festival national du film d’animation organisé par l’AFCA (Association française du cinéma d’animation) du 4 au 8 avril 2018 à Rennes. Cette application a pour but de faciliter les choix sur le programme (projections, rencontres, ateliers…) ainsi que le déplacement (plusieurs lieux) pour les festivaliers (invités accrédités, intervenants, grand public) lors de l’évènement.",
         "projectsList": [
             {
                 "id": 32,
-                "name": "Application - Festival nation du film d'animation",
+                "name": "Application - Festival national du film d'animation",
                 "ident": "appli",
                 "studentsList": [
                     0,
@@ -358,7 +358,7 @@
             },
             {
                 "id": 33,
-                "name": "Application - Festival nation du film d'animation",
+                "name": "Application - Festival national du film d'animation",
                 "ident": "appli",
                 "studentsList": [
                     4,
@@ -372,7 +372,7 @@
             },
             {
                 "id": 34,
-                "name": "Application - Festival nation du film d'animation",
+                "name": "Application - Festival national du film d'animation",
                 "ident": "appli",
                 "studentsList": [
                     6,
@@ -385,7 +385,7 @@
             },
             {
                 "id": 35,
-                "name": "Application - Festival nation du film d'animation",
+                "name": "Application - Festival national du film d'animation",
                 "ident": "appli",
                 "studentsList": [
                     10,
@@ -398,7 +398,7 @@
             },
             {
                 "id": 36,
-                "name": "Application - Festival nation du film d'animation",
+                "name": "Application - Festival national du film d'animation",
                 "ident": "appli",
                 "studentsList": [
                     13,
@@ -411,7 +411,7 @@
             },
             {
                 "id": 37,
-                "name": "Application - Festival nation du film d'animation",
+                "name": "Application - Festival national du film d'animation",
                 "ident": "appli",
                 "studentsList": [
                     20,
@@ -424,7 +424,7 @@
             },
             {
                 "id": 38,
-                "name": "Application - Festival nation du film d'animation",
+                "name": "Application - Festival national du film d'animation",
                 "ident": "appli",
                 "studentsList": [
                     27,
@@ -437,7 +437,7 @@
             },
             {
                 "id": 39,
-                "name": "Application - Festival nation du film d'animation",
+                "name": "Application - Festival national du film d'animation",
                 "ident": "appli",
                 "studentsList": [
                     36,
@@ -450,7 +450,7 @@
             },
             {
                 "id": 40,
-                "name": "Application - Festival nation du film d'animation",
+                "name": "Application - Festival national du film d'animation",
                 "ident": "appli",
                 "studentsList": [
                     7,
@@ -462,7 +462,7 @@
             },
             {
                 "id": 41,
-                "name": "Application - Festival nation du film d'animation",
+                "name": "Application - Festival national du film d'animation",
                 "ident": "appli",
                 "studentsList": [
                     14,
@@ -993,7 +993,7 @@
         "id": 6,
         "ident": "web",
         "name": "Initiation HTML/CSS/JS",
-        "description": "Chaque étudiant (option graphisme) a élaboré les maquettes d’un site web (son portfolio ou autre) en pensant à la direction artistique ainsi qu’à toutes les spécificités techniques liées au support et à la contrainte du responsive.<br>Ensuite développement du site en language HTML CSS et Javascript pour les plus aguerris (ou grâce à l’aide des développeurs). ;)",
+        "description": "Chaque étudiant (option graphisme) a élaboré les maquettes d’un site web (son portfolio ou autre) en pensant à la direction artistique ainsi qu’à toutes les spécificités techniques liées au support et à la contrainte du responsive. Ensuite développement du site en language HTML CSS et Javascript pour les plus aguerris (ou grâce à l’aide des développeurs). ;)",
         "projectsList": [
             {
                 "id": 91,
