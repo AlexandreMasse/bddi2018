@@ -1,7 +1,7 @@
 <template>
   <div class="project">
-   <iframe-project v-if="iframe" :src="srcIframe"></iframe-project>
-   <screen-project v-if="screen" :project="project" :students="studentListOutput" :iframe="iframe" ></screen-project>
+   <iframe-project v-if="showIframe" :src="srcIframe"></iframe-project>
+   <screen-project v-if="screen" :project="project" :students="studentListOutput" :iframe="iframe" :src="srcScreen"></screen-project>
   </div>
 </template>
 
@@ -52,14 +52,20 @@
           }
         }
       },
-      iframe () {
-        return this.project.view === 'iframe' || this.project.view === 'both'
+      showIframe () {
+        return this.project.view === 'iframe'
       },
       srcIframe () {
         return `/projets/${this.categoryIdent}/${this.projectId}_${this.projectIdent}/code/`
       },
+      iframe () {
+        return this.project.view === 'both'
+      },
       screen () {
         return this.project.view === 'screen' || this.project.view === 'both'
+      },
+      srcScreen () {
+        return `/projets/${this.categoryIdent}/${this.projectId}_${this.projectIdent}/screens/`
       }
     },
     mounted () {

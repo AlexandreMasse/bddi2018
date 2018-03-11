@@ -16,5 +16,6 @@
     text-transform: uppercase;
     letter-spacing: 4px;
     cursor: pointer;
+    text-decoration: none;
   }
 </style>
