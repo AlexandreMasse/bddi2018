@@ -13,6 +13,7 @@
   import projectItem from '@/components/ProjectItem.vue'
   import intro from '@/components/Intro.vue'
   import categories from '@/data/categories.json'
+  import { TimelineLite, Power3 } from 'gsap'
 
   export default {
     name: 'category',
@@ -38,8 +39,30 @@
       if (!this.category) {
         this.$router.push('/')
       }
+
+      const tl = new TimelineLite()
+
+      tl.set('.category__description', {
+        transform: 'translateX(-20px)',
+        opacity: 0
+      })
+        .set('.projects__list-item', {
+          transform: 'translateY(-20px)',
+          opacity: 0,
+        })
+        .to('.category__description', 1.7, {
+          transform: 'translateX(0px)',
+          opacity: 1,
+          ease: Power3.easeOut
+        }, '+=0.1')
+        .staggerTo('.projects__list-item', 1.7, {
+          opacity: 1,
+          transform: 'translateY(0px)',
+          ease: Power3.easeOut
+        }, 0.1, '-=1.5')
     }
   }
+
 </script>
 
 <style lang="scss" scoped>

@@ -1,16 +1,17 @@
 <template>
-    <section class="menu" id="menu">
-      <nav class="menu__navigation">
-        <ul class="menu__items" id="categories-item">
-          <menu-item v-for="category in categories" :key="category.id" :categoryId="category.id" :categoryIdent="category.ident" :categoryName="category.name"></menu-item>
-        </ul>
-      </nav>
-    </section>
+ <section class="menu" id="menu">
+    <nav class="menu__navigation">
+      <ul class="menu__items" id="categories-item">
+        <menu-item v-for="category in categories" :key="category.id" :categoryId="category.id" :categoryIdent="category.ident" :categoryName="category.name"></menu-item>
+      </ul>
+    </nav>
+  </section>
 </template>
 
 <script>
   import MenuItem from '@/components/MenuItem.vue'
   import categories from '@/data/categories.json'
+  import { TimelineLite, Power3 } from 'gsap'
 
   export default {
     name: 'menu',
@@ -19,11 +20,24 @@
       return {
         categories
       }
+    },
+    mounted () {
+      const tl = new TimelineLite()
+
+      tl
+        .set('li.menu__items-item', {
+          opacity: 0
+        })
+        .staggerTo('li.menu__items-item', 1, {
+          opacity: 1,
+          ease: Power3.easeOut
+        }, 0.2)
     }
   }
 </script>
 
 <style lang="scss" scoped>
+
   .menu {
     position: relative;
     z-index: 2;
