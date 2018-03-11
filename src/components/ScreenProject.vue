@@ -73,7 +73,7 @@
     .project__informations {
       margin: 0 auto 60px;
       text-align: left;
-       h1 {
+      h1 {
         text-transform: uppercase;
         opacity: 0.5;
         font-family: $font-aileron-light;
@@ -82,7 +82,7 @@
         text-align: left;
       }
       h2 {
-        font-family: $font-aileron-light;
+        font-family: $font-walsheim-regular;
         font-size: 30px;
         font-weight: bold;
         text-align: left;
