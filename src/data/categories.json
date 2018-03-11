@@ -1013,7 +1013,7 @@
                     25
                 ],
                 "screens" : [0, 1, 2, 3],
-                "view": "screen"
+                "view": "both"
             },
             {
                 "id": 93,

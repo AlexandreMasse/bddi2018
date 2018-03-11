@@ -1,6 +1,8 @@
 <template>
  <div id="iframe">
-    <back-link></back-link>
+   <span v-on:click="backToScreen" >
+      <back-link :backLinkSrc="backLinkSrc"></back-link>
+   </span>
     <iframe :src='src' frameborder="0"></iframe>
   </div>
 </template>
@@ -8,8 +10,13 @@
   import BackLink from '@/components/BackLink.vue'
   export default {
     name: 'iframeProject',
-    props: ['src'],
-    components: {BackLink}
+    props: ['src' ,'backLinkSrc'],
+    components: {BackLink},
+    methods : {
+      backToScreen () {
+        this.$emit('backToScreen')
+      }
+    }
   }
 </script>
 

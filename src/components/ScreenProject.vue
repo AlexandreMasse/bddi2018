@@ -1,28 +1,40 @@
 <template>
-  <div>
-    <back-link></back-link>
-    <div class="project__screens">
+  <transition name="fade" mode="out-in">
+    <iframe-project v-if="showIframe" :src="srcIframe" v-on:backToScreen="hideIframe" :backLinkSrc="currentLink" :key="iframe"></iframe-project>
+    <div class="project__screens" v-else :key="screens">
+      <back-link :backLinkSrc="backLinkSrc"  v-if="!showIframe"></back-link>
       <div class="project__informations">
         <h1>
-          <span v-for="(student, index) in studentsListOutput" :key="student.id"> {{student[0].firstname}} {{student[0].lastname}} <em>({{student[0].option}})</em> <span  v-if="index != studentsListOutput.length - 1">-</span> </span>
+          <span v-for="(student, index) in studentsListOutput" :key="student.id"> 
+            {{student[0].firstname}} {{student[0].lastname}}  
+            <em>({{student[0].option}})</em>
+            <span v-if="index != studentsListOutput.length - 1">-</span>
+          </span>
         </h1>
         <h2>{{project.name}}</h2>
-        <span v-if="iframe" class="callIframe"><i class="fi flaticon-right-arrow"></i> Voir le projet </span>
+        <span v-if="hasIframe" class="callIframe" v-on:click="callIframe" ><i class="fi flaticon-right-arrow"></i> Voir le projet </span>
       </div>
       <div class="project__screen" v-for="(screen, index) in project.screens" :key="'screen_'+ index">
           <img :src="src + index + '.jpg' " alt=""/>
       </div>
     </div>
-  </div>
+  </transition>
 </template>
 <script>
   import backLink from '@/components/BackLink.vue'
   import studentsList from '@/data/students.json'
+  import iframeProject from '@/components/IframeProject.vue'
 
   export default {
     name: 'screenProject',
-    props: ['project', 'students', 'src', 'iframe'],
-    components: {backLink},
+    props: ['project', 'students', 'src', 'iframe', 'backLinkSrc'],
+    components: {backLink, iframeProject},
+    data () {
+      return {
+        showIframe: false,
+        currentLink : this.$route.path
+      }
+    },
     computed: {
       studentsListOutput () {
         var students = []
@@ -33,15 +45,45 @@
             return students
           }
         }
+      },
+      srcIframe () {
+        // return '/projets/canvas-audio/46_dancing_blob/code/'
+        return `/projets/${this.categoryIdent}/${this.projectId}_${this.projectIdent}/code/`
+      },
+      hasIframe () {
+        return this.project.view === 'both'
+      }
+    },
+    methods: {
+      callIframe () {
+        this.showIframe = true
+      },
+      hideIframe () {
+        this.showIframe = false
       }
     }
   }
 </script>
 
 <style scoped lang="scss">
+.fade-enter-active {
+  transition: opacity 1s ease-in;
+}
+
+.fade-leave-active {
+  transition: opacity 0.5s ease-out;
+}
+
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+}
+
   .project__screens {
     width: 940px;
     margin: 200px auto;
+    .fade-enter-active, .fade-leave-active {
+  transition: opacity .5s;
+}
     .project__informations {
       margin: 0 auto 60px;
       text-align: left;
@@ -66,6 +108,7 @@
         letter-spacing: 3px;
         font-size: 13px;
         color: $color-purple;
+        cursor: pointer;
       }
     }
     img {

@@ -1,9 +1,12 @@
 <template>
-  <a href="" class="back-link fi flaticon-left-arrow">Back</a>
+  <router-link :to="backLinkSrc" class="back-link">
+    <span class="fi flaticon-left-arrow">Back</span>
+  </router-link>
 </template>
 <script>
   export default {
-    name: 'backLink'
+    name: 'backLink',
+    props : ['backLinkSrc']
   }
 </script>
 
