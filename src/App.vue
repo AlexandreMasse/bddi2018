@@ -51,8 +51,9 @@
   height: 100%;
 
   #home-link {
-    padding: 30px;
     position: absolute;
+    z-index: 10;
+    padding: 30px;
     left: 0;
     top: 0;
     .home {
@@ -78,7 +79,7 @@
 
   #menu-link {
     padding: 30px;
-    z-index:998;
+    z-index:10;
     position: fixed;
     right: 60px;
     top: 0;
@@ -100,18 +101,6 @@
         width: 50px;
         height: 1px;
         background: #fefefe;
-      }
-    }
-  }
-
-  #nav {
-    padding: 30px;
-    z-index:999;
-    a {
-      font-weight: bold;
-      color: #2c3e50;
-      &.router-link-exact-active {
-        color: #42b983;
       }
     }
   }

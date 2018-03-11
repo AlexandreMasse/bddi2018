@@ -1,6 +1,6 @@
 <template>
   <div class="project">
-   <iframe-project v-if="iframe"></iframe-project>
+   <iframe-project v-if="iframe" :src="srcIframe"></iframe-project>
    <screen-project v-if="screen" :project="project" :students="studentListOutput" :iframe="iframe" ></screen-project>
   </div>
 </template>
@@ -18,7 +18,7 @@
       return {
         text: 'Project',
         categoryIdent: this.$route.params.categoryIdent,
-        projectIdent: this.$route.params.categoryIdent,
+        projectIdent: this.$route.params.projectIdent,
         projectId: this.$route.params.projectId
       }
     },
@@ -55,6 +55,9 @@
       iframe () {
         return this.project.view === 'iframe' || this.project.view === 'both'
       },
+      srcIframe () {
+        return `/projets/${this.categoryIdent}/${this.projectId}_${this.projectIdent}/code/`
+      },
       screen () {
         return this.project.view === 'screen' || this.project.view === 'both'
       }
@@ -66,3 +69,10 @@
     }
   }
 </script>
+
+<style scoped lang="scss">
+  .project {
+    position: relative;
+    z-index: 2;
+  }
+</style>

@@ -11,6 +11,8 @@
 </template>
 <style lang="scss" scoped>
   .about {
+    position: relative;
+    z-index: 2;
     font-family: $font-aileron-light;
   h1 {
     text-transform: uppercase;

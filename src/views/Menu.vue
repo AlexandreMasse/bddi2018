@@ -7,7 +7,7 @@
       </nav>
     </section>
 </template>
-  
+
 <script>
   import MenuItem from '@/components/MenuItem.vue'
   import categories from '@/data/categories.json'
@@ -25,12 +25,13 @@
 
 <style lang="scss" scoped>
   .menu {
+    position: relative;
+    z-index: 2;
     width: 100%;
     height: 100%;
     top: 0;
     left: 0;
     display: block;
-    z-index: 500;
     &__navigation {
       width: 700px;
       position: absolute;

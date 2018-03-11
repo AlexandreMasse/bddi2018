@@ -44,7 +44,8 @@
 
 <style lang="scss" scoped>
   .category {
-    // opacity: 0;
+    position: relative;
+    z-index: 2;
     &__content {
       width: 940px;
       margin: 0 auto;

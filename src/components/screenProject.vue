@@ -8,7 +8,7 @@
 </template>
 <script>
   import intro from '@/components/Intro.vue'
-  import backLink from '@/components/BackLink.vue'
+  // import backLink from '@/components/BackLink.vue'
   export default {
     name: 'screenProject',
     props: ['project', 'students'],

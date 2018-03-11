@@ -1,15 +1,27 @@
 <template>
-  <h1>Iframe</h1>
+ <div id="iframe">
+    <back-link></back-link>
+    <iframe :src='src' frameborder="0"></iframe>
+  </div>
 </template>
 <script>
-
-  import backLink from '@/components/BackLink.vue'
-  
+  import BackLink from '@/components/BackLink.vue'
   export default {
     name: 'iframeProject',
-    props: []
+    props: ['src'],
+    components: {BackLink}
   }
 </script>
 
 <style scoped lang="scss">
+  #iframe {
+    background-color: black;
+  }
+  iframe {
+    display: block;
+    height: 100vh;
+    width: 100vw;
+    border: 0;
+  }
+
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <a href="" class="project__back-link fi flaticon-left-arrow action-back'">Back</a>
+  <a href="" class="back-link fi flaticon-left-arrow">Back</a>
 </template>
 <script>
   export default {
@@ -9,8 +9,6 @@
 
 <style scoped lang="scss">
   .back-link {
-    display: none;
-    opacity: 0;
     position: fixed;
     left: 30px;
     top: 100px;

@@ -37,7 +37,7 @@
       styles () {
         let url = ''
         if (this.project.screens && this.project.screens.length) {
-          url = require(`../projets/${this.categoryIdent}/${this.project.id}_${this.project.ident}/screens/0.jpg`)
+          url = `/projets/${this.categoryIdent}/${this.project.id}_${this.project.ident}/screens/0.jpg`
         } else {
           url = require(`../assets/images/thumbnail-${this.categoryId}.jpg`)
         }
