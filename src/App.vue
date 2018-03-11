@@ -7,7 +7,10 @@
       </router-link>
     </div>
     <div id="menu-link">
-      <router-link to="/menu" class="menu"><span>Works</span></router-link>
+      <transition name="menu" mode="out-in">
+        <a v-if="!menuIsOpen" v-on:click="onMenuOpen" class="menu" key="work"><span>Works</span></a>
+        <a v-else v-on:click="onMenuClose" class="menu" key="close"><span>Close</span></a>
+      </transition>
     </div>
     <div id="about-link">
       <router-link to="/about">About</router-link>
@@ -23,7 +26,29 @@
   import canvasBackground from '@/components/CanvasBackground.vue'
   export default {
     name: 'App',
-    components: {canvasBackground}
+    components: {canvasBackground},
+    data () {
+      return {
+        menuIsOpen: false
+      }
+    },
+    methods: {
+      onMenuOpen () {
+        this.$router.push('/menu')
+      },
+      onMenuClose () {
+        this.$router.go(-1)
+      },
+      checkMenuRoute () {
+        this.menuIsOpen = this.$route.path === this.$router.match('menu').fullPath
+      }
+    },
+    mounted () {
+      this.checkMenuRoute()
+    },
+    updated () {
+      this.checkMenuRoute()
+    }
   }
 </script>
 
@@ -38,6 +63,18 @@
 }
 
 .fade-enter, .fade-leave-to {
+  opacity: 0;
+}
+
+.menu-enter-active {
+  transition: opacity 1s ease-in;
+}
+
+.menu-leave-active {
+  transition: opacity 0.5s ease-out;
+}
+
+.menu-enter, .menu-leave-to {
   opacity: 0;
 }
 
@@ -78,11 +115,12 @@
   }
 
   #menu-link {
-    padding: 30px;
+    margin: 30px;
     z-index:10;
     position: fixed;
     right: 60px;
     top: 0;
+    cursor: pointer;
     .menu {
       position: relative;
       text-transform: uppercase;
