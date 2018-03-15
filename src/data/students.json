@@ -13,7 +13,7 @@
     "dribble": "",
     "instagram": "https://www.instagram.com/antoineabbou/",
     "linkedin": "https://www.linkedin.com/in/antoine-abbou-159757110/",
-    "": ""
+    "interests": ["Javascript", "React", "ThreeJS", "VueJS"]
   },
   {
     "id": 1,
@@ -28,8 +28,8 @@
     "behance": "",
     "dribble": "https://dribbble.com/rob-n",
     "instagram": "https://www.instagram.com/robn_md/",
-    "linkedin": "",
-    "": ""
+    "linkedin": "",  
+    "interests": ["Narration", "scénarisation", "motion", "fablabs", "objet connectés", "sociologie", "installations"]
   },
   {
     "id": 2,
@@ -44,8 +44,8 @@
     "behance": "",
     "dribble": "",
     "instagram": "",
-    "linkedin": "",
-    "": ""
+    "linkedin": "", 
+    "interests": ["React Native", "React", "WebGL", "Unity"]
   },
   {
     "id": 3,
@@ -60,8 +60,8 @@
     "behance": "https://www.behance.net/manoncarrour",
     "dribble": "",
     "instagram": "https://www.instagram.com/manon_carrour/",
-    "linkedin": "https://fr.linkedin.com/in/manon-carrour-105478127",
-    "": ""
+    "linkedin": "https://fr.linkedin.com/in/manon-carrour-105478127",  
+    "interests": ["Objet connecté", "installations", "video mapping"]
   },
   {
     "id": 4,
@@ -76,8 +76,8 @@
     "behance": "",
     "dribble": "",
     "instagram": "",
-    "linkedin": "",
-    "": ""
+    "linkedin": "",  
+    "interests": ["UI/UX Design", "motion design", "direction artistique", "Installations interactives", "web design"]
   },
   {
     "id": 5,
@@ -92,8 +92,8 @@
     "behance": "",
     "dribble": "",
     "instagram": "",
-    "linkedin": "",
-    "": ""
+    "linkedin": "",   
+    "interests": []
   },
   {
     "id": 6,
@@ -108,8 +108,8 @@
     "behance": "",
     "dribble": "",
     "instagram": "",
-    "linkedin": "",
-    "": ""
+    "linkedin": "",  
+    "interests": ["VueJS", "WebGL natif", "L'IOT", "JavaScript (Vue, ThreeJS)"]
   },
   {
     "id": 7,
@@ -125,7 +125,8 @@
     "dribble": "",
     "instagram": "",
     "linkedin": "https://linkedin.com/in/juliendargelos",
-    "": ""
+    
+    "interests": ["Swift", "AI", "Ruby"]
   },
   {
     "id": 8,
@@ -140,8 +141,8 @@
     "behance": "https://www.behance.net/Elisa-Dubois",
     "dribble": "https://dribbble.com/Shojii",
     "instagram": "https://www.instagram.com/elisa__d/",
-    "linkedin": "https://www.linkedin.com/in/elisadubois/",
-    "": ""
+    "linkedin": "https://www.linkedin.com/in/elisadubois/", 
+    "interests": ["UX Design orienté jeux vidéos", "UI Design", "motion"]
   },
   {
     "id": 9,
@@ -156,8 +157,8 @@
     "behance": "",
     "dribble": "https://dribbble.com/Remel",
     "instagram": "https://www.instagram.com/remi.eliet/",
-    "linkedin": "https://fr.linkedin.com/in/r%C3%A9mi-eliet-30b415123",
-    "": ""
+    "linkedin": "https://fr.linkedin.com/in/r%C3%A9mi-eliet-30b415123", 
+    "interests": ["Web design", "UI Design", "Photographie", "3D", "UX Design"]
   },
   {
     "id": 10,
@@ -173,7 +174,7 @@
     "dribble": "",
     "instagram": "",
     "linkedin": "https://fr.linkedin.com/in/cl%C3%A9mentine-espinel-72a403145",
-    "": ""
+    "interests": ["3D", "Motion", "Emotion", "UX Design"]
   },
   {
     "id": 11,
@@ -189,7 +190,7 @@
     "dribble": "",
     "instagram": "https://www.instagram.com/noemie.ey/",
     "linkedin": "https://www.linkedin.com/in/noemieey",
-    "": ""
+    "interests": ["UX Design", "Scénarisation d'interactivité", "Installations interactives (mapping...)", "motion design (2D et 3D)", "objets connectés."]
   },
   {
     "id": 12,
@@ -205,7 +206,7 @@
     "dribble": "",
     "instagram": "",
     "linkedin": "https://fr.linkedin.com/in/circegrand",
-    "": ""
+    "interests": ["Symfony", "Magento", "Photographie", "Direction de projet"]
   },
   {
     "id": 13,
@@ -221,7 +222,7 @@
     "dribble": "https://dribbble.com/Matoche",
     "instagram": "https://www.instagram.com/mathildeherard/",
     "linkedin": "https://www.linkedin.com/in/mathilde-herard-60aa29102/",
-    "": ""
+    "interests": ["Objets connectés", "expérimentation", "3D", "Jeu vidéo", "storytelling", "narration", "arduino", "processing", "javascript", "webdesign", "UX Design"]
   },
   {
     "id": 14,
@@ -237,7 +238,7 @@
     "dribble": "",
     "instagram": "",
     "linkedin": "https://fr.linkedin.com/in/christine-yini-huang",
-    "": ""
+    "interests": ["ReactJS", "VueJs", "WebGL", "Unity", "Processing", "React", "ThreeJS"]
   },
   {
     "id": 15,
@@ -253,7 +254,7 @@
     "dribble": "",
     "instagram": "",
     "linkedin": "https://www.linkedin.com/in/omar-jbara/",
-    "": ""
+    "interests": ["Unity", "VueJS", "PHP", "C#"]
   },
   {
     "id": 16,
@@ -269,7 +270,7 @@
     "dribble": "",
     "instagram": "",
     "linkedin": "",
-    "": ""
+    "interests": ["Narration multimedia", "direction artistique", "motion design", "expériences interactives", "3D", "vidéo", "photographie", "installations", "objet connectés"]
   },
   {
     "id": 17,
@@ -285,7 +286,7 @@
     "dribble": "",
     "instagram": "https://www.instagram.com/sophie_laplace/",
     "linkedin": "https://www.linkedin.com/in/sophie-laplace-12647511a/",
-    "": ""
+    "interests": []
   },
   {
     "id": 18,
@@ -301,7 +302,7 @@
     "dribble": "https://dribbble.com/Cassandrel-y",
     "instagram": "",
     "linkedin": "https://www.linkedin.com/in/cassandre-leguay-designer/",
-    "": ""
+    "interests": []
   },
   {
     "id": 19,
@@ -311,13 +312,13 @@
     "studies": "BTS Design Graphique (Rouen), Bachelor Chef de Projet Digital (ECV Digital)",
     "github": "",
     "codepen": "",
-    "portfolio": "",
+    "portfolio": "https://justine-lenouvel.fr",
     "twitter": "",
     "behance": "",
     "dribble": "",
     "instagram": "",
-    "linkedin": "",
-    "": ""
+    "linkedin": "https://www.linkedin.com/in/justine-lenouvel-487355115/",
+    "interests": ["Motion", "web design", "design interactif", "design scénographique", "design sonore", "mapping"]
   },
   {
     "id": 20,
@@ -333,7 +334,7 @@
     "dribble": "",
     "instagram": "",
     "linkedin": "",
-    "": ""
+    "interests": ["Psychologie utilisateur", "storytelling"]
   },
   {
     "id": 21,
@@ -349,7 +350,7 @@
     "dribble": "",
     "instagram": "https://www.linkedin.com/in/erwannletue/",
     "linkedin": "",
-    "": ""
+    "interests": ["Javascript", "VueJS", "Laravel", "WebGL", "Unity"]
   },
   {
     "id": 22,
@@ -365,7 +366,7 @@
     "dribble": "",
     "instagram": "",
     "linkedin": "",
-    "": ""
+    "interests": ["UI/UX Design", "Motion", "3D", "Objets connectés", "Design sonore", "Installations interactives"]
   },
   {
     "id": 23,
@@ -381,7 +382,7 @@
     "dribble": "",
     "instagram": "",
     "linkedin": "https://www.linkedin.com/in/alexandremasse/",
-    "": ""
+    "interests": ["VueJS", "React", "WebGL"]
   },
   {
     "id": 24,
@@ -397,7 +398,7 @@
     "dribble": "",
     "instagram": "https://www.instagram.com/audrenmauplot/",
     "linkedin": "https://www.linkedin.com/in/audren-mauplot-88984012a",
-    "": ""
+    "interests": ["VueJS", "ThreeJS", "Site e-commerces..."]
   },
   {
     "id": 25,
@@ -413,7 +414,7 @@
     "dribble": "",
     "instagram": "https://www.instagram.com/all.mch/",
     "linkedin": "",
-    "": ""
+    "interests": ["UX Design", "Interface web", "Expérience web/interractive"]
   },
   {
     "id": 26,
@@ -429,7 +430,7 @@
     "dribble": "",
     "instagram": "",
     "linkedin": "",
-    "": ""
+    "interests": ["VueJS", "ThreeJS", "Processing", "React"]
   },
   {
     "id": 27,
@@ -445,7 +446,7 @@
     "dribble": "",
     "instagram": "",
     "linkedin": "",
-    "": ""
+    "interests": ["UI/UX Design", "3D", "Motion", "Photographie"]
   },
   {
     "id": 28,
@@ -461,7 +462,7 @@
     "dribble": "",
     "instagram": "",
     "linkedin": "",
-    "": ""
+    "interests": ["WebGL", "NodeJS", "ReactJS", "C#", "C++"]
   },
   {
     "id": 29,
@@ -477,7 +478,7 @@
     "dribble": "",
     "instagram": "",
     "linkedin": "",
-    "": ""
+    "interests": ["NodeJS", "Rxjs", "ThreeJS"]
   },
   {
     "id": 30,
@@ -493,7 +494,7 @@
     "dribble": "",
     "instagram": "",
     "linkedin": "",
-    "": ""
+    "interests": ["Motion", "3D", "Design interactif lié à la pédagogie"]
   },
   {
     "id": 31,
@@ -509,7 +510,7 @@
     "dribble": "",
     "instagram": "",
     "linkedin": "",
-    "": ""
+    "interests": ["Javascript, NodeJS, VueJS, WebGL"]
   },
   {
     "id": 32,
@@ -525,11 +526,11 @@
     "dribble": "",
     "instagram": "",
     "linkedin": "https://www.linkedin.com/in/arnaud-pinot-86a062aa/",
-    "": ""
+    "interests": ["VueJS", "React", "WebGL", "ThreeJS", "Unity"]
   },
   {
     "id": 33,
-    "lastname": "REVEL",
+    "lastname": "DUSSOUT-REVEL",
     "firstname": "Solal",
     "option": "Développeur",
     "studies": "DUT MMI (Bordeaux)",
@@ -541,7 +542,7 @@
     "dribble": "",
     "instagram": "",
     "linkedin": "https://www.linkedin.com/in/solal-dussout-revel-7ab927107/",
-    "": ""
+    "interests": ["Meteor", "Unity", "WebGL", "Node", "Arduino", "React", "ARKit"]
   },
   {
     "id": 34,
@@ -557,7 +558,7 @@
     "dribble": "",
     "instagram": "",
     "linkedin": "",
-    "": ""
+    "interests": []
   },
   {
     "id": 35,
@@ -573,7 +574,7 @@
     "dribble": "",
     "instagram": "",
     "linkedin": "https://www.linkedin.com/in/nikita-skargovskii-2b915111a/",
-    "": ""
+    "interests": ["WebGL", "GLSL", "VueJS", "ThreeJS", "Pixi", "Canvas", "VR", "Unity", "React"]
   },
   {
     "id": 36,
@@ -589,7 +590,7 @@
     "dribble": "",
     "instagram": "https://www.instagram.com/goodgoldisrare/",
     "linkedin": "",
-    "": ""
+    "interests": ["Javascript", "WebGL", "3D", "React", "Processing"]
   },
   {
     "id": 37,
@@ -605,7 +606,7 @@
     "dribble": "",
     "instagram": "",
     "linkedin": "https://www.linkedin.com/in/leatanda/",
-    "": ""
+    "interests": ["VueJS", "React", "WebGL", "Unity", "Installations interactives", "AR"]
   },
   {
     "id": 38,
@@ -621,7 +622,7 @@
     "dribble": "",
     "instagram": "",
     "linkedin": "",
-    "": ""
+    "interests": ["3D", "UI/UX Design", "Expérimentation interactives", "Objets connectés"]
   },
   {
     "id": 39,
@@ -637,7 +638,7 @@
     "dribble": "",
     "instagram": "",
     "linkedin": "",
-    "": ""
+    "interests": []
   },
   {
     "id": 40,
@@ -653,7 +654,7 @@
     "dribble": "",
     "instagram": "https://www.instagram.com/xindiiiiii",
     "linkedin": "",
-    "": ""
+    "interests": ["Design émotionnel", "expérience narrative", "UX Design", "Game Design", "3D", "Motion", "IOT", "Gestion de projet", "Sciences cognitives", "Sociologie", "psychologie", "storytelling"]
   },
   {
     "id": 41,
@@ -669,6 +670,6 @@
     "dribble": "",
     "instagram": "",
     "linkedin": "",
-    "": ""
+    "interests": []
   }
 ]

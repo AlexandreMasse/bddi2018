@@ -28,32 +28,8 @@
       font-size: 20px;
       align-self: auto;
       a {
-        position: relative;
-        display: inline-block;
         font-weight: bold;
         line-height: 1.4;
-        padding: 0 5px;
-        transition: color 0.3s;
-        text-decoration: none;
-        &::before {
-          content: "";
-          position: absolute;
-          background: #611eff;
-          bottom: 0;
-          left: 0;
-          width: 100%;
-          height: 60%;
-          opacity: 0.5;
-          transform: scale3d(0,1,1);
-          transform-origin: left;
-          transition: transform 0.3s;
-          z-index: -1;
-        }
-        &:hover {
-          &::before {
-            transform: scale3d(1,1,1);
-          }
-        }
       }
     }
   }

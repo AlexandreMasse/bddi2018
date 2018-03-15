@@ -70,7 +70,7 @@
     data () {
       return {
         title: 'Bachelor Designer & Développeur Intéractif',
-        description: 'BBDI 2018, c’est une équipe, une classe, une famille de 42 talents, tous aussi créatifs les uns que les autres, qui puise perpétuellement leurs inspirations dans le numérique et son devenir. Nous aimons les challenges et créer de nouvelles choses que vous pouvez retrouver ici :'
+        description: 'BBDI 2018, c’est une équipe, une classe, une famille de 42 talents, tous aussi créatifs les uns que les autres, qui puisent perpétuellement leurs inspirations dans le numérique et son devenir. Nous aimons les challenges et créer de nouvelles choses que vous pouvez retrouver ici :'
       }
     }
   }

@@ -48,7 +48,7 @@
       })
         .set('.projects__list-item', {
           transform: 'translateY(-20px)',
-          opacity: 0,
+          opacity: 0
         })
         .to('.category__description', 1.7, {
           transform: 'translateX(0px)',

@@ -12,8 +12,9 @@
         <a v-else v-on:click="onMenuClose" class="menu" key="close"><span>Close</span></a>
       </transition>
     </div>
-    <div id="about-link">
-      <router-link to="/about">About</router-link>
+    <div id="footer-links">
+      <router-link to="/bddi" class="highlight-hover">Les BDDI</router-link>
+      <router-link to="/about" class="highlight-hover">About</router-link>
     </div>
     <transition name="fade" mode="out-in">
       <router-view/>
@@ -143,18 +144,23 @@
     }
   }
 
-  #about-link {
+  #footer-links {
     position: fixed;
     bottom: 20px;
     right: 40px;
+    width: 100px;
     font-family: $font-aileron-light;
     font-size: 14px;
     text-transform: uppercase;
     letter-spacing: 3px;
+    text-align: right;
     z-index: 10000;
     a {
       text-decoration: none;
       color: #afadad;
+      margin: 15px 0;
+      display:inline-block;
+      font-weight: bold;
       &:hover {
         color: $color-purple;
       }

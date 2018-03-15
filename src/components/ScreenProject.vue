@@ -21,7 +21,6 @@
   </transition>
 </template>
 <script>
-  import studentsList from '@/data/students.json'
   import iframeProject from '@/components/IframeProject.vue'
   import backLink from '@/components/BackLink.vue'
 
