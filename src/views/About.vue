@@ -1,12 +1,12 @@
 <template>
   <div class="about">
     <h1>About</h1>
-    <p>Developed by <a href="#">Circé Grand</a>, <a href="#">Alexandre Massé</a> & <a href="#">Léa Tanda</a></p>
-    <p>Website designed by <a href="#">Elisa Dubois</a></p>
-    <p>Characters designed by <a href="#">Matthieu Pajot</a></p>
-    <p>Bachelor Designer & Developpeur Interactif </p>
+    <p>Developed by <a href="http://circegrand.fr/" target="_blank" title="Redirection vers le portfolio de Circé Grand">Circé Grand</a>, <a href="https://alexandremasse.fr/" target="_blank" title="Redirection vers le portfolio d'Alexandre Massé">Alexandre Massé</a> &amp; <a href="http://www.leatanda.fr/" target="_blank" title="Redirection vers le portfolio de Léa Tanda">Léa Tanda</a></p>
+    <p>Website designed by <a href="http://elisadubois.fr/" target="_blank" title="Redirection vers le portfolio d'Elisa Dubois">Elisa Dubois</a></p>
+    <p>Characters designed by <a href="http://www.matthieupajot.com/" target="_blank" title="Redirection vers le portfolio de Matthieu Pajot">Matthieu Pajot</a></p>
+    <p>Bachelor Designer &amp; Developpeur Interactif </p>
     <p>Promo 2018</p>
-    <p>Gobelins, l'École de l'Image</p>
+    <p><a href="https://www.gobelins.fr/" target="_blank" title="Redirection vers le site de l'école des Gobelins">Gobelins, l'École de l'Image</a></p>
   </div>
 </template>
 <style lang="scss" scoped>
