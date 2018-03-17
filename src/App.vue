@@ -156,14 +156,12 @@
     text-align: right;
     z-index: 10000;
     a {
+      position: relative;
       text-decoration: none;
-      color: #afadad;
+      color: #fff;
       margin: 15px 0;
       display:inline-block;
       font-weight: bold;
-      &:hover {
-        color: $color-purple;
-      }
     }
   }
 }
