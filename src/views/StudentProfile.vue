@@ -27,9 +27,8 @@
       </div>
       <div student></div>
     </div>
-      <h2>Ses projets :</h2>
-      <project-item v-for="(project, index) in projects" :key="project.id" :data="project" :categoryIdent="categoryIdents[index]" :categoryId="categoryIds[index]"></project-item>
-    </div>
+    <h2>Ses projets :</h2>
+    <project-item v-for="(project, index) in projects" :key="project.id" :data="project" :categoryIdent="categoryIdents[index]" :categoryId="categoryIds[index]"></project-item>
   </section>
 </template>
 
@@ -51,6 +50,7 @@
         studentFirstname: this.$route.params.studentFirstname.toString(),
         categoryIds: [],
         categoryIdents: [],
+        projects: [],
         studentList
       }
     },
@@ -67,24 +67,6 @@
       interests () {
         return this.student.interests.join(', ')
       },
-      projects () {
-        var projectsList = []
-        for (let i = 0; i < categories.length; i++) {
-          let currentCategory = categories[i];
-          if (currentCategory.option == this.student.option || currentCategory.option == "mixed") {
-            for (let j = 0; j < currentCategory.projectsList.length; j++) {
-              let currentProject = currentCategory.projectsList[j]
-              if (currentProject.studentsList.indexOf(this.student.id) != -1) {
-                projectsList.push(currentProject)
-                this.categoryIds.push(currentCategory.id)
-                this.categoryIdents.push(currentCategory.ident)
-              }
-              
-            }
-          }
-        }
-        return projectsList;
-      },
       styles () {
         let path = `${this.student.id}_${this.student.firstname.toLowerCase()}`
         let url = require(`../assets/images/students/${path}.png`)
@@ -96,6 +78,20 @@
     mounted () {
       if (!this.student) {
         this.$router.push('/')
+      }
+
+      for (let i = 0; i < categories.length; i++) {
+        let currentCategory = categories[i]
+        if (currentCategory.option === this.student.option || currentCategory.option === 'mixed') {
+          for (let j = 0; j < currentCategory.projectsList.length; j++) {
+            let currentProject = currentCategory.projectsList[j]
+            if (currentProject.studentsList.indexOf(this.student.id) !== -1) {
+              this.projects.push(currentProject)
+              this.categoryIds.push(currentCategory.id)
+              this.categoryIdents.push(currentCategory.ident)
+            }
+          }
+        }
       }
     }
   }

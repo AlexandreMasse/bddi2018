@@ -15,7 +15,7 @@
   export default {
     name: 'studentItem',
     props: ['student'],
-    components : {studentCharacter}
+    components: {studentCharacter}
   }
 </script>
 
