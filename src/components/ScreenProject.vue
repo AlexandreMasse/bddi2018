@@ -14,6 +14,9 @@
         <h2>{{project.name}}</h2>
         <span v-if="hasIframe" class="callIframe" v-on:click="callIframe" ><i class="fi flaticon-right-arrow"></i> Voir le projet </span>
       </div>
+      <div class="project__screen" v-for="(video, index) in project.videos" :key="'screen_'+ index">
+          <video :src="src + index + '.webm' " alt="" loop autoplay/>
+      </div>
       <div class="project__screen" v-for="(screen, index) in project.screens" :key="'screen_'+ index">
           <img :src="src + index + '.jpg' " alt=""/>
       </div>
@@ -106,7 +109,7 @@
         }
       }
     }
-    img {
+    img, video {
       display: block;
       width: 100%;
       height: auto;
