@@ -17,6 +17,7 @@ p, h1, a {
   padding: 0 5px;
   transition: color 0.3s;
   text-decoration: none;
+  z-index: 1;
   &::before {
     content: "";
     position: absolute;

@@ -1,9 +1,10 @@
 <template>
   <div class="about">
     <h1>About</h1>
-    <p>Developed by <a href="#">Circé Grand</a>, <a href="#">Alexandre Massé</a> & <a href="#">Léa Tanda</a></p>
-    <p>Website designed by <a href="#">Elisa Dubois</a></p>
-    <p>Characters designed by <a href="#">Matthieu Pajot</a></p>
+    <p>Developed by <a href="#" class="highlight-hover">Circé Grand</a>, <a href="#" class="highlight-hover">Alexandre Massé</a> & <a href="#" class="highlight-hover">Léa Tanda</a></p>
+    <p>Website designed by <a href="#" class="highlight-hover">Elisa Dubois</a></p>
+    <p>Characters designed by <a href="#" class="highlight-hover">Matthieu Pajot</a></p>
+    <p>Characters animated by <a href="#" class="highlight-hover">Solal-Dussout Revel</a></p>
     <p>Bachelor Designer & Developpeur Interactif </p>
     <p>Promo 2018</p>
     <p>Gobelins, l'École de l'Image</p>

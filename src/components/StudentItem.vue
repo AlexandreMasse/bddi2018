@@ -1,7 +1,7 @@
 <template>
   <div class="students__list-item">
     <div class="students__thumbnail">
-        <div class="students__thumbnail-img" :style="styles"></div>
+      <student-character :student="student"></student-character>
     </div>
     <router-link :to="'/bddi/' + student.id + '/' + student.firstname">
       <h2 class="highlight-hover">{{student.firstname}}</h2>
@@ -11,21 +11,11 @@
 </template>
 
 <script>
+  import studentCharacter from '@/components/StudentCharacter.vue'
   export default {
     name: 'studentItem',
     props: ['student'],
-    computed: {
-      styles () {
-        let path = `${this.student.id}_${this.student.firstname.toLowerCase()}`
-        let url = require(`../assets/images/students/${path}.png`)
-        return {
-          'background-image': `url(${url})`
-        }
-      }
-    },
-    filter: {
-
-    }
+    components : {studentCharacter}
   }
 </script>
 
@@ -37,20 +27,6 @@
 
     &:nth-of-type(5n) {
       margin: 0;
-    }
-
-    .students__thumbnail {
-      width: 100%;
-      height: 150px;
-
-      &-img {
-        width: 100%;
-        height: 150px;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: contain;
-        transition: all 0.7s ease;
-      }
     }
 
     h2 {

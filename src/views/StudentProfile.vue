@@ -1,14 +1,34 @@
 <template>
   <section class="student">
     <div class="student__content">
-      <div class="student__description">
-        <intro :title="student.option" :backLinkSrc="'/bddi'"></intro>
-        <h2>{{student.firstname}} {{student.lastname}}</h2>
-        <p>Son parcours : {{student.studies}}</p>
-        <p>Ses intérêts : {{interests}} </p>
-        <p>Ses réseaux sociaux/sites : TODO</p>
-        <h3>Ses projets</h3>
-       </div>
+      <intro :backLinkSrc="'/bddi'"></intro>
+      <div class="student__content-info">
+        <div class="student__content-info-main">
+          <student-character :student="student"></student-character>
+          <h2>{{student.firstname}} {{student.lastname}}</h2>
+          <h3>{{student.option}}</h3>
+        </div>
+        <div class="student__content-info-description">
+          <h2>Son parcours :</h2>
+          <p>{{student.studies}}</p>
+          <h2>Ses intérêts : </h2>
+          <p>{{interests}} </p>
+          <h2>Retrouver ce talent : </h2>
+          <p>
+            <a :href="student.links.github" target="_blank" v-if="student.links.github" class="highlight-hover">Github</a>
+            <a :href="student.links.codepen" target="_blank" v-if="student.links.codepen" class="highlight-hover">Codepen</a>
+            <a :href="student.links.portfolio" target="_blank" v-if="student.links.portfolio" class="highlight-hover">Site perso</a>
+            <a :href="student.links.behance" target="_blank" v-if="student.links.behance" class="highlight-hover">Behance</a>
+            <a :href="student.links.dribbble" target="_blank" v-if="student.links.dribbble" class="highlight-hover">Dribbble</a>
+            <a :href="student.links.instagram" target="_blank" v-if="student.links.instagram" class="highlight-hover">Instagram</a>
+            <a :href="student.links.linkedin" target="_blank" v-if="student.links.linkedin" class="highlight-hover">LinkedIn</a>
+          </p>
+        </div>
+      </div>
+      <div student></div>
+    </div>
+      <h2>Ses projets :</h2>
+      <project-item v-for="(project, index) in projects" :key="project.id" :data="project" :categoryIdent="categoryIdents[index]" :categoryId="categoryIds[index]"></project-item>
     </div>
   </section>
 </template>
@@ -18,10 +38,11 @@
   import categories from '@/data/categories.json'
   import intro from '@/components/Intro.vue'
   import projectItem from '@/components/ProjectItem.vue'
+  import studentCharacter from '@/components/StudentCharacter.vue'
 
   export default {
     name: 'studentProfile',
-    components: {intro, projectItem},
+    components: {intro, projectItem, studentCharacter},
     data () {
       return {
         title: 'Profil',
@@ -45,6 +66,31 @@
       },
       interests () {
         return this.student.interests.join(', ')
+      },
+      projects () {
+        var projectsList = []
+        for (let i = 0; i < categories.length; i++) {
+          let currentCategory = categories[i];
+          if (currentCategory.option == this.student.option || currentCategory.option == "mixed") {
+            for (let j = 0; j < currentCategory.projectsList.length; j++) {
+              let currentProject = currentCategory.projectsList[j]
+              if (currentProject.studentsList.indexOf(this.student.id) != -1) {
+                projectsList.push(currentProject)
+                this.categoryIds.push(currentCategory.id)
+                this.categoryIdents.push(currentCategory.ident)
+              }
+              
+            }
+          }
+        }
+        return projectsList;
+      },
+      styles () {
+        let path = `${this.student.id}_${this.student.firstname.toLowerCase()}`
+        let url = require(`../assets/images/students/${path}.png`)
+        return {
+          'background-image': `url(${url})`
+        }
       }
     },
     mounted () {
@@ -58,31 +104,39 @@
 
 <style lang="scss" scoped>
 .student {
-    width: 940px;
-    margin: 200px auto;
-    .student__content {
-      margin: 0 auto 60px;
-      text-align: left;
-      h1 {
-        text-transform: uppercase;
-        opacity: 0.5;
-        font-family: $font-aileron-light;
-        letter-spacing: 3px;
-        font-size: 13px;
-        text-align: left;
-      }
-      h2 {
-        font-family: $font-walsheim-regular;
-        font-size: 30px;
-        font-weight: bold;
-        text-align: left;
-        margin: 0 auto 10px;
-      }
+  width: 940px;
+  margin: 200px auto;
+
+  &__content {
+    margin: 0 auto 60px;
+    text-align: left;
+
+    h2 {
+      font-family: $font-walsheim-regular;
+      margin-bottom: 0;
     }
-    img {
-      display: block;
-      width: 100%;
-      height: auto;
+
+    &-info {
+      display: flex;
+      &-main {
+        width: 200px;
+        margin: 0 80px;
+        text-align: center;
+        h3 {
+          text-transform: uppercase;
+          opacity: 0.5;
+          font-family: $font-aileron-light;
+          letter-spacing: 3px;
+          font-size: 13px;
+          text-align: center;
+        }
+      }
+      &-description {
+        p {
+          font-family: $font-aileron-light;
+        }
+      }
     }
   }
+}
 </style>
