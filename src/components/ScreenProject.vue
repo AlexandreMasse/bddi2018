@@ -40,7 +40,7 @@
     },
     computed: {
       srcIframe () {
-        return `${baseUrl}/projets/${this.categoryIdent}/${this.project.id}_${this.project.ident}/code/`
+        return `${this.baseUrl}projets/${this.categoryIdent}/${this.project.id}_${this.project.ident}/code/`
       },
       hasIframe () {
         return this.project.view === 'both'

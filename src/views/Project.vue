@@ -56,13 +56,13 @@
         return this.project.view === 'iframe'
       },
       srcIframe () {
-        return `${baseUrl}/projets/${this.categoryIdent}/${this.projectId}_${this.projectIdent}/code/`
+        return `${this.baseUrl}projets/${this.categoryIdent}/${this.projectId}_${this.projectIdent}/code/`
       },
       screen () {
         return this.project.view === 'screen' || this.project.view === 'both'
       },
       srcScreen () {
-        return `${baseUrl}/projets/${this.categoryIdent}/${this.projectId}_${this.projectIdent}/screens/`
+        return `${this.baseUrl}projets/${this.categoryIdent}/${this.projectId}_${this.projectIdent}/screens/`
       },
       backLinkSrc () {
         return `/category/${this.categoryIdent}`
