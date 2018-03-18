@@ -27,12 +27,27 @@
 
 <style lang="scss" scoped>
   .mobile-menu {
+    width: 100%;
+    height: 100%;
     .menu_items {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      width: 100%;
       ul {
         margin: 0;
         padding: 0;
         li {
           list-style: none;
+          a {
+            ext-decoration: none;
+            font-family: 'GTWalsheimProRegular';
+            letter-spacing: 15px;
+            font-size: 25px;
+            text-transform: uppercase;
+            padding: 20px 0;
+          }
         }
       }
     }

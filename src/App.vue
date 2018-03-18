@@ -100,9 +100,9 @@
   #home-link {
     position: absolute;
     z-index: 10;
-    padding: 30px 30px 0;
+    padding: 0 30px;
     left: 0;
-    top: 0;
+    top: 30px;
     .home {
       text-align: left;
       text-decoration: none;
@@ -205,7 +205,9 @@
       }
     }
     #home-link {
-      top:40px;
+      p {
+        display: none;
+      }
     }
     #menu-link, #footer-links {
       display: none;
