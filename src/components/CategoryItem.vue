@@ -1,17 +1,34 @@
 <template>
-  <div class="projects__category">
-    <div class="projects__category-title">
-      <h2>Lorem Ipsum Dolor Sit Amet</h2>
-    </div>
-    <div class="projects__category-content">
-      <div class="projects__category-thumbnail"></div>
-      <div class="projects__category-description">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        <div class="fi flaticon-left-arrow action-show"></div>
+  <router-link :to="'/category/' + categoryIdent">
+    <div class="projects__category">
+      <div class="projects__category-title">
+        <h2>{{categoryName}}</h2>
+      </div>
+      <div class="projects__category-content">
+        <div class="projects__category-thumbnail" :style="styles"></div>
+        <div class="projects__category-description">
+          <p>{{categoryDescription}}</p>
+          <!-- <div class="fi flaticon-left-arrow action-show"></div> -->
+        </div>
       </div>
     </div>
-  </div>
+  </router-link>
 </template>
+
+<script>
+  export default {
+    name: 'CategoryItem',
+    props: ['categoryId', 'categoryIdent', 'categoryName', 'categoryDescription'],
+    computed: {
+      styles () {
+        let url = require(`../assets/images/thumbnail-${this.categoryId}.jpg`)
+        return {
+          'background-image': `url(${url})`
+        }
+      }
+    }
+  }
+</script>
 
 <style lang="scss">
 .projects {
@@ -118,9 +135,3 @@
   }
 }
 </style>
-
-<script>
-  export default {
-    name: 'categoryItem'
-  }
-</script>

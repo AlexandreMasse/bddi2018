@@ -8,9 +8,28 @@
         <span>Start here</span>
       </div>
     </div>
-    <category-item></category-item>
+    <category-item v-for="category in categories" :key="category.id" :categoryId="category.id" :categoryIdent="category.ident" :categoryName="category.name" :categoryDescription="category.description"></category-item>
   </div>
 </template>
+
+<script>
+import CategoryItem from '@/components/CategoryItem.vue'
+import categories from '@/data/categories.json'
+import intro from '@/components/Intro.vue'
+
+export default {
+  name: 'home',
+  components: {CategoryItem, intro},
+  data () {
+    return {
+      title: 'Bachelor Designer & Développeur Intéractif',
+      description: 'BBDI 2018, c’est une équipe, une classe, une famille de 42 talents, tous aussi créatifs les uns que les autres, qui puise perpétuellement leurs inspirations dans le numérique et son devenir. Nous aimons les challenges et créer de nouvelles choses que vous pouvez retrouver ici :',
+      categories
+    }
+  }
+}
+
+</script>
 
 <style lang="scss">
   .home {
@@ -59,19 +78,3 @@
     }
   }
 </style>
-
-<script>
-  import categoryItem from '@/components/CategoryItem.vue'
-  import intro from '@/components/Intro.vue'
-
-  export default {
-    name: 'home',
-    components: {categoryItem, intro},
-    data () {
-      return {
-        title: 'Bachelor Designer & Développeur Intéractif',
-        description: 'BBDI 2018, c’est une équipe, une classe, une famille de 42 talents, tous aussi créatifs les uns que les autres, qui puise perpétuellement leurs inspirations dans le numérique et son devenir. Nous aimons les challenges et créer de nouvelles choses que vous pouvez retrouver ici :'
-      }
-    }
-  }
-</script>
