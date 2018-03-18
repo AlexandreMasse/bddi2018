@@ -6,6 +6,11 @@
         <p>Gobelins - L'école de l'image <br> BDDI 2018</p>
       </router-link>
     </div>
+    <div id="mobile-nav">
+      <router-link to="/mobile-menu">
+        <span>Menu</span>
+      </router-link>
+    </div>
     <div id="menu-link">
       <transition name="menu" mode="out-in">
         <a v-if="!menuIsOpen" v-on:click="onMenuOpen" class="menu" key="work"><span>Works</span></a>
@@ -88,6 +93,10 @@
   width: 100%;
   height: 100%;
 
+  #mobile-nav {
+    display: none;
+  }
+
   #home-link {
     position: absolute;
     z-index: 10;
@@ -162,6 +171,44 @@
       margin: 15px 0;
       display:inline-block;
       font-weight: bold;
+    }
+  }
+}
+@media screen and (max-width : 600px) {
+  #app {
+    #mobile-nav {
+      display: block;
+      position: fixed;
+      z-index: 100;
+      right:90px;
+      top:30px;
+      cursor: pointer;
+      a {
+        text-decoration: none;
+        text-transform: uppercase;
+        font-family: $font-aileron-light;
+        font-size: 18px;
+        letter-spacing: 5px;
+        position: relative;
+        &:after {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          content: "";
+          width: 50px;
+          height: 1px;
+          background: #fefefe;
+        }
+        span {
+          margin-right: 10px;
+        }
+      }
+    }
+    #home-link {
+      top:40px;
+    }
+    #menu-link, #footer-links {
+      display: none;
     }
   }
 }

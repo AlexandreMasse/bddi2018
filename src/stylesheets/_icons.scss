@@ -24,6 +24,11 @@
   font-smoothing: antialiased;
 }
 
+.flaticon-cancel-1:before { content: "\f100"; }
+.flaticon-cancel:before { content: "\f101"; }
+.flaticon-menu-1:before { content: "\f102"; }
+.flaticon-menu:before { content: "\f103"; }
+.flaticon-menu-button-of-three-horizontal-lines:before { content: "\f104"; }
 .flaticon-link:before { content: "\f100"; }
 .flaticon-grid-world:before { content: "\f101"; }
 .flaticon-vimeo-logo:before { content: "\f102"; }
@@ -48,6 +53,11 @@
 .flaticon-right-arrow-1:before { content: "\f115"; }
 .flaticon-right-arrow:before { content: "\f116"; }
 
+$font-Flaticon-cancel-1: "\f100";
+$font-Flaticon-cancel: "\f101";
+$font-Flaticon-menu-1: "\f102";
+$font-Flaticon-menu: "\f103";
+$font-Flaticon-menu-button-of-three-horizontal-lines: "\f104";
 $font-Flaticon-link: "\f100";
 $font-Flaticon-grid-world: "\f101";
 $font-Flaticon-vimeo-logo: "\f102";

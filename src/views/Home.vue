@@ -77,4 +77,29 @@ export default {
       }
     }
   }
+  @media screen and (max-width : 600px) {
+    .home {
+      .landing {
+        margin-bottom: 60px;
+        &__content {
+          width: 80%;
+          transform: translate(-50%,-50%);
+          top: 50%;
+          left: 50%;
+          .intro {
+            width: 100%;
+            p {
+              text-align: justify;
+            }
+          }
+        }
+        &__start {
+          span {
+            &:after {
+            }
+          }
+        }
+      }
+    }
+  }
   </style>
