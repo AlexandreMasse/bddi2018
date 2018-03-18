@@ -16,7 +16,7 @@
     components: {iframeProject, screenProject},
     data () {
       return {
-        text: 'Project',
+        baseUrl: process.env.BASE_URL,
         categoryIdent: this.$route.params.categoryIdent,
         projectIdent: this.$route.params.projectIdent,
         projectId: this.$route.params.projectId
@@ -56,13 +56,13 @@
         return this.project.view === 'iframe'
       },
       srcIframe () {
-        return `/projets/${this.categoryIdent}/${this.projectId}_${this.projectIdent}/code/`
+        return `${baseUrl}/projets/${this.categoryIdent}/${this.projectId}_${this.projectIdent}/code/`
       },
       screen () {
         return this.project.view === 'screen' || this.project.view === 'both'
       },
       srcScreen () {
-        return `/projets/${this.categoryIdent}/${this.projectId}_${this.projectIdent}/screens/`
+        return `${baseUrl}/projets/${this.categoryIdent}/${this.projectId}_${this.projectIdent}/screens/`
       },
       backLinkSrc () {
         return `/category/${this.categoryIdent}`
