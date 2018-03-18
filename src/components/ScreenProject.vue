@@ -33,13 +33,14 @@
     components: {iframeProject, backLink},
     data () {
       return {
+        baseUrl: process.env.BASE_URL,
         showIframe: false,
         currentLink: this.$route.path
       }
     },
     computed: {
       srcIframe () {
-        return `/projets/${this.categoryIdent}/${this.project.id}_${this.project.ident}/code/`
+        return `${baseUrl}/projets/${this.categoryIdent}/${this.project.id}_${this.project.ident}/code/`
       },
       hasIframe () {
         return this.project.view === 'both'

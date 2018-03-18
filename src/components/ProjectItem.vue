@@ -20,6 +20,7 @@
     props: ['data', 'categoryIdent', 'categoryId'],
     data () {
       return {
+        baseUrl: process.env.BASE_URL,
         project: this.data
       }
     },
@@ -37,7 +38,7 @@
       styles () {
         let url = ''
         if (this.project.screens && this.project.screens.length) {
-          url = `/projets/${this.categoryIdent}/${this.project.id}_${this.project.ident}/screens/0.jpg`
+          url = `${baseUrl}/projets/${this.categoryIdent}/${this.project.id}_${this.project.ident}/screens/0.jpg`
         } else {
           url = require(`../assets/images/thumbnail-${this.categoryId}.jpg`)
         }
