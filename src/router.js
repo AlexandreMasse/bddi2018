@@ -5,6 +5,8 @@ import Menu from './views/Menu.vue'
 import Home from './views/Home.vue'
 import Category from './views/Category.vue'
 import Project from './views/Project.vue'
+import Students from './views/Students.vue'
+import StudentProfile from './views/StudentProfile.vue'
 
 Vue.use(Router)
 
@@ -35,6 +37,16 @@ export default new Router({
       path: '/project/:categoryIdent/:projectId/:projectIdent',
       name: 'project',
       component: Project
+    },
+    {
+      path: '/bddi',
+      name: 'students',
+      component: Students
+    },
+    {
+      path: '/bddi/:studentId/:studentFirstname',
+      name: 'studentProfile',
+      component: StudentProfile
     },
     {
       path: '*',

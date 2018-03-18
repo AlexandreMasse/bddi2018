@@ -3,6 +3,7 @@
         "id": 0,
         "name": "Datavisualisation",
         "ident": "dataviz",
+        "option": "mixed",
         "description": "Pour ce projet, nous avions la possibilité de choisir une technologie de notre choix. L’idée derrière ce projet était de montrer, au travers d’un site web, une représentation de données. Visuellement parlant, nous étions libres, et les données pouvaient soit provenir de gros jeu de données (pollution au cours des années, déforestation…) ou bien cela pouvait être un questionnaire de notre cru (enquête concernant les élèves de la classe par exemple)",
         "projectsList": [
             {
@@ -229,6 +230,7 @@
         "id": 1,
         "name": "La petite Galerie",
         "ident": "louvres",
+        "option": "Designer",
         "description": "À partir des œuvres présentent à l’exposition « théâtre du pouvoir » de la petite galerie du Louvre, nous avons conçu des dispositifs créatifs ancrés dans l’environnement technique numérique. Ces dispositifs peuvent détourner une œuvre, la prolonger, l’augmenter ou l’animer et l’expliquer.",
         "projectsList": [
             {
@@ -373,6 +375,7 @@
         "id": 2,
         "ident": "festival",
         "name": "Application",
+        "option": "mixed",
         "description": "Réalisation d’une application mobile (android et IOS) pour le prochain Festival national du film d’animation organisé par l’AFCA (Association française du cinéma d’animation) du 4 au 8 avril 2018 à Rennes. Cette application a pour but de faciliter les choix sur le programme (projections, rencontres, ateliers…) ainsi que le déplacement (plusieurs lieux) pour les festivaliers (invités accrédités, intervenants, grand public) lors de l’évènement.",
         "projectsList": [
             {
@@ -524,6 +527,7 @@
     {
         "id": 3,
         "ident": "canvas-audio",
+        "option": "Développeur",
         "name": "Canvas Audio Expirement",
         "description": "Nous avons pu découvrir au travers de cette expérience la Web Audio API. Il s’agit d’une API navigateur qui permet d’analyser en temps réel un son. De ce fait, nous avons donc réalisé un « visualiseur » de son via l’utilisation des canvas en JavaScript. Nous avons donc pu, au travers de ce workshop, libérer notre créativité et expérimenter énormément de choses.",
         "projectsList": [
@@ -783,6 +787,7 @@
         "id": 4,
         "ident": "chat",
         "name": "VueJS Chat",
+        "option": "mixed",
         "description": "Il s’agit d’un des tous premiers workshops qui nous a été assigné en duo designer / développeur. Le but était de réaliser un client pour un chat en ligne en temps réel. Un serveur socket.io centralisé pour la classe a été mis à disposition. VueJS a été utilisé pour la réalisation de l’application. ",
         "projectsList": [
             {
@@ -883,6 +888,7 @@
         "id": 5,
         "ident": "3d-audio",
         "name": "3D Audio Experiment",
+        "option": "Développeur",
         "description": "Partant de nos connaissances que nous avions acquises sur la Web Audio API, nous avons dû refaire une expérience audio. Cependant, celle là devait être faite avec ThreeJS, une librairie permettant de faire de la 3D assez simplement. L’aspect trois dimensions nous a permis de se permettre encore plus de folies concernant le rendu visuel, et cela a donné des rendus très différents les uns des autres.",
         "projectsList": [
             {
@@ -1133,6 +1139,7 @@
     {
         "id": 6,
         "ident": "web",
+        "option": "Designer",
         "name": "Initiation HTML/CSS/JS",
         "description": "Chaque étudiant (option graphisme) a élaboré les maquettes d’un site web (son portfolio ou autre) en pensant à la direction artistique ainsi qu’à toutes les spécificités techniques liées au support et à la contrainte du responsive. Ensuite développement du site en language HTML CSS et Javascript pour les plus aguerris (ou grâce à l’aide des développeurs). ;)",
         "projectsList": [
@@ -1270,7 +1277,207 @@
         "id": 7,
         "name": "C4D",
         "ident": "c4d",
+        "option": "Designer",
         "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos repellendus similique delectus, vero eum fuga labore nulla ab vel, in porro aliquid deleniti architecto, aperiam doloribus optio? Dolor, beatae commodi?",
-        "projectsList": []
+        "projectsList": [
+            {
+                "id": 100,
+                "name": "-",
+                "ident": "alix",
+                "studentsList": [4],
+                "screens": [0],
+                "videos" : [0],
+                "view": "screen"
+            },
+            {
+                "id": 101,
+                "name": "-",
+                "ident": "justine",
+                "studentsList": [19],
+                "screens": [0],
+                "videos" : [0],
+                "view": "screen"
+            },
+            {
+                "id": 102,
+                "name": "-",
+                "ident": "cassandre",
+                "studentsList": [18],
+                "screens": [0],
+                "videos" : [0],
+                "view": "screen"
+            },
+            {
+                "id": 103,
+                "name": "Breakfast at Tiffany's",
+                "ident": "martin",
+                "studentsList": [18],
+                "screens": [0],
+                "videos" : [0],
+                "view": "screen"
+            },
+            {
+                "id": 104,
+                "name": "-",
+                "ident": "manon",
+                "studentsList": [3],
+                "screens": [0],
+                "videos" : [0],
+                "view": "screen"
+            },
+            {
+                "id": 105,
+                "name": "Pepouze",
+                "ident": "clara",
+                "studentsList": [39],
+                "screens": [0],
+                "videos" : [0],
+                "view": "screen"
+            },
+            {
+                "id": 106,
+                "name": "L'envol",
+                "ident": "clara",
+                "studentsList": [27],
+                "screens": [0],
+                "videos" : [0],
+                "view": "screen"
+            },
+            {
+                "id": 107,
+                "name": "Film de boule",
+                "ident": "matthieu",
+                "studentsList": [30],
+                "screens": [0],
+                "videos" : [0],
+                "view": "screen"
+            },
+            {
+                "id": 108,
+                "name": "Poutine vs Tomate",
+                "ident": "matthieu",
+                "studentsList": [30],
+                "screens": [0],
+                "videos" : [0],
+                "view": "screen"
+            },
+            {
+                "id": 109,
+                "name": "-",
+                "ident": "bastien",
+                "studentsList": [20],
+                "screens": [0],
+                "videos" : [0],
+                "view": "screen"
+            },
+            {
+                "id": 110,
+                "name": "Elvis Presse Lait",
+                "ident": "mathilde",
+                "studentsList": [13],
+                "screens": [0],
+                "videos" : [0],
+                "view": "screen"
+            },
+            {
+                "id": 111,
+                "name": "-",
+                "ident": "noemie",
+                "studentsList": [11],
+                "screens": [0],
+                "videos" : [0],
+                "view": "screen"
+            },
+            {
+                "id": 112,
+                "name": "Papercut",
+                "ident": "remi",
+                "studentsList": [9],
+                "screens": [0],
+                "videos" : [0],
+                "view": "screen"
+            },
+            {
+                "id": 113,
+                "name": "Papercut",
+                "ident": "remi",
+                "studentsList": [9],
+                "screens": [0],
+                "videos" : [0],
+                "view": "screen"
+            },
+            {
+                "id": 114,
+                "name": "-",
+                "ident": "iris",
+                "studentsList": [22],
+                "screens": [0],
+                "videos" : [0],
+                "view": "screen"
+            },
+            {
+                "id": 115,
+                "name": "-",
+                "ident": "camille",
+                "studentsList": [34],
+                "screens": [0],
+                "videos" : [0],
+                "view": "screen"
+            },
+            {
+                "id": 116,
+                "name": "-",
+                "ident": "elisa",
+                "studentsList": [8],
+                "screens": [0],
+                "videos" : [0],
+                "view": "screen"
+            },
+            {
+                "id": 117,
+                "name": "-",
+                "ident": "allan",
+                "studentsList": [25],
+                "screens": [0],
+                "videos" : [0],
+                "view": "screen"
+            },
+            {
+                "id": 118,
+                "name": "-",
+                "ident": "robin",
+                "studentsList": [1],
+                "screens": [0],
+                "videos" : [0],
+                "view": "screen"
+            },
+            {
+                "id": 119,
+                "name": "-",
+                "ident": "sophie",
+                "studentsList": [17],
+                "screens": [0],
+                "videos" : [0],
+                "view": "screen"
+            },
+            {
+                "id": 120,
+                "name": "-",
+                "ident": "xindi",
+                "studentsList": [40],
+                "screens": [0],
+                "videos" : [0],
+                "view": "screen"
+            },
+            {
+                "id": 121,
+                "name": "Planète",
+                "ident": "fany",
+                "studentsList": [38],
+                "screens": [0],
+                "videos" : [0],
+                "view": "screen"
+            }
+        ]
     }
 ]
