@@ -4,7 +4,7 @@
         "name": "Datavisualisation",
         "ident": "dataviz",
         "option": "mixed",
-        "description": "Pour ce projet, nous avions la possibilité de choisir une technologie de notre choix. L’idée derrière ce projet était de montrer, au travers d’un site web, une représentation de données. Visuellement parlant, nous étions libres, et les données pouvaient soit provenir de gros jeu de données (pollution au cours des années, déforestation…) ou bien cela pouvait être un questionnaire de notre cru (enquête concernant les élèves de la classe par exemple)",
+        "description": "Pour ce projet, nous avions la possibilité de choisir une technologie de notre choix. L’idée était de montrer une représentation de données à travers un site web. Visuellement parlant, nous étions libres,et les données pouvaient soit provenir d'un gros jeu de données (pollution au cours des années, déforestation…) ou bien cela pouvait être un questionnaire de notre cru (enquête concernant les élèves de la classe par exemple).",
         "projectsList": [
             {
                 "id": 0,
@@ -231,7 +231,7 @@
         "name": "La petite Galerie",
         "ident": "louvres",
         "option": "Designer",
-        "description": "À partir des œuvres présentent à l’exposition « théâtre du pouvoir » de la petite galerie du Louvre, nous avons conçu des dispositifs créatifs ancrés dans l’environnement technique numérique. Ces dispositifs peuvent détourner une œuvre, la prolonger, l’augmenter ou l’animer et l’expliquer.",
+        "description": "À partir des œuvres présentes à l’exposition « théâtre du pouvoir » de la petite galerie du Louvre, nous avons conçu des dispositifs créatifs ancrés dans l’environnement technique numérique. Ces dispositifs peuvent détourner une œuvre, la prolonger, l’augmenter ou l’animer et l’expliquer.",
         "projectsList": [
             {
                 "id": 22,
@@ -889,7 +889,7 @@
         "ident": "3d-audio",
         "name": "3D Audio Experiment",
         "option": "Développeur",
-        "description": "Partant de nos connaissances que nous avions acquises sur la Web Audio API, nous avons dû refaire une expérience audio. Cependant, celle là devait être faite avec ThreeJS, une librairie permettant de faire de la 3D assez simplement. L’aspect trois dimensions nous a permis de se permettre encore plus de folies concernant le rendu visuel, et cela a donné des rendus très différents les uns des autres.",
+        "description": "Partant des connaissances que nous avions acquises sur la Web Audio API, nous avons dû refaire une expérience audio. Cependant, celle-ci devait être faite avec ThreeJS, une librairie permettant de faire de la 3D assez simplement. L’aspect trois dimensions nous a permis de se permettre encore plus de folies concernant le rendu visuel, et cela a donné des rendus très différents les uns des autres.",
         "projectsList": [
             {
                 "id": 66,
