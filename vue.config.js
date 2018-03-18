@@ -1,9 +1,7 @@
-const fs = require('fs');
-
 module.exports = {
-  baseUrl: '/',
+  // baseUrl: '/bddi2018/',
   css: {
-    //sourceMap: true,
+    // sourceMap: true,
     loaderOptions: {
       sass: {
         data: '@import "~@/stylesheets/global.scss";'
