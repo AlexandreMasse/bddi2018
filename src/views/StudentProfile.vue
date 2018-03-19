@@ -27,8 +27,10 @@
       </div>
       <div student></div>
     </div>
-    <h2>Ses projets :</h2>
-    <project-item v-for="(project, index) in projects" :key="project.id" :data="project" :categoryIdent="categoryIdents[index]" :categoryId="categoryIds[index]"></project-item>
+    <div class="student__projects">
+      <h2><span>Ses projets</span></h2>
+      <project-item v-for="(project, index) in projects" :key="project.id" :data="project" :categoryIdent="categoryIdents[index]" :categoryId="categoryIds[index]"></project-item>
+    </div>
   </section>
 </template>
 
@@ -130,6 +132,61 @@
       &-description {
         p {
           font-family: $font-aileron-light;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width : 600px) {
+  .student {
+    width: initial;
+    margin-top: 150px;
+    margin-bottom: 0;
+    padding: 30px;
+    &__content {
+      margin-bottom: 100px;
+      &-info {
+        display: block;
+        &-main {
+          margin: 0 auto;
+          margin-bottom: 50px;
+        }
+        &-description {
+          h2 {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+    &__projects {
+      h2 {
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        opacity: 0.8;
+        margin-bottom: 50px;
+        position: relative;
+        span {
+          &:after {
+            content:'';
+            width: 50px;
+            height: 1px;
+            background: white;
+            position: absolute;
+            bottom:-20px;
+            left:50%;
+            transform: translateX(-50%);
+          }
+        }
+      }
+      .projects__list-item {
+        float: none;
+        margin: 0 auto!important;
+        width: initial;
+      }
+      .project__thumbnail {
+        width: initial;
+        .project__thumbnail-img {
+          width: initial;
         }
       }
     }

@@ -81,4 +81,13 @@
       }
     }
   }
+  @media screen and (max-width : 600px) {
+    .category {
+      &__content {
+        width: initial;
+        margin-top: 100px;
+        padding: 30px;
+      }
+    }
+  }
 </style>

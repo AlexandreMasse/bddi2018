@@ -116,4 +116,15 @@
       height: auto;
     }
   }
+@media screen and (max-width : 600px) {
+  .project__screens {
+    width: initial;
+    padding: 30px;
+    margin-top: 100px;
+    margin-bottom: 0;
+    .project__screen {
+      margin-bottom: 20px;
+    }
+  }
+}
 </style>
