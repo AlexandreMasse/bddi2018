@@ -43,4 +43,9 @@
       text-align: left;
     }
   }
+  @media screen and (max-width : 600px) {
+    .intro {
+      width: 100%;
+    }
+  }
 </style>

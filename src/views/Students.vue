@@ -44,4 +44,22 @@
       }
     }
   }
+  @media screen and (max-width : 1024px) {
+    .students {
+      &__content {
+        margin-top: 100px;
+        width: initial;
+        padding: 30px;
+      }
+    }
+  }
+  @media screen and (max-width : 600px) {
+    .students {
+      &__content {
+        margin-top: 100px;
+        width: initial;
+        padding: 30px;
+      }
+    }
+  }
 </style>

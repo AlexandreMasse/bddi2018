@@ -52,4 +52,14 @@
       }
     }
   }
+  @media screen and (max-width : 1024px) {
+    .students__list-item {
+      width: 33%;
+    }
+  }
+  @media screen and (max-width : 600px) {
+    .students__list-item {
+      width: 50%;
+    }
+  }
 </style>
