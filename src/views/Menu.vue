@@ -58,4 +58,12 @@
       padding: 0;
     }
   }
+  @media screen and (max-width : 600px) {
+    .menu {
+      &__navigation {
+        top: 150px;
+        width: 100%;
+      }
+    }
+  }
 </style>
