@@ -76,9 +76,9 @@ var avenir;
 var avenirLight;
 
 preload = function() {
-  verdana = loadFont('../font/Verdana.ttf');
-  avenir = loadFont('../font/AvenirNextRegular.ttf');
-  avenirLight = loadFont('../font/AvenirNextUltraLight.ttf');
+  verdana = loadFont('font/Verdana.ttf');
+  avenir = loadFont('font/AvenirNextRegular.ttf');
+  avenirLight = loadFont('font/AvenirNextUltraLight.ttf');
   setDatasFrance()
 }
 

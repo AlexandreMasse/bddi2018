@@ -116,7 +116,7 @@
       height: auto;
     }
   }
-@media screen and (max-width : 600px) {
+@media screen and (max-width : 1024px) {
   .project__screens {
     width: initial;
     padding: 30px;

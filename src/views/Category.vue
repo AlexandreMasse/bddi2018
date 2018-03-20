@@ -81,7 +81,7 @@
       }
     }
   }
-  @media screen and (max-width : 600px) {
+  @media screen and (max-width : 1024px) {
     .category {
       &__content {
         width: initial;

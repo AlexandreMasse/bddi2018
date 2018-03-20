@@ -99,6 +99,19 @@
       }
     }
   }
+  @media screen and (max-width : 1024px) {
+    .projects__list-item {
+      width: 50%;
+      margin: 0!important;
+      .project__thumbnail {
+        width: initial;
+        margin: 0 10px;
+        .project__thumbnail-img {
+          width: initial;
+        }
+      }
+    }
+  }
   @media screen and (max-width : 600px) {
     .projects__list-item {
       float: none;

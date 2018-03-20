@@ -80,6 +80,13 @@
       }
     }
   }
+  @media screen and (max-width : 1024px) {
+    .home {
+      .landing {
+        margin-bottom: 100px;
+      }
+    }
+  }
   @media screen and (max-width : 600px) {
     .home {
       .landing {

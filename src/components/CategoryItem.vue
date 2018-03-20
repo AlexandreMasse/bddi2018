@@ -5,7 +5,9 @@
           <h2><span>{{categoryName}}</span></h2>
         </div>
         <div class="projects__category-content">
-          <div class="projects__category-thumbnail" :style="styles"></div>
+          <div class="projects__category-thumbnail">
+            <div class="projects__category-thumbnail-img" :style="styles"></div>
+          </div>
           <div class="projects__category-description">
             <p>{{categoryDescription}}</p>
           </div>
@@ -133,6 +135,54 @@
     }
   }
 }
+@media screen and (max-width : 1024px) {
+  .projects {
+    &__category {
+      height: 800px;
+      a {
+        text-decoration: none;
+      }
+      &-title {
+        position: initial;
+        top: 0;
+        left: 0;
+        transform: none;
+        text-align: center;
+        h2 {
+          writing-mode: initial;
+          &:after {
+            width: 50px;
+            height: 1px;
+            bottom: -20px;
+          }
+        }
+      }
+      &-content {
+        width: 80%;
+        .projects__category-thumbnail {
+          width: 80%;
+          top: 0;
+          &-img {
+            width:100%;
+            height: 100%;
+          }
+        }
+        .projects__category-description {
+          top: 50%;
+          height: auto;
+          p {
+            margin: 0;
+          }
+        }
+        &:after {
+          .projects__category-thumbnail {
+            transform: scale(1.1);
+          }
+        }
+      }
+    }
+  }
+}
 @media screen and (max-width : 600px) {
   .projects {
     &__category {
@@ -140,11 +190,7 @@
       height: auto;
       width: auto;
       padding: 20px;
-      a {
-        text-decoration: none;
-      }
       &-title {
-        transform: none;
         position: relative;
         left:initial;
         top:initial;
@@ -152,7 +198,6 @@
         width:100%;
         height: auto;
         h2 {
-          writing-mode: initial;
           text-decoration: none;
           font-size: 22px;
           margin-bottom: 40px;
@@ -161,8 +206,6 @@
             height: 1px;
             top:50px;
           }
-        }
-        &-long {
         }
       }
       &-content {
