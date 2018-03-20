@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import About from './views/About.vue'
+import MobileMenu from './views/MobileMenu.vue'
 import Menu from './views/Menu.vue'
 import Home from './views/Home.vue'
 import Category from './views/Category.vue'
@@ -28,6 +29,11 @@ export default new Router({
       path: '/menu',
       name: 'menu',
       component: Menu
+    },
+    {
+      path: '/mobile-menu',
+      name: 'mobile-menu',
+      component: MobileMenu
     },
     {
       path: '/category/:ident',

@@ -20,7 +20,7 @@
       margin: 50px auto 80px;
       text-transform: uppercase;
       letter-spacing: 5px;
-      font-size: 15px;
+      font-size: 18px;
       color: $color-grey;
     }
     p {
@@ -31,6 +31,14 @@
       a {
         font-weight: bold;
         line-height: 1.4;
+      }
+    }
+  }
+  @media screen and (max-width : 600px) {
+    .about {
+      padding: 30px;
+      p {
+        font-size: 16px;
       }
     }
   }

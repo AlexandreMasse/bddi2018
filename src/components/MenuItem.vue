@@ -74,4 +74,23 @@
       }
     }
   }
+  @media screen and (max-width : 600px) {
+    .menu__items {
+      &-item {
+        font-size: 20px;
+        margin: 20px auto;
+        letter-spacing: 5px;
+        height: 80px;
+        width: 80%;
+
+        .menu__thumbnail {
+          width: 90%;
+          height: 100px;
+          top: -15%;
+          left:50%;
+          transform: translateX(-50%);
+        }
+      }
+    }
+  }
 </style>
