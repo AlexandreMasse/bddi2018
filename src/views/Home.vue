@@ -90,7 +90,7 @@
   @media screen and (max-width : 600px) {
     .home {
       .landing {
-        margin-bottom: 60px;
+        margin-bottom: 100px;
         &__content {
           width: 80%;
           transform: translate(-50%,-50%);
