@@ -2,13 +2,13 @@
   <div class="home">
     <div class="landing">
       <div class="landing__content">
-        <intro :title="title" :description="description" :backHome="false"></intro>
+        <intro :title="title" :description="description" :backHome="false"/>
       </div>
-      <div class="landing__start">
+      <div class="landing__start" @click="scrollToFirstCategory">
         <span>Start here</span>
       </div>
     </div>
-    <category-item v-for="category in categories" :key="category.id" :categoryId="category.id" :categoryIdent="category.ident" :categoryName="category.name" :categoryDescription="category.description"></category-item>
+    <category-item v-for="category in categories" :key="category.id" :categoryId="category.id" :categoryIdent="category.ident" :categoryName="category.name" :categoryDescription="category.description"/>
   </div>
 </template>
 
@@ -16,6 +16,8 @@
   import CategoryItem from '@/components/CategoryItem.vue'
   import categories from '@/data/categories.json'
   import intro from '@/components/Intro.vue'
+  import {TweenLite, Power2} from 'gsap'
+  import 'gsap/ScrollToPlugin'
 
   export default {
     name: 'home',
@@ -25,6 +27,15 @@
         title: 'Bachelor Designer & Développeur Intéractif',
         description: 'BBDI 2018, c’est une équipe, une classe, une famille de 42 talents, tous aussi créatifs les uns que les autres, qui puise perpétuellement leurs inspirations dans le numérique et son devenir. Nous aimons les challenges et créer de nouvelles choses que vous pouvez retrouver ici :',
         categories
+      }
+    },
+    methods: {
+      scrollToFirstCategory () {
+        const firstCategory = document.querySelectorAll('.projects__category')[0]
+        TweenLite.to(window, 1, {
+          scrollTo: firstCategory.offsetHeight,
+          ease: Power2.easeInOut
+        })
       }
     },
     mounted () {
@@ -112,4 +123,4 @@
       }
     }
   }
-  </style>
+</style>

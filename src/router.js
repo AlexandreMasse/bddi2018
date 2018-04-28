@@ -9,6 +9,9 @@ import Project from './views/Project.vue'
 import Students from './views/Students.vue'
 import StudentProfile from './views/StudentProfile.vue'
 
+import {TweenLite, Power2} from 'gsap'
+import 'gsap/ScrollToPlugin'
+
 Vue.use(Router)
 
 export default new Router({
@@ -61,8 +64,5 @@ export default new Router({
         name: 'home'
       }
     }
-  ],
-  scrollBehavior (to, from, savedPosition) {
-    return { x: 0, y: 0 }
-  }
+  ]
 })

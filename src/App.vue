@@ -24,12 +24,15 @@
     <transition name="fade" mode="out-in">
       <router-view/>
     </transition>
-    <canvas-background></canvas-background>
+    <canvas-background/>
   </div>
 </template>
 
 <script>
   import canvasBackground from '@/components/CanvasBackground.vue'
+  import {TweenLite, Power1} from 'gsap'
+  import 'gsap/ScrollToPlugin'
+
   export default {
     name: 'App',
     components: {canvasBackground},
@@ -54,6 +57,14 @@
     },
     updated () {
       this.checkMenuRoute()
+    },
+    watch: {
+      '$route' (to, from) {
+        TweenLite.to(window, 0.5, {
+          scrollTo: {y: 0},
+          ease: Power1.easeInOut
+        })
+      }
     }
   }
 </script>

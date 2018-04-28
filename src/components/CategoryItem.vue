@@ -1,18 +1,22 @@
 <template>
   <div class="projects__category">
-    <router-link :to="'/category/' + categoryIdent">
-        <div class="projects__category-title">
-          <h2><span>{{categoryName}}</span></h2>
+    <div class="projects__category-title">
+      <router-link :to="{ name: 'category', params: { ident: categoryIdent }}">
+        <h2><span>{{categoryName}}</span></h2>
+      </router-link>
+    </div>
+    <div class="projects__category-content">
+      <router-link :to="{ name: 'category', params: { ident: categoryIdent }}">
+        <div class="projects__category-thumbnail">
+          <div class="projects__category-thumbnail-img" :style="styles"></div>
         </div>
-        <div class="projects__category-content">
-          <div class="projects__category-thumbnail">
-            <div class="projects__category-thumbnail-img" :style="styles"></div>
-          </div>
-          <div class="projects__category-description">
-            <p>{{categoryDescription}}</p>
-          </div>
+      </router-link>
+      <router-link :to="{ name: 'category', params: { ident: categoryIdent }}">
+        <div class="projects__category-description">
+          <p>{{categoryDescription}}</p>
         </div>
-    </router-link>
+      </router-link>
+    </div>
   </div>
 </template>
 
@@ -44,23 +48,26 @@
       top: 150px;
       text-align: right;
       line-height: 30px;
-      h2 {
-        writing-mode: vertical-lr;
-        text-transform: uppercase;
-        letter-spacing: 3px;
-        position:relative;
-        opacity: 0.9;
-        font-family:'Aileron-light';
-        &:after {
-          content: '';
-          width: 1px;
-          height: 50px;
-          background: #fefefe;
-          position: absolute;
-          opacity: 1;
-          left: 50%;
-          transform: translateX(-50%);
-          bottom: -65px;
+      a {
+        text-decoration: none;
+        h2 {
+          writing-mode: vertical-lr;
+          text-transform: uppercase;
+          letter-spacing: 3px;
+          position:relative;
+          opacity: 0.9;
+          font-family:'Aileron-light';
+          &:after {
+            content: '';
+            width: 1px;
+            height: 50px;
+            background: #fefefe;
+            position: absolute;
+            opacity: 1;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: -65px;
+          }
         }
       }
       &-long {
@@ -107,8 +114,8 @@
       cursor: pointer;
       background: #fefefe;
       width: 350px;
-      height: 250px;
-      padding: 25px;
+      min-height: 200px;
+      padding: 35px 30px;
       position: absolute;
       top: 0;
       right: 0;
@@ -116,6 +123,7 @@
       font-size: 16px;
       text-align: justify;
       p {
+        margin: 0;
         color: #000;
         line-height: 25px;
         font-family: 'Aileron-regular';

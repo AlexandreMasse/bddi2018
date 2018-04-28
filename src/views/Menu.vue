@@ -2,7 +2,7 @@
  <section class="menu" id="menu">
     <nav class="menu__navigation">
       <ul class="menu__items" id="categories-item">
-        <menu-item v-for="category in categories" :key="category.id" :categoryId="category.id" :categoryIdent="category.ident" :categoryName="category.name"></menu-item>
+        <menu-item v-for="category in categories" :key="category.id" :categoryId="category.id" :categoryIdent="category.ident" :categoryName="category.name"/>
       </ul>
     </nav>
   </section>
@@ -23,7 +23,6 @@
     },
     mounted () {
       const tl = new TimelineLite()
-
       tl
         .set('li.menu__items-item', {
           opacity: 0
