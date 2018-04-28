@@ -1,5 +1,5 @@
 module.exports = {
-  // baseUrl: '/bddi2018/',
+  baseUrl: '/bddi2018/',
   css: {
     // sourceMap: true,
     loaderOptions: {

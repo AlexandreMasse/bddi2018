@@ -7,6 +7,7 @@
     name: 'CanvasBackground',
     data () {
       return {
+        isMobile: false,
         points: [],
         mouse: {
           x: 0,
@@ -38,8 +39,9 @@
           }
         }
       },
-      render: function () {
-        requestAnimationFrame(this.render)
+      renderDesktop: function () {
+        this.raf = requestAnimationFrame(this.renderDesktop)
+
         this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height)
 
         for (var i = 0; i < this.points.length; i++) {
@@ -67,14 +69,42 @@
           this.ctx.closePath()
         }
       },
+      renderMobile () {
+        cancelAnimationFrame(this.raf)
+        this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height)
+
+        for (var i = 0; i < this.points.length; i++) {
+          var point = this.points[i]
+
+          this.ctx.beginPath()
+          this.ctx.save()
+          this.ctx.fillStyle = 'rgb(255,255,255)'
+          this.ctx.arc(point.x, point.y, 1, 0, 2 * Math.PI, false)
+          this.ctx.fill()
+          this.ctx.restore()
+          this.ctx.closePath()
+        }
+      },
       getDistance: function (obj1, obj2) {
         var distanceX = obj1.x - obj2.x
         var distanceY = obj1.y - obj2.y
         return Math.sqrt(distanceX * distanceX + distanceY * distanceY)
       },
+      checkMobile (screenWidth) {
+        if (screenWidth >= 700) {
+          this.isMobile = false
+        } else {
+          this.isMobile = true
+        }
+      },
       addlistener: function () {
-        window.addEventListener('resize', () => {
+        window.addEventListener('resize', (e) => {
           this.setup()
+          this.checkMobile(e.target.innerWidth)
+
+          if (this.isMobile) {
+            this.renderMobile()
+          }
         })
         window.addEventListener('mousemove', (e) => {
           this.mouse.x = e.clientX
@@ -84,13 +114,28 @@
       init: function () {
         this.setup()
         this.addlistener()
-        this.render()
+
+        if (this.isMobile) {
+          this.renderMobile()
+        } else {
+          this.renderDesktop()
+        }
       }
     },
     mounted () {
       this.canvas = document.querySelector('#canvas')
       this.ctx = this.canvas.getContext('2d')
+      this.checkMobile(window.innerWidth)
       this.init()
+    },
+    watch: {
+      'isMobile' (from, to) {
+        if (this.isMobile) {
+          this.renderMobile()
+        } else {
+          this.renderDesktop()
+        }
+      }
     }
   }
 
