@@ -1278,7 +1278,7 @@
         "name": "C4D",
         "ident": "c4d",
         "option": "Designer",
-        "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos repellendus similique delectus, vero eum fuga labore nulla ab vel, in porro aliquid deleniti architecto, aperiam doloribus optio? Dolor, beatae commodi?",
+        "description": "Les designers ont du réaliser une courte vidéo d'animation 3D de maximum 10 secondes, en boucle, sur le logiciel Cinema4D pour se familiariser avec l'outil. Le thème était libre et cela a donné lieu à des projets très différents les uns des autres et intéressants.",
         "projectsList": [
             {
                 "id": 100,
@@ -1485,7 +1485,7 @@
       "name": "Veille",
       "ident": "veille",
       "option": "mixed",
-      "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos repellendus similique delectus, vero eum fuga labore nulla ab vel, in porro aliquid deleniti architecto, aperiam doloribus optio? Dolor, beatae commodi?",
+      "description": "Par groupes de designers et dévelopeurs, nous avons du réaliser une veille sur un sujet donné d'actualité entre Septembre et Avril puis nous devions restituer ces données sous un format web afin de les rendre accessibles à tous. Les designers étaient libres de leur interprétation créative sur le sujet et les développeurs étaient libres sur la technologie à utiliser.",
       "projectsList": [
         {
           "id": 122,
