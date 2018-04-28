@@ -185,13 +185,13 @@
     }
   }
 }
-@media screen and (max-width : 1024px) {
+@media screen and (max-width : $media-mobile) {
   #app {
     #mobile-nav {
       display: block;
       position: fixed;
       z-index: 100;
-      right:90px;
+      right: 65px;
       top:30px;
       cursor: pointer;
       a {
@@ -206,7 +206,7 @@
           top: 50%;
           transform: translateY(-50%);
           content: "";
-          width: 50px;
+          width: 30px;
           height: 1px;
           background: #fefefe;
         }
@@ -216,6 +216,9 @@
       }
     }
     #home-link {
+      padding: 0;
+      top: 20px;
+      left: 20px;
       p {
         display: none;
       }

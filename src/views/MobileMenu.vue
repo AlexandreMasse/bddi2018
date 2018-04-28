@@ -3,13 +3,13 @@
     <div class="menu_items">
       <ul>
         <li>
-          <router-link to="/menu" class="highlight-hover">Works</router-link>
+          <router-link to="/menu">Works</router-link>
         </li>
         <li>
-          <router-link to="/bddi" class="highlight-hover">Les BDDI</router-link>
+          <router-link to="/bddi">Les BDDI</router-link>
         </li>
         <li>
-          <router-link to="/about" class="highlight-hover">About</router-link>
+          <router-link to="/about">About</router-link>
         </li>
       </ul>
     </div>
@@ -40,7 +40,8 @@
         li {
           list-style: none;
           a {
-            ext-decoration: none;
+            display: inline-block;
+            text-decoration: none;
             font-family: 'GTWalsheimProRegular';
             letter-spacing: 15px;
             font-size: 25px;

@@ -5,7 +5,8 @@
         <intro :title="title" :description="description" :backHome="false"/>
       </div>
       <div class="landing__start" @click="scrollToFirstCategory">
-        <span>Start here</span>
+        <p>Start here</p>
+        <span></span>
       </div>
     </div>
     <category-item v-for="category in categories" :key="category.id" :categoryId="category.id" :categoryIdent="category.ident" :categoryName="category.name" :categoryDescription="category.description"/>
@@ -33,7 +34,7 @@
       scrollToFirstCategory () {
         const firstCategory = document.querySelectorAll('.projects__category')[0]
         TweenLite.to(window, 1, {
-          scrollTo: firstCategory.offsetHeight,
+          scrollTo: firstCategory.getBoundingClientRect().top + window.scrollY,
           ease: Power2.easeInOut
         })
       }
@@ -63,12 +64,12 @@
       }
       &__start {
         position: absolute;
-        bottom: 50px;
+        bottom: 0;
         left: 50%;
         transform: translateX(-50%);
         cursor: pointer;
-        span {
-          line-height: 50px;
+        text-align: center;
+        p {
           color: #fefefe;
           text-transform: uppercase;
           font-size: 12px;
@@ -76,17 +77,12 @@
           letter-spacing: 3px;
           opacity: 0.9;
           font-family: $font-aileron-light;
-          &:after {
-            content: '';
-            width: 1px;
-            height: 100px;
-            background: #fefefe;
-            position: absolute;
-            opacity: 0.9;
-            left: 50%;
-            transform: translateX(-50%);
-            top: 20px;
-          }
+        }
+        span {
+          display: inline-block;
+          width: 1px;
+          background: #fefefe;
+          height: 50px;
         }
       }
     }
@@ -98,10 +94,10 @@
       }
     }
   }
-  @media screen and (max-width : 600px) {
+  @media screen and (max-width : $media-mobile) {
     .home {
       .landing {
-        margin-bottom: 100px;
+        margin-bottom: 50px;
         &__content {
           width: 80%;
           transform: translate(-50%,-50%);

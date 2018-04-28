@@ -46,6 +46,13 @@
   @media screen and (max-width : 600px) {
     .intro {
       width: 100%;
+      h1 {
+        font-size: 15px;
+        margin-bottom: 25px;
+      }
+      p {
+        font-size: 17px;
+      }
     }
   }
 </style>

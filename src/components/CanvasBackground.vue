@@ -91,7 +91,7 @@
         return Math.sqrt(distanceX * distanceX + distanceY * distanceY)
       },
       checkMobile (screenWidth) {
-        if (screenWidth >= 700) {
+        if (screenWidth >= 800) {
           this.isMobile = false
         } else {
           this.isMobile = true
