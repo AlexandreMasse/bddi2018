@@ -16,7 +16,6 @@
   </div>
 </template>
 
-
 <script>
   import canvasBackground from '@/components/CanvasBackground.vue'
   export default {

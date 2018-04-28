@@ -1479,5 +1479,14 @@
                 "view": "screen"
             }
         ]
+    },
+    {
+      "id": 8,
+      "name": "Veille",
+      "ident": "veille",
+      "option": "mixed",
+      "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos repellendus similique delectus, vero eum fuga labore nulla ab vel, in porro aliquid deleniti architecto, aperiam doloribus optio? Dolor, beatae commodi?",
+      "projectsList": [
+      ]
     }
 ]

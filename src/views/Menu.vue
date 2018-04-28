@@ -56,6 +56,7 @@
     }
     .menu__items {
       padding: 0;
+      line-height: 1;
     }
   }
   @media screen and (max-width : 600px) {
