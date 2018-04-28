@@ -1487,6 +1487,86 @@
       "option": "mixed",
       "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos repellendus similique delectus, vero eum fuga labore nulla ab vel, in porro aliquid deleniti architecto, aperiam doloribus optio? Dolor, beatae commodi?",
       "projectsList": [
+        {
+          "id": 122,
+          "name": "Machine Learning",
+          "ident": "machine-learning",
+          "studentsList": [0, 1, 2, 3],
+          "screens": [],
+          "view": "iframe"
+        },
+        {
+          "id": 123,
+          "name": "La maison connectée",
+          "ident": "maison-connectee",
+          "studentsList": [4, 5, 6, 8],
+          "screens": [],
+          "view": "iframe"
+        },
+        {
+          "id": 124,
+          "name": "La reconnaissance et contrôle gestuel",
+          "ident": "reconnaissance-gestuel",
+          "studentsList": [7, 33, 10, 9],
+          "screens": [],
+          "view": "iframe"
+        },
+        {
+          "id": 125,
+          "name": "L'informatique affective",
+          "ident": "informatique-affective",
+          "studentsList": [11, 12, 13, 14],
+          "screens": [],
+          "view": "iframe"
+        },
+        {
+          "id": 125,
+          "name": "Chatbots",
+          "ident": "chatbots",
+          "studentsList": [15, 16, 17, 21],
+          "screens": [],
+          "view": "iframe"
+        },
+        {
+          "id": 126,
+          "name": "L'humain augmenté",
+          "ident": "humain-augmente",
+          "studentsList": [23, 24, 18, 19],
+          "screens": [],
+          "view": "iframe"
+        },
+        {
+          "id": 127,
+          "name": "Réalité virtuelle et réalité augmentée",
+          "ident": "vr-ra",
+          "studentsList": [20, 22, 26, 28],
+          "screens": [],
+          "view": "iframe"
+        },
+        {
+          "id": 128,
+          "name": "La santé connectée",
+          "ident": "sante-connectee",
+          "studentsList": [25, 27, 29, 31],
+          "screens": [],
+          "view": "iframe"
+        },
+        {
+          "id": 129,
+          "name": "Agrilture connectée",
+          "ident": "agriculture-connectee",
+          "studentsList": [32, 30, 41, 34, 35],
+          "screens": [],
+          "view": "iframe"
+        },
+        {
+          "id": 130,
+          "name": "Urbanisme connecté",
+          "ident": "urbanisme-connecte",
+          "studentsList": [36, 37, 38, 39, 40],
+          "screens": [],
+          "view": "iframe"
+        }
       ]
     }
 ]
