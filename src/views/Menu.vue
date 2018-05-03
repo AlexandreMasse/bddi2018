@@ -58,7 +58,7 @@
       line-height: 1;
     }
   }
-  @media screen and (max-width : 600px) {
+  @media screen and (max-width : $media-mobile) {
     .menu {
       &__navigation {
         top: 150px;

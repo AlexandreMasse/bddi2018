@@ -17,10 +17,8 @@
 </template>
 
 <script>
-  import canvasBackground from '@/components/CanvasBackground.vue'
   export default {
-    name: 'MobileMenu',
-    components: {canvasBackground}
+    name: 'MobileMenu'
   }
 </script>
 

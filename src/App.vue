@@ -1,20 +1,21 @@
 <template>
   <div id="app">
     <div id="home-link">
-      <router-link to="/" class="home">
+      <router-link :to="{name: 'home'}" class="home">
         <img src="./assets/images/gobelins_logo_white.png">
         <p>Gobelins - L'école de l'image <br> BDDI 2018</p>
       </router-link>
     </div>
     <div id="mobile-nav">
-      <router-link to="/mobile-menu">
-        <span>Menu</span>
-      </router-link>
+      <transition name="menu" mode="out-in">
+        <router-link :to="{name: 'mobile-menu'}" v-if="!menuMobileIsOpen" class="menu" key="work"><span>Menu</span></router-link>
+        <router-link :to="lastRoutePathBeforeMenu" v-else class="menu" key="close"><span>Close</span></router-link>
+      </transition>
     </div>
     <div id="menu-link">
       <transition name="menu" mode="out-in">
-        <a v-if="!menuIsOpen" v-on:click="onMenuOpen" class="menu" key="work"><span>Works</span></a>
-        <a v-else v-on:click="onMenuClose" class="menu" key="close"><span>Close</span></a>
+        <router-link :to="{name: 'menu'}" v-if="!menuDesktopIsOpen" class="menu" key="work"><span>Works</span></router-link>
+        <a v-else v-on:click="onDesktopMenuClose" class="menu" key="close"><span>Close</span></a>
       </transition>
     </div>
     <div id="footer-links">
@@ -38,28 +39,31 @@
     components: {canvasBackground},
     data () {
       return {
-        menuIsOpen: false
+        menuDesktopIsOpen: false,
+        menuMobileIsOpen: false,
+        lastRoutePathBeforeMenu: '/'
       }
     },
     methods: {
-      onMenuOpen () {
-        this.$router.push('/menu')
-      },
-      onMenuClose () {
+      onDesktopMenuClose () {
         this.$router.go(-1)
-      },
-      checkMenuRoute () {
-        this.menuIsOpen = this.$route.path === this.$router.match('menu').fullPath
       }
     },
     mounted () {
-      this.checkMenuRoute()
-    },
-    updated () {
-      this.checkMenuRoute()
+      this.menuDesktopIsOpen = this.$route.path === this.$router.match('menu').fullPath
+      this.menuMobileIsOpen = this.$route.path === this.$router.match('mobile-menu').fullPath
     },
     watch: {
       '$route' (to, from) {
+        this.menuDesktopIsOpen = to.name === 'menu'
+
+        this.menuMobileIsOpen = (to.name === 'mobile-menu') || (from.name === 'mobile-menu' && to.name === 'menu')
+
+        if (to.name === 'mobile-menu' && from.name !== 'mobile-menu') {
+          this.lastRoutePathBeforeMenu = from.fullPath
+        }
+
+        // Scroll
         TweenLite.to(window, 0.5, {
           scrollTo: {y: 0},
           ease: Power1.easeInOut

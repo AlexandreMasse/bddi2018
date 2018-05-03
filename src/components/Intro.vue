@@ -1,6 +1,6 @@
 <template>
   <div class="intro">
-    <back-link v-if="backLinkSrc" :backLinkSrc="backLinkSrc"></back-link>
+    <back-link v-if="backLinkSrc" :backLinkSrc="backLinkSrc"/>
     <h1 v-if="title">{{title}}</h1>
     <p v-if="description">{{description}}</p>
   </div>

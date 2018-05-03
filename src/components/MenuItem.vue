@@ -74,7 +74,7 @@
       }
     }
   }
-  @media screen and (max-width : 600px) {
+  @media screen and (max-width : $media-mobile) {
     .menu__items {
       &-item {
         font-size: 20px;
