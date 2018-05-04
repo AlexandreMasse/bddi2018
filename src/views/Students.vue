@@ -2,9 +2,9 @@
   <section class="students">
     <div class="students__content">
       <div class="students__description">
-         <intro :title="title" :description="description" :backLinkSrc="'/'"></intro>
+         <intro :title="title" :description="description" :backLinkSrc="'/'"/>
       </div>
-      <student-item v-for="student in studentList" :key="'student'+student.id" :student="student"></student-item>
+      <student-item v-for="student in studentList" :key="'student'+student.id" :student="student"/>
     </div>
   </section>
 </template>

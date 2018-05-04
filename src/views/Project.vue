@@ -1,7 +1,7 @@
 <template>
   <div class="project">
-   <iframe-project v-if="iframe" :src="srcIframe" :backLinkSrc="backLinkSrc"></iframe-project>
-   <screen-project v-if="screen" :project="project" :students="studentListOutput" :categoryIdent="categoryIdent" :iframe="iframe" :src="srcScreen" :backLinkSrc="backLinkSrc"></screen-project>
+   <iframe-project v-if="iframe" :src="srcIframe" :backLinkSrc="backLinkSrc"/>
+   <screen-project v-if="screen" :project="project" :students="studentListOutput" :categoryIdent="categoryIdent" :iframe="iframe" :src="srcScreen" :backLinkSrc="backLinkSrc"/>
   </div>
 </template>
 
@@ -56,7 +56,11 @@
         return this.project.view === 'iframe'
       },
       srcIframe () {
-        return `${this.baseUrl}projets/${this.categoryIdent}/${this.projectId}_${this.projectIdent}/code/`
+        if (this.project.url) {
+          return this.project.url
+        } else {
+          return `${this.baseUrl}projets/${this.categoryIdent}/${this.projectId}_${this.projectIdent}/code/`
+        }
       },
       screen () {
         return this.project.view === 'screen' || this.project.view === 'both'
@@ -78,7 +82,7 @@
 
 <style scoped lang="scss">
   .project {
-    position: relative;
-    z-index: 2;
+    /* position: relative;
+    z-index: 2; */
   }
 </style>

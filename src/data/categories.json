@@ -1520,7 +1520,7 @@
           "view": "iframe"
         },
         {
-          "id": 125,
+          "id": 126,
           "name": "Chatbots",
           "ident": "chatbots",
           "studentsList": [15, 16, 17, 21],
@@ -1528,15 +1528,16 @@
           "view": "iframe"
         },
         {
-          "id": 126,
+          "id": 127,
           "name": "L'humain augmenté",
           "ident": "humain-augmente",
           "studentsList": [23, 24, 18, 19],
           "screens": [],
-          "view": "iframe"
+          "view": "iframe",
+          "url": "https://alexandremasse.fr/transhumanism/"
         },
         {
-          "id": 127,
+          "id": 128,
           "name": "Réalité virtuelle et réalité augmentée",
           "ident": "vr-ra",
           "studentsList": [20, 22, 26, 28],
@@ -1544,7 +1545,7 @@
           "view": "iframe"
         },
         {
-          "id": 128,
+          "id": 129,
           "name": "La santé connectée",
           "ident": "sante-connectee",
           "studentsList": [25, 27, 29, 31],
@@ -1552,7 +1553,7 @@
           "view": "iframe"
         },
         {
-          "id": 129,
+          "id": 130,
           "name": "Agrilture connectée",
           "ident": "agriculture-connectee",
           "studentsList": [32, 30, 41, 34, 35],
@@ -1560,7 +1561,7 @@
           "view": "iframe"
         },
         {
-          "id": 130,
+          "id": 131,
           "name": "Urbanisme connecté",
           "ident": "urbanisme-connecte",
           "studentsList": [36, 37, 38, 39, 40],

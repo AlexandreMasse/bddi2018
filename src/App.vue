@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <canvas-background/>
     <div id="home-link">
       <router-link :to="{name: 'home'}" class="home">
         <img src="./assets/images/gobelins_logo_white.png">
@@ -25,7 +26,6 @@
     <transition name="fade" mode="out-in">
       <router-view/>
     </transition>
-    <canvas-background/>
   </div>
 </template>
 
@@ -140,11 +140,10 @@
   }
 
   #menu-link {
-    margin: 30px;
     z-index:10000;
     position: fixed;
-    right: 60px;
-    top: 0;
+    right: 100px;
+    top: 32px;
     cursor: pointer;
     .menu {
       position: relative;
@@ -164,6 +163,11 @@
         width: 50px;
         height: 1px;
         background: #fefefe;
+        transition: width 0.3s ease;
+      }
+
+      &:hover:after {
+        width: 35px;
       }
     }
   }
@@ -226,6 +230,7 @@
       p {
         display: none;
       }
+
     }
     #menu-link, #footer-links {
       display: none;

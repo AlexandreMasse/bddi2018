@@ -1,10 +1,10 @@
 <template>
   <section class="student">
     <div class="student__content">
-      <intro :backLinkSrc="'/bddi'"></intro>
+      <intro :backLinkSrc="'/bddi'"/>
       <div class="student__content-info">
         <div class="student__content-info-main">
-          <student-character :student="student"></student-character>
+          <student-character :student="student"/>
           <h2>{{student.firstname}} {{student.lastname}}</h2>
           <h3>{{student.option}}</h3>
         </div>
@@ -29,7 +29,7 @@
     </div>
     <div class="student__projects">
       <h2><span>Ses projets</span></h2>
-      <project-item v-for="(project, index) in projects" :key="project.id" :data="project" :categoryIdent="categoryIdents[index]" :categoryId="categoryIds[index]"></project-item>
+      <project-item v-for="(project, index) in projects" :key="project.id" :data="project" :categoryIdent="categoryIdents[index]" :categoryId="categoryIds[index]"/>
     </div>
   </section>
 </template>
@@ -137,7 +137,7 @@
     }
   }
 }
-@media screen and (max-width : 600px) {
+@media screen and (max-width : 970px) {
   .student {
     width: initial;
     margin-top: 150px;
