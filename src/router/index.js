@@ -1,22 +1,22 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import About from './views/About.vue'
-import MobileMenu from './views/MobileMenu.vue'
-import Menu from './views/Menu.vue'
-import Home from './views/Home.vue'
-import Category from './views/Category.vue'
-import Project from './views/Project.vue'
-import Students from './views/Students.vue'
-import StudentProfile from './views/StudentProfile.vue'
+import About from '../views/About.vue'
+import MobileMenu from '../views/MobileMenu.vue'
+import Menu from '../views/Menu.vue'
+import Home from '../views/Home.vue'
+import Category from '../views/Category.vue'
+import Project from '../views/Project.vue'
+import Students from '../views/Students.vue'
+import StudentProfile from '../views/StudentProfile.vue'
 
-import {TweenLite, Power2} from 'gsap'
-import 'gsap/ScrollToPlugin'
+// import {TweenLite, Power2} from 'gsap'
+// import 'gsap/ScrollToPlugin'
 
 Vue.use(Router)
 
 export default new Router({
   mode: 'history',
-  base: '/bddi2018/',
+  // base: '/bddi2018/',
   routes: [
     {
       path: '/',
