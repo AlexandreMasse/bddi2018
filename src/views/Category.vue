@@ -4,7 +4,7 @@
       <div class="category__description">
         <intro :title="category.name" :description="category.description" :backLinkSrc="'/'"></intro>
       </div>
-      <project-item v-for="project in category.projectsList" :key="project.id" :data="project" :categoryIdent="category.ident" :categoryId="category.id"></project-item>
+      <project-item v-for="project in category.projectsList" :key="project.id" :data="project" :categoryIdent="category.ident" :categoryId="category.id" v-if="!project.hide"></project-item>
     </div>
   </section>
 </template>

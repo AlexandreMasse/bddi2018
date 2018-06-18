@@ -40,7 +40,7 @@
         if (this.project.screens && this.project.screens.length) {
           url = `${this.baseUrl}projets/${this.categoryIdent}/${this.project.id}_${this.project.ident}/screens/0.jpg`
         } else {
-          url = require(`../assets/images/thumbnail-${this.categoryId}.jpg`)
+          url = require(`./../assets/images/thumbnail-${this.categoryId}.jpg`)
         }
         return {
           'background-image': `url(${url})`
