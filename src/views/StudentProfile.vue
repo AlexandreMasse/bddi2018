@@ -29,7 +29,7 @@
     </div>
     <div class="student__projects">
       <h2><span>Ses projets</span></h2>
-      <project-item v-for="(project, index) in projects" :key="project.id" :data="project" :categoryIdent="categoryIdents[index]" :categoryId="categoryIds[index]"/>
+      <project-item v-for="(project, index) in projects" :key="project.id" :data="project" :categoryIdent="categoryIdents[index]" :categoryId="categoryIds[index]" v-if="!project.hide"/>
     </div>
   </section>
 </template>

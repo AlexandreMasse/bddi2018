@@ -25,7 +25,8 @@
                     33
                 ],
                 "view": "iframe",
-                "screens": []
+                "screens": [],
+                "url": "http://climate.solaldussout-revel.com/"
             },
             {
                 "id": 2,
@@ -116,7 +117,8 @@
                     15,
                     34
                 ],
-                "view": "iframe"
+                "view": "iframe",
+                "url": "https://datable.herokuapp.com"
             },
             {
                 "id": 11,
@@ -625,7 +627,8 @@
                 "view": "iframe",
                 "screens": [
                     0
-                ]
+                ],
+                "url": "https://sound-visualiser.herokuapp.com/"
             },
             {
                 "id": 50,
@@ -732,7 +735,8 @@
                 "view": "iframe",
                 "screens": [
                     0
-                ]
+                ],
+                "url": "https://solaldr.github.io/CanvasExperiment/TrucChelou/"
             },
             {
                 "id": 59,
@@ -814,7 +818,8 @@
                 "screens": [
                     0
                 ],
-                "view": "screen"
+                "view": "screen",
+                "url": "http://chat.solaldussout-revel.com/"
             },
             {
                 "id": 65,
@@ -824,7 +829,8 @@
                     15,
                     18
                 ],
-                "view": "screen"
+                "view": "screen",
+                "url": "https://pipelette.herokuapp.com/"
             },
             {
                 "id": 87,
@@ -901,7 +907,8 @@
                 "view": "iframe",
                 "screens": [
                     0
-                ]
+                ],
+                "url": "http://projets.gobelins.fr/bddi/2018/3d-music-xp/project/abbou-antoine"
             },
             {
                 "id": 67,
@@ -913,7 +920,8 @@
                 "view": "iframe",
                 "screens": [
                     0
-                ]
+                ],
+                "url": "http://projets.gobelins.fr/bddi/2018/3d-music-xp/project/caillot-remi"
             },
             {
                 "id": 68,
@@ -925,8 +933,10 @@
                 "view": "iframe",
                 "screens": [
                     0
-                ]
-            },
+                ],
+                "url": "http://projets.gobelins.fr/bddi/2018/3d-music-xp/project/grand-circe",
+                "hide": true
+              },
             {
                 "id": 69,
                 "name": "AudioField",
@@ -937,7 +947,8 @@
                 "view": "iframe",
                 "screens": [
                     0
-                ]
+                ],
+                "url": "http://projets.gobelins.fr/bddi/2018/3d-music-xp/project/cornier-bastien"
             },
             {
                 "id": 70,
@@ -946,7 +957,8 @@
                 "studentsList": [
                     7
                 ],
-                "view": "iframe"
+                "view": "iframe",
+                "url": "http://projets.gobelins.fr/bddi/2018/3d-music-xp/project/dargelos-julien"
             },
             {
                 "id": 71,
@@ -958,7 +970,8 @@
                 "view": "iframe",
                 "screens": [
                     0
-                ]
+                ],
+                "url": "http://projets.gobelins.fr/bddi/2018/3d-music-xp/project/grand-circe"
             },
             {
                 "id": 72,
@@ -970,7 +983,8 @@
                 "view": "iframe",
                 "screens": [
                     0
-                ]
+                ],
+                "url": "http://projets.gobelins.fr/bddi/2018/3d-music-xp/project/huang-christine"
             },
             {
                 "id": 73,
@@ -982,7 +996,8 @@
                 "view": "iframe",
                 "screens": [
                     0
-                ]
+                ],
+                "url": "https://music-sampler.herokuapp.com/"
             },
             {
                 "id": 74,
@@ -994,7 +1009,8 @@
                 "view": "iframe",
                 "screens": [
                     0
-                ]
+                ],
+                "url": "http://projets.gobelins.fr/bddi/2018/3d-music-xp/project/letue-erwann"
             },
             {
                 "id": 75,
@@ -1003,7 +1019,8 @@
                 "studentsList": [
                     23
                 ],
-                "view": "iframe"
+                "view": "iframe",
+                "url": "http://projets.gobelins.fr/bddi/2018/3d-music-xp/project/masse-alexandre"
             },
             {
                 "id": 76,
@@ -1015,7 +1032,8 @@
                 "view": "iframe",
                 "screens": [
                     0
-                ]
+                ],
+                "link": "http://projets.gobelins.fr/bddi/2018/3d-music-xp/project/mauplot-audren"
             },
             {
                 "id": 77,
@@ -1027,7 +1045,8 @@
                 "view": "iframe",
                 "screens": [
                     0
-                ]
+                ],
+                "url": "http://projets.gobelins.fr/bddi/2018/3d-music-xp/project/minervini-robin"
             },
             {
                 "id": 78,
@@ -1036,7 +1055,8 @@
                 "studentsList": [
                     28
                 ],
-                "view": "iframe"
+                "view": "iframe",
+                "url": "http://projets.gobelins.fr/bddi/2018/3d-music-xp/project/ndoulou-jean"
             },
             {
                 "id": 79,
@@ -1048,7 +1068,8 @@
                 "view": "iframe",
                 "screens": [
                     0
-                ]
+                ],
+                "url": "http://projets.gobelins.fr/bddi/2018/3d-music-xp/project/ngo-melanie"
             },
             {
                 "id": 80,
@@ -1060,7 +1081,8 @@
                 "view": "iframe",
                 "screens": [
                     0
-                ]
+                ],
+                "url": "http://projets.gobelins.fr/bddi/2018/3d-music-xp/project/pincemaille-eliott"
             },
             {
                 "id": 81,
@@ -1072,7 +1094,8 @@
                 "view": "iframe",
                 "screens": [
                     0
-                ]
+                ],
+                "url": "http://projets.gobelins.fr/bddi/2018/3d-music-xp/project/pinot-arnaud"
             },
             {
                 "id": 82,
@@ -1084,7 +1107,8 @@
                 "view": "iframe",
                 "screens": [
                     0
-                ]
+                ],
+                "url": "http://projets.gobelins.fr/bddi/2018/3d-music-xp/project/dussout-revel-solal"
             },
             {
                 "id": 83,
@@ -1096,7 +1120,8 @@
                 "view": "iframe",
                 "screens": [
                     0
-                ]
+                ],
+                "url": "http://projets.gobelins.fr/bddi/2018/3d-music-xp/project/skargovskii-nikita"
             },
             {
                 "id": 84,
@@ -1108,7 +1133,8 @@
                 "view": "iframe",
                 "screens": [
                     0
-                ]
+                ],
+                "url": "http://projets.gobelins.fr/bddi/2018/3d-music-xp/project/stichelbaut-pauline"
             },
             {
                 "id": 85,
@@ -1120,7 +1146,8 @@
                 "view": "iframe",
                 "screens": [
                     0
-                ]
+                ],
+                "url": "http://projets.gobelins.fr/bddi/2018/3d-music-xp/project/tanda-lea"
             },
             {
                 "id": 86,
@@ -1132,7 +1159,8 @@
                 "view": "iframe",
                 "screens": [
                     0
-                ]
+                ],
+                "url": "http://projets.gobelins.fr/bddi/2018/3d-music-xp/project/zhang-nathalie"
             }
         ]
     },
@@ -1525,7 +1553,8 @@
           "ident": "chatbots",
           "studentsList": [15, 16, 17, 21],
           "screens": [],
-          "view": "iframe"
+          "view": "iframe",
+          "url": "https://veille-chatbot.herokuapp.com/"
         },
         {
           "id": 127,
@@ -1567,6 +1596,33 @@
           "studentsList": [36, 37, 38, 39, 40],
           "screens": [],
           "view": "iframe"
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Livre futur jeunesse",
+      "ident": "livre",
+      "option": "mixed",
+      "description": "En tant que projet de fin d'année, les BDDI, par équipe, ont ré-inventé le livre futur pour la jeunesse. À chacun sa vision de la jeunesse, à chacun sa vision du livre du futur, en voici leur sélection.",
+      "projectsList": [
+        {
+          "id": 132,
+          "name": "Spell",
+          "ident": "spell",
+          "studentsList": [19, 33, 35, 30],
+          "screens": [],
+          "view": "iframe",
+          "url": "https://spell-io.herokuapp.com/"
+        },
+        {
+          "id": 133,
+          "name": "L'ilu",
+          "ident": "lilu",
+          "studentsList": [7, 12, 39, 13],
+          "screens": [],
+          "view": "iframe",
+          "url": "https://lilu-gobelins.herokuapp.com/"
         }
       ]
     }
