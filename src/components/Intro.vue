@@ -26,7 +26,7 @@
       font-size: 13px;
       text-align: left;
     }
-    .fi {
+    .icon-arrow-left {
       display: block;
       text-align: left;
       text-decoration: none;

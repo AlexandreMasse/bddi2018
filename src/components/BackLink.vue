@@ -1,5 +1,7 @@
 <template>
-   <router-link :to="backLinkSrc" class="fi flaticon-left-arrow action-back back"></router-link>
+   <router-link :to="backLinkSrc" class="action-back back">
+     <i class="icon-arrow-left"></i>
+   </router-link>
 </template>
 
 <script>
@@ -10,14 +12,16 @@
 </script>
 
 <style lang="scss" scoped>
-  .fi {
+  a {
     display: block;
     text-align: left;
     text-decoration: none;
-    &:before {
-      cursor: pointer;
-      font-size: 20px;
-      color: $color-purple;
+    .icon-arrow-left {
+      &:before {
+        cursor: pointer;
+        font-size: 20px;
+        color: $color-purple;
+      }
     }
   }
 </style>

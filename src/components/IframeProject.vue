@@ -2,7 +2,7 @@
  <div id="iframe">
    <span v-on:click="backToScreen">
       <router-link :to="backLinkSrc" class="back-link">
-        <span class="fi flaticon-left-arrow">Back</span>
+        <i class="icon-left-arrow">Back</i>
       </router-link>
    </span>
     <iframe :src='src' frameborder="0"></iframe>
