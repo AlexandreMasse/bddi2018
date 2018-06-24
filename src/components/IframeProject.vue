@@ -1,9 +1,7 @@
 <template>
  <div id="iframe">
-   <span v-on:click="backToScreen">
-      <router-link :to="backLinkSrc" class="back-link">
-        <i class="icon-left-arrow">Back</i>
-      </router-link>
+   <span v-on:click="backToScreen" class="back-link">
+     <i class="icon-left-arrow">Back</i>
    </span>
     <iframe :src='src' frameborder="0"></iframe>
   </div>
@@ -14,6 +12,7 @@
     props: ['src', 'backLinkSrc'],
     methods: {
       backToScreen () {
+        this.$router.go(-1)
         this.$emit('backToScreen')
       }
     }

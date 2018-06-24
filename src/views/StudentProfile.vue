@@ -25,7 +25,6 @@
           </p>
         </div>
       </div>
-      <div student></div>
     </div>
     <div class="student__projects">
       <h2><span>Ses projets</span></h2>
@@ -35,11 +34,11 @@
 </template>
 
 <script>
-  import studentList from '@/data/students.json'
-  import categories from '@/data/categories.json'
-  import intro from '@/components/Intro.vue'
-  import projectItem from '@/components/ProjectItem.vue'
-  import studentCharacter from '@/components/StudentCharacter.vue'
+  import studentList from '../data/students.json'
+  import categories from '../data/categories.json'
+  import intro from '../components/Intro.vue'
+  import projectItem from '../components/ProjectItem.vue'
+  import studentCharacter from '../components/StudentCharacter.vue'
 
   export default {
     name: 'studentProfile',

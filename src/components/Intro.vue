@@ -7,7 +7,7 @@
 </template>
 
 <script>
-  import backLink from '@/components/BackLink.vue'
+  import backLink from '../components/BackLink.vue'
   export default {
     name: 'intro',
     props: ['title', 'description', 'backLinkSrc'],

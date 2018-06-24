@@ -1,7 +1,7 @@
 <template>
   <div class="projects__list-item">
     <div class="project__thumbnail">
-      <router-link :to="'/project/' + categoryIdent + '/' + project.id + '/' + project.ident " class="home">
+      <router-link :to="{name:'project', params: {categoryIdent: categoryIdent, projectId: project.id, projectIdent: project.ident, lastPath: currentPath}}" class="home">
         <div class="project__thumbnail-img" :style="styles"></div>
       </router-link>
     </div>
@@ -13,7 +13,7 @@
 </template>
 
 <script>
-  import studentsList from '@/data/students.json'
+  import studentsList from '../data/students.json'
 
   export default {
     name: 'projectItem',
@@ -21,7 +21,8 @@
     data () {
       return {
         // baseUrl: process.env.BASE_URL,
-        project: this.data
+        project: this.data,
+        currentPath: this.$route.fullPath
       }
     },
     computed: {

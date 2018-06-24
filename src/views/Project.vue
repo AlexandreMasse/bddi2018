@@ -1,15 +1,15 @@
 <template>
   <div class="project">
-   <iframe-project v-if="iframe" :src="srcIframe" :backLinkSrc="backLinkSrc"/>
-   <screen-project v-if="screen" :project="project" :students="studentListOutput" :categoryIdent="categoryIdent" :iframe="iframe" :src="srcScreen" :backLinkSrc="backLinkSrc"/>
+   <iframe-project v-if="iframe" :src="srcIframe" :backLinkSrc="lastPath"/>
+   <screen-project v-if="screen" :project="project" :students="studentListOutput" :categoryIdent="categoryIdent" :iframe="iframe" :src="srcScreen" :backLinkSrc="lastPath"/>
   </div>
 </template>
 
 <script>
-  import categories from '@/data/categories.json'
-  import studentsList from '@/data/students.json'
-  import iframeProject from '@/components/IframeProject.vue'
-  import screenProject from '@/components/ScreenProject.vue'
+  import categories from '../data/categories.json'
+  import studentsList from '../data/students.json'
+  import iframeProject from '../components/IframeProject.vue'
+  import screenProject from '../components/ScreenProject.vue'
 
   export default {
     name: 'project',
@@ -19,7 +19,8 @@
         baseUrl: process.env.BASE_URL,
         categoryIdent: this.$route.params.categoryIdent,
         projectIdent: this.$route.params.projectIdent,
-        projectId: this.$route.params.projectId
+        projectId: this.$route.params.projectId,
+        lastPath: this.$route.params.lastPath
       }
     },
     computed: {
@@ -67,9 +68,6 @@
       },
       srcScreen () {
         return `/static/projets/${this.categoryIdent}/${this.projectId}_${this.projectIdent}/screens/`
-      },
-      backLinkSrc () {
-        return `/category/${this.categoryIdent}`
       }
     },
     mounted () {

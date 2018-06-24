@@ -9,8 +9,8 @@
 </template>
 
 <script>
-  import MenuItem from '@/components/MenuItem.vue'
-  import categories from '@/data/categories.json'
+  import MenuItem from '../components/MenuItem.vue'
+  import categories from '../data/categories.json'
   import { TimelineLite, Power3 } from 'gsap'
 
   export default {
