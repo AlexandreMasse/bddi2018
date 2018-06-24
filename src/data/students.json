@@ -52,7 +52,7 @@
       "instagram": "https://www.instagram.com/manon_carrour/",
       "linkedin": "https://fr.linkedin.com/in/manon-carrour-105478127"
     },
-    "interests": ["Objet connecté", "installations", "video mapping"]
+    "interests": ["Objets connectés", "installations", "video mapping"]
   },
   {
     "id": 4,
@@ -394,7 +394,7 @@
     "links" : {
       "github": "https://github.com/arnvvd",
       "twitter": "https://twitter.com/pinotarnaud",
-      "linkedin": "https://www.linkedin.com/in/arnaud-pinot-86a062aa/" 
+      "linkedin": "https://www.linkedin.com/in/arnaud-pinot-86a062aa/"
     },
     "interests": ["VueJS", "React", "WebGL", "ThreeJS", "Unity"]
   },

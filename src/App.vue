@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <canvas-background/>
+    <!-- <canvas-background/> -->
     <div id="home-link">
       <router-link :to="{name: 'home'}" class="home">
         <img src="./assets/images/gobelins_logo_white.png">

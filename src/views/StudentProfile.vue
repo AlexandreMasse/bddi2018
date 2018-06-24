@@ -136,6 +136,16 @@
       }
     }
   }
+  &__projects {
+    .projects__list-item {
+      &:nth-of-type(3n) {
+        margin: 0;
+      }
+      &:nth-of-type(3n+2) {
+        margin: 0 20px;
+      }
+    }
+  }
 }
 @media screen and (max-width : 970px) {
   .student {
