@@ -59,14 +59,14 @@
         if (this.project.url) {
           return this.project.url
         } else {
-          return `${this.baseUrl}projets/${this.categoryIdent}/${this.projectId}_${this.projectIdent}/code/`
+          return `/static/projets/${this.categoryIdent}/${this.projectId}_${this.projectIdent}/code/`
         }
       },
       screen () {
         return this.project.view === 'screen' || this.project.view === 'both'
       },
       srcScreen () {
-        return `${this.baseUrl}projets/${this.categoryIdent}/${this.projectId}_${this.projectIdent}/screens/`
+        return `/static/projets/${this.categoryIdent}/${this.projectId}_${this.projectIdent}/screens/`
       },
       backLinkSrc () {
         return `/category/${this.categoryIdent}`
