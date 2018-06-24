@@ -10,8 +10,6 @@
       "codepen": "https://codepen.io/antoineabbou/",
       "portfolio": "http://antoineabbou.fr",
       "twitter": "https://twitter.com/antoineabbou",
-      "behance": "",
-      "dribbble": "",
       "instagram": "https://www.instagram.com/antoineabbou/",
       "linkedin": "https://www.linkedin.com/in/antoine-abbou-159757110/"
     },
@@ -24,14 +22,9 @@
     "option": "Designer",
     "studies": "Motion Design (Gobelins)",
     "links" : {
-      "github": "",
-      "codepen": "",
       "portfolio": "robn.fr",
-      "twitter": "",
-      "behance": "",
       "dribbble": "https://dribbble.com/rob-n",
-      "instagram": "https://www.instagram.com/robn_md/",
-      "linkedin": ""
+      "instagram": "https://www.instagram.com/robn_md/"
     },
     "interests": ["Narration", "scénarisation", "motion", "fablabs", "objet connectés", "sociologie", "installations"]
   },
@@ -42,14 +35,7 @@
     "option": "Développeur",
     "studies": "DUT MMI (Laval)",
     "links" : {
-      "github": "",
-      "codepen": "",
-      "portfolio": "Http://remicaillot.fr",
-      "twitter": "",
-      "behance": "",
-      "dribbble": "",
-      "instagram": "",
-      "linkedin": ""
+      "portfolio": "Http://remicaillot.fr"
     },
     "interests": ["React Native", "React", "WebGL", "Unity"]
   },
@@ -60,12 +46,9 @@
     "option": "Designer",
     "studies": "BTS Design graphique numérique (École Estienne)",
     "links" : {
-      "github": "",
-      "codepen": "",
       "portfolio": "http://manoncarrour.tumblr.com/",
       "twitter": "https://twitter.com/manoncarrour",
       "behance": "https://www.behance.net/manoncarrour",
-      "dribbble": "",
       "instagram": "https://www.instagram.com/manon_carrour/",
       "linkedin": "https://fr.linkedin.com/in/manon-carrour-105478127"
     },
@@ -77,16 +60,7 @@
     "firstname": "Alix",
     "option": "Designer",
     "studies": "BTS Design graphique numérique (École Estienne)",
-    "links" : {
-      "github": "",
-      "codepen": "",
-      "portfolio": "",
-      "twitter": "",
-      "behance": "",
-      "dribbble": "",
-      "instagram": "",
-      "linkedin": ""
-    },
+    "links" : {},
     "interests": ["UI/UX Design", "motion design", "direction artistique", "Installations interactives", "web design"]
   },
   {
@@ -95,16 +69,7 @@
     "firstname": "Yann",
     "option": "Développeur",
     "studies": "DUT MMI (Bordeaux), Licence professionnelle Creation multimédia (La Rochelle)",
-    "links" : {
-      "github": "",
-      "codepen": "",
-      "portfolio": "",
-      "twitter": "",
-      "behance": "",
-      "dribbble": "",
-      "instagram": "",
-      "linkedin": ""
-    },
+    "links" : {},
     "interests": []
   },
   {
@@ -113,16 +78,7 @@
     "firstname": "Bastien",
     "option": "Développeur",
     "studies": "DUT MMI (Montbeliard), Licence Pro Webdesign Sensoriel (Limoges)",
-    "links" : {
-      "github": "",
-      "codepen": "",
-      "portfolio": "",
-      "twitter": "",
-      "behance": "",
-      "dribbble": "",
-      "instagram": "",
-      "linkedin": ""
-    },
+    "links" : {},
     "interests": ["VueJS", "WebGL natif", "L'IOT", "JavaScript (Vue, ThreeJS)"]
   },
   {
@@ -136,9 +92,6 @@
       "codepen": "https://codepen.io/juliendargelos",
       "portfolio": "https://juliendargelos.com",
       "twitter": "https://twitter.com/juliendargelos",
-      "behance": "",
-      "dribbble": "",
-      "instagram": "",
       "linkedin": "https://linkedin.com/in/juliendargelos"
     },
     "interests": ["Swift", "AI", "Ruby"]
@@ -150,8 +103,6 @@
     "option": "Designer",
     "studies": "DUT SRC Média (Montbéliard), Bachelor chef de projet opt. Design (Hétic), Mastère Expert en Stratégie Digitale opt. DA/UX (IESA Multimédia)",
     "links" : {
-      "github": "",
-      "codepen": "",
       "portfolio": "http://elisadubois.fr/",
       "twitter": "https://twitter.com/Dubois_Elisa",
       "behance": "https://www.behance.net/Elisa-Dubois",
@@ -168,11 +119,7 @@
     "option": "Designer",
     "studies": "BTS Design Graphique Numérique (ESAAT)",
     "links" : {
-      "github": "",
-      "codepen": "",
       "portfolio": "http://remieliet.com/",
-      "twitter": "",
-      "behance": "",
       "dribbble": "https://dribbble.com/Remel",
       "instagram": "https://www.instagram.com/remi.eliet/",
       "linkedin": "https://fr.linkedin.com/in/r%C3%A9mi-eliet-30b415123"
@@ -186,13 +133,7 @@
     "option": "Designer",
     "studies": "BTS Design Graphique  (Gobelins)",
     "links" : {
-      "github": "",
-      "codepen": "",
       "portfolio": "http://clementinespinel.com/",
-      "twitter": "",
-      "behance": "",
-      "dribbble": "",
-      "instagram": "",
       "linkedin": "https://fr.linkedin.com/in/cl%C3%A9mentine-espinel-72a403145"
     },
     "interests": ["3D", "Motion", "Emotion", "UX Design"]
@@ -204,12 +145,8 @@
     "option": "Designer",
     "studies": "Post diplôme digital media lab (EPSAA), BTS design graphique numérique (École Estienne)",
     "links" : {
-      "github": "",
-      "codepen": "",
       "portfolio": "https://www.noemie-ey.com/",
-      "twitter": "",
       "behance": "https://www.behance.net/neydo",
-      "dribbble": "",
       "instagram": "https://www.instagram.com/noemie.ey/",
       "linkedin": "https://www.linkedin.com/in/noemieey"
     },
@@ -223,12 +160,8 @@
     "studies": "DUT MMI (Champs-sur-Marne)",
     "links" : {
       "github": "https://github.com/cerseig",
-      "codepen": "",
       "portfolio": "http://circegrand.fr/",
       "twitter": "https://twitter.com/circegrand_pro",
-      "behance": "",
-      "dribbble": "",
-      "instagram": "",
       "linkedin": "https://fr.linkedin.com/in/circegrand"
     },
     "interests": ["Symfony", "Magento", "Photographie", "Direction de projet"]
@@ -240,11 +173,6 @@
     "option": "Designer",
     "studies": "Motion Design (Gobelins)",
     "links" : {
-      "github": "",
-      "codepen": "",
-      "portfolio": "",
-      "twitter": "",
-      "behance": "",
       "dribbble": "https://dribbble.com/Matoche",
       "instagram": "https://www.instagram.com/mathildeherard/",
       "linkedin": "https://www.linkedin.com/in/mathilde-herard-60aa29102/"
@@ -259,12 +187,7 @@
     "studies": "DUT MMI (Bobigny)",
     "links" : {
       "github": "https://github.com/cygnauh",
-      "codepen": "",
       "portfolio": "http://christinehuang.fr",
-      "twitter": "",
-      "behance": "",
-      "dribbble": "",
-      "instagram": "",
       "linkedin": "https://fr.linkedin.com/in/christine-yini-huang"
     },
     "interests": ["ReactJS", "VueJs", "WebGL", "Unity", "Processing", "React", "ThreeJS"]
@@ -277,12 +200,7 @@
     "studies": "DUT MMI (Champs sur Marne)",
     "links" : {
       "github": "https://github.com/liinkiing",
-      "codepen": "",
       "portfolio": "https://omar-jbara.herokuapp.com",
-      "twitter": "",
-      "behance": "",
-      "dribbble": "",
-      "instagram": "",
       "linkedin": "https://www.linkedin.com/in/omar-jbara/"
     },
     "interests": ["Unity", "VueJS", "PHP", "C#"]
@@ -293,16 +211,7 @@
     "firstname": "Martin",
     "option": "Designer",
     "studies": "BTS Design Graphique Numérique (Estienne)",
-    "links" : {
-      "github": "",
-      "codepen": "",
-      "portfolio": "",
-      "twitter": "",
-      "behance": "",
-      "dribbble": "",
-      "instagram": "",
-      "linkedin": ""
-    },
+    "links" : {},
     "interests": ["Narration multimedia", "direction artistique", "motion design", "expériences interactives", "3D", "vidéo", "photographie", "installations", "objet connectés"]
   },
   {
@@ -312,12 +221,7 @@
     "option": "Designer",
     "studies": "MASTER II (Intuit Lab)",
     "links" : {
-      "github": "",
-      "codepen": "",
-      "portfolio": "",
-      "twitter": "",
       "behance": "https://www.behance.net/sophielaplace",
-      "dribbble": "",
       "instagram": "https://www.instagram.com/sophie_laplace/",
       "linkedin": "https://www.linkedin.com/in/sophie-laplace-12647511a/"
     },
@@ -330,13 +234,8 @@
     "option": "Designer",
     "studies": "BTS Design Graphique Option communication et médias numériques (Gobelins)",
     "links" : {
-      "github": "",
-      "codepen": "",
       "portfolio": "http://cargocollective.com/cassandrely",
-      "twitter": "",
-      "behance": "",
       "dribbble": "https://dribbble.com/Cassandrel-y",
-      "instagram": "",
       "linkedin": "https://www.linkedin.com/in/cassandre-leguay-designer/"
     },
     "interests": []
@@ -348,13 +247,7 @@
     "option": "Designer",
     "studies": "BTS Design Graphique (Rouen), Bachelor Chef de Projet Digital (ECV Digital)",
     "links" : {
-      "github": "",
-      "codepen": "",
       "portfolio": "https://justine-lenouvel.fr",
-      "twitter": "",
-      "behance": "",
-      "dribbble": "",
-      "instagram": "",
       "linkedin": "https://www.linkedin.com/in/justine-lenouvel-487355115/"
     },
     "interests": ["Motion", "web design", "design interactif", "design scénographique", "design sonore", "mapping"]
@@ -366,14 +259,8 @@
     "option": "Designer",
     "studies": "BTS Design Graphique numérique (Blois)",
     "links" : {
-      "github": "",
-      "codepen": "",
-      "portfolio": "",
-      "twitter": "",
       "behance": "https://www.behance.net/Lepecheur",
-      "dribbble": "",
-      "instagram": "",
-      "linkedin": ""
+      "portfolio": "http://baledesign.fr"
     },
     "interests": ["Psychologie utilisateur", "storytelling"]
   },
@@ -386,12 +273,8 @@
     "links" : {
       "github": "https://github.com/Eronne",
       "codepen": "https://codepen.io/Eronne/",
-      "portfolio": "",
       "twitter": "https://twitter.com/erwann_letue",
-      "behance": "",
-      "dribbble": "",
-      "instagram": "https://www.linkedin.com/in/erwannletue/",
-      "linkedin": ""
+      "instagram": "https://www.linkedin.com/in/erwannletue/"
     },
     "interests": ["Javascript", "VueJS", "Laravel", "WebGL", "Unity"]
   },
@@ -401,16 +284,7 @@
     "firstname": "Iris",
     "option": "Designer",
     "studies": "BTS Design Graphique Numérique (Estienne)",
-    "links" : {
-      "github": "",
-      "codepen": "",
-      "portfolio": "",
-      "twitter": "",
-      "behance": "",
-      "dribbble": "",
-      "instagram": "",
-      "linkedin": ""
-    },
+    "links" : {},
     "interests": ["UI/UX Design", "Motion", "3D", "Objets connectés", "Design sonore", "Installations interactives"]
   },
   {
@@ -424,9 +298,6 @@
       "codepen": "https://codepen.io/alexandremasse/",
       "portfolio": "https://alexandremasse.fr",
       "twitter": "https://twitter.com/Alexandre_Masse",
-      "behance": "",
-      "dribbble": "",
-      "instagram": "",
       "linkedin": "https://www.linkedin.com/in/alexandremasse/"
     },
     "interests": ["VueJS", "React", "WebGL"]
@@ -438,12 +309,6 @@
     "option": "Développeur",
     "studies": "DUT MMI (Meaux)",
     "links" : {
-      "github": "",
-      "codepen": "",
-      "portfolio": "",
-      "twitter": "",
-      "behance": "",
-      "dribbble": "",
       "instagram": "https://www.instagram.com/audrenmauplot/",
       "linkedin": "https://www.linkedin.com/in/audren-mauplot-88984012a"
     },
@@ -456,14 +321,8 @@
     "option": "Designer",
     "studies": "DMA cinéma d'animation (ESAAT)",
     "links" : {
-      "github": "",
-      "codepen": "",
       "portfolio": "http://michelallan.tumblr.com/",
-      "twitter": "",
-      "behance": "",
-      "dribbble": "",
-      "instagram": "https://www.instagram.com/all.mch/",
-      "linkedin": ""
+      "instagram": "https://www.instagram.com/all.mch/"
     },
     "interests": ["UX Design", "Interface web", "Expérience web/interractive"]
   },
@@ -475,13 +334,7 @@
     "studies": "DUT MMI (Montbéliard)",
     "links" : {
       "github": "https://github.com/mineraux",
-      "codepen": "",
-      "portfolio": "http://robinminervini.fr/",
-      "twitter": "",
-      "behance": "",
-      "dribbble": "",
-      "instagram": "",
-      "linkedin": ""
+      "portfolio": "http://robinminervini.fr/"
     },
     "interests": ["VueJS", "ThreeJS", "Processing", "React"]
   },
@@ -491,16 +344,7 @@
     "firstname": "Clara",
     "option": "Designer",
     "studies": "BTS Design Graphique Numérique (Estienne)",
-    "links" : {
-      "github": "",
-      "codepen": "",
-      "portfolio": "",
-      "twitter": "",
-      "behance": "",
-      "dribbble": "",
-      "instagram": "",
-      "linkedin": ""
-    },
+    "links" : {},
     "interests": ["UI/UX Design", "3D", "Motion", "Photographie"]
   },
   {
@@ -509,16 +353,7 @@
     "firstname": "Jean",
     "option": "Développeur",
     "studies": "Bachelor Web (Hetic)",
-    "links" : {
-      "github": "",
-      "codepen": "",
-      "portfolio": "",
-      "twitter": "",
-      "behance": "",
-      "dribbble": "",
-      "instagram": "",
-      "linkedin": ""
-    },
+    "links" : {},
     "interests": ["WebGL", "NodeJS", "ReactJS", "C#", "C++"]
   },
   {
@@ -527,16 +362,7 @@
     "firstname": "Mélanie",
     "option": "Développeur",
     "studies": "DUT MMI (Meaux)",
-    "links" : {
-      "github": "",
-      "codepen": "",
-      "portfolio": "",
-      "twitter": "",
-      "behance": "",
-      "dribbble": "",
-      "instagram": "",
-      "linkedin": "" 
-    },
+    "links" : {},
     "interests": ["NodeJS", "Rxjs", "ThreeJS"]
   },
   {
@@ -546,14 +372,7 @@
     "option": "Designer",
     "studies": "DMA Illustration (Ecole Éstienne), DSAA Design Graphique & Narration Multimédia (Lycée Jacques Prévert)",
     "links" : {
-      "github": "",
-      "codepen": "",
-      "portfolio": "http://www.matthieupajot.com/",
-      "twitter": "",
-      "behance": "",
-      "dribbble": "",
-      "instagram": "",
-      "linkedin": ""
+      "portfolio": "http://www.matthieupajot.com/"
     },
     "interests": ["Motion", "3D", "Design interactif lié à la pédagogie"]
   },
@@ -563,16 +382,7 @@
     "firstname": "Eliott",
     "option": "Développeur",
     "studies": "BTS Design Graphique Numérique, Licence pro E-commerce et Marketing Numérique",
-    "links" : {
-      "github": "",
-      "codepen": "",
-      "portfolio": "",
-      "twitter": "",
-      "behance": "",
-      "dribbble": "",
-      "instagram": "",
-      "linkedin": ""
-    },
+    "links" : {},
     "interests": ["Javascript, NodeJS, VueJS, WebGL"]
   },
   {
@@ -583,12 +393,7 @@
     "studies": "Bachelor Web (Hetic)",
     "links" : {
       "github": "https://github.com/arnvvd",
-      "codepen": "",
-      "portfolio": "",
       "twitter": "https://twitter.com/pinotarnaud",
-      "behance": "",
-      "dribbble": "",
-      "instagram": "",
       "linkedin": "https://www.linkedin.com/in/arnaud-pinot-86a062aa/" 
     },
     "interests": ["VueJS", "React", "WebGL", "ThreeJS", "Unity"]
@@ -604,9 +409,6 @@
       "codepen": "https://codepen.io/Solalz/",
       "portfolio": "https://solaldussout-revel.com/",
       "twitter": "https://twitter.com/solalDR",
-      "behance": "",
-      "dribbble": "",
-      "instagram": "",
       "linkedin": "https://www.linkedin.com/in/solal-dussout-revel-7ab927107/"
     },
     "interests": ["Meteor", "Unity", "WebGL", "Node", "Arduino", "React", "ARKit"]
@@ -617,16 +419,7 @@
     "firstname": "Camille",
     "option": "Designer",
     "studies": "BTS Design Graphique Option Médias numériques (Lycée Jacques Prévert)",
-    "links" : {
-      "github": "",
-      "codepen": "",
-      "portfolio": "",
-      "twitter": "",
-      "behance": "",
-      "dribbble": "",
-      "instagram": "",
-      "linkedin": ""
-    },
+    "links" : {},
     "interests": []
   },
   {
@@ -640,9 +433,6 @@
       "codepen": "https://codepen.io/nikita_ska/",
       "portfolio": "https://nikitaskar.github.io/myportfolio/",
       "twitter": "https://twitter.com/nskargovskii?lang=fr",
-      "behance": "",
-      "dribbble": "",
-      "instagram": "",
       "linkedin": "https://www.linkedin.com/in/nikita-skargovskii-2b915111a/"
     },
     "interests": ["WebGL", "GLSL", "VueJS", "ThreeJS", "Pixi", "Canvas", "VR", "Unity", "React"]
@@ -658,10 +448,7 @@
       "codepen": "https://codepen.io/goodgoldisrare/",
       "portfolio": "http://www.popoo.work",
       "twitter": "https://twitter.com/PaulineStich",
-      "behance": "",
-      "dribbble": "",
-      "instagram": "https://www.instagram.com/goodgoldisrare/",
-      "linkedin": ""
+      "instagram": "https://www.instagram.com/goodgoldisrare/"
     },
     "interests": ["Javascript", "WebGL", "3D", "React", "Processing"]
   },
@@ -673,12 +460,8 @@
     "studies": "DUT MMI (Champs-sur-Marne)",
     "links" : {
       "github": "https://github.com/itsleaht",
-      "codepen": "",
       "portfolio": "https://leatanda.fr",
       "twitter": "https://twitter.com/itsleaht",
-      "behance": "",
-      "dribbble": "",
-      "instagram": "",
       "linkedin": "https://www.linkedin.com/in/leatanda/"
     },
     "interests": ["VueJS", "React", "WebGL", "Unity", "Installations interactives", "AR"]
@@ -689,16 +472,7 @@
     "firstname": "Fany",
     "option": "Designer",
     "studies": "BTS Design Graphique Multimédia Option Graphisme (Gobelins)",
-    "links" : {
-      "github": "",
-      "codepen": "",
-      "portfolio": "",
-      "twitter": "",
-      "behance": "",
-      "dribbble": "",
-      "instagram": "",
-      "linkedin": ""
-    },
+    "links" : {},
     "interests": ["3D", "UI/UX Design", "Expérimentation interactives", "Objets connectés"]
   },
   {
@@ -707,16 +481,7 @@
     "firstname": "Clara",
     "option": "Designer",
     "studies": "EPSAA - Arts Graphiques",
-    "links" : {
-      "github": "",
-      "codepen": "",
-      "portfolio": "",
-      "twitter": "",
-      "behance": "",
-      "dribbble": "",
-      "instagram": "",
-      "linkedin": ""
-    },
+    "links" : {},
     "interests": []
   },
   {
@@ -726,14 +491,8 @@
     "option": "Designer",
     "studies": "DUT MMI (Limoges)",
     "links" : {
-      "github": "",
-      "codepen": "",
       "portfolio": "http://xindiyang.com",
-      "twitter": "",
-      "behance": "",
-      "dribbble": "",
-      "instagram": "https://www.instagram.com/xindiiiiii",
-      "linkedin": ""
+      "instagram": "https://www.instagram.com/xindiiiiii"
     },
     "interests": ["Design émotionnel", "expérience narrative", "UX Design", "Game Design", "3D", "Motion", "IOT", "Gestion de projet", "Sciences cognitives", "Sociologie", "psychologie", "storytelling"]
   },
@@ -743,16 +502,7 @@
     "firstname": "Nathalie",
     "option": "Développeur",
     "studies": "DUT MMI (Champs-sur-Marne)",
-    "links" : {
-      "github": "",
-      "codepen": "",
-      "portfolio": "",
-      "twitter": "",
-      "behance": "",
-      "dribbble": "",
-      "instagram": "",
-      "linkedin": ""
-    },
+    "links" : {},
     "interests": []
   }
 ]

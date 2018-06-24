@@ -11,10 +11,10 @@
         <div class="student__content-info-description">
           <h2>Son parcours :</h2>
           <p>{{student.studies}}</p>
-          <h2>Ses intérêts :</h2>
-          <p>{{interests}}</p>
-          <h2>Retrouver ce talent :</h2>
-          <p>
+          <h2>Ses intérêts : </h2>
+          <p>{{interests}} </p>
+          <h2 v-if="Object.keys(student.links).length !== 0">Retrouver ce talent : </h2>
+          <p v-if="Object.keys(student.links).length !== 0">
             <a :href="student.links.github" target="_blank" v-if="student.links.github" class="highlight-hover">Github</a>
             <a :href="student.links.codepen" target="_blank" v-if="student.links.codepen" class="highlight-hover">Codepen</a>
             <a :href="student.links.portfolio" target="_blank" v-if="student.links.portfolio" class="highlight-hover">Site perso</a>
