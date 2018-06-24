@@ -1,19 +1,24 @@
 const scroll = {
-  isInScrollView (min, max, el) {
+  isInScrollView (el, min, max, watchBelow, watchAbove) {
     min = min ? min : 0.5
     max = max ? max : 1.5
-  
-    const elementbounding = scrollable.getBoundingClientRect()
+    watchBelow = watchBelow ? true : false
+    watchAbove = watchAbove ? true : false
+
+    const elementbounding = el.getBoundingClientRect()
     const offsetBottomY = elementbounding.bottom
     const offsetTopY = (elementbounding.top + window.scrollY) - (+window.scrollY)
     const offsetTopYPourcent = offsetTopY / window.innerHeight
     const offsetBottomYPourcent = offsetBottomY / window.innerHeight
 
-    if (offsetBottomYPourcent > 0.5 && offsetBottomYPourcent < 1.5) {
-      scrollable.classList.add('isScrolled')
+    if (watchAbove && offsetTopYPourcent < min) {
+      el.classList.remove('isScrolled')
+      return false
+    } else if (offsetBottomYPourcent > min && offsetBottomYPourcent < max) {
+      el.classList.add('isScrolled')
       return true
-    } else if (scrollable.classList.contains('isScrolled') && (offsetBottomYPourcent < -1 || offsetBottomYPourcent > 3)) {
-      scrollable.classList.remove('isScrolled')
+    } else if (watchBelow && el.classList.contains('isScrolled') && (offsetBottomYPourcent < min || offsetBottomYPourcent > max)) {
+      el.classList.remove('isScrolled')
       return false
     }
   }
@@ -31,7 +36,7 @@ const transformDOM = {
 const animate = {
   letter (decomposedTextEl, duration, delay, from) {
     decomposedTextEl.forEach((el, index) => {
-      
+
     })
   }
 }

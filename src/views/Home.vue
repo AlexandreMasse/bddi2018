@@ -9,7 +9,7 @@
         <span></span>
       </div>
     </div>
-    <category-item v-for="category in categories" :key="category.id" :categoryId="category.id" :categoryIdent="category.ident" :categoryName="category.name" :categoryDescription="category.description"/>
+    <category-item v-for="category in categories" :key="category.id" :categoryId="category.id" :categoryIdent="category.ident" :categoryName="category.name" :categoryDescription="category.description" ref="categoryItem"/>
   </div>
 </template>
 
@@ -19,6 +19,7 @@
   import intro from '@/components/Intro.vue'
   import {TweenLite, Power2} from 'gsap'
   import 'gsap/ScrollToPlugin'
+  import  { scroll } from './../utils/main'
 
   export default {
     name: 'home',
@@ -37,10 +38,15 @@
           scrollTo: firstCategory.getBoundingClientRect().top + window.scrollY,
           ease: Power2.easeInOut
         })
+      },
+      handleScroll () {
+        this.$refs.categoryItem.forEach(element => {
+          scroll.isInScrollView(element.$el, 0.5, 1.5)
+        });
       }
     },
     mounted () {
-      // console.log(process.env)
+      window.addEventListener('scroll', this.handleScroll)
     }
   }
 

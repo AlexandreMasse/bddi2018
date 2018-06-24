@@ -7,13 +7,15 @@
     </div>
     <div class="projects__category-content">
       <router-link :to="{ name: 'category', params: { ident: categoryIdent }}">
-        <div class="projects__category-thumbnail">
+        <div class="projects__category-thumbnail overlay">
           <div class="projects__category-thumbnail-img" :style="styles"></div>
         </div>
       </router-link>
       <router-link :to="{ name: 'category', params: { ident: categoryIdent }}">
-        <div class="projects__category-description">
-          <p>{{categoryDescription}}</p>
+        <div class="projects__category-description overlay">
+          <div class="projects__category-description-wrapper">
+            <p>{{categoryDescription}}</p>
+          </div>
         </div>
       </router-link>
     </div>
@@ -38,6 +40,41 @@
 <style lang="scss">
 .projects {
   &__category {
+    .overlay {
+      overflow: hidden;
+      &::before {
+        content:"";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: $color-purple;
+        transition: transform .7s;
+        transform: translateX(-100%);
+        z-index: 10;
+      }
+    }
+    &.isScrolled {
+      .overlay {
+        &.projects__category-description {
+          &::before {
+            animation: slidesRight 1s forwards;
+          }
+          .projects__category-description-wrapper {
+            opacity: 1;
+          }
+        }
+        &.projects__category-thumbnail {
+          &::before {
+            animation: 1s slidesRight 1s forwards;
+          }
+          .projects__category-thumbnail-img {
+            opacity: 1;
+          }
+        }
+      }
+    }
     width: 100%;
     height: 100%;
     position: relative;
@@ -84,6 +121,7 @@
       height: 500px;
     }
     &-thumbnail {
+      position: relative;
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover;
@@ -95,11 +133,20 @@
       cursor: pointer;
       overflow: hidden;
 
+      &.overlay {
+        &::before {
+          transition: 1s transform .7s;
+        }
+      }
+
       &-img {
         display: block;
         width: 100%;
         height: 100%;
-        transition: transform .7s;
+        opacity: 0;
+        transition-property: opacity, transform;
+        transition-delay: 1.7s, .01s;
+        transition-duration: .1s, 3s;
       }
 
       &:hover {
@@ -112,32 +159,42 @@
     }
     &-description {
       cursor: pointer;
-      background: #fefefe;
-      width: 350px;
-      min-height: 200px;
-      padding: 35px 30px;
       position: absolute;
       top: 0;
       right: 0;
       font-family: 'Aileron-regular';
       font-size: 16px;
       text-align: justify;
-      p {
-        margin: 0;
-        color: #000;
-        line-height: 25px;
-        font-family: 'Aileron-regular';
-        font-size: 16px;
+      z-index: 15;
+      &.overlay {
+        transition: transform .7s;
       }
-      .action-show {
-        text-align: right;
-        position: absolute;
-        right: 25px;
-        bottom: 25px;
-        cursor: pointer;
-        &:before {
-          color: #8625FA;
-          transform: rotate(180deg);
+      &-wrapper {
+        min-height: 200px;
+        width: 350px;
+        padding: 35px 30px;
+        background: #fefefe;
+        opacity: 0;
+        transition-property: opacity;
+        transition-duration: .1s;
+        transition-delay: .7s;
+        p {
+          margin: 0;
+          color: #000;
+          line-height: 25px;
+          font-family: 'Aileron-regular';
+          font-size: 16px;
+        }
+        .action-show {
+          text-align: right;
+          position: absolute;
+          right: 25px;
+          bottom: 25px;
+          cursor: pointer;
+          &:before {
+            color: #8625FA;
+            transform: rotate(180deg);
+          }
         }
       }
     }
@@ -229,6 +286,21 @@
         position: relative;
       }
     }
+  }
+}
+
+@keyframes slidesRight {
+  0% {
+    transform: translateX(-100%)
+  }
+  25% {
+    transform: translateX(-50%)
+  }
+  70% {
+    transform: translateX(0)
+  }
+  100% {
+    transform: translateX(100%)
   }
 }
 </style>
