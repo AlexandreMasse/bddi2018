@@ -53,14 +53,14 @@
         left: 0;
         opacity: 0;
         z-index: 1;
-        transition: all 0.5s ease;
+        transition: all 0.6s ease;
       }
       span {
         cursor: pointer;
         position: relative;
         z-index: 2;
         opacity: 0.5;
-        transition: all 0.5s ease;
+        transition: all 0.6s ease;
         color: #fefefe;
       }
       &:hover {
@@ -69,7 +69,7 @@
         }
         span {
           opacity: 1;
-          font-weight: bold;
+          //font-weight: bold;
         }
       }
     }

@@ -11,9 +11,9 @@
         <div class="student__content-info-description">
           <h2>Son parcours :</h2>
           <p>{{student.studies}}</p>
-          <h2>Ses intérêts : </h2>
-          <p>{{interests}} </p>
-          <h2>Retrouver ce talent : </h2>
+          <h2>Ses intérêts :</h2>
+          <p>{{interests}}</p>
+          <h2>Retrouver ce talent :</h2>
           <p>
             <a :href="student.links.github" target="_blank" v-if="student.links.github" class="highlight-hover">Github</a>
             <a :href="student.links.codepen" target="_blank" v-if="student.links.codepen" class="highlight-hover">Codepen</a>
@@ -25,7 +25,6 @@
           </p>
         </div>
       </div>
-      <div student></div>
     </div>
     <div class="student__projects">
       <h2><span>Ses projets</span></h2>
@@ -35,11 +34,11 @@
 </template>
 
 <script>
-  import studentList from '@/data/students.json'
-  import categories from '@/data/categories.json'
-  import intro from '@/components/Intro.vue'
-  import projectItem from '@/components/ProjectItem.vue'
-  import studentCharacter from '@/components/StudentCharacter.vue'
+  import studentList from '../data/students.json'
+  import categories from '../data/categories.json'
+  import intro from '../components/Intro.vue'
+  import projectItem from '../components/ProjectItem.vue'
+  import studentCharacter from '../components/StudentCharacter.vue'
 
   export default {
     name: 'studentProfile',
